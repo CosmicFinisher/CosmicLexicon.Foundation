@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>$(NetPrimaryTargetFramework)</TargetFramework>
+    <RootNamespace>OpenEchoSystem.Core.xExtensions</RootNamespace>
+    <EnableSharedUnitTestDependencies>true</EnableSharedUnitTestDependencies>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="$(MSBuildThisFileDirectory)..\..\src\OpenEchoSystem.Core.Extensions.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Using Include="OpenEchoSystem.Core.xExtensions" />
+  </ItemGroup>
+</Project>

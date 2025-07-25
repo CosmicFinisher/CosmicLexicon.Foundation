@@ -1,0 +1,11 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>$(NetPrimaryTargetFramework)</TargetFramework>
+    <RootNamespace>OpenEchoSystem.Core.xLinq</RootNamespace>
+	  <EnableSharedUnitTestDependencies>true</EnableSharedUnitTestDependencies>
+  </PropertyGroup>
+    <ItemGroup>
+    <ProjectReference Include="$(MSBuildThisFileDirectory)..\..\src\OpenEchoSystem.Core.Linq.csproj" />
+   </ItemGroup>
+
+</Project>
