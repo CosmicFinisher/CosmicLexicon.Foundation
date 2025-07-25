@@ -10,7 +10,7 @@
 		<Company>OpenEmergent</Company>
 		<Description>A foundation framework core library for Rosyllionce projects.</Description>
 		<PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
-		<RepositoryUrl>https://github.com/Rosyllionce/Backend_BCL_OpenEchoSystem.Core.git</RepositoryUrl>
+		<RepositoryUrl>https://github.com/Rosyllionce/OpenEchoSystem.Core.git</RepositoryUrl>
 		<PackageProjectUrl>$(RepositoryUrl)</PackageProjectUrl>
 		<PackageIcon>icon.png</PackageIcon>
 		<RepositoryType>git</RepositoryType>

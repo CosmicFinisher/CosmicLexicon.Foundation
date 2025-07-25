@@ -1,13 +1,13 @@
 ﻿<!-- Logo -->
 <p align="center">
-  <img src="https://raw.githubusercontent.com/Rosyllionce/Backend_BCL_OpenEchoSystem.Core/main/docs/assets/logo-net.png" alt="OpenEchoSystem.Core.Net Logo" width="120"/>
+  <img src="https://raw.githubusercontent.com/Rosyllionce/OpenEchoSystem.Core/main/docs/assets/logo-net.png" alt="OpenEchoSystem.Core.Net Logo" width="120"/>
 </p>
 
 <p align="center">
-  <a href="https://github.com/Rosyllionce/Backend_BCL_OpenEchoSystem.Core/actions/workflows/build.yml"><img src="https://img.shields.io/github/actions/workflow/status/Rosyllionce/Backend_BCL_OpenEchoSystem.Core/build.yml?branch=main&label=build" alt="Build Status"></a>
+  <a href="https://github.com/Rosyllionce/OpenEchoSystem.Core/actions/workflows/build.yml"><img src="https://img.shields.io/github/actions/workflow/status/Rosyllionce/OpenEchoSystem.Core/build.yml?branch=main&label=build" alt="Build Status"></a>
   <a href="https://www.nuget.org/packages/OpenEchoSystem.Core.Net"><img src="https://img.shields.io/nuget/v/OpenEchoSystem.Core.Net.svg?label=nuget" alt="NuGet"></a>
   <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="MIT License"></a>
-  <a href="https://github.com/Rosyllionce/Backend_BCL_OpenEchoSystem.Core"><img src="https://img.shields.io/github/stars/Rosyllionce/Backend_BCL_OpenEchoSystem.Core?style=social" alt="GitHub stars"></a>
+  <a href="https://github.com/Rosyllionce/OpenEchoSystem.Core"><img src="https://img.shields.io/github/stars/Rosyllionce/OpenEchoSystem.Core?style=social" alt="GitHub stars"></a>
 </p>
 
 # OpenEchoSystem.Core.Net

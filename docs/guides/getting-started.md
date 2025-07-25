@@ -98,11 +98,11 @@ public Result<int> Calculate()
 - [Detailed Documentation](../../README.md)
 - [Design Decisions](../../research/design-decisions.md)
 - [Version History](../../research/migration-and-versioning.md)
-- [Known Issues](https://github.com/Rosyllionce/Backend_BCL_OpenEchoSystem.Core/issues)
+- [Known Issues](https://github.com/Rosyllionce/OpenEchoSystem.Core/issues)
 
 ## Need Help?
 
 - Review our [FAQ](../faq.md)
 - Check [Common Issues](../troubleshooting.md)
 <!-- - Join our [Discord Community](https://discord.gg/openEmergent) -->
-- Submit an [Issue](https://github.com/Rosyllionce/Backend_BCL_OpenEchoSystem.Core/issues)
+- Submit an [Issue](https://github.com/Rosyllionce/OpenEchoSystem.Core/issues)

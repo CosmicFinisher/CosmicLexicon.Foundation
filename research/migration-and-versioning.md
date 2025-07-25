@@ -140,8 +140,8 @@ dotnet openEchoSystem-analyze
 
 - [Getting Started Guide](../docs/guides/getting-started.md)
 - [API Documentation](../docs/api/index.md)
-- [Known Issues](https://github.com/Rosyllionce/Backend_BCL_OpenEchoSystem.Core/issues)
-- [Migration Support](https://github.com/Rosyllionce/Backend_BCL_OpenEchoSystem.Core/discussions)
+- [Known Issues](https://github.com/Rosyllionce/OpenEchoSystem.Core/issues)
+- [Migration Support](https://github.com/Rosyllionce/OpenEchoSystem.Core/discussions)
 
 ## Version History
 

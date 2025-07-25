@@ -88,7 +88,7 @@ We welcome contributions! See our [Contributing Guide](CONTRIBUTING.md) for:
 
 - [Release Notes](CHANGELOG.md)
 - [Roadmap](docs/architecture/overview.md#future-directions)
-- [Known Issues](https://github.com/Rosyllionce/Backend_BCL_OpenEchoSystem.Core/issues)
+- [Known Issues](https://github.com/Rosyllionce/OpenEchoSystem.Core/issues)
 
 ## Additional Resources
 
