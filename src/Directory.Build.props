@@ -1,0 +1,48 @@
+<Project>
+
+	<PropertyGroup>
+		<ProductName>OpenEchoSystem.Core</ProductName>
+		<ProjectTitle>Open Echo System Framework Core Library</ProjectTitle>
+	</PropertyGroup>
+	<PropertyGroup Label="NugetPackagingSettings">
+		<!--<PackageId>OpenEchoSystem.Core</PackageId>-->
+		<Authors>OpenEmergent Alpha Team</Authors>
+		<Company>OpenEmergent</Company>
+		<Description>A foundation framework core library for Rosyllionce projects.</Description>
+		<PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
+		<RepositoryUrl>https://github.com/Rosyllionce/Backend_BCL_OpenEchoSystem.Core.git</RepositoryUrl>
+		<PackageProjectUrl>$(RepositoryUrl)</PackageProjectUrl>
+		<PackageIcon>icon.png</PackageIcon>
+		<RepositoryType>git</RepositoryType>
+
+	</PropertyGroup>
+
+
+	
+	<Import Project="$(MSBuildThisFileDirectory)..\..\..\..\..\..\.net\Framework.Build.props" />
+	<PropertyGroup Label="SharedDependencyControl">
+		<!-- Enable packaging and repository integration for framework projects by default. -->
+		<EnableRepository>true</EnableRepository>
+	</PropertyGroup>
+
+	<PropertyGroup>
+		<RepositoryRootPath>$(MSBuildThisFileDirectory)..\</RepositoryRootPath>
+	</PropertyGroup>
+
+	<ItemGroup Label="LicenseFilePackaging" Condition=" '$(EnablePackaging)' == 'true'">
+		<None Include="$(RepositoryRootPath)licenses\LICENSE">
+			<Pack>True</Pack>
+			<PackagePath>\</PackagePath>
+		</None>
+		<None Include="$(RepositoryRootPath)icon.png">
+			<Pack>True</Pack>
+			<PackagePath>\</PackagePath>
+		</None>
+		<None Include="$(RepositoryRootPath)licenses\NOTICE">
+			<Pack>True</Pack>
+			<PackagePath>\</PackagePath>
+		</None>
+
+	</ItemGroup>
+
+</Project>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RunSettings>
+  <DataCollectionRunSettings>
+    <DataCollectors>
+      <DataCollector friendlyName="XPlat Code Coverage" assemblyQualifiedName="Coverlet.Collector.DataCollection.CoverageCollector, Coverlet.Collector, Version=3.2.0.0, Culture=neutral, PublicKeyToken=null">
+        <Configuration>
+          <Format>cobertura</Format>
+          <ExcludeByFile>$(MSBuildProjectDirectory)/**/tests/**/*.cs</ExcludeByFile>
+          <ExcludeByFile>$(MSBuildProjectDirectory)/**/obj/**/*.cs</ExcludeByFile>
+          <ExcludeByFile>$(MSBuildProjectDirectory)/**/bin/**/*.cs</ExcludeByFile>
+          <Exclude>[*]*.UnitTest</Exclude>
+          <Exclude>[*]*.Tests</Exclude>
+          <Exclude>[*]*.Test</Exclude>
+          <Exclude>[*]*.Test</Exclude>
+          <Include>Core.Text</Include>
+          <MergeWith>$(MSBuildProjectDirectory)/coverage.json</MergeWith>
+        </Configuration>
+      </DataCollector>
+    </DataCollectors>
+  </DataCollectionRunSettings>
+</RunSettings>

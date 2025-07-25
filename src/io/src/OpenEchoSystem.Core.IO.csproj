@@ -1,0 +1,8 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>$(NetPrimaryTargetFramework)</TargetFramework>
+    <RootNamespace>OpenEchoSystem.Core.xIO</RootNamespace>
+    <EnableSharedKernelDependencies>true</EnableSharedKernelDependencies>
+	
+  </PropertyGroup>
+</Project> 

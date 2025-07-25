@@ -1,0 +1,10 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>$(NetPrimaryTargetFramework)</TargetFramework>
+    <RootNamespace>OpenEchoSystem.Core.xExtensions</RootNamespace>
+    <EnableSharedKernelDependencies>true</EnableSharedKernelDependencies>
+	  
+  </PropertyGroup>
+
+</Project>

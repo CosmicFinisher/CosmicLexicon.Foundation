@@ -1,0 +1,10 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>$(NetPrimaryTargetFramework)</TargetFramework>
+    <RootNamespace>OpenEchoSystem.Core.xGlobalization</RootNamespace>
+    <EnableSharedUnitTestDependencies>true</EnableSharedUnitTestDependencies>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="$(MSBuildThisFileDirectory)..\..\src\OpenEchoSystem.Core.Globalization.csproj" />
+  </ItemGroup>
+</Project> 
