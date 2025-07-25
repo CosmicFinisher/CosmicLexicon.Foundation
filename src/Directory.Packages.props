@@ -1,0 +1,3 @@
+<Project>
+  <Import Project="$(MSBuildThisFileDirectory)..\..\..\..\..\..\.net\Framework.Packages.props" />
+</Project>
