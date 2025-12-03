@@ -1,11 +1,7 @@
-using System;
 using System.Globalization;
-using Xunit;
-using CosmicLexicon.Foundation.xText;
-using CosmicLexicon.Foundation.Formats;
-using Moq; // Added for mocking
+using Moq;
 
-namespace CosmicLexicon.Foundation.xText.Tests
+namespace CosmicLexicon.Foundation.Formats.UnitTest
 {
     
     public class StringHelpersTests

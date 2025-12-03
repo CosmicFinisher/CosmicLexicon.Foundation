@@ -1,10 +1,4 @@
-using Xunit;
-using CosmicLexicon.Foundation.Transport;
-using System;
-using System.IO;
-using CosmicLexicon.Foundation.Transport;
-
-namespace CosmicLexicon.Foundation.Transport
+namespace CosmicLexicon.Foundation.Transport.UnitTest
 {
     public class PathHelpersTests
     {

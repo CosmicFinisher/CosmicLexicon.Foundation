@@ -1,8 +1,4 @@
-using CosmicLexicon.Foundation.Formats;
-using System.Reflection.Metadata;
-using Xunit;
-
-namespace CosmicLexicon.Foundation.xText
+namespace CosmicLexicon.Foundation.Formats.UnitTest
 {
     public sealed class StringConcatExtensionTests
     {

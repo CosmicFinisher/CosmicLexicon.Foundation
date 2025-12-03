@@ -1,5 +1,3 @@
-using System.Collections.Generic;
-
 namespace CosmicLexicon.Foundation.Formats // Updated namespace
 {
     //

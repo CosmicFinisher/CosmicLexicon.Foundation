@@ -1,9 +1,6 @@
-using System;
-using System.Linq;
-using Xunit;
 using CosmicLexicon.Foundation.Structures.Enums;
 
-namespace CosmicLexicon.Foundation.Structures.Enums
+namespace CosmicLexicon.Foundation.Structures.UnitTest.Enums
 {
     public class EnumHelperTests
     {

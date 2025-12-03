@@ -1,7 +1,4 @@
-using Xunit;
-using CosmicLexicon.Foundation.xGlobalization;
-
-namespace CosmicLexicon.Foundation.xGlobalization
+namespace CosmicLexicon.Foundation.Globalization.UnitTest
 {
     public class TimeFrameTests
     {

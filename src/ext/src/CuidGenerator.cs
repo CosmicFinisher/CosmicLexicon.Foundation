@@ -1,6 +1,4 @@
-using System.Text;
-
-namespace CosmicLexicon.Foundation.xExtensions;
+namespace CosmicLexicon.Foundation.Extensions;
 
 /// <summary>
 /// Generate CUIDs (Custom Unique Identifier (ID))

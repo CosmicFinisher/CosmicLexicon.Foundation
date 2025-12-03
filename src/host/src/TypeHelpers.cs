@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace CosmicLexicon.Foundation.Host
+﻿namespace CosmicLexicon.Foundation.Host
 {
     public static class TypeHelpers
     {

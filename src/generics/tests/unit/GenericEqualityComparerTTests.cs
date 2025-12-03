@@ -1,10 +1,4 @@
-using Xunit;
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using CosmicLexicon.Foundation.xGenerics;
-
-namespace CosmicLexicon.Foundation.Structures.Comparison
+namespace CosmicLexicon.Foundation.Generics.UnitTest
 {
     public class GenericEqualityComparerTTests
     {

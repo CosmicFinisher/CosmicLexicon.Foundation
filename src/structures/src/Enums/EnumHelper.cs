@@ -1,8 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace CosmicLexicon.Foundation.Structures.Enums
+﻿namespace CosmicLexicon.Foundation.Structures.Enums
 {
 
     public static class EnumHelper

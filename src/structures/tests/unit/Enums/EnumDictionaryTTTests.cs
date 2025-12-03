@@ -1,10 +1,6 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using Xunit;
 using CosmicLexicon.Foundation.Structures.Enums;
 
-namespace CosmicLexicon.Foundation.Structures.Enums
+namespace CosmicLexicon.Foundation.Structures.UnitTest.Enums
 {
     public class EnumDictionaryTTTests
     {

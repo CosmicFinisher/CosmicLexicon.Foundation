@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>$(NetPrimaryTargetFramework)</TargetFramework>
     <EnableSharedUnitTestDependencies>true</EnableSharedUnitTestDependencies>
@@ -7,6 +7,6 @@
     <ProjectReference Include="$(MSBuildThisFileDirectory)..\..\src\CosmicLexicon.Foundation.Extensions.csproj" />
   </ItemGroup>
   <ItemGroup>
-    <Using Include="CosmicLexicon.Foundation.xExtensions" />
+    <Using Include="CosmicLexicon.Foundation.Extensions" />
   </ItemGroup>
 </Project>

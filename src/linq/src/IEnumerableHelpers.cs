@@ -1,7 +1,6 @@
-using System.Collections.Generic;
-using System.Linq;
+using CosmicLexicon.Foundation.Linq;
 
-namespace CosmicLexicon.Foundation.xLinq
+namespace CosmicLexicon.Foundation.Linq
 {
     /// <summary>
     /// Provides helper methods for IEnumerable types to enhance collection operations.

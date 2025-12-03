@@ -1,10 +1,4 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using Xunit;
-using CosmicLexicon.Foundation.Structures;
-
-namespace CosmicLexicon.Foundation.Structures
+namespace CosmicLexicon.Foundation.Structures.UnitTest
 {
     public class BaseCollectionTTests
     {

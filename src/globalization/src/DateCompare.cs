@@ -1,8 +1,6 @@
-namespace CosmicLexicon.Foundation.xGlobalization;
+namespace CosmicLexicon.Foundation.Globalization;
 
 using System;
-using System.Collections.Generic;
-using System.Text;
 
 // Summary:
 //     Date comparison type

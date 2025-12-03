@@ -1,8 +1,4 @@
-using Xunit;
-using CosmicLexicon.Foundation.xExtensions;
-using System;
-
-namespace CosmicLexicon.Foundation.xExtensions.Tests
+namespace CosmicLexicon.Foundation.Extensions.UnitTest
 {
     public class GuidExtensionsTests
     {

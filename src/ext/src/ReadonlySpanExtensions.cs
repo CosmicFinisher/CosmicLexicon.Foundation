@@ -1,5 +1,4 @@
-
-namespace CosmicLexicon.Foundation.xExtensions
+namespace CosmicLexicon.Foundation.Extensions
 {
     public static class ReadonlySpanExtensions
     {

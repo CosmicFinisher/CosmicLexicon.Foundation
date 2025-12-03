@@ -1,7 +1,4 @@
-using Xunit;
-using CosmicLexicon.Foundation.Formats;
-
-namespace CosmicLexicon.Foundation.xText
+namespace CosmicLexicon.Foundation.Formats.UnitTest
 {
     public class TextUtilitiesTests
     {

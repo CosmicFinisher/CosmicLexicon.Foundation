@@ -1,7 +1,4 @@
-using CosmicLexicon.Foundation.Formats;
-using Xunit;
-
-namespace CosmicLexicon.Foundation.xText
+namespace CosmicLexicon.Foundation.Formats.UnitTest
 {
     public class StringCompareTests
     {

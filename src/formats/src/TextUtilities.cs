@@ -1,6 +1,3 @@
-using System.Collections.Generic;
-using System.Linq;
-
 namespace CosmicLexicon.Foundation.Formats // Updated namespace
 {
     public static class TextUtilities

@@ -1,8 +1,4 @@
-using Xunit;
-using CosmicLexicon.Foundation.Transport.Net;
-using System.Threading.Tasks;
-
-namespace CosmicLexicon.Foundation.Transport.Net
+namespace CosmicLexicon.Foundation.Transport.Net.UnitTest
 {
     public class NetExtensionsTests
     {

@@ -1,10 +1,6 @@
-using Xunit;
-using CosmicLexicon.Foundation.Structures;
-using System;
-using System.Collections.Generic;
 using CosmicLexicon.Foundation.Structures.Extensions;
 
-namespace CosmicLexicon.Foundation.Structures
+namespace CosmicLexicon.Foundation.Structures.UnitTest
 {
     public class ArrayHelpersTests
     {

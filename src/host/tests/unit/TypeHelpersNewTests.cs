@@ -1,10 +1,6 @@
-using System;
-using System.Collections.Generic;
-using CosmicLexicon.Foundation.Host;
-using Xunit;
 using System.Globalization;
 
-namespace CosmicLexicon.Foundation.Host
+namespace CosmicLexicon.Foundation.Host.UnitTest
 {
     public class TypeHelpersNewTests
     {

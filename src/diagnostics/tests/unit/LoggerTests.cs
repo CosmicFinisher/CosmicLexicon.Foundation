@@ -1,12 +1,6 @@
-using Xunit;
-using CosmicLexicon.Foundation.xDiagnostics;
-using System;
-using System.IO;
-
-namespace CosmicLexicon.Foundation.xDiagnostics
+namespace CosmicLexicon.Foundation.Diagnostics.UnitTest
 {
     using Xunit;
-    using CosmicLexicon.Foundation.xDiagnostics;
     using System;
     using System.IO;
 

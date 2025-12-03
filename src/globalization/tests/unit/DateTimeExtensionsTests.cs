@@ -1,9 +1,6 @@
-using Xunit;
-using CosmicLexicon.Foundation.xGlobalization;
-using System;
 using System.Globalization;
 
-namespace CosmicLexicon.Foundation.xGlobalization
+namespace CosmicLexicon.Foundation.Globalization.UnitTest
 {
     public class DateTimeExtensionsTests
     {
@@ -107,7 +104,7 @@ namespace CosmicLexicon.Foundation.xGlobalization
         {
             // Arrange
             DateTime date = new DateTime(2025, 5, 30, 10, 30, 0); // Friday
-            System.Globalization.CultureInfo culture = new System.Globalization.CultureInfo("de-DE"); // Culture where Monday is FirstDayOfWeek
+            CultureInfo culture = new CultureInfo("de-DE"); // Culture where Monday is FirstDayOfWeek
 
             // Act
             DateTime result = date.BeginningOf(TimeFrame.Week, culture);

@@ -1,8 +1,4 @@
-using System; // Added for ArgumentOutOfRangeException
-using Xunit;
-using CosmicLexicon.Foundation.Formats; // Ensure this namespace is correct for StringExtension
-
-namespace CosmicLexicon.Foundation.xText.Tests
+namespace CosmicLexicon.Foundation.Formats.UnitTest
 {
     public class StringExtensionTruncateWithEllipsisTests
     {

@@ -1,7 +1,4 @@
-using Xunit;
-using CosmicLexicon.Foundation.Formats; // Ensure this namespace is correct for CharHelpers
-
-namespace CosmicLexicon.Foundation.xText.Tests
+namespace CosmicLexicon.Foundation.Formats.UnitTest
 {
     public class CharHelpersTests
     {

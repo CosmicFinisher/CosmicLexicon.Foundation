@@ -1,12 +1,4 @@
-using Xunit;
-using CosmicLexicon.Foundation.Structures;
-using System;
-using System.Collections.Generic;
-using System.Collections.Specialized;
-using System.ComponentModel;
-using System.Linq;
-
-namespace CosmicLexicon.Foundation.Structures
+namespace CosmicLexicon.Foundation.Structures.UnitTest
 {
     public class ObservableListCollectionTests
     {

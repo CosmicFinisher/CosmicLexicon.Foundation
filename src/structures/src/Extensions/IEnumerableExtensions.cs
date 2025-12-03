@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Linq;
-using System.Runtime.InteropServices;
-using System.Threading.Tasks;
-using CosmicLexicon.Foundation.xLinq;
-using CosmicLexicon.Foundation.xLinq;
-using CosmicLexicon.Foundation.xGenerics;
+﻿using System.ComponentModel;
+using CosmicLexicon.Foundation.Generics;
+using CosmicLexicon.Foundation.Linq;
 
 namespace CosmicLexicon.Foundation.Structures.Extensions
 {

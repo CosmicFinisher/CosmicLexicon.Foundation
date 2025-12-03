@@ -1,5 +1,3 @@
-using CosmicLexicon.Foundation.Structures;
-
 namespace CosmicLexicon.Foundation.Structures
 {
 

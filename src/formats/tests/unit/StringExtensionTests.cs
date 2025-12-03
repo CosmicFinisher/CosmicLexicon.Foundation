@@ -1,8 +1,4 @@
-using System;
-using Xunit;
-using CosmicLexicon.Foundation.Formats; // Corrected namespace for StringExtension
-
-namespace CosmicLexicon.Foundation.xText
+namespace CosmicLexicon.Foundation.Formats.UnitTest
 {
     public class StringExtensionTests
     {

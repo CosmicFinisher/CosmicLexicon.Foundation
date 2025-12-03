@@ -1,8 +1,4 @@
-namespace CosmicLexicon.Foundation.xGlobalization;
-
-using System.Collections.Generic;
-using System.Text;
-
+namespace CosmicLexicon.Foundation.Globalization;
 //
 // Summary:
 //     Time frame

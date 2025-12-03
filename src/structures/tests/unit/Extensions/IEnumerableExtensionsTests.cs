@@ -1,12 +1,8 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
+using CosmicLexicon.Foundation.Linq;
 using CosmicLexicon.Foundation.Structures;
 using CosmicLexicon.Foundation.Structures.Extensions;
-using CosmicLexicon.Foundation.xLinq;
-using Xunit;
 
-namespace CosmicLexicon.Foundation.Structures.Extensions
+namespace CosmicLexicon.Foundation.Structures.UnitTest.Extensions
 {
     public class IEnumerableExtensionsTests
     {

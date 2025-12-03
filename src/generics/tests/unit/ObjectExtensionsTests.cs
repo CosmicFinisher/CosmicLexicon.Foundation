@@ -1,8 +1,4 @@
-using CosmicLexicon.Foundation.xGenerics;
-using System;
-using Xunit;
-
-namespace CosmicLexicon.Foundation.xGenerics
+namespace CosmicLexicon.Foundation.Generics.UnitTest
 {
     public class ObjectExtensionsTests
     {

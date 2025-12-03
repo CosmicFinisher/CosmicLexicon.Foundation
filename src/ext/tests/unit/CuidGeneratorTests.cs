@@ -1,9 +1,4 @@
-using Xunit;
-using CosmicLexicon.Foundation.xExtensions;
-using System;
-using System.Text.RegularExpressions;
-
-namespace CosmicLexicon.Foundation.xExtensions.Tests
+namespace CosmicLexicon.Foundation.Extensions.UnitTest
 {
     public class CuidGeneratorTests
     {

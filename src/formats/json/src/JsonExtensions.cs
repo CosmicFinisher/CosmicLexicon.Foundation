@@ -1,11 +1,10 @@
-using System;
 using System.Reflection;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 using System.Text.Json.Serialization.Metadata;
 
 
-namespace CosmicLexicon.Foundation.xText.Json;
+namespace CosmicLexicon.Foundation.Formats.Json;
 
 public static class JsonExtensions
 {

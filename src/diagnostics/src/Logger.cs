@@ -1,4 +1,4 @@
-namespace CosmicLexicon.Foundation.xDiagnostics
+namespace CosmicLexicon.Foundation.Diagnostics
 {
     public class Logger
     {

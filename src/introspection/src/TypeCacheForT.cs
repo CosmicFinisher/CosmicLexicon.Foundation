@@ -1,4 +1,4 @@
-namespace CosmicLexicon.Foundation.xReflection;
+namespace CosmicLexicon.Foundation.Introspection;
 
 using System.Reflection;
 using System;

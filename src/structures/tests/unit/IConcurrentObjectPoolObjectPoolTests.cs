@@ -1,8 +1,4 @@
-using System;
-using CosmicLexicon.Foundation.Structures;
-using Xunit;
-
-namespace CosmicLexicon.Foundation.Structures
+namespace CosmicLexicon.Foundation.Structures.UnitTest
 {
     public class IConcurrentObjectPoolObjectPoolTests
     {

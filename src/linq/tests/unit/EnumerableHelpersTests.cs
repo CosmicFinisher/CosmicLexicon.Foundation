@@ -1,9 +1,4 @@
-using Xunit;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-
-namespace CosmicLexicon.Foundation.xLinq.Tests
+namespace CosmicLexicon.Foundation.Linq.UnitTest
 {
     public class EnumerableHelpersTests
     {
@@ -15,7 +10,7 @@ namespace CosmicLexicon.Foundation.xLinq.Tests
             Func<int, bool> func = x => x % 2 == 0;
 
             // Act
-            bool result =CosmicLexicon.Foundation.xLinq.EnumerableHelpers.CanBeSucceeded(collection, func);
+            bool result = EnumerableHelpers.CanBeSucceeded(collection, func);
 
             // Assert
             Assert.True(result);
@@ -29,7 +24,7 @@ namespace CosmicLexicon.Foundation.xLinq.Tests
             Func<int, bool> func = x => x % 2 == 0;
 
             // Act
-            bool result =CosmicLexicon.Foundation.xLinq.EnumerableHelpers.CanBeSucceeded(collection, func);
+            bool result = EnumerableHelpers.CanBeSucceeded(collection, func);
 
             // Assert
             Assert.False(result);
@@ -43,8 +38,8 @@ namespace CosmicLexicon.Foundation.xLinq.Tests
             Func<int, bool> func = x => x % 2 == 0;
 
             // Act & Assert
-            Assert.Throws<ArgumentNullException>(() => 
-               CosmicLexicon.Foundation.xLinq.EnumerableHelpers.CanBeSucceeded(collection!, func));
+            Assert.Throws<ArgumentNullException>(() =>
+               EnumerableHelpers.CanBeSucceeded(collection!, func));
         }
 
         [Fact]
@@ -55,8 +50,8 @@ namespace CosmicLexicon.Foundation.xLinq.Tests
             Func<int, bool>? func = null;
 
             // Act & Assert
-            Assert.Throws<ArgumentNullException>(() => 
-               CosmicLexicon.Foundation.xLinq.EnumerableHelpers.CanBeSucceeded(collection, func!));
+            Assert.Throws<ArgumentNullException>(() =>
+               EnumerableHelpers.CanBeSucceeded(collection, func!));
         }
 
         [Fact]
@@ -67,7 +62,7 @@ namespace CosmicLexicon.Foundation.xLinq.Tests
             Func<int, bool> func = x => x % 2 == 0;
 
             // Act
-            bool result =CosmicLexicon.Foundation.xLinq.EnumerableHelpers.CanBeIncluded(collection, func);
+            bool result = EnumerableHelpers.CanBeIncluded(collection, func);
 
             // Assert
             Assert.True(result);
@@ -81,7 +76,7 @@ namespace CosmicLexicon.Foundation.xLinq.Tests
             Func<int, bool> func = x => x % 2 == 0;
 
             // Act
-            bool result =CosmicLexicon.Foundation.xLinq.EnumerableHelpers.CanBeIncluded(collection, func);
+            bool result = EnumerableHelpers.CanBeIncluded(collection, func);
 
             // Assert
             Assert.False(result);
@@ -96,7 +91,7 @@ namespace CosmicLexicon.Foundation.xLinq.Tests
 
             // Act & Assert
             Assert.Throws<ArgumentNullException>(() =>
-                CosmicLexicon.Foundation.xLinq.EnumerableHelpers.CanBeIncluded(collection!, func));
+                EnumerableHelpers.CanBeIncluded(collection!, func));
         }
 
         [Fact]
@@ -108,7 +103,7 @@ namespace CosmicLexicon.Foundation.xLinq.Tests
 
             // Act & Assert
             Assert.Throws<ArgumentNullException>(() =>
-               CosmicLexicon.Foundation.xLinq.EnumerableHelpers.CanBeIncluded(collection, func!));
+               EnumerableHelpers.CanBeIncluded(collection, func!));
         }
     }
 }

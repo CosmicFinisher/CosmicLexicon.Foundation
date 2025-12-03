@@ -1,6 +1,4 @@
-using System;
-
-namespace CosmicLexicon.Foundation.xReflection
+namespace CosmicLexicon.Foundation.Introspection
 {
     public struct CustomStruct
     {

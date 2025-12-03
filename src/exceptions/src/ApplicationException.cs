@@ -1,6 +1,6 @@
 using System.Runtime.Serialization;
 
-namespace CosmicLexicon.Foundation.xExceptions
+namespace CosmicLexicon.Foundation.Exceptions
 {
     /// <summary>
     /// Represents an application-specific exception that occurs during execution.

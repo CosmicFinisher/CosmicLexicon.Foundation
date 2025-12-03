@@ -1,8 +1,4 @@
-using System;
-using CosmicLexicon.Foundation.Host;
-using Xunit;
-
-namespace CosmicLexicon.Foundation.Host;
+namespace CosmicLexicon.Foundation.Host.UnitTest;
 
 public class TypeHelpersTests
 {

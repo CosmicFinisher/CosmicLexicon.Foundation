@@ -1,6 +1,6 @@
 using System.Reflection;
 
-namespace CosmicLexicon.Foundation.xReflection;
+namespace CosmicLexicon.Foundation.Introspection;
 
 using System;
 using System.Linq;

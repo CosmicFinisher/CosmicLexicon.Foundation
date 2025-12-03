@@ -1,10 +1,7 @@
-using System;
 using System.Text;
-using Xunit;
-using CosmicLexicon.Foundation.Formats;
-using Moq; // Added for mocking
+using Moq;
 
-namespace CosmicLexicon.Foundation.xText
+namespace CosmicLexicon.Foundation.Formats.UnitTest
 {
     public class ByteArrayHelpersTests
     {

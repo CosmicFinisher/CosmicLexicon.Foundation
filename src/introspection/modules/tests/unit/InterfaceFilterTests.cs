@@ -1,8 +1,4 @@
-using Xunit;
-using CosmicLexicon.Foundation.Introspection.Modules;
-using CosmicLexicon.Foundation.Introspection.Modules;
-
-namespace CosmicLexicon.Foundation.Introspection.Modules.Tests
+namespace CosmicLexicon.Foundation.Introspection.Modules.UnitTest
 {
     public class InterfaceFilterTests
     {

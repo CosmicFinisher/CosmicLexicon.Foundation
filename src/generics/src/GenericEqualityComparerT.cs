@@ -1,8 +1,6 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
-using System.Text;
 
-namespace CosmicLexicon.Foundation.xGenerics
+namespace CosmicLexicon.Foundation.Generics
 {
     //
     // Summary:

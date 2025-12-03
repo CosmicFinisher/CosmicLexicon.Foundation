@@ -1,11 +1,6 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Reflection;
-using Xunit;
-using CosmicLexicon.Foundation.Introspection.Modules;
 
-namespace CosmicLexicon.Foundation.Introspection.Modules
+namespace CosmicLexicon.Foundation.Introspection.Modules.UnitTest
 {
     public class PropertyInfoExtensionsTests
     {

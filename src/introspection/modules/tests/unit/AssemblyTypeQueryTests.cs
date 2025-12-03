@@ -1,7 +1,4 @@
-using CosmicLexicon.Foundation.Introspection.Modules;
-using Xunit;
-
-namespace CosmicLexicon.Foundation.Structures
+namespace CosmicLexicon.Foundation.Introspection.Modules.UnitTest
 {
     public class AssemblyTypeQueryTests
     {

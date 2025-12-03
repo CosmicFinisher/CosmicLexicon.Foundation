@@ -1,11 +1,7 @@
-using Xunit;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using CosmicLexicon.Foundation.xLinq;
+using CosmicLexicon.Foundation.Linq;
 using System.Globalization;
 
-namespace CosmicLexicon.Foundation.xLinq
+namespace CosmicLexicon.Foundation.Linq.UnitTest
 {
     public class IEnumerableHelpersTests
     {        private static readonly string[] expectedStrings = new string[] { "1", "2", "3" };

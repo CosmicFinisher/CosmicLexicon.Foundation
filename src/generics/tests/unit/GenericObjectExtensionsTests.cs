@@ -1,16 +1,10 @@
-using Xunit;
-using CosmicLexicon.Foundation.xGenerics;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-
-namespace CosmicLexicon.Foundation.xGenerics.Tests
+namespace CosmicLexicon.Foundation.Generics.UnitTest
 {
     using Xunit;
-    using CosmicLexicon.Foundation.xGenerics;
     using System;
     using System.Collections.Generic;
     using System.Linq;
+    using CosmicLexicon.Foundation.Generics;
 
     public class GenericObjectExtensionsTests
     {

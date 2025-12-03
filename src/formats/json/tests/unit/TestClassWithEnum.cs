@@ -1,6 +1,6 @@
 using System.Text.Json.Serialization;
 
-namespace CosmicLexicon.Foundation.xText.Json
+namespace CosmicLexicon.Foundation.Formats.Json.UnitTest
 {
     internal class TestClassWithEnum
     {

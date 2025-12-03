@@ -1,11 +1,4 @@
-using System;
-using System.Text.Json;
-using System.Text.Json.Serialization;
-using Xunit;
-using CosmicLexicon.Foundation.xText.Json;
-using Xunit.Sdk;
-
-namespace CosmicLexicon.Foundation.xText.Json
+namespace CosmicLexicon.Foundation.Formats.Json.UnitTest
 {
     public class JsonExtensionsTests
     {

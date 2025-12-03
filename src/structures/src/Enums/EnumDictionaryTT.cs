@@ -1,11 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Windows.Input;
-
-namespace CosmicLexicon.Foundation.Structures.Enums
+﻿namespace CosmicLexicon.Foundation.Structures.Enums
 {
     public sealed class EnumDictionary<TEnum, TValue>
         where TEnum : struct, Enum

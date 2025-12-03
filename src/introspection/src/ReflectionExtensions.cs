@@ -1,17 +1,10 @@
 using System.Diagnostics;
 using System.Diagnostics.CodeAnalysis;
-using System.Linq;
-using System.Linq.Expressions;
 using System.Reflection;
-using System.Text;
-
-using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Resources;
-using CosmicLexicon.Foundation.xGenerics;
+using CosmicLexicon.Foundation.Generics;
 
-namespace CosmicLexicon.Foundation.xReflection
+namespace CosmicLexicon.Foundation.Introspection
 {
     //
     // Summary:

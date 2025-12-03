@@ -1,10 +1,4 @@
-using Xunit;
-using CosmicLexicon.Foundation.xGlobalization;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-
-namespace CosmicLexicon.Foundation.xGlobalization
+namespace CosmicLexicon.Foundation.Globalization.UnitTest
 {
     public class TimeSpanExtensionsTests
     {

@@ -1,4 +1,4 @@
-﻿namespace CosmicLexicon.Foundation.xText.Json
+﻿namespace CosmicLexicon.Foundation.Formats.Json.UnitTest
 {
     internal class TestClassExample
     {

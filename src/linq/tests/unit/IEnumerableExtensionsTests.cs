@@ -1,10 +1,6 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using Xunit;
-using CosmicLexicon.Foundation.xLinq;
+using CosmicLexicon.Foundation.Linq;
 
-namespace CosmicLexicon.Foundation.xLinq
+namespace CosmicLexicon.Foundation.Linq.UnitTest
 {
     public class IEnumerableExtensionsTests
     {

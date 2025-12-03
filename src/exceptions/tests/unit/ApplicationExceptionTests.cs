@@ -1,8 +1,4 @@
-using CosmicLexicon.Foundation.xExceptions;
-using System;
-using Xunit;
-
-namespace CosmicLexicon.Foundation.xExceptions
+namespace CosmicLexicon.Foundation.Exceptions.UnitTest
 {
     public class ApplicationExceptionTests
     {
@@ -10,7 +6,7 @@ namespace CosmicLexicon.Foundation.xExceptions
         public void ConstructorDefaultCreatesInstance()
         {
             // Act
-            var exception = new CosmicLexicon.Foundation.xExceptions.ApplicationException();
+            var exception = new Exceptions.ApplicationException();
             
             // Assert
             Assert.NotNull(exception);
@@ -25,7 +21,7 @@ namespace CosmicLexicon.Foundation.xExceptions
             string message = "Test exception message";
             
             // Act
-            var exception = new CosmicLexicon.Foundation.xExceptions.ApplicationException(message);
+            var exception = new Exceptions.ApplicationException(message);
             
             // Assert
             Assert.Equal(message, exception.Message);
@@ -41,7 +37,7 @@ namespace CosmicLexicon.Foundation.xExceptions
             var innerException = new InvalidOperationException("Inner exception");
             
             // Act
-            var exception = new CosmicLexicon.Foundation.xExceptions.ApplicationException(message, innerException);
+            var exception = new Exceptions.ApplicationException(message, innerException);
             
             // Assert
             Assert.Equal(message, exception.Message);
@@ -57,7 +53,7 @@ namespace CosmicLexicon.Foundation.xExceptions
             int errorCode = 42;
             
             // Act
-            var exception = new CosmicLexicon.Foundation.xExceptions.ApplicationException(message, errorCode);
+            var exception = new Exceptions.ApplicationException(message, errorCode);
             
             // Assert
             Assert.Equal(message, exception.Message);
@@ -74,7 +70,7 @@ namespace CosmicLexicon.Foundation.xExceptions
             var innerException = new InvalidOperationException("Inner exception");
             
             // Act
-            var exception = new CosmicLexicon.Foundation.xExceptions.ApplicationException(message, errorCode, innerException);
+            var exception = new Exceptions.ApplicationException(message, errorCode, innerException);
             
             // Assert
             Assert.Equal(message, exception.Message);
@@ -90,7 +86,7 @@ namespace CosmicLexicon.Foundation.xExceptions
             int errorCode = 100; // Use a non-zero error code
 
             // Act
-            var exception = new CosmicLexicon.Foundation.xExceptions.ApplicationException(message, errorCode);
+            var exception = new Exceptions.ApplicationException(message, errorCode);
 
             // Assert
             Assert.Equal(message, exception.Message);
@@ -102,7 +98,7 @@ namespace CosmicLexicon.Foundation.xExceptions
         public void ErrorCodeCanBeSet()
         {
             // Arrange
-            var exception = new CosmicLexicon.Foundation.xExceptions.ApplicationException();
+            var exception = new Exceptions.ApplicationException();
             int errorCode = 42;
 
             // Act
@@ -120,7 +116,7 @@ namespace CosmicLexicon.Foundation.xExceptions
             string customErrorCode = "CUSTOM_ERROR_STRING_001";
 
             // Act
-            var exception = new CosmicLexicon.Foundation.xExceptions.ApplicationException(message, customErrorCode);
+            var exception = new Exceptions.ApplicationException(message, customErrorCode);
 
             // Assert
             Assert.Equal(message, exception.Message);
@@ -138,7 +134,7 @@ namespace CosmicLexicon.Foundation.xExceptions
             var innerException = new InvalidOperationException("Inner exception for string error code");
 
             // Act
-            var exception = new CosmicLexicon.Foundation.xExceptions.ApplicationException(message, customErrorCode, innerException);
+            var exception = new Exceptions.ApplicationException(message, customErrorCode, innerException);
 
             // Assert
             Assert.Equal(message, exception.Message);
@@ -151,7 +147,7 @@ namespace CosmicLexicon.Foundation.xExceptions
         public void CustomStringErrorCodeCanBeSet()
         {
             // Arrange
-            var exception = new CosmicLexicon.Foundation.xExceptions.ApplicationException();
+            var exception = new Exceptions.ApplicationException();
             string customErrorCode = "ANOTHER_CUSTOM_ERROR_STRING";
             
             // Act

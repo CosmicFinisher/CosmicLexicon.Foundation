@@ -1,10 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace CosmicLexicon.Foundation.Transport
+﻿namespace CosmicLexicon.Foundation.Transport
 {
     /// <summary>
     /// Provides helper methods for working with file paths.

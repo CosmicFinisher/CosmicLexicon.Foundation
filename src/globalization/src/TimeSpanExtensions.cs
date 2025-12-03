@@ -1,4 +1,6 @@
-namespace CosmicLexicon.Foundation.xGlobalization;
+namespace CosmicLexicon.Foundation.Globalization;
+
+using CosmicLexicon.Foundation.Globalization;
 
 using System;
 using System.Collections.Generic;

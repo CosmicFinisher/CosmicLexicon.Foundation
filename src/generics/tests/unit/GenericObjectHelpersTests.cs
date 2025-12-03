@@ -1,8 +1,4 @@
-using Xunit;
-using CosmicLexicon.Foundation.xGenerics;
-using System;
-
-namespace CosmicLexicon.Foundation.xGenerics
+namespace CosmicLexicon.Foundation.Generics.UnitTest
 {
     public class GenericObjectHelpersTests
     {
