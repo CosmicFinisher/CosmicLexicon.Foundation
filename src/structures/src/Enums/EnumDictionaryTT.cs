@@ -28,15 +28,11 @@
                 values[i] = val;
             }
         }
-        public void SetValueFor(TEnum forMember, TValue value)
-        {
-            values[GetIndex(forMember)] = value;
-        }
+        public void SetValueFor(TEnum forMember, TValue value) => values[GetIndex(forMember)] = value;
 
         public void SetValueFor(TEnum[] forMember, TValue value)
         {
-            if (forMember is null)
-                throw new ArgumentNullException(nameof(forMember));
+            ArgumentNullException.ThrowIfNull(forMember);
 
             for (int i = 0; i < forMember.Length; i++)
             {
@@ -48,10 +44,7 @@
             }
         }
 
-        public TValue Member(TEnum forMember)
-        {
-            return values[GetIndex(forMember)];
-        }
+        public TValue Member(TEnum forMember) => values[GetIndex(forMember)];
 
         public TEnum WhereValue(TValue withValue)
         {
@@ -136,15 +129,9 @@
             return index;
         }
 
-        private static bool ComapreMember(TEnum forMember, string member)
-        {
-            return forMember.ToString() == member;
-        }
+        private static bool ComapreMember(TEnum forMember, string member) => forMember.ToString() == member;
 
 
-        public string[] GetMembers()
-        {
-            return members;
-        }
+        public string[] GetMembers() => members;
     }
 }

@@ -10,349 +10,341 @@ namespace CosmicLexicon.Foundation.Structures.Extensions
     [EditorBrowsable(EditorBrowsableState.Never)]
     public static class IEnumerableExtensions
     {
-        public static IEnumerable<T> Concat<T>(this ICollection<T> collection, ICollection<T>[] otherCollection)
+        extension<T>(ICollection<T> collection)
         {
-            if (collection == null || collection.Count == 0)
+            public IEnumerable<T> Concat(ICollection<T>[] otherCollection)
             {
+                if (collection == null || collection.Count == 0)
+                {
+                    if (otherCollection == null || otherCollection.Length == 0)
+                    {
+                        return Enumerable.Empty<T>();
+                    }
+                    return otherCollection.Where(c => c != null && c.Count > 0)
+                                        .SelectMany(c => c);
+                }
+
                 if (otherCollection == null || otherCollection.Length == 0)
                 {
-                    return Enumerable.Empty<T>();
+                    return collection;
                 }
+
                 return otherCollection.Where(c => c != null && c.Count > 0)
-                                    .SelectMany(c => c);
+                                     .Aggregate(collection as IEnumerable<T>,
+                                              (current, next) => current.Concat(next));
             }
 
-            if (otherCollection == null || otherCollection.Length == 0)
+            public IEnumerable<T> Concat(ICollection<T> otherCollection)
             {
-                return collection;
-            }
+                if (collection == null || collection.Count == 0)
+                {
+                    if (otherCollection == null || otherCollection.Count == 0)
+                    {
+                        return Enumerable.Empty<T>();
+                    }
+                    return otherCollection;
+                }
 
-            return otherCollection.Where(c => c != null && c.Count > 0)
-                                 .Aggregate(collection as IEnumerable<T>, 
-                                          (current, next) => current.Concat(next));
-        }
-
-        public static IEnumerable<T> Concat<T>(this ICollection<T> collection, ICollection<T> otherCollection)
-        {
-            if (collection == null || collection.Count == 0)
-            {
                 if (otherCollection == null || otherCollection.Count == 0)
                 {
-                    return Enumerable.Empty<T>();
+                    return collection;
                 }
-                return otherCollection;
+
+                return Enumerable.Concat(collection, otherCollection);
             }
-
-            if (otherCollection == null || otherCollection.Count == 0)
-            {
-                return collection;
-            }
-
-            return Enumerable.Concat(collection, otherCollection);
-        }
-        //
-        // Summary:
-        //     Does a left join on the two lists
-        //
-        // Parameters:
-        //   outer:
-        //     The outer list.
-        //
-        //   inner:
-        //     The inner list.
-        //
-        //   outerKeySelector:
-        //     The outer key selector.
-        //
-        //   innerKeySelector:
-        //     The inner key selector.
-        //
-        //   resultSelector:
-        //     The result selector.
-        //
-        //   comparer:
-        //     The comparer (if null, a generic comparer is used).
-        //
-        // Type parameters:
-        //   TObject1:
-        //     The type of outer list.
-        //
-        //   TObject2:
-        //     The type of inner list.
-        //
-        //   TKey:
-        //     The type of the key.
-        //
-        //   TResult:
-        //     The return type
-        //
-        // Returns:
-        //     Returns a left join of the two lists
-        public static IEnumerable<TResult> LeftJoin<TObject1, TObject2, TKey, TResult>(this IEnumerable<TObject1> outer, IEnumerable<TObject2> inner, Func<TObject1, TKey> outerKeySelector, Func<TObject2, TKey> innerKeySelector, Func<TObject1, TObject2, TResult> resultSelector, IEqualityComparer<TKey>? comparer = null)
-        {
-            if (inner is null)
-            {
-                throw new ArgumentNullException(nameof(inner));
-            }
-
-            if (outerKeySelector is null)
-            {
-                throw new ArgumentNullException(nameof(outerKeySelector));
-            }
-
-            if (innerKeySelector is null)
-            {
-                throw new ArgumentNullException(nameof(innerKeySelector));
-            }
-
-            if (resultSelector is null)
-            {
-                throw new ArgumentNullException(nameof(resultSelector));
-            }
-
-            comparer ??= new GenericEqualityComparer<TKey>();
-
-            return outer.ForEach((x) => new
-            {
-                left = x,
-                right = inner.FirstOrDefault((y) => comparer.Equals(innerKeySelector(y), outerKeySelector(x)))
-            }).ForEach(x => resultSelector(x.left, x.right));
         }
 
-        //
-        // Summary:
-        //     Does an outer join on the two lists
-        //
-        // Parameters:
-        //   outer:
-        //     The outer list.
-        //
-        //   inner:
-        //     The inner list.
-        //
-        //   outerKeySelector:
-        //     The outer key selector.
-        //
-        //   innerKeySelector:
-        //     The inner key selector.
-        //
-        //   resultSelector:
-        //     The result selector.
-        //
-        //   comparer:
-        //     The comparer (if null, a generic comparer is used).
-        //
-        // Type parameters:
-        //   T1:
-        //     The type of outer list.
-        //
-        //   T2:
-        //     The type of inner list.
-        //
-        //   TKey:
-        //     The type of the key.
-        //
-        //   TResult:
-        //     The return type
-        //
-        // Returns:
-        //     Returns an outer join of the two lists
-        public static IEnumerable<TResult> OuterJoin<T1, T2, TKey, TResult>(this IEnumerable<T1> outer, IEnumerable<T2> inner, Func<T1, TKey> outerKeySelector, Func<T2, TKey> innerKeySelector, Func<T1, T2, TResult> resultSelector, IEqualityComparer<TKey>? comparer = null)
+        extension<TObject1>(IEnumerable<TObject1> outer)
         {
-            if (inner is null)
+            //
+            // Summary:
+            //     Does a left join on the two lists
+            //
+            // Parameters:
+            //   outer:
+            //     The outer list.
+            //
+            //   inner:
+            //     The inner list.
+            //
+            //   outerKeySelector:
+            //     The outer key selector.
+            //
+            //   innerKeySelector:
+            //     The inner key selector.
+            //
+            //   resultSelector:
+            //     The result selector.
+            //
+            //   comparer:
+            //     The comparer (if null, a generic comparer is used).
+            //
+            // Type parameters:
+            //   TObject1:
+            //     The type of outer list.
+            //
+            //   TObject2:
+            //     The type of inner list.
+            //
+            //   TKey:
+            //     The type of the key.
+            //
+            //   TResult:
+            //     The return type
+            //
+            // Returns:
+            //     Returns a left join of the two lists
+            public IEnumerable<TResult> LeftJoin<TObject2, TKey, TResult>(IEnumerable<TObject2> inner, Func<TObject1, TKey> outerKeySelector, Func<TObject2, TKey> innerKeySelector, Func<TObject1, TObject2, TResult> resultSelector, IEqualityComparer<TKey>? comparer = null)
             {
-                throw new ArgumentNullException(nameof(inner));
-            }
+                ArgumentNullException.ThrowIfNull(inner);
 
-            if (outer is null)
-            {
-                throw new ArgumentNullException(nameof(outer));
-            }
+                ArgumentNullException.ThrowIfNull(outerKeySelector);
 
-            if (outerKeySelector is null)
-            {
-                throw new ArgumentNullException(nameof(outerKeySelector));
-            }
+                ArgumentNullException.ThrowIfNull(innerKeySelector);
 
-            if (innerKeySelector is null)
-            {
-                throw new ArgumentNullException(nameof(innerKeySelector));
-            }
+                ArgumentNullException.ThrowIfNull(resultSelector);
 
-            if (resultSelector is null)
-            {
-                throw new ArgumentNullException(nameof(resultSelector));
-            }
+                comparer ??= new GenericEqualityComparer<TKey>();
 
-            IEnumerable<TResult> first = outer.LeftJoin(inner, outerKeySelector, innerKeySelector, resultSelector, comparer);
-            IEnumerable<TResult> second = outer.RightJoin(inner, outerKeySelector, innerKeySelector, resultSelector, comparer);
-            return first.Union(second);
+                return outer.ForEach((x) => new
+                {
+                    left = x,
+                    right = inner.FirstOrDefault((y) => comparer.Equals(innerKeySelector(y), outerKeySelector(x)))
+                }).ForEach(x => resultSelector(x.left, x.right));
+            }
         }
 
-        //
-        // Summary:
-        //     Determines the position of an object if it is present, otherwise it returns -1
-        //
-        // Parameters:
-        //   list:
-        //     List of objects to search
-        //
-        //   item:
-        //     Object to find the position of
-        //
-        //   equalityComparer:
-        //     Equality comparer used to determine if the object is present
-        //
-        // Type parameters:
-        //   T:
-        //     Object type
-        //
-        // Returns:
-        //     The position of the object if it is present, otherwise -1
-        public static int PositionOf<T>(this IEnumerable<T> list, T item, IEqualityComparer<T>? equalityComparer = null)
+        extension<T1>(IEnumerable<T1> outer)
         {
-            if (list == null || !list.Any())
+            //
+            // Summary:
+            //     Does an outer join on the two lists
+            //
+            // Parameters:
+            //   outer:
+            //     The outer list.
+            //
+            //   inner:
+            //     The inner list.
+            //
+            //   outerKeySelector:
+            //     The outer key selector.
+            //
+            //   innerKeySelector:
+            //     The inner key selector.
+            //
+            //   resultSelector:
+            //     The result selector.
+            //
+            //   comparer:
+            //     The comparer (if null, a generic comparer is used).
+            //
+            // Type parameters:
+            //   T1:
+            //     The type of outer list.
+            //
+            //   T2:
+            //     The type of inner list.
+            //
+            //   TKey:
+            //     The type of the key.
+            //
+            //   TResult:
+            //     The return type
+            //
+            // Returns:
+            //     Returns an outer join of the two lists
+            public IEnumerable<TResult> OuterJoin<T2, TKey, TResult>(IEnumerable<T2> inner, Func<T1, TKey> outerKeySelector, Func<T2, TKey> innerKeySelector, Func<T1, T2, TResult> resultSelector, IEqualityComparer<TKey>? comparer = null)
             {
+                ArgumentNullException.ThrowIfNull(inner);
+
+                ArgumentNullException.ThrowIfNull(outer);
+
+                ArgumentNullException.ThrowIfNull(outerKeySelector);
+
+                ArgumentNullException.ThrowIfNull(innerKeySelector);
+
+                ArgumentNullException.ThrowIfNull(resultSelector);
+
+                IEnumerable<TResult> first = outer.LeftJoin(inner, outerKeySelector, innerKeySelector, resultSelector, comparer);
+                IEnumerable<TResult> second = outer.RightJoin(inner, outerKeySelector, innerKeySelector, resultSelector, comparer);
+                return first.Union(second);
+            }
+
+            //
+            // Summary:
+            //     Does a right join on the two lists
+            //
+            // Parameters:
+            //   outer:
+            //     The outer list.
+            //
+            //   inner:
+            //     The inner list.
+            //
+            //   outerKeySelector:
+            //     The outer key selector.
+            //
+            //   innerKeySelector:
+            //     The inner key selector.
+            //
+            //   resultSelector:
+            //     The result selector.
+            //
+            //   comparer:
+            //     The comparer (if null, a generic comparer is used).
+            //
+            // Type parameters:
+            //   T1:
+            //     The type of outer list.
+            //
+            //   T2:
+            //     The type of inner list.
+            //
+            //   TKey:
+            //     The type of the key.
+            //
+            //   TResult:
+            //     The return type
+            //
+            // Returns:
+            //     Returns a right join of the two lists
+            public IEnumerable<TResult> RightJoin<T2, TKey, TResult>(IEnumerable<T2> inner, Func<T1, TKey> outerKeySelector, Func<T2, TKey> innerKeySelector, Func<T1, T2, TResult> resultSelector, IEqualityComparer<TKey>? comparer = null)
+            {
+                IEnumerable<T1> outer2 = outer;
+                IEqualityComparer<TKey> comparer2 = comparer;
+                Func<T2, TKey> innerKeySelector2 = innerKeySelector;
+                Func<T1, TKey> outerKeySelector2 = outerKeySelector;
+                Func<T1, T2, TResult> resultSelector2 = resultSelector;
+                if (outer2 == null || outerKeySelector2 == null || innerKeySelector2 == null || resultSelector2 == null)
+                {
+                    return [];
+                }
+
+                if (comparer2 == null)
+                {
+                    comparer2 = new GenericEqualityComparer<TKey>();
+                }
+
+                return inner.ForEach((x) => new
+                {
+                    left = outer2.FirstOrDefault((y) => comparer2.Equals(innerKeySelector2(x), outerKeySelector2(y))),
+                    right = x
+                }).ForEach(x => resultSelector2(x.left, x.right));
+            }
+        }
+
+        extension<T>(IEnumerable<T> list)
+        {
+            //
+            // Summary:
+            //     Determines the position of an object if it is present, otherwise it returns -1
+            //
+            // Parameters:
+            //   list:
+            //     List of objects to search
+            //
+            //   item:
+            //     Object to find the position of
+            //
+            //   equalityComparer:
+            //     Equality comparer used to determine if the object is present
+            //
+            // Type parameters:
+            //   T:
+            //     Object type
+            //
+            // Returns:
+            //     The position of the object if it is present, otherwise -1
+            public int PositionOf(T item, IEqualityComparer<T>? equalityComparer = null)
+            {
+                if (list == null || !list.Any())
+                {
+                    return -1;
+                }
+
+                if (equalityComparer == null)
+                {
+                    equalityComparer = new GenericEqualityComparer<T>();
+                }
+
+                int num = 0;
+                foreach (T item2 in list)
+                {
+                    if (equalityComparer!.Equals(item, item2))
+                    {
+                        return num;
+                    }
+
+                    num++;
+                }
+
                 return -1;
             }
+        }
 
-            if (equalityComparer == null)
+        extension<T>(IEnumerable<T> enumerable)
+        {
+            //
+            // Summary:
+            //     Returns only distinct items from the IEnumerable based on the predicate
+            //
+            // Parameters:
+            //   enumerable:
+            //     List of objects
+            //
+            //   predicate:
+            //     Predicate that is used to determine if two objects are equal. True if they are
+            //     the same, false otherwise
+            //
+            // Type parameters:
+            //   T:
+            //     Object type within the list
+            //
+            // Returns:
+            //     An IEnumerable of only the distinct items
+            public IEnumerable<T> Distinct(Func<T, T, bool> predicate)
             {
-                equalityComparer = new GenericEqualityComparer<T>();
-            }
-
-            int num = 0;
-            foreach (T item2 in list)
-            {
-                if (equalityComparer!.Equals(item, item2))
+                if (enumerable == null || !enumerable.Any())
                 {
-                    return num;
+                    yield break;
                 }
 
-                num++;
-            }
+                predicate ??= new GenericEqualityComparer<T>().Equals;
 
-            return -1;
-        }
-
-        //
-        // Summary:
-        //     Does a right join on the two lists
-        //
-        // Parameters:
-        //   outer:
-        //     The outer list.
-        //
-        //   inner:
-        //     The inner list.
-        //
-        //   outerKeySelector:
-        //     The outer key selector.
-        //
-        //   innerKeySelector:
-        //     The inner key selector.
-        //
-        //   resultSelector:
-        //     The result selector.
-        //
-        //   comparer:
-        //     The comparer (if null, a generic comparer is used).
-        //
-        // Type parameters:
-        //   T1:
-        //     The type of outer list.
-        //
-        //   T2:
-        //     The type of inner list.
-        //
-        //   TKey:
-        //     The type of the key.
-        //
-        //   TResult:
-        //     The return type
-        //
-        // Returns:
-        //     Returns a right join of the two lists
-        public static IEnumerable<TResult> RightJoin<T1, T2, TKey, TResult>(this IEnumerable<T1> outer, IEnumerable<T2> inner, Func<T1, TKey> outerKeySelector, Func<T2, TKey> innerKeySelector, Func<T1, T2, TResult> resultSelector, IEqualityComparer<TKey>? comparer = null)
-        {
-            IEnumerable<T1> outer2 = outer;
-            IEqualityComparer<TKey> comparer2 = comparer;
-            Func<T2, TKey> innerKeySelector2 = innerKeySelector;
-            Func<T1, TKey> outerKeySelector2 = outerKeySelector;
-            Func<T1, T2, TResult> resultSelector2 = resultSelector;
-            if (outer2 == null || outerKeySelector2 == null || innerKeySelector2 == null || resultSelector2 == null)
-            {
-                return [];
-            }
-
-            if (comparer2 == null)
-            {
-                comparer2 = new GenericEqualityComparer<TKey>();
-            }
-
-            return inner.ForEach((x) => new
-            {
-                left = outer2.FirstOrDefault((y) => comparer2.Equals(innerKeySelector2(x), outerKeySelector2(y))),
-                right = x
-            }).ForEach(x => resultSelector2(x.left, x.right));
-        }
-        //
-        // Summary:
-        //     Returns only distinct items from the IEnumerable based on the predicate
-        //
-        // Parameters:
-        //   enumerable:
-        //     List of objects
-        //
-        //   predicate:
-        //     Predicate that is used to determine if two objects are equal. True if they are
-        //     the same, false otherwise
-        //
-        // Type parameters:
-        //   T:
-        //     Object type within the list
-        //
-        // Returns:
-        //     An IEnumerable of only the distinct items
-        public static IEnumerable<T> Distinct<T>(this IEnumerable<T> enumerable, Func<T, T, bool> predicate)
-        {
-            if (enumerable == null || !enumerable.Any())
-            {
-                yield break;
-            }
-
-            predicate ??= new GenericEqualityComparer<T>().Equals;
-
-            HashSet<T> distinctItems = new HashSet<T>();
-            foreach (T item in enumerable)
-            {
-                if (distinctItems.Add(item))
+                HashSet<T> distinctItems = [];
+                foreach (T item in enumerable)
                 {
-                    yield return item;
+                    if (distinctItems.Add(item))
+                    {
+                        yield return item;
+                    }
                 }
             }
         }
 
-        /// <summary>
-        /// Converts the IEnumerable to an observable list collection with type conversion
-        /// </summary>
-        /// <typeparam name="TSource">The type of the source.</typeparam>
-        /// <typeparam name="TTarget">The type of the target.</typeparam>
-        /// <param name="list">The list to convert.</param>
-        /// <param name="convertingFunction">The function to convert items from source to target type.</param>
-        /// <returns>The observable list collection version of the original list</returns>
-        public static ObservableListCollection<TTarget> ToObservableList<TSource, TTarget>(this IEnumerable<TSource>? list, Func<TSource, TTarget> convertingFunction)
+        extension<TSource>(IEnumerable<TSource>? list)
         {
-            ArgumentNullException.ThrowIfNull(convertingFunction);
-
-            if (list is null)
+            /// <summary>
+            /// Converts the IEnumerable to an observable list collection with type conversion
+            /// </summary>
+            /// <typeparam name="TSource">The type of the source.</typeparam>
+            /// <typeparam name="TTarget">The type of the target.</typeparam>
+            /// <param name="list">The list to convert.</param>
+            /// <param name="convertingFunction">The function to convert items from source to target type.</param>
+            /// <returns>The observable list collection version of the original list</returns>
+            public ObservableListCollection<TTarget> ToObservableList<TTarget>(Func<TSource, TTarget> convertingFunction)
             {
-                return new ObservableListCollection<TTarget>();
+                ArgumentNullException.ThrowIfNull(convertingFunction);
+
+                if (list is null)
+                {
+                    return [];
+                }
+
+                return [.. list.Select(convertingFunction)];
             }
-
-            return new ObservableListCollection<TTarget>(list.Select(convertingFunction));
         }
-
     }
 }
 

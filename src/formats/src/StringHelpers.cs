@@ -189,11 +189,11 @@ namespace CosmicLexicon.Foundation.Formats
         {
             if (comparisonType == StringCompare.Anagram)
             {
-                return new string((from x in value1?.ToCharArray()
+                return new string([.. (from x in value1?.ToCharArray()
                                    orderby x
-                                   select x).ToArray()) == new string((from x in value2?.ToCharArray()
+                                   select x)]) == new string([.. (from x in value2?.ToCharArray()
                                                                        orderby x
-                                                                       select x).ToArray());
+                                                                       select x)]);
             }
 
             return StringHelpers.Is(value1, comparisonType); // Adjusted
@@ -219,9 +219,9 @@ namespace CosmicLexicon.Foundation.Formats
                 return string.Empty;
             }
 
-            Regex regex = new Regex(filter);
+            Regex regex = new(filter);
             MatchCollection matchCollection = regex.Matches(input);
-            StringBuilder stringBuilder = new StringBuilder();
+            StringBuilder stringBuilder = new();
             int i = 0;
             for (int count = matchCollection.Count; i < count; i++)
             {
@@ -311,16 +311,13 @@ namespace CosmicLexicon.Foundation.Formats
             return new string(maskedChars);
         }
 
-        public static string Minify(string? Input, MinificationType Type = MinificationType.HTML)
+        public static string Minify(string? Input, MinificationType Type = MinificationType.HTML) => Type switch
         {
-            return Type switch
-            {
-                MinificationType.HTML => HTMLMinify(Input ?? string.Empty),
-                MinificationType.CSS => CSSMinify(Input ?? string.Empty),
-                MinificationType.JavaScript => JavaScriptMinify(Input ?? string.Empty),
-                _ => Input ?? string.Empty,
-            };
-        }
+            MinificationType.HTML => HTMLMinify(Input ?? string.Empty),
+            MinificationType.CSS => CSSMinify(Input ?? string.Empty),
+            MinificationType.JavaScript => JavaScriptMinify(Input ?? string.Empty),
+            _ => Input ?? string.Empty,
+        };
 
         public static int NumberTimesOccurs(string? input, string match)
         {
@@ -345,10 +342,7 @@ namespace CosmicLexicon.Foundation.Formats
             return new Regex(filter).Replace(input, "");
         }
 
-        public static string? Remove(string? input, StringFilter filter)
-        {
-            return Replace(input, filter, ""); // Adjusted
-        }
+        public static string? Remove(string? input, StringFilter filter) => Replace(input, filter, ""); // Adjusted
 
         public static string RemoveDiacritics(string? input)
         {
@@ -356,7 +350,7 @@ namespace CosmicLexicon.Foundation.Formats
                 return string.Empty;
 
             string normalizedString = input.Normalize(NormalizationForm.FormD);
-            StringBuilder stringBuilder = new StringBuilder(normalizedString.Length);
+            StringBuilder stringBuilder = new(normalizedString.Length);
 
             foreach (char c in normalizedString)
             {
@@ -378,7 +372,7 @@ namespace CosmicLexicon.Foundation.Formats
             if (string.IsNullOrEmpty(input) || replacements == null || !replacements.Any())
                 return input ?? string.Empty;
 
-            StringBuilder sb = new StringBuilder(input);
+            StringBuilder sb = new(input);
             foreach (var replacement in replacements)
             {
                 sb.Replace(replacement.Key, replacement.Value);
@@ -391,7 +385,7 @@ namespace CosmicLexicon.Foundation.Formats
             if (string.IsNullOrEmpty(value) || oldChars == null || oldChars.Length == 0)
                 return value ?? string.Empty;
             
-            StringBuilder sb = new StringBuilder(value.Length);
+            StringBuilder sb = new(value.Length);
             foreach (char c in value)
             {
                 sb.Append(oldChars.Contains(c) ? newChar : c);
@@ -444,7 +438,7 @@ namespace CosmicLexicon.Foundation.Formats
             {
                 return string.Empty;
             }
-            StringBuilder stringBuilder = new StringBuilder();
+            StringBuilder stringBuilder = new();
             foreach (char item in content)
             {
                 // XML 1.0 legal characters:
@@ -554,10 +548,7 @@ namespace CosmicLexicon.Foundation.Formats
             }
         }
 
-        public static string ToString(string? input, IFormatProvider? provider)
-        {
-            return input ?? string.Empty;
-        }
+        public static string ToString(string? input, IFormatProvider? provider) => input ?? string.Empty;
 
         public static string ToString(string? input, string format, IStringFormatter? formatter)
         {
@@ -578,7 +569,7 @@ namespace CosmicLexicon.Foundation.Formats
             return input.Any(c => c > 127);
         }
 
-        private static readonly string[] SENTENCE_SEPARATORS = new[] { ". ", "! ", "? " };
+        private static readonly string[] SENTENCE_SEPARATORS = [". ", "! ", "? "];
 
         public static string ToString(string? input, string format, IFormatProvider? provider = null)
         {
@@ -607,7 +598,7 @@ namespace CosmicLexicon.Foundation.Formats
             ArgumentNullException.ThrowIfNull(endSeperator);
 
             Type type = inputObject.GetType();
-            List<PropertyInfo> props = new(type.GetProperties());
+            List<PropertyInfo> props = [.. type.GetProperties()];
 
             string result = input;
             foreach (PropertyInfo prop in props.Where(p => p.CanRead))
@@ -656,34 +647,31 @@ namespace CosmicLexicon.Foundation.Formats
             return result;
         }
 
-        private static string BuildFilter(StringFilter filter)
+        private static string BuildFilter(StringFilter filter) => filter switch
         {
-            return filter switch
-            {
-                StringFilter.Numbers => "[0-9]",
-                StringFilter.Letters => "[a-zA-Z]",
-                StringFilter.Alphanumeric => "[a-zA-Z0-9]",
-                StringFilter.NonAlphanumeric => "[^a-zA-Z0-9]",
-                StringFilter.Whitespace => "\\s",
-                StringFilter.NonWhitespace => "\\S",
-                StringFilter.Punctuation => "\\p{P}",
-                StringFilter.NonPunctuation => "[^\\p{P}]",
-                StringFilter.Symbols => "\\p{S}",
-                StringFilter.NonSymbols => "[^\\p{S}]",
-                StringFilter.Hexadecimal => "[0-9a-fA-F]",
-                StringFilter.NonHexadecimal => "[^0-9a-fA-F]",
-                StringFilter.Binary => "[01]",
-                StringFilter.NonBinary => "[^01]",
-                _ => string.Empty,
-            };
-        }
+            StringFilter.Numbers => "[0-9]",
+            StringFilter.Letters => "[a-zA-Z]",
+            StringFilter.Alphanumeric => "[a-zA-Z0-9]",
+            StringFilter.NonAlphanumeric => "[^a-zA-Z0-9]",
+            StringFilter.Whitespace => "\\s",
+            StringFilter.NonWhitespace => "\\S",
+            StringFilter.Punctuation => "\\p{P}",
+            StringFilter.NonPunctuation => "[^\\p{P}]",
+            StringFilter.Symbols => "\\p{S}",
+            StringFilter.NonSymbols => "[^\\p{S}]",
+            StringFilter.Hexadecimal => "[0-9a-fA-F]",
+            StringFilter.NonHexadecimal => "[^0-9a-fA-F]",
+            StringFilter.Binary => "[01]",
+            StringFilter.NonBinary => "[^01]",
+            _ => string.Empty,
+        };
 
         private static string CSSMinify(string input)
         {
             string pattern = "(/\\*([^*]|[\r\n]|(\\*+([^*/]|[\r\n])))*\\*+/)|(^\\s*//.*$)|(^\\s*/\\*.*\\*/$)";
-            Regex commentRegex = new Regex(pattern, RegexOptions.Multiline);
+            Regex commentRegex = new(pattern, RegexOptions.Multiline);
             input = commentRegex.Replace(input, string.Empty);
-            Regex whitespaceRegex = new Regex("\\s+");
+            Regex whitespaceRegex = new("\\s+");
             input = whitespaceRegex.Replace(input, " ");
             input = input.Replace("} ", "}");
             input = input.Replace("{ ", "{");
@@ -698,10 +686,7 @@ namespace CosmicLexicon.Foundation.Formats
             return input.Trim();
         }
 
-        private static string Evaluate(Match matcher)
-        {
-            return string.Empty;
-        }
+        private static string Evaluate(Match matcher) => string.Empty;
 
         private static string HTMLMinify(string input)
         {
@@ -815,11 +800,11 @@ namespace CosmicLexicon.Foundation.Formats
         // Used to calculate line numbers for error messages
         public static int[] GetLineLengths(string text)
         {
-            List<int> lineLengths = new List<int>();
+            List<int> lineLengths = [];
 
             if (text != null)
             {
-                using (StringReader reader = new StringReader(text))
+                using (StringReader reader = new(text))
                 {
                     string line;
                     while ((line = reader.ReadLine()) != null)
@@ -828,7 +813,7 @@ namespace CosmicLexicon.Foundation.Formats
                     }
                 }
             }
-            return lineLengths.ToArray();
+            return [.. lineLengths];
         }
 
         private enum ChunkContentType // Moved from TextUtilities
@@ -878,7 +863,7 @@ namespace CosmicLexicon.Foundation.Formats
             if (enumeration == null || !enumeration.Any())
                 return string.Empty;
 
-            StringBuilder sb = new StringBuilder();
+            StringBuilder sb = new();
             foreach (string item in enumeration)
             {
                 if (!includeWhitespace && string.IsNullOrWhiteSpace(item))
@@ -899,7 +884,7 @@ namespace CosmicLexicon.Foundation.Formats
             if (enumeration == null || !enumeration.Any())
                 return string.Empty;
 
-            StringBuilder sb = new StringBuilder();
+            StringBuilder sb = new();
             foreach (string item in enumeration)
             {
                 sb.Append(item);
@@ -907,27 +892,30 @@ namespace CosmicLexicon.Foundation.Formats
 
             return sb.ToString();
         }
-        public static IEnumerable<T> Concat<T>(this IEnumerable<T> enumerable1, params IEnumerable<T>[] additions)
+        extension<T>(IEnumerable<T> enumerable1)
         {
-            if (enumerable1 == null)
+            public IEnumerable<T> Concat(params IEnumerable<T>[] additions)
             {
-                enumerable1 = [];
+                if (enumerable1 == null)
+                {
+                    enumerable1 = [];
+                }
+
+
+                if (additions == null || additions.Length == 0)
+                {
+                    return enumerable1;
+                }
+
+
+                ArrayPool<IEnumerable<T>> shared = ArrayPool<IEnumerable<T>>.Shared;
+                IEnumerable<T>[] array = shared.Rent(additions.Length + 1);
+                array[0] = enumerable1;
+                Array.Copy(additions, 0, array, 1, additions.Length);
+                T[] result = [.. array.Where((x) => x != null).SelectMany((x) => x)];
+                shared.Return(array);
+                return result;
             }
-
-
-            if (additions == null || additions.Length == 0)
-            {
-                return enumerable1;
-            }
-
-
-            ArrayPool<IEnumerable<T>> shared = ArrayPool<IEnumerable<T>>.Shared;
-            IEnumerable<T>[] array = shared.Rent(additions.Length + 1);
-            array[0] = enumerable1;
-            Array.Copy(additions, 0, array, 1, additions.Length);
-            T[] result = array.Where((x) => x != null).SelectMany((x) => x).ToArray();
-            shared.Return(array);
-            return result;
         }
 
         public static string Concat(IEnumerable<string> enumeration, Func<string, string> action) // Refactored
@@ -935,7 +923,7 @@ namespace CosmicLexicon.Foundation.Formats
             if (enumeration == null || !enumeration.Any())
                 return string.Empty;
 
-            StringBuilder sb = new StringBuilder();
+            StringBuilder sb = new();
             foreach (string item in enumeration)
             {
                 if (string.IsNullOrWhiteSpace(item))
@@ -947,10 +935,7 @@ namespace CosmicLexicon.Foundation.Formats
             return sb.ToString();
         }
 
-        public static string Format(string format, params object?[] args)
-        {
-            return string.Format(CultureInfo.CurrentCulture, format, args);
-        }
+        public static string Format(string format, params object?[] args) => string.Format(CultureInfo.CurrentCulture, format, args);
 
         public static string Format(string format, object arg0, object arg1, object arg2, IFormatProvider? formatProvider = null)
         {
@@ -958,10 +943,7 @@ namespace CosmicLexicon.Foundation.Formats
             return string.Format(formatProvider, format, arg0, arg1, arg2);
         }
 
-        public static string Format(string format, object arg0, object arg1, object arg2)
-        {
-            return Format(format, arg0, arg1, arg2, CultureInfo.CurrentCulture);
-        }
+        public static string Format(string format, object arg0, object arg1, object arg2) => Format(format, arg0, arg1, arg2, CultureInfo.CurrentCulture);
 
         public static string ToString(string? input, string format, bool useFormatter = false)
         {
@@ -975,11 +957,9 @@ namespace CosmicLexicon.Foundation.Formats
             return formatter?.Format(input, format) ?? string.Format(CultureInfo.CurrentCulture, format, input);
         }
 
-        private static IStringFormatter? GetDefaultFormatter()
-        {
+        private static IStringFormatter? GetDefaultFormatter() =>
             // Return your default formatter implementation here
-            return null;  
-        }
+            null;
 
         /// <summary>
         /// Creates a string representation with custom formatting.
@@ -1007,7 +987,7 @@ namespace CosmicLexicon.Foundation.Formats
             ArgumentNullException.ThrowIfNull(endSeperator);
 
             Type type = inputObject.GetType();
-            List<PropertyInfo> props = new(type.GetProperties());
+            List<PropertyInfo> props = [.. type.GetProperties()];
 
             string result = input;
             foreach (PropertyInfo prop in props.Where(p => p.CanRead))

@@ -4,13 +4,13 @@ using System.Globalization;
 namespace CosmicLexicon.Foundation.Structures.Linq.UnitTest
 {
     public class IEnumerableHelpersTests
-    {        private static readonly string[] expectedStrings = new string[] { "1", "2", "3" };
+    {        private static readonly string[] expectedStrings = ["1", "2", "3"];
 
         [Fact]
         public void ToArrayValidSourceAndSelectorReturnsTransformedArray()
         {
             // Arrange
-            IEnumerable<int> source = new List<int> { 1, 2, 3 };
+            IEnumerable<int> source = [1, 2, 3];
             Func<int, string> selector = x => x.ToString(CultureInfo.InvariantCulture);
 
             // Act
@@ -35,7 +35,7 @@ namespace CosmicLexicon.Foundation.Structures.Linq.UnitTest
         public void ToArrayNullSelectorThrowsArgumentNullException()
         {
             // Arrange
-            IEnumerable<int> source = new List<int> { 1, 2, 3 };
+            IEnumerable<int> source = [1, 2, 3];
             Func<int, string> selector = null;
 
             // Act & Assert
@@ -44,14 +44,14 @@ namespace CosmicLexicon.Foundation.Structures.Linq.UnitTest
         public void ToListValidSourceAndSelectorReturnsTransformedList()
         {
             // Arrange
-            IEnumerable<int> source = new List<int> { 1, 2, 3 };
+            IEnumerable<int> source = [1, 2, 3];
             Func<int, string> selector = x => x.ToString();
 
             // Act
             List<string> result = IEnumerableHelpers.ToList(source, selector);
 
             // Assert
-            Assert.Equal(new string[] { "1", "2", "3" }, result);
+            Assert.Equal(expected, result);
         }        [Fact]
         public void ToListNullSourceThrowsArgumentNullException()
         {
@@ -65,7 +65,7 @@ namespace CosmicLexicon.Foundation.Structures.Linq.UnitTest
         public void ToListNullSelectorThrowsArgumentNullException()
         {
             // Arrange
-            IEnumerable<int> source = new List<int> { 1, 2, 3 };
+            IEnumerable<int> source = [1, 2, 3];
             Func<int, string> selector = null;
 
             // Act & Assert
@@ -82,13 +82,14 @@ namespace CosmicLexicon.Foundation.Structures.Linq.UnitTest
             // Assert
             Assert.NotNull(result);
             Assert.Empty(result);
-        }        private static readonly int[] testArray = new[] { 1, 2, 3 };
+        }        private static readonly int[] testArray = [1, 2, 3];
+        private static readonly string[] expected = ["1", "2", "3"];
 
         [Fact]
         public void NullToEmptyNotEmptySourceReturnsOriginalEnumerable()
         {
             // Arrange
-            IEnumerable<int> source = new List<int>(testArray);
+            IEnumerable<int> source = [.. testArray];
 
             // Act
             IEnumerable<int> result = IEnumerableHelpers.NullToEmpty(source);
@@ -111,7 +112,7 @@ namespace CosmicLexicon.Foundation.Structures.Linq.UnitTest
         public void ToArrayOrEmptyNotEmptySourceReturnsOriginalArray()
         {
             // Arrange
-            IEnumerable<int> source = new List<int>(testArray);
+            IEnumerable<int> source = [.. testArray];
 
             // Act
             int[] result = IEnumerableHelpers.ToArrayOrEmpty(source);
@@ -134,7 +135,7 @@ namespace CosmicLexicon.Foundation.Structures.Linq.UnitTest
         public void ToListOrEmptyNotEmptySourceReturnsOriginalList()
         {
             // Arrange
-            IEnumerable<int> source = new List<int>(testArray);
+            IEnumerable<int> source = [.. testArray];
 
             // Act
             List<int> result = IEnumerableHelpers.ToListOrEmpty(source);
@@ -145,7 +146,7 @@ namespace CosmicLexicon.Foundation.Structures.Linq.UnitTest
         public void ForEachValidSourceAndActionExecutesActionOnAllElements()
         {
             // Arrange
-            IEnumerable<int> source = new List<int>(testArray);
+            IEnumerable<int> source = [.. testArray];
             int sum = 0;
             Action<int> action = x => sum += x;
 
@@ -167,7 +168,7 @@ namespace CosmicLexicon.Foundation.Structures.Linq.UnitTest
         public void ForEachNullActionThrowsArgumentNullException()
         {
             // Arrange
-            IEnumerable<int> source = new List<int>(testArray);
+            IEnumerable<int> source = [.. testArray];
             Action<int>? action = null;
 
             // Act & Assert

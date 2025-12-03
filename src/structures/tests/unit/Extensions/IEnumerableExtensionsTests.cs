@@ -10,14 +10,14 @@ namespace CosmicLexicon.Foundation.Structures.UnitTest.Extensions
         public void ConcatNonNullCollectionsReturnsConcatenated()
         {
             // Arrange
-            ICollection<int> collection1 = new List<int> { 1, 2 };
-            ICollection<int> collection2 = new List<int> { 3, 4 };
+            ICollection<int> collection1 = [1, 2];
+            ICollection<int> collection2 = [3, 4];
 
             // Act
             IEnumerable<int> result = collection1.Concat(collection2);
 
             // Assert
-            Assert.Equal(new[] { 1, 2, 3, 4 }, result.ToArray());
+            Assert.Equal([1, 2, 3, 4], result.ToArray());
         }
 
         [Fact]
@@ -39,7 +39,7 @@ namespace CosmicLexicon.Foundation.Structures.UnitTest.Extensions
         {
             // Arrange
             ICollection<int>? collection1 = null;
-            ICollection<int> collection2 = new List<int> { 1, 2 };
+            ICollection<int> collection2 = [1, 2];
 
             // Act
             IEnumerable<int> result = collection1.Concat(collection2);
@@ -52,7 +52,7 @@ namespace CosmicLexicon.Foundation.Structures.UnitTest.Extensions
         public void ConcatSecondNullCollectionReturnsConcatenated()
         {
             // Arrange
-            ICollection<int> collection1 = new List<int> { 1, 2 };
+            ICollection<int> collection1 = [1, 2];
             ICollection<int>? collection2 = null;
 
             // Act
@@ -92,7 +92,7 @@ namespace CosmicLexicon.Foundation.Structures.UnitTest.Extensions
         public void IsNullOrEmptyWithNonEmptyReturnsFalse()
         {
             // Arrange
-            IEnumerable<int> collection = new[] { 1 };
+            IEnumerable<int> collection = [1];
 
             // Act
             bool result = collection.IsNullOrEmpty();

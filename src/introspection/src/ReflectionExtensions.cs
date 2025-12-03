@@ -20,213 +20,204 @@ namespace CosmicLexicon.Foundation.Introspection
         //     The object cartographer to.
         private static MethodInfo ObjectCartographerTo { get; } = typeof(GenericObjectExtensions).GetMethod("To", BindingFlags.Public | BindingFlags.Static) ?? throw new InvalidOperationException("GenericObjectExtensions.To method not found");
 
-        //
-        // Summary:
-        //     Gets the attribute from the item
-        //
-        // Parameters:
-        //   provider:
-        //     Attribute provider
-        //
-        //   inherit:
-        //     When true, it looks up the heirarchy chain for the inherited custom attributes
-        //
-        // Type parameters:
-        //   T:
-        //     Attribute type
-        //
-        // Returns:
-        //     Attribute specified if it exists
-        [return: MaybeNull]
-        public static T Attribute<T>(this MemberInfo provider, bool inherit = true) where T : Attribute
+        extension(MemberInfo provider)
         {
-            T[] array = provider.Attributes<T>(inherit);
-            if (array.Length == 0)
+            //
+            // Summary:
+            //     Gets the attribute from the item
+            //
+            // Parameters:
+            //   provider:
+            //     Attribute provider
+            //
+            //   inherit:
+            //     When true, it looks up the heirarchy chain for the inherited custom attributes
+            //
+            // Type parameters:
+            //   T:
+            //     Attribute type
+            //
+            // Returns:
+            //     Attribute specified if it exists
+            [return: MaybeNull]
+            public T Attribute<T>(bool inherit = true) where T : Attribute
             {
-                return null;
+                T[] array = provider.Attributes<T>(inherit);
+                if (array.Length == 0)
+                {
+                    return null;
+                }
+
+                return array[0];
             }
-
-            return array[0];
-        }
-        //
-        // Summary:
-        //     Gets the attributes from the item
-        //
-        // Parameters:
-        //   provider:
-        //     Attribute provider
-        //
-        //   inherit:
-        //     When true, it looks up the heirarchy chain for the inherited custom attributes
-        //
-        // Type parameters:
-        //   T:
-        //     Attribute type
-        //
-        // Returns:
-        //     Array of attributes
-        public static T[] Attributes<T>(this MemberInfo provider, bool inherit = true) where T : Attribute
-        {
-            return provider?.GetCustomAttributes(typeof(T), inherit).Cast<T>().ToArray() ?? Array.Empty<T>();
-        }
-
-        //
-        // Summary:
-        //     Calls a method on an object
-        //
-        // Parameters:
-        //   inputObject:
-        //     Object to call the method on
-        //
-        //   methodName:
-        //     Method name
-        //
-        //   inputVariables:
-        //     (Optional)input variables for the method
-        //
-        // Type parameters:
-        //   TReturnType:
-        //     Return type expected
-        //
-        // Returns:
-        //     The returned value of the method
-        //
-        // Exceptions:
-        //   T:System.ArgumentNullException:
-        //     inputObject or methodName
-        //
-        //   T:System.InvalidOperationException:
-        //     Could not find method " + methodName + " with the appropriate input variables.
-        public static TReturnType Call<TReturnType>(this object inputObject, string methodName, params object[] inputVariables)
-        {
-            if (inputObject == null)
-            {
-                throw new ArgumentNullException(nameof(inputObject));
-            }
-
-            if (string.IsNullOrEmpty(methodName))
-            {
-                throw new ArgumentNullException(nameof(methodName));
-            }
-
-            if (inputVariables == null)
-            {
-                inputVariables = [];
-            }
-
-            Type type = inputObject.GetType();
-            MethodInfo methodInfo = FindMethod(methodName, inputVariables, type);
-            if (methodInfo == null)
-            {
-                throw new InvalidOperationException("Could not find method " + methodName + " with the appropriate input variables.");
-            }
-
-            return (TReturnType)methodInfo.Invoke(inputObject, inputVariables);
+            //
+            // Summary:
+            //     Gets the attributes from the item
+            //
+            // Parameters:
+            //   provider:
+            //     Attribute provider
+            //
+            //   inherit:
+            //     When true, it looks up the heirarchy chain for the inherited custom attributes
+            //
+            // Type parameters:
+            //   T:
+            //     Attribute type
+            //
+            // Returns:
+            //     Array of attributes
+            public T[] Attributes<T>(bool inherit = true) where T : Attribute => provider?.GetCustomAttributes(typeof(T), inherit).Cast<T>().ToArray() ?? Array.Empty<T>();
         }
 
-        //
-        // Summary:
-        //     Calls a method on an object
-        //
-        // Parameters:
-        //   inputObject:
-        //     Object to call the method on
-        //
-        //   methodName:
-        //     Method name
-        //
-        //   inputVariables:
-        //     (Optional)input variables for the method
-        //
-        // Type parameters:
-        //   TGenericType1:
-        //     Generic method type 1
-        //
-        //   TReturnType:
-        //     Return type expected
-        //
-        // Returns:
-        //     The returned value of the method
-        //
-        // Exceptions:
-        //   T:System.ArgumentNullException:
-        //     inputObject or methodName
-        //
-        //   T:System.InvalidOperationException:
-        //     Could not find method " + methodName + " with the appropriate input variables.
-        public static TReturnType Call<TGenericType1, TReturnType>(this object inputObject, string methodName, params object[] inputVariables)
+        extension(object inputObject)
         {
-            if (inputObject == null)
+            //
+            // Summary:
+            //     Calls a method on an object
+            //
+            // Parameters:
+            //   inputObject:
+            //     Object to call the method on
+            //
+            //   methodName:
+            //     Method name
+            //
+            //   inputVariables:
+            //     (Optional)input variables for the method
+            //
+            // Type parameters:
+            //   TReturnType:
+            //     Return type expected
+            //
+            // Returns:
+            //     The returned value of the method
+            //
+            // Exceptions:
+            //   T:System.ArgumentNullException:
+            //     inputObject or methodName
+            //
+            //   T:System.InvalidOperationException:
+            //     Could not find method " + methodName + " with the appropriate input variables.
+            public TReturnType Call<TReturnType>(string methodName, params object[] inputVariables)
             {
-                throw new ArgumentNullException(nameof(inputObject));
+                ArgumentNullException.ThrowIfNull(inputObject);
+
+                if (string.IsNullOrEmpty(methodName))
+                {
+                    throw new ArgumentNullException(nameof(methodName));
+                }
+
+                if (inputVariables == null)
+                {
+                    inputVariables = [];
+                }
+
+                Type type = inputObject.GetType();
+                MethodInfo methodInfo = FindMethod(methodName, inputVariables, type);
+                if (methodInfo == null)
+                {
+                    throw new InvalidOperationException("Could not find method " + methodName + " with the appropriate input variables.");
+                }
+
+                return (TReturnType)methodInfo.Invoke(inputObject, inputVariables);
             }
 
-            if (string.IsNullOrEmpty(methodName))
+            //
+            // Summary:
+            //     Calls a method on an object
+            //
+            // Parameters:
+            //   inputObject:
+            //     Object to call the method on
+            //
+            //   methodName:
+            //     Method name
+            //
+            //   inputVariables:
+            //     (Optional)input variables for the method
+            //
+            // Type parameters:
+            //   TGenericType1:
+            //     Generic method type 1
+            //
+            //   TReturnType:
+            //     Return type expected
+            //
+            // Returns:
+            //     The returned value of the method
+            //
+            // Exceptions:
+            //   T:System.ArgumentNullException:
+            //     inputObject or methodName
+            //
+            //   T:System.InvalidOperationException:
+            //     Could not find method " + methodName + " with the appropriate input variables.
+            public TReturnType Call<TGenericType1, TReturnType>(string methodName, params object[] inputVariables)
             {
-                throw new ArgumentNullException(nameof(methodName));
+                ArgumentNullException.ThrowIfNull(inputObject);
+
+                if (string.IsNullOrEmpty(methodName))
+                {
+                    throw new ArgumentNullException(nameof(methodName));
+                }
+
+                if (inputVariables == null)
+                {
+                    inputVariables = [];
+                }
+
+                Type type = inputObject.GetType();
+                MethodInfo methodInfo = FindMethod(methodName, inputVariables, type);
+                if (methodInfo == null)
+                {
+                    throw new InvalidOperationException("Could not find method " + methodName + " with the appropriate input variables.");
+                }
+
+                methodInfo = methodInfo.MakeGenericMethod(typeof(TGenericType1));
+                return inputObject.Call<TReturnType>(methodInfo, inputVariables);
             }
 
-            if (inputVariables == null)
+            //
+            // Summary:
+            //     Calls a method on an object
+            //
+            // Parameters:
+            //   inputObject:
+            //     Object to call the method on
+            //
+            //   methodName:
+            //     Method name
+            //
+            //   inputVariables:
+            //     (Optional)input variables for the method
+            //
+            // Type parameters:
+            //   TReturnType:
+            //     Return type expected
+            //
+            // Returns:
+            //     The returned value of the method
+            //
+            // Exceptions:
+            //   T:System.ArgumentNullException:
+            //     inputObject or methodName
+            //
+            //   T:System.InvalidOperationException:
+            //     Could not find method " + methodName + " with the appropriate input variables.
+            public TReturnType Call<TReturnType>(MethodInfo methodInfo, params object[] inputVariables)
             {
-                inputVariables = [];
+                ArgumentNullException.ThrowIfNull(inputObject);
+
+                ArgumentNullException.ThrowIfNull(methodInfo);
+
+                if (inputVariables == null)
+                {
+                    inputVariables = [];
+                }
+
+                return (TReturnType)methodInfo.Invoke(inputObject, inputVariables);
             }
-
-            Type type = inputObject.GetType();
-            MethodInfo methodInfo = FindMethod(methodName, inputVariables, type);
-            if (methodInfo == null)
-            {
-                throw new InvalidOperationException("Could not find method " + methodName + " with the appropriate input variables.");
-            }
-
-            methodInfo = methodInfo.MakeGenericMethod(typeof(TGenericType1));
-            return inputObject.Call<TReturnType>(methodInfo, inputVariables);
-        }
-
-        //
-        // Summary:
-        //     Calls a method on an object
-        //
-        // Parameters:
-        //   inputObject:
-        //     Object to call the method on
-        //
-        //   methodName:
-        //     Method name
-        //
-        //   inputVariables:
-        //     (Optional)input variables for the method
-        //
-        // Type parameters:
-        //   TReturnType:
-        //     Return type expected
-        //
-        // Returns:
-        //     The returned value of the method
-        //
-        // Exceptions:
-        //   T:System.ArgumentNullException:
-        //     inputObject or methodName
-        //
-        //   T:System.InvalidOperationException:
-        //     Could not find method " + methodName + " with the appropriate input variables.
-        public static TReturnType Call<TReturnType>(this object inputObject, MethodInfo methodInfo, params object[] inputVariables)
-        {
-            if (inputObject == null)
-            {
-                throw new ArgumentNullException(nameof(inputObject));
-            }
-
-            if (methodInfo == null)
-            {
-                throw new ArgumentNullException(nameof(methodInfo));
-            }
-
-            if (inputVariables == null)
-            {
-                inputVariables = [];
-            }
-
-            return (TReturnType)methodInfo.Invoke(inputObject, inputVariables);
         }
 
         //
@@ -275,19 +266,19 @@ namespace CosmicLexicon.Foundation.Introspection
             return methodInfo;
         }
 
-        //
-        // Summary:
-        //     Checks if JIT tracking is enabled
-        //
-        // Parameters:
-        //   attribute:
-        //     Debuggable attribute
-        //
-        // Returns:
-        //     True if JIT tracking is enabled, false otherwise
-        private static bool IsJitTrackingEnabled(this DebuggableAttribute attribute)
+        extension(DebuggableAttribute attribute)
         {
-            return (attribute.DebuggingFlags & DebuggableAttribute.DebuggingModes.EnableEditAndContinue) != 0;
+            //
+            // Summary:
+            //     Checks if JIT tracking is enabled
+            //
+            // Parameters:
+            //   attribute:
+            //     Debuggable attribute
+            //
+            // Returns:
+            //     True if JIT tracking is enabled, false otherwise
+            private bool IsJitTrackingEnabled() => (attribute.DebuggingFlags & DebuggableAttribute.DebuggingModes.EnableEditAndContinue) != 0;
         }
     }
 }

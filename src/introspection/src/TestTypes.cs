@@ -2,12 +2,12 @@ namespace CosmicLexicon.Foundation.Introspection
 {
     public struct CustomStruct
     {
-        public int Value;
-        public bool IsActive;
+        public int Value { get; set; }
+        public bool IsActive { get; set; }
     }
 
     public class CustomClass
     {
-        public string Name { get; set; }
+        public required string Name { get; set; }
     }
 }

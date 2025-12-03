@@ -2,10 +2,10 @@ namespace CosmicLexicon.Foundation.Extensions
 {
     public static class ReadonlySpanExtensions
     {
-        public static T Parse<T>(this ReadOnlySpan<char> input, IFormatProvider? formatProvider = null)
-            where T : ISpanParsable<T>
+        extension(ReadOnlySpan<char> input)
         {
-            return T.Parse(input, formatProvider);
+            public T Parse<T>(IFormatProvider? formatProvider = null)
+            where T : ISpanParsable<T> => T.Parse(input, formatProvider);
         }
     }
 } 

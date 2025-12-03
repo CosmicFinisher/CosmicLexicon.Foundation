@@ -9,29 +9,40 @@ namespace CosmicLexicon.Foundation.Structures
     public static class ListExtensions
     {
 
-        public static ReadOnlyCollection<T> ToReadOnly<T>(this T item) => new ReadOnlyCollection<T>(new T[] { item });
-        public static IReadOnlyCollection<T> IsNullOrEmpty<T>(this IReadOnlyCollection<T> source) => source ?? [];
-        public static IReadOnlyCollection<T> NullCheck<T>(this IReadOnlyCollection<T> source) => source ?? [];
-        public static IEnumerable<T> Concat<T>(this IReadOnlyCollection<T> collection, IReadOnlyCollection<T> otherCollection)
+        extension<T>(T item)
         {
-            return (collection ?? Enumerable.Empty<T>()).Concat(otherCollection ?? Enumerable.Empty<T>());
+            public ReadOnlyCollection<T> ToReadOnly() => new([item]);
         }
 
-        public static List<T> ToFlatList<T>(this List<List<T>?> collection)
+        extension<T>(IReadOnlyCollection<T> source)
         {
-            ArgumentNullException.ThrowIfNull(collection);
-            return collection.SelectMany(list => list ?? Enumerable.Empty<T>()).ToList();
+            public IReadOnlyCollection<T> IsNullOrEmpty() => source ?? [];
+            public IReadOnlyCollection<T> NullCheck() => source ?? [];
         }
 
-        public static IEnumerable<T> AsFlattened<T>(this IEnumerable<List<T>?> collection)
+        extension<T>(IReadOnlyCollection<T> collection)
         {
-            ArgumentNullException.ThrowIfNull(collection);
-
-            return collection.SelectMany(list => list ?? Enumerable.Empty<T>());
+            public IEnumerable<T> Concat(IReadOnlyCollection<T> otherCollection) => (collection ?? Enumerable.Empty<T>()).Concat(otherCollection ?? Enumerable.Empty<T>());
         }
-        public static List<T> ToFlattenedList<T>(this IEnumerable<List<T>?> collection)
+
+        extension<T>(List<List<T>?> collection)
         {
-            return collection.AsFlattened().ToList();
+            public List<T> ToFlatList()
+            {
+                ArgumentNullException.ThrowIfNull(collection);
+                return [.. collection.SelectMany(list => list ?? Enumerable.Empty<T>())];
+            }
+        }
+
+        extension<T>(IEnumerable<List<T>?> collection)
+        {
+            public IEnumerable<T> AsFlattened()
+            {
+                ArgumentNullException.ThrowIfNull(collection);
+
+                return collection.SelectMany(list => list ?? Enumerable.Empty<T>());
+            }
+            public List<T> ToFlattenedList() => [.. collection.AsFlattened()];
         }
     }
 }

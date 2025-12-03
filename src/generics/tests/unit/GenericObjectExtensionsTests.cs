@@ -236,7 +236,7 @@ namespace CosmicLexicon.Foundation.Generics.UnitTest
         public void ThrowIfNotNullOrEmptyCollectionNotEmptyThrowsException()
         {
             // Arrange
-            List<int> item = new List<int>() { 1, 2, 3 };
+            List<int> item = [1, 2, 3];
             Exception exception = new ArgumentException("Item is not null or empty");
 
             // Act
@@ -270,7 +270,7 @@ namespace CosmicLexicon.Foundation.Generics.UnitTest
 
             // Assert
             Assert.Equal(count, executionCount);
-            Assert.Equal(new int[] { 0, 1, 2 }, result.ToArray());
+            Assert.Equal([0, 1, 2], result.ToArray());
         }
 
         [Fact]
@@ -294,7 +294,7 @@ namespace CosmicLexicon.Foundation.Generics.UnitTest
             // Arrange
             string obj = "test";
             bool predicate = true;
-            Func<string, string> method = (s) => s.ToUpper();
+            Func<string, string> method = (s) => s.ToUpper(System.Globalization.CultureInfo.CurrentCulture);
 
             // Act
             string result = obj.When(predicate, method);
@@ -309,7 +309,7 @@ namespace CosmicLexicon.Foundation.Generics.UnitTest
             // Arrange
             string obj = "test";
             bool predicate = false;
-            Func<string, string> method = (s) => s.ToUpper();
+            Func<string, string> method = (s) => s.ToUpper(System.Globalization.CultureInfo.CurrentCulture);
 
             // Act
             string result = obj.When(predicate, method);

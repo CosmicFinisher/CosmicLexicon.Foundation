@@ -16,11 +16,9 @@ namespace CosmicLexicon.Foundation.Formats
         //
         // Returns:
         //     True if it's unicode, false otherwise
-        public static bool IsUnicode(byte[] input)
-        {
+        public static bool IsUnicode(byte[] input) =>
             // Check for Unicode BOM (UTF-16LE or UTF-16BE)
-            return input != null && input.Length >= 2 && (input[0] == 0xFF && input[1] == 0xFE || input[0] == 0xFE && input[1] == 0xFF);
-        }
+            input != null && input.Length >= 2 && (input[0] == 0xFF && input[1] == 0xFE || input[0] == 0xFE && input[1] == 0xFF);
 
         //
         // Summary:

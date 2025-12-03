@@ -21,7 +21,7 @@ namespace CosmicLexicon.Foundation.Structures
         //
         // Summary:
         //     The lock object
-        private readonly object LockObject = new object();
+        private readonly object LockObject = new();
 
         //
         // Summary:
@@ -46,7 +46,7 @@ namespace CosmicLexicon.Foundation.Structures
         //
         // Summary:
         //     List that contains the list of values
-        public ICollection<IEnumerable<T2>> Values => Items.Values.Select(x => (IEnumerable<T2>)x).ToList();
+        public ICollection<IEnumerable<T2>> Values => [.. Items.Values.Select(x => (IEnumerable<T2>)x)];
 
         //
         // Summary:
@@ -101,10 +101,7 @@ namespace CosmicLexicon.Foundation.Structures
         //
         //   value:
         //     The value to add
-        public void Add(T1 key, T2 value)
-        {
-            AddValues(key, value);
-        }
+        public void Add(T1 key, T2 value) => AddValues(key, value);
 
         //
         // Summary:
@@ -113,10 +110,7 @@ namespace CosmicLexicon.Foundation.Structures
         // Parameters:
         //   item:
         //     Key value pair to add
-        public void Add(KeyValuePair<T1, IEnumerable<T2>> item)
-        {
-            Add(item.Key, item.Value);
-        }
+        public void Add(KeyValuePair<T1, IEnumerable<T2>> item) => Add(item.Key, item.Value);
 
         //
         // Summary:
@@ -128,10 +122,7 @@ namespace CosmicLexicon.Foundation.Structures
         //
         //   value:
         //     The values to add
-        public void Add(T1 key, IEnumerable<T2> value)
-        {
-            AddValues(key, value);
-        }
+        public void Add(T1 key, IEnumerable<T2> value) => AddValues(key, value);
 
         //
         // Summary:
@@ -155,10 +146,7 @@ namespace CosmicLexicon.Foundation.Structures
         //
         // Returns:
         //     True if it exists, false otherwise
-        public bool Contains(KeyValuePair<T1, IEnumerable<T2>> item)
-        {
-            return ContainsKey(item.Key) && this[item.Key].SequenceEqual(item.Value);
-        }
+        public bool Contains(KeyValuePair<T1, IEnumerable<T2>> item) => ContainsKey(item.Key) && this[item.Key].SequenceEqual(item.Value);
 
         //
         // Summary:
@@ -187,7 +175,7 @@ namespace CosmicLexicon.Foundation.Structures
                     return false;
                 }
 
-                HashSet<T2> valueSet = new HashSet<T2>(tempValues);
+                HashSet<T2> valueSet = [.. tempValues];
                 return values.All(valueSet.Contains);
             }
         }
@@ -251,15 +239,9 @@ namespace CosmicLexicon.Foundation.Structures
         //     array index
         public void CopyTo(KeyValuePair<T1, IEnumerable<T2>>[] array, int arrayIndex)
         {
-            if (array == null)
-            {
-                throw new ArgumentNullException(nameof(array));
-            }
+            ArgumentNullException.ThrowIfNull(array);
 
-            if (arrayIndex < 0)
-            {
-                throw new ArgumentOutOfRangeException(nameof(arrayIndex));
-            }
+            ArgumentOutOfRangeException.ThrowIfNegative(arrayIndex);
 
             if (array.Length - arrayIndex < Count)
             {
@@ -335,10 +317,7 @@ namespace CosmicLexicon.Foundation.Structures
         //
         // Returns:
         //     True if it is removed, false otherwise
-        public bool Remove(KeyValuePair<T1, IEnumerable<T2>> item)
-        {
-            return Remove(item.Key);
-        }
+        public bool Remove(KeyValuePair<T1, IEnumerable<T2>> item) => Remove(item.Key);
 
         //
         // Summary:
@@ -392,7 +371,7 @@ namespace CosmicLexicon.Foundation.Structures
                 return temp;
             }
 
-            StringBuilder stringBuilder = new StringBuilder();
+            StringBuilder stringBuilder = new();
             lock (LockObject)
             {
                 foreach (var item in Items)
@@ -468,9 +447,6 @@ namespace CosmicLexicon.Foundation.Structures
             }
         }
 
-        private void AddValues(T1 key, T2 value)
-        {
-            AddValues(key, Enumerable.Repeat(value, 1));
-        }
+        private void AddValues(T1 key, T2 value) => AddValues(key, Enumerable.Repeat(value, 1));
     }
 }

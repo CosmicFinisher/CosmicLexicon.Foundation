@@ -6,8 +6,15 @@ using System.ComponentModel;
 [EditorBrowsable(EditorBrowsableState.Never)]
 public static class GuidExtensions
 {
-    public static Guid NewIfNullOrEmpty(this Guid? value)
+    extension(Guid? value)
+    {
+        public Guid NewIfNullOrEmpty()
         => !value.HasValue || value.Value == Guid.Empty ? Guid.NewGuid() : value.Value;
-    public static bool IsEmpty(this Guid value)
+    }
+
+    extension(Guid value)
+    {
+        public bool IsEmpty()
         => Guid.Empty == value;
+    }
 }

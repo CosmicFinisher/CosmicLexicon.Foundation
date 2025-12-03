@@ -16,7 +16,7 @@ namespace CosmicLexicon.Foundation.Structures.UnitTest
             list.Add(1);
 
             // Assert
-            Assert.Equal(1, list.Count);
+            Assert.Single(list);
             Assert.Equal(1, list[0]);
             Assert.True(collectionChangedRaised);
             Assert.True(propertyChangedRaised);
@@ -36,7 +36,7 @@ namespace CosmicLexicon.Foundation.Structures.UnitTest
             list.Add((object)1);
 
             // Assert
-            Assert.Equal(1, list.Count);
+            Assert.Single(list);
             Assert.Equal(1, list[0]);
             Assert.True(collectionChangedRaised);
             Assert.True(propertyChangedRaised);
@@ -63,11 +63,11 @@ namespace CosmicLexicon.Foundation.Structures.UnitTest
             list.PropertyChanged += (sender, e) => propertyChangedRaised = true;
 
             // Act
-            list.AddRange(new int[] { 1, 2, 3 });
+            list.AddRange([1, 2, 3]);
 
             // Assert
             Assert.Equal(3, list.Count);
-            Assert.Equal(new int[] { 1, 2, 3 }, list.ToArray());
+            Assert.Equal([1, 2, 3], list.ToArray());
             Assert.True(collectionChangedRaised);
             Assert.True(propertyChangedRaised);
         }
@@ -86,7 +86,7 @@ namespace CosmicLexicon.Foundation.Structures.UnitTest
             list.Clear();
 
             // Assert
-            Assert.Equal(0, list.Count);
+            Assert.Empty(list);
             Assert.True(collectionChangedRaised);
             Assert.True(propertyChangedRaised);
         }
@@ -172,7 +172,7 @@ namespace CosmicLexicon.Foundation.Structures.UnitTest
             list.CopyTo(array, 1);
 
             // Assert
-            Assert.Equal(new int[] { 0, 1, 2, 3, 0 }, array);
+            Assert.Equal([0, 1, 2, 3, 0], array);
         }
 
         [Fact]
@@ -230,7 +230,7 @@ namespace CosmicLexicon.Foundation.Structures.UnitTest
 
             // Assert
             Assert.Equal(4, list.Count);
-            Assert.Equal(new int[] { 1, 4, 2, 3 }, list.ToArray());
+            Assert.Equal([1, 4, 2, 3], list.ToArray());
             Assert.True(collectionChangedRaised);
             Assert.True(propertyChangedRaised);
         }
@@ -250,7 +250,7 @@ namespace CosmicLexicon.Foundation.Structures.UnitTest
 
             // Assert
             Assert.Equal(4, list.Count);
-            Assert.Equal(new int[] { 1, 4, 2, 3 }, list.ToArray());
+            Assert.Equal([1, 4, 2, 3], list.ToArray());
             Assert.True(collectionChangedRaised);
             Assert.True(propertyChangedRaised);
         }
@@ -276,11 +276,11 @@ namespace CosmicLexicon.Foundation.Structures.UnitTest
             list.PropertyChanged += (sender, e) => propertyChangedRaised = true;
 
             // Act
-            list.InsertRange(1, new int[] { 4, 5 });
+            list.InsertRange(1, [4, 5]);
 
             // Assert
             Assert.Equal(5, list.Count);
-            Assert.Equal(new int[] { 1, 4, 5, 2, 3 }, list.ToArray());
+            Assert.Equal([1, 4, 5, 2, 3], list.ToArray());
             Assert.True(collectionChangedRaised);
             Assert.True(propertyChangedRaised);
         }
@@ -300,7 +300,7 @@ namespace CosmicLexicon.Foundation.Structures.UnitTest
 
             // Assert
             Assert.Equal(2, list.Count);
-            Assert.Equal(new int[] { 1, 3 }, list.ToArray());
+            Assert.Equal([1, 3], list.ToArray());
             Assert.True(collectionChangedRaised);
             Assert.True(propertyChangedRaised);
         }
@@ -320,7 +320,7 @@ namespace CosmicLexicon.Foundation.Structures.UnitTest
 
             // Assert
             Assert.Equal(2, list.Count);
-            Assert.Equal(new int[] { 1, 3 }, list.ToArray());
+            Assert.Equal([1, 3], list.ToArray());
             Assert.True(collectionChangedRaised);
             Assert.True(propertyChangedRaised);
         }
@@ -340,7 +340,7 @@ namespace CosmicLexicon.Foundation.Structures.UnitTest
 
             // Assert
             Assert.Equal(2, list.Count);
-            Assert.Equal(new int[] { 1, 3 }, list.ToArray());
+            Assert.Equal([1, 3], list.ToArray());
             Assert.True(collectionChangedRaised);
             Assert.True(propertyChangedRaised);
         }
@@ -360,7 +360,7 @@ namespace CosmicLexicon.Foundation.Structures.UnitTest
 
             // Assert
             Assert.Equal(3, list.Count);
-            Assert.Equal(new int[] { 1, 4, 5 }, list.ToArray());
+            Assert.Equal([1, 4, 5], list.ToArray());
             Assert.True(collectionChangedRaised);
             Assert.True(propertyChangedRaised);
         }
@@ -393,7 +393,7 @@ namespace CosmicLexicon.Foundation.Structures.UnitTest
 
             // Assert
             Assert.Equal(4, list[1]);
-            Assert.Equal(new int[] { 1, 4, 3 }, list.ToArray());
+            Assert.Equal([1, 4, 3], list.ToArray());
             Assert.True(collectionChangedRaised);
             Assert.True(propertyChangedRaised);
         }

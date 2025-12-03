@@ -34,16 +34,13 @@ namespace CosmicLexicon.Foundation.Structures
         {
             public bool IsDisposed { get; private set; }
 
-            public void Dispose()
-            {
-                IsDisposed = true;
-            }
+            public void Dispose() => IsDisposed = true;
         }
 
 
         private class ConcreteObjectPool : ConcurrentObjectPoolBase<DisposableObject>
         {
-            private readonly List<DisposableObject> _objects = new List<DisposableObject>();
+            private readonly List<DisposableObject> _objects = [];
             private bool _disposed;
 
             public override DisposableObject GenerateObject()
@@ -53,15 +50,9 @@ namespace CosmicLexicon.Foundation.Structures
                 return obj;
             }
 
-            public int GetObjectsCount()
-            {
-                return _objects.Count;
-            }
+            public int GetObjectsCount() => _objects.Count;
 
-            public bool AreObjectsDisposed()
-            {
-                return _objects.All(o => o.IsDisposed);
-            }
+            public bool AreObjectsDisposed() => _objects.All(o => o.IsDisposed);
         }
     }
 }

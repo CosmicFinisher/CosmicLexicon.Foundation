@@ -23,10 +23,7 @@ namespace CosmicLexicon.Foundation.Formats.UnitTest
         [InlineData("single", 1, "s")]
         [InlineData(null, 5, "")] // Modified: Expected "" for null input
         [InlineData("", 5, "")]
-        public void LeftReturnsCorrectSubstring(string? input, int length, string? expected)
-        {
-            Assert.Equal(expected, StringHelpers.Left(input, length)); // Removed ?? "" as Left returns string.Empty for null
-        }
+        public void LeftReturnsCorrectSubstring(string? input, int length, string? expected) => Assert.Equal(expected, StringHelpers.Left(input, length)); // Removed ?? "" as Left returns string.Empty for null
 
         [Theory]
         [InlineData("hello world", 5, "world")]
@@ -35,10 +32,7 @@ namespace CosmicLexicon.Foundation.Formats.UnitTest
         [InlineData("single", 1, "e")]
         [InlineData(null, 5, "")] // Expected "" for null input
         [InlineData("", 5, "")]
-        public void RightReturnsCorrectSubstring(string? input, int length, string? expected)
-        {
-            Assert.Equal(expected ?? "", StringHelpers.Right(input, length)); // Removed ?? ""
-        }
+        public void RightReturnsCorrectSubstring(string? input, int length, string? expected) => Assert.Equal(expected ?? "", StringHelpers.Right(input, length)); // Removed ?? ""
 
         [Fact]
         public void FormatStringWithCurrentCultureReturnsFormattedString()

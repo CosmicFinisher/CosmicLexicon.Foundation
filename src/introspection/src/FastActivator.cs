@@ -77,10 +77,7 @@ public static class FastActivator
     //
     // Returns:
     //     The object if it can be created, null otherwise.
-    public static object? CreateInstance(Type type, params object[] args)
-    {
-        return GetConstructorList(type)?.CreateInstance(args);
-    }
+    public static object? CreateInstance(Type type, params object[] args) => GetConstructorList(type)?.CreateInstance(args);
 
     //
     // Summary:

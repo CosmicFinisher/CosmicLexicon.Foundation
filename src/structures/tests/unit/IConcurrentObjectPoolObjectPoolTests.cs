@@ -13,35 +13,17 @@ namespace CosmicLexicon.Foundation.Structures.UnitTest
                 _rentedObject = new object();
             }
 
-            public void Seed(int seedSize)
-            {
-                _seedSize = seedSize;
-            }
+            public void Seed(int seedSize) => _seedSize = seedSize;
 
-            public object Rent()
-            {
-                return _rentedObject ?? new object();
-            }
+            public object Rent() => _rentedObject ?? new object();
 
-            public void ReturnToPool(object returnObject)
-            {
-                _returnedObject = returnObject;
-            }
+            public void ReturnToPool(object returnObject) => _returnedObject = returnObject;
 
-            public int GetSeedSize()
-            {
-                return _seedSize;
-            }
+            public int GetSeedSize() => _seedSize;
 
-            public object GetRentedObject()
-            {
-                return _rentedObject ?? new object();
-            }
+            public object GetRentedObject() => _rentedObject ?? new object();
 
-            public object? GetReturnedObject()
-            {
-                return _returnedObject;
-            }
+            public object? GetReturnedObject() => _returnedObject;
         }
 
         [Fact]
