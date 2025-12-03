@@ -2,7 +2,7 @@ using System;
 using System.Net;
 using System.Threading.Tasks;
 
-namespace CosmicLexicon.Foundation.xNet
+namespace CosmicLexicon.Foundation.Transport.Net
 {
     public static class NetExtensions
     {

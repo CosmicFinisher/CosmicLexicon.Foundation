@@ -1,10 +1,10 @@
 using Xunit;
-using CosmicLexicon.Foundation.xIO;
+using CosmicLexicon.Foundation.Transport;
 using System;
 using System.IO;
-using CosmicLexicon.Foundation.xIO;
+using CosmicLexicon.Foundation.Transport;
 
-namespace CosmicLexicon.Foundation.xIO
+namespace CosmicLexicon.Foundation.Transport
 {
     public class PathHelpersTests
     {

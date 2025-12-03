@@ -95,7 +95,7 @@ The goal of this project is to enhance the CosmicLexicon.Foundation library by f
 ### Core Principles
 
 *   **System-Only Dependencies:** `CosmicLexicon.Foundation` strictly depends *only* on `System.*` assemblies from the .NET Base Class Library (BCL). No references to `Microsoft.Extensions.*`, other framework areas (e.g., `AreaX`), or third-party libraries are permitted. This ensures maximum portability, minimal external coupling, and a stable foundation.
-*   **Functional Grouping:** Components within `CosmicLexicon.Foundation` are organized into namespaces and folders that mirror the functional context of their `System.*` counterparts (e.g., `CosmicLexicon.Foundation.xIO` for `System.IO` related utilities).
+*   **Functional Grouping:** Components within `CosmicLexicon.Foundation` are organized into namespaces and folders that mirror the functional context of their `System.*` counterparts (e.g., `CosmicLexicon.Foundation.Transport` for `System.IO` related utilities).
 *   **Stability & Reliability:** Code in `CosmicLexicon.Foundation` must be highly stable, well-tested, and performant, as it underpins the entire framework.
 *   **No Business Logic:** `CosmicLexicon.Foundation` must remain free of any application-specific or business domain logic.
 

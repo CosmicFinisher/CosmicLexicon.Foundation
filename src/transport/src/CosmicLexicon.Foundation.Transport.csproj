@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>$(NetPrimaryTargetFramework)</TargetFramework>
-    <RootNamespace>CosmicLexicon.Foundation.xIO</RootNamespace>
+    <RootNamespace>CosmicLexicon.Foundation.Transport</RootNamespace>
     <EnableSharedKernelDependencies>true</EnableSharedKernelDependencies>
 	
   </PropertyGroup>

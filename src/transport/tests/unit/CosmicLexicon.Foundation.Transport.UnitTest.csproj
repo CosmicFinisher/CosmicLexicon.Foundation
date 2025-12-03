@@ -1,10 +1,10 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>$(NetPrimaryTargetFramework)</TargetFramework>
-    <RootNamespace>CosmicLexicon.Foundation.xIO</RootNamespace>
+    <RootNamespace>CosmicLexicon.Foundation.Transport</RootNamespace>
 	  <EnableSharedUnitTestDependencies>true</EnableSharedUnitTestDependencies>
   </PropertyGroup>
   <ItemGroup>
-    <ProjectReference Include="$(MSBuildThisFileDirectory)..\..\src\CosmicLexicon.Foundation.IO.csproj" />
+    <ProjectReference Include="..\..\src\CosmicLexicon.Foundation.Transport.csproj" />
   </ItemGroup>
 </Project> 
