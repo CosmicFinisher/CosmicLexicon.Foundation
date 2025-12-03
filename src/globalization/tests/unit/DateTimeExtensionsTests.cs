@@ -187,7 +187,7 @@ namespace CosmicLexicon.Foundation.xGlobalization
         [InlineData(2025, 1, 15, TimeFrame.Month, 31)] // January
         [InlineData(2025, 4, 15, TimeFrame.Month, 30)] // April
         [InlineData(2025, 5, 15, TimeFrame.Month, 31)] // May
-        public void DaysIn_MonthTimeFrame_ReturnsCorrectDays(int year, int month, int day, TimeFrame timeFrame, int expectedDays)
+        public void DaysInMonthTimeFrameReturnsCorrectDays(int year, int month, int day, TimeFrame timeFrame, int expectedDays)
         {
             // Arrange
             DateTime date = new DateTime(year, month, day);
@@ -200,7 +200,7 @@ namespace CosmicLexicon.Foundation.xGlobalization
         }
 
         [Fact]
-        public void DaysIn_YearTimeFrame_ReturnsCorrectDaysWhenCultureIsNotSpecified()
+        public void DaysInYearTimeFrameReturnsCorrectDaysWhenCultureIsNotSpecified()
         {
             // Arrange
             DateTime date = new DateTime(2025, 6, 15);
@@ -213,7 +213,7 @@ namespace CosmicLexicon.Foundation.xGlobalization
         }
 
         [Fact]
-        public void DaysIn_InvalidTimeFrame_ThrowsArgumentException()
+        public void DaysInInvalidTimeFrameThrowsArgumentException()
         {
             // Arrange
             DateTime date = new DateTime(2025, 1, 1);
@@ -223,7 +223,7 @@ namespace CosmicLexicon.Foundation.xGlobalization
         }
 
         [Fact]
-        public void DaysIn_DayTimeFrame_ReturnsOne()
+        public void DaysInDayTimeFrameReturnsOne()
         {
             // Arrange
             DateTime date = new DateTime(2025, 1, 15);
@@ -236,7 +236,7 @@ namespace CosmicLexicon.Foundation.xGlobalization
         }
 
         [Fact]
-        public void DaysIn_WeekTimeFrame_ReturnsSeven()
+        public void DaysInWeekTimeFrameReturnsSeven()
         {
             // Arrange
             DateTime date = new DateTime(2025, 1, 15);
@@ -254,7 +254,7 @@ namespace CosmicLexicon.Foundation.xGlobalization
         [InlineData(2025, 7, 1, 92)] // Q3: Jul 1 - Sep 30 (31+31+30 = 92 days)
         [InlineData(2025, 10, 1, 92)] // Q4: Oct 1 - Dec 31 (31+30+31 = 92 days)
         [InlineData(2024, 1, 1, 91)] // Leap year Q1: Jan 1 - Mar 31 (31+29+31 = 91 days)
-        public void DaysIn_QuarterTimeFrame_ReturnsCorrectDays(int year, int month, int day, int expectedDays)
+        public void DaysInQuarterTimeFrameReturnsCorrectDays(int year, int month, int day, int expectedDays)
         {
             // Arrange
             DateTime date = new DateTime(year, month, day);
@@ -270,7 +270,7 @@ namespace CosmicLexicon.Foundation.xGlobalization
         [Theory]
         [InlineData(2025, 365)] // Non-leap year
         [InlineData(2024, 366)] // Leap year
-        public void DaysIn_YearTimeFrame_ReturnsCorrectDays(int year, int expectedDays)
+        public void DaysInYearTimeFrameReturnsCorrectDays(int year, int expectedDays)
         {
             // Arrange
             DateTime date = new DateTime(year, 6, 15);
@@ -308,7 +308,7 @@ namespace CosmicLexicon.Foundation.xGlobalization
         }
 
         [Fact]
-        public void EndOf_DayTimeFrame_ReturnsEndOfDay()
+        public void EndOfDayTimeFrameReturnsEndOfDay()
         {
             // Arrange
             DateTime date = new DateTime(2025, 5, 30, 10, 30, 0);
@@ -347,7 +347,7 @@ namespace CosmicLexicon.Foundation.xGlobalization
         }
 
         [Fact]
-        public void EndOf_InvalidTimeFrame_ThrowsArgumentException()
+        public void EndOfInvalidTimeFrameThrowsArgumentException()
         {
             // Arrange
             DateTime date = new DateTime(2025, 1, 1);
@@ -357,7 +357,7 @@ namespace CosmicLexicon.Foundation.xGlobalization
         }
 
         [Fact]
-        public void EndOf_WeekTimeFrame_ReturnsEndOfWeek()
+        public void EndOfWeekTimeFrameReturnsEndOfWeek()
         {
             // Arrange
             DateTime date = new DateTime(2025, 5, 30, 10, 30, 0); // Friday, assuming Sunday as FirstDayOfWeek
@@ -375,7 +375,7 @@ namespace CosmicLexicon.Foundation.xGlobalization
         [InlineData(2025, 2, 28)] // February (non-leap) has 28 days
         [InlineData(2024, 2, 29)] // February (leap) has 29 days
         [InlineData(2025, 4, 30)] // April has 30 days
-        public void EndOf_MonthTimeFrame_ReturnsEndOfMonth(int year, int month, int expectedDay)
+        public void EndOfMonthTimeFrameReturnsEndOfMonth(int year, int month, int expectedDay)
         {
             // Arrange
             DateTime date = new DateTime(year, month, 15, 10, 30, 0);
@@ -393,7 +393,7 @@ namespace CosmicLexicon.Foundation.xGlobalization
         [InlineData(2025, 7, 15, 2025, 9, 30)] // Q3
         [InlineData(2025, 10, 15, 2025, 12, 31)] // Q4
         [InlineData(2024, 1, 15, 2024, 3, 31)] // Leap year Q1
-        public void EndOf_QuarterTimeFrame_ReturnsEndOfQuarter(int year, int month, int day, int expectedYear, int expectedMonth, int expectedDay)
+        public void EndOfQuarterTimeFrameReturnsEndOfQuarter(int year, int month, int day, int expectedYear, int expectedMonth, int expectedDay)
         {
             // Arrange
             DateTime date = new DateTime(year, month, day, 10, 30, 0);
@@ -408,7 +408,7 @@ namespace CosmicLexicon.Foundation.xGlobalization
         [Theory]
         [InlineData(2025, 2025, 12, 31)] // Non-leap year
         [InlineData(2024, 2024, 12, 31)] // Leap year
-        public void EndOf_YearTimeFrame_ReturnsEndOfYear(int year, int expectedYear, int expectedMonth, int expectedDay)
+        public void EndOfYearTimeFrameReturnsEndOfYear(int year, int expectedYear, int expectedMonth, int expectedDay)
         {
             // Arrange
             DateTime date = new DateTime(year, 6, 15, 10, 30, 0);

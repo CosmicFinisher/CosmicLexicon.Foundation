@@ -16,7 +16,7 @@ namespace CosmicLexicon.Foundation.Structures.Enums
         }
 
         [Fact]
-        public void ResetValues_ResetsAllValuesToGivenValue()
+        public void ResetValuesResetsAllValuesToGivenValue()
         {
             // Arrange
             var dictionary = new EnumDictionary<TestEnum, int>(0);
@@ -31,7 +31,7 @@ namespace CosmicLexicon.Foundation.Structures.Enums
         }
 
         [Fact]
-        public void SetValueFor_SingleEnum_SetsValueForGivenEnum()
+        public void SetValueForSingleEnumSetsValueForGivenEnum()
         {
             // Arrange
             var dictionary = new EnumDictionary<TestEnum, int>(0);
@@ -46,7 +46,7 @@ namespace CosmicLexicon.Foundation.Structures.Enums
         }
 
         [Fact]
-        public void SetValueFor_EnumArray_SetsValueForGivenEnums()
+        public void SetValueForEnumArraySetsValueForGivenEnums()
         {
             // Arrange
             var dictionary = new EnumDictionary<TestEnum, int>(0);
@@ -61,7 +61,7 @@ namespace CosmicLexicon.Foundation.Structures.Enums
         }
 
         [Fact]
-        public void Member_ReturnsValueForGivenEnum()
+        public void MemberReturnsValueForGivenEnum()
         {
             // Arrange
             var dictionary = new EnumDictionary<TestEnum, int>(0);
@@ -75,7 +75,7 @@ namespace CosmicLexicon.Foundation.Structures.Enums
         }
 
         [Fact]
-        public void WhereValue_ReturnsEnumForGivenValue()
+        public void WhereValueReturnsEnumForGivenValue()
         {
             // Arrange
             var dictionary = new EnumDictionary<TestEnum, int>(0);
@@ -91,7 +91,7 @@ namespace CosmicLexicon.Foundation.Structures.Enums
         }
 
         [Fact]
-        public void SelectValues_ReturnsKeyValuePairArrayForGivenValues()
+        public void SelectValuesReturnsKeyValuePairArrayForGivenValues()
         {
             // Arrange
             var dictionary = new EnumDictionary<TestEnum, int>(0);

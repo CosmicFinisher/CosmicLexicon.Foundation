@@ -11,7 +11,7 @@ namespace CosmicLexicon.Foundation.Structures
     {
         [Fact]
         [RequiresPreviewFeatures]
-        public void GetEnumerator_ValidRange_ReturnsEnumerator()
+        public void GetEnumeratorValidRangeReturnsEnumerator()
         {
             // Arrange
             Range range = 1..5;
@@ -30,7 +30,7 @@ namespace CosmicLexicon.Foundation.Structures
 
         [Fact]
         [RequiresPreviewFeatures]
-        public void GetEnumerator_ReversedRange_ReturnsReversedEnumerator()
+        public void GetEnumeratorReversedRangeReturnsReversedEnumerator()
         {
             // Arrange
             Range range = 5..1;
@@ -49,7 +49,7 @@ namespace CosmicLexicon.Foundation.Structures
 
         [Fact]
         [RequiresPreviewFeatures]
-        public void CustomRangeEnumerator_FromEndRange_ThrowsNotSupportedException()
+        public void CustomRangeEnumeratorFromEndRangeThrowsNotSupportedException()
         {
             // Arrange
             Range range = 1..^1;

@@ -9,7 +9,7 @@ namespace CosmicLexicon.Foundation.xLinq
     public class IEnumerableExtensionsTests
     {
         [Fact]
-        public void Empty_NullArray_ReturnsTrue()
+        public void EmptyNullArrayReturnsTrue()
         {
             // Arrange
             IEnumerable<int?> array = null;
@@ -22,7 +22,7 @@ namespace CosmicLexicon.Foundation.xLinq
         }
 
         [Fact]
-        public void Empty_EmptyArray_ReturnsTrue()
+        public void EmptyEmptyArrayReturnsTrue()
         {
             // Arrange
             IEnumerable<int?> array = new int?[] { };
@@ -35,7 +35,7 @@ namespace CosmicLexicon.Foundation.xLinq
         }
 
         [Fact]
-        public void Empty_NotEmptyArray_ReturnsFalse()
+        public void EmptyNotEmptyArrayReturnsFalse()
         {
             // Arrange
             IEnumerable<int?> array = new int?[] { 1, 2, 3 };
@@ -48,7 +48,7 @@ namespace CosmicLexicon.Foundation.xLinq
         }
 
         [Fact]
-        public void ToNullSafeArray_NullArray_ReturnsEmptyArray()
+        public void ToNullSafeArrayNullArrayReturnsEmptyArray()
         {
             // Arrange
             IEnumerable<int?> array = null;
@@ -62,7 +62,7 @@ namespace CosmicLexicon.Foundation.xLinq
         }
 
         [Fact]
-        public void ToNullSafeArray_NotEmptyArray_ReturnsOriginalArray()
+        public void ToNullSafeArrayNotEmptyArrayReturnsOriginalArray()
         {
             // Arrange
             IEnumerable<int?> array = new int?[] { 1, 2, 3 };
@@ -75,7 +75,7 @@ namespace CosmicLexicon.Foundation.xLinq
         }
 
         [Fact]
-        public void ElementsBetween_ValidRange_ReturnsCorrectElements()
+        public void ElementsBetweenValidRangeReturnsCorrectElements()
         {
             // Arrange
             IEnumerable<int> list = new List<int> { 1, 2, 3, 4, 5 };
@@ -90,7 +90,7 @@ namespace CosmicLexicon.Foundation.xLinq
         }
 
         [Fact]
-        public void Except_ValidPredicate_ReturnsCorrectElements()
+        public void ExceptValidPredicateReturnsCorrectElements()
         {
             // Arrange
             IEnumerable<int> value = new List<int> { 1, 2, 3, 4, 5 };

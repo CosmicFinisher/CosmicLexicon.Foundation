@@ -13,7 +13,7 @@ namespace CosmicLexicon.Foundation.xText.Tests
         // Add test for string of length 1, maxLength 1, expecting original string
         [InlineData("A", 1, "A")] // Added: Test for string length equal to maxLength 1
         [InlineData("AB", 2, "AB")] // Added: Test for string length equal to maxLength 2
-        public void TruncateWithEllipsis_StringShorterThanOrEqualToMaxLength_ReturnsOriginalString(string input, int maxLength, string expected)
+        public void TruncateWithEllipsisStringShorterThanOrEqualToMaxLengthReturnsOriginalString(string input, int maxLength, string expected)
         {
             // Act
             string result = input.TruncateWithEllipsis(maxLength);
@@ -26,7 +26,7 @@ namespace CosmicLexicon.Foundation.xText.Tests
         [Theory]
         [InlineData("This is a very long string that needs to be truncated.", 10, "This is...")]
         [InlineData("Another long string example", 7, "Anot...")] // Modified: Expected "Anot..." based on maxLength - 3 logic
-        public void TruncateWithEllipsis_StringLongerThanMaxLength_TruncatesAndAppendsEllipsis(string input, int maxLength, string expected)
+        public void TruncateWithEllipsisStringLongerThanMaxLengthTruncatesAndAppendsEllipsis(string input, int maxLength, string expected)
         {
             // Act
             string result = input.TruncateWithEllipsis(maxLength);
@@ -41,7 +41,7 @@ namespace CosmicLexicon.Foundation.xText.Tests
         // because its length is greater than maxLength, ensuring the ellipsis logic for 1 or 2 maxLength is hit.
         [InlineData("Hello", 2, "..")] // String longer than 2, maxLength is 2, should return ".."
         [InlineData("Long", 1, ".")] // String longer than 1, maxLength is 1, should return "."
-        public void TruncateWithEllipsis_StringNeedsTruncationAndMaxLengthIsOneOrTwo_ReturnsCorrectEllipsis(string input, int maxLength, string expected)
+        public void TruncateWithEllipsisStringNeedsTruncationAndMaxLengthIsOneOrTwoReturnsCorrectEllipsis(string input, int maxLength, string expected)
         {
             // Act
             string result = input.TruncateWithEllipsis(maxLength);
@@ -51,7 +51,7 @@ namespace CosmicLexicon.Foundation.xText.Tests
         }
 
         [Fact]
-        public void TruncateWithEllipsis_MaxLengthIsZeroOrLess_ThrowsArgumentOutOfRangeException()
+        public void TruncateWithEllipsisMaxLengthIsZeroOrLessThrowsArgumentOutOfRangeException()
         {
             // Test Data
             string input = "Hello";

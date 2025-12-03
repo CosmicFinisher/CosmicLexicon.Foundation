@@ -8,7 +8,7 @@ namespace CosmicLexicon.Foundation.Structures
     public class ListExtensions3Tests
     {
         [Fact]
-        public void AddIfNotExists_IEnumerable_AddsUniqueValues()
+        public void AddIfNotExistsIEnumerableAddsUniqueValues()
         {
             // Arrange
             List<int> list = new List<int> { 1, 2, 3 };
@@ -22,7 +22,7 @@ namespace CosmicLexicon.Foundation.Structures
         }
 
         [Fact]
-        public void AddIfNotExists_IEnumerable_DoesNotAddExistingValues()
+        public void AddIfNotExistsIEnumerableDoesNotAddExistingValues()
         {
             // Arrange
             List<int> list = new List<int> { 1, 2, 3 };
@@ -36,7 +36,7 @@ namespace CosmicLexicon.Foundation.Structures
         }
 
         [Fact]
-        public void AddIfNotExists_SingleValue_AddsValueIfUnique()
+        public void AddIfNotExistsSingleValueAddsValueIfUnique()
         {
             // Arrange
             List<int> list = new List<int> { 1, 2, 3 };
@@ -50,7 +50,7 @@ namespace CosmicLexicon.Foundation.Structures
         }
 
         [Fact]
-        public void AddIfNotExists_SingleValue_DoesNotAddValueIfExisting()
+        public void AddIfNotExistsSingleValueDoesNotAddValueIfExisting()
         {
             // Arrange
             List<int> list = new List<int> { 1, 2, 3 };

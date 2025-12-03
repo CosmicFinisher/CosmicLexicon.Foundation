@@ -7,7 +7,7 @@ namespace CosmicLexicon.Foundation.Host;
 public class GenericComparerTTests
 {
     [Fact]
-    public void Compare_DifferentValues_ReturnsCorrectComparison()
+    public void CompareDifferentValuesReturnsCorrectComparison()
     {
         // Arrange
         var comparer = GenericComparer<int>.Comparer;
@@ -22,7 +22,7 @@ public class GenericComparerTTests
     }
 
     [Fact]
-    public void Compare_NonNullValues_ReturnsCorrectComparison()
+    public void CompareNonNullValuesReturnsCorrectComparison()
     {
         // Arrange
         var comparer = GenericComparer<string>.Comparer;
@@ -37,7 +37,7 @@ public class GenericComparerTTests
     }
 
     [Fact]
-    public void Compare_EqualValues_ReturnsZero()
+    public void CompareEqualValuesReturnsZero()
     {
         // Arrange
         var comparer = GenericComparer<int>.Comparer;
@@ -52,7 +52,7 @@ public class GenericComparerTTests
     }
 
     [Fact]
-    public void Compare_NullValues_ReturnsCorrectComparison()
+    public void CompareNullValuesReturnsCorrectComparison()
     {
         // Arrange
         var comparer = GenericComparer<string>.Comparer;

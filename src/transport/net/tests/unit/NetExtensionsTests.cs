@@ -7,7 +7,7 @@ namespace CosmicLexicon.Foundation.Transport.Net
     public class NetExtensionsTests
     {
         [Fact]
-        public async Task HasInternetConnectionAsync_ReturnsTrue()
+        public async Task HasInternetConnectionAsyncReturnsTrue()
         {
             // Arrange
             string host = "google.com";

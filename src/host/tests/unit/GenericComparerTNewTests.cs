@@ -31,7 +31,7 @@ namespace CosmicLexicon.Foundation.Host
         }
 
         [Fact]
-        public void Compare_CustomComparableTypes_ReturnsCorrectResult()
+        public void CompareCustomComparableTypesReturnsCorrectResult()
         {
             // Arrange
             CustomComparable x = new CustomComparable(10);
@@ -50,7 +50,7 @@ namespace CosmicLexicon.Foundation.Host
         }
 
         [Fact]
-        public void Compare_ReferenceType_FirstIsNull_ReturnsNegativeOne()
+        public void CompareReferenceTypeFirstIsNullReturnsNegativeOne()
         {
             // Arrange
             string? x = null;
@@ -64,7 +64,7 @@ namespace CosmicLexicon.Foundation.Host
         }
 
         [Fact]
-        public void Compare_ReferenceType_SecondIsNull_ReturnsOne()
+        public void CompareReferenceTypeSecondIsNullReturnsOne()
         {
             // Arrange
             string x = "test";
@@ -78,7 +78,7 @@ namespace CosmicLexicon.Foundation.Host
         }
 
         [Fact]
-        public void Compare_ReferenceType_BothAreNull_ReturnsZero()
+        public void CompareReferenceTypeBothAreNullReturnsZero()
         {
             // Arrange
             string? x = null;
@@ -95,7 +95,7 @@ namespace CosmicLexicon.Foundation.Host
         [InlineData(5, 10, -1)]
         [InlineData(10, 5, 1)]
         [InlineData(5, 5, 0)]
-        public void Compare_DiverseNumericTypes_Int(int x, int y, int expectedSign)
+        public void CompareDiverseNumericTypesInt(int x, int y, int expectedSign)
         {
             // Act
             int result = GenericComparer<int>.Comparer.Compare(x, y);
@@ -108,7 +108,7 @@ namespace CosmicLexicon.Foundation.Host
         [InlineData(5.5f, 10.5f, -1)]
         [InlineData(10.5f, 5.5f, 1)]
         [InlineData(5.5f, 5.5f, 0)]
-        public void Compare_DiverseNumericTypes_Float(float x, float y, int expectedSign)
+        public void CompareDiverseNumericTypesFloat(float x, float y, int expectedSign)
         {
             // Act
             int result = GenericComparer<float>.Comparer.Compare(x, y);
@@ -122,7 +122,7 @@ namespace CosmicLexicon.Foundation.Host
         [InlineData("banana", "apple", 1)]
         [InlineData("apple", "apple", 0)]
         [InlineData("Apple", "apple", 1)] // Default string comparison is case-sensitive, 'A' is less than 'a' in ordinal, but Compare returns 1 for A > a
-        public void Compare_StringComparisons_ReturnsCorrectResult(string x, string y, int expectedSign)
+        public void CompareStringComparisonsReturnsCorrectResult(string x, string y, int expectedSign)
         {
             // Act
             int result = GenericComparer<string>.Comparer.Compare(x, y);

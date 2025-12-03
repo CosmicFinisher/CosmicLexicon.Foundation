@@ -13,7 +13,7 @@ namespace CosmicLexicon.Foundation.xDiagnostics
     public class LoggerTests
     {
         [Fact]
-        public void Log_LogsMessageToConsole()
+        public void LogLogsMessageToConsole()
         {
             // Arrange
             var logger = new Logger();

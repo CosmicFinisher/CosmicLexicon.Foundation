@@ -14,7 +14,7 @@ namespace CosmicLexicon.Foundation.xText.Tests
         // [InlineData('\u0085', true)] // Next Line (NEL)
         // [InlineData('\u2028', true)] // Line Separator
         // [InlineData('\u2029', true)] // Paragraph Separator
-        public void IsLineBreakChar_ValidLineBreakCharacters_ReturnsTrue(char c, bool expected)
+        public void IsLineBreakCharValidLineBreakCharactersReturnsTrue(char c, bool expected)
         {
             // Act
             bool result = CharHelpers.IsLineBreakChar(c);
@@ -30,7 +30,7 @@ namespace CosmicLexicon.Foundation.xText.Tests
         [InlineData('\t', false)] // Tab
         [InlineData('1', false)] // Digit
         [InlineData('@', false)] // Symbol
-        public void IsLineBreakChar_NonLineBreakCharacters_ReturnsFalse(char c, bool expected)
+        public void IsLineBreakCharNonLineBreakCharactersReturnsFalse(char c, bool expected)
         {
             // Act
             bool result = CharHelpers.IsLineBreakChar(c);

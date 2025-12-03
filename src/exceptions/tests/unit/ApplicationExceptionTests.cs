@@ -7,7 +7,7 @@ namespace CosmicLexicon.Foundation.xExceptions
     public class ApplicationExceptionTests
     {
         [Fact]
-        public void Constructor_Default_CreatesInstance()
+        public void ConstructorDefaultCreatesInstance()
         {
             // Act
             var exception = new CosmicLexicon.Foundation.xExceptions.ApplicationException();
@@ -19,7 +19,7 @@ namespace CosmicLexicon.Foundation.xExceptions
         }
         
         [Fact]
-        public void Constructor_WithMessage_SetsMessage()
+        public void ConstructorWithMessageSetsMessage()
         {
             // Arrange
             string message = "Test exception message";
@@ -34,7 +34,7 @@ namespace CosmicLexicon.Foundation.xExceptions
         }
         
         [Fact]
-        public void Constructor_WithMessageAndInnerException_SetsMessageAndInnerException()
+        public void ConstructorWithMessageAndInnerExceptionSetsMessageAndInnerException()
         {
             // Arrange
             string message = "Test exception message";
@@ -50,7 +50,7 @@ namespace CosmicLexicon.Foundation.xExceptions
         }
         
         [Fact]
-        public void Constructor_WithMessageAndErrorCode_SetsMessageAndErrorCode()
+        public void ConstructorWithMessageAndErrorCodeSetsMessageAndErrorCode()
         {
             // Arrange
             string message = "Test exception message";
@@ -66,7 +66,7 @@ namespace CosmicLexicon.Foundation.xExceptions
         }
         
         [Fact]
-        public void Constructor_WithMessageErrorCodeAndInnerException_SetsAllProperties()
+        public void ConstructorWithMessageErrorCodeAndInnerExceptionSetsAllProperties()
         {
             // Arrange
             string message = "Test exception message";
@@ -83,7 +83,7 @@ namespace CosmicLexicon.Foundation.xExceptions
         }
 
         [Fact]
-        public void Constructor_WithMessageAndNonZeroErrorCode_SetsMessageAndErrorCode()
+        public void ConstructorWithMessageAndNonZeroErrorCodeSetsMessageAndErrorCode()
         {
             // Arrange
             string message = "Another test exception message";
@@ -99,7 +99,7 @@ namespace CosmicLexicon.Foundation.xExceptions
         }
 
         [Fact]
-        public void ErrorCode_CanBeSet()
+        public void ErrorCodeCanBeSet()
         {
             // Arrange
             var exception = new CosmicLexicon.Foundation.xExceptions.ApplicationException();
@@ -113,7 +113,7 @@ namespace CosmicLexicon.Foundation.xExceptions
         }
 
         [Fact]
-        public void Constructor_WithMessageAndCustomStringErrorCode_SetsMessageAndCustomStringErrorCode()
+        public void ConstructorWithMessageAndCustomStringErrorCodeSetsMessageAndCustomStringErrorCode()
         {
             // Arrange
             string message = "Test exception with custom string error code";
@@ -130,7 +130,7 @@ namespace CosmicLexicon.Foundation.xExceptions
         }
 
         [Fact]
-        public void Constructor_WithMessageCustomStringErrorCodeAndInnerException_SetsAllProperties()
+        public void ConstructorWithMessageCustomStringErrorCodeAndInnerExceptionSetsAllProperties()
         {
             // Arrange
             string message = "Test exception with custom string error code and inner exception";
@@ -148,7 +148,7 @@ namespace CosmicLexicon.Foundation.xExceptions
         }
 
         [Fact]
-        public void CustomStringErrorCode_CanBeSet()
+        public void CustomStringErrorCodeCanBeSet()
         {
             // Arrange
             var exception = new CosmicLexicon.Foundation.xExceptions.ApplicationException();

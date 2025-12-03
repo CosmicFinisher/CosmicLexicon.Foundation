@@ -3,7 +3,7 @@ using CosmicLexicon.Foundation.Structures;
 public class ConcurrentObjectPoolInterfaceTests
                 {
                     [Fact]
-                    public void Seed_AddsObjectsToPool()
+                    public void SeedAddsObjectsToPool()
                     {
                         // Arrange
                         IConcurrentObjectPool pool = new ConcreteObjectPool();
@@ -17,7 +17,7 @@ public class ConcurrentObjectPoolInterfaceTests
                     }
             
                     [Fact]
-                    public void Rent_ReturnsObject()
+                    public void RentReturnsObject()
                     {
                         // Arrange
                         IConcurrentObjectPool<object> pool = new ConcreteObjectPool();
@@ -31,7 +31,7 @@ public class ConcurrentObjectPoolInterfaceTests
                     }
             
                     [Fact]
-                    public void ReturnToPool_AddsObjectToPool()
+                    public void ReturnToPoolAddsObjectToPool()
                     {
                         // Arrange
                         IConcurrentObjectPool<object> pool = new ConcreteObjectPool();

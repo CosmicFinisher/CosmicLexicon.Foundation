@@ -7,7 +7,7 @@ namespace CosmicLexicon.Foundation.xGenerics
     public class ObjectExtensionsTests
     {
         [Fact]
-        public void IsNullOrDbNull_NullObject_ReturnsTrue()
+        public void IsNullOrDbNullNullObjectReturnsTrue()
         {
             // Arrange
             object obj = null;
@@ -20,7 +20,7 @@ namespace CosmicLexicon.Foundation.xGenerics
         }
 
         [Fact]
-        public void IsNullOrDbNull_DbNullObject_ReturnsTrue()
+        public void IsNullOrDbNullDbNullObjectReturnsTrue()
         {
             // Arrange
             object obj = DBNull.Value;
@@ -33,7 +33,7 @@ namespace CosmicLexicon.Foundation.xGenerics
         }
 
         [Fact]
-        public void IsNullOrDbNull_NotNullObject_ReturnsFalse()
+        public void IsNullOrDbNullNotNullObjectReturnsFalse()
         {
             // Arrange
             object obj = new object();

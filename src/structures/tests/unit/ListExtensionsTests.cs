@@ -9,7 +9,7 @@ namespace CosmicLexicon.Foundation.Structures
     public class ListExtensionsTests
     {
         [Fact]
-        public void ToReadOnly_ReturnsReadOnlyCollection()
+        public void ToReadOnlyReturnsReadOnlyCollection()
         {
             // Arrange
             int item = 10;
@@ -24,7 +24,7 @@ namespace CosmicLexicon.Foundation.Structures
         }
 
         [Fact]
-        public void IsNullOrEmpty_WithNullCollection_ReturnsEmptyCollection()
+        public void IsNullOrEmptyWithNullCollectionReturnsEmptyCollection()
         {
             // Arrange
             IReadOnlyCollection<int> collection = null;
@@ -37,7 +37,7 @@ namespace CosmicLexicon.Foundation.Structures
         }
 
         [Fact]
-        public void IsNullOrEmpty_WithEmptyCollection_ReturnsEmptyCollection()
+        public void IsNullOrEmptyWithEmptyCollectionReturnsEmptyCollection()
         {
             // Arrange
             IReadOnlyCollection<int> collection = new List<int>();
@@ -50,7 +50,7 @@ namespace CosmicLexicon.Foundation.Structures
         }
 
         [Fact]
-        public void IsNullOrEmpty_WithNonEmptyCollection_ReturnsOriginalCollection()
+        public void IsNullOrEmptyWithNonEmptyCollectionReturnsOriginalCollection()
         {
             // Arrange
             IReadOnlyCollection<int> collection = new List<int> { 1, 2, 3 };
@@ -63,7 +63,7 @@ namespace CosmicLexicon.Foundation.Structures
         }
 
         [Fact]
-        public void Concat_WithNullCollections_ReturnsEmptyCollection()
+        public void ConcatWithNullCollectionsReturnsEmptyCollection()
         {
             // Arrange
             IReadOnlyCollection<int> collection1 = null;
@@ -77,7 +77,7 @@ namespace CosmicLexicon.Foundation.Structures
         }
 
         [Fact]
-        public void ToFlatList_WithListOfLists_ReturnsFlattenedList()
+        public void ToFlatListWithListOfListsReturnsFlattenedList()
         {
             // Arrange
             var listOfLists = new List<List<int>?>
@@ -95,7 +95,7 @@ namespace CosmicLexicon.Foundation.Structures
         }
 
         [Fact]
-        public void AsFlattened_WithListOfLists_ReturnsFlattenedEnumerable()
+        public void AsFlattenedWithListOfListsReturnsFlattenedEnumerable()
         {
             // Arrange
             var listOfLists = new List<List<int>?>
@@ -113,7 +113,7 @@ namespace CosmicLexicon.Foundation.Structures
         }
 
         [Fact]
-        public void ToFlattenedList_WithListOfLists_ReturnsFlattenedListFromEnumerable()
+        public void ToFlattenedListWithListOfListsReturnsFlattenedListFromEnumerable()
         {
             // Arrange
             var listOfLists = new List<List<int>?>
@@ -130,7 +130,7 @@ namespace CosmicLexicon.Foundation.Structures
             Assert.Equal(new List<int> { 1, 2, 3, 4 }, result);
         }
         [Fact]
-        public void ToReadOnly_ValidItem_ReturnsReadOnlyCollection()
+        public void ToReadOnlyValidItemReturnsReadOnlyCollection()
         {
             // Arrange
             int item = 5;
@@ -145,7 +145,7 @@ namespace CosmicLexicon.Foundation.Structures
         }
 
         [Fact]
-        public void NullCheck_NonNullCollection_ReturnsOriginalCollection()
+        public void NullCheckNonNullCollectionReturnsOriginalCollection()
         {
             // Arrange
             IReadOnlyCollection<int> collection = new List<int> { 1, 2, 3 };
@@ -158,7 +158,7 @@ namespace CosmicLexicon.Foundation.Structures
         }
 
         [Fact]
-        public void NullCheck_NullCollection_ReturnsEmptyCollection()
+        public void NullCheckNullCollectionReturnsEmptyCollection()
         {
             // Arrange
             IReadOnlyCollection<int> collection = null;
@@ -172,7 +172,7 @@ namespace CosmicLexicon.Foundation.Structures
         }
 
         [Fact]
-        public void Concat_NonNullCollections_ReturnsConcatenatedCollection()
+        public void ConcatNonNullCollectionsReturnsConcatenatedCollection()
         {
             // Arrange
             IReadOnlyCollection<int> collection1 = new List<int> { 1, 2 };
@@ -186,7 +186,7 @@ namespace CosmicLexicon.Foundation.Structures
         }
 
         [Fact]
-        public void Concat_NullCollections_ReturnsEmptyCollection()
+        public void ConcatNullCollectionsReturnsEmptyCollection()
         {
             // Arrange
             IReadOnlyCollection<int> collection1 = null;
@@ -200,7 +200,7 @@ namespace CosmicLexicon.Foundation.Structures
         }
 
         [Fact]
-        public void ToFlatList_NonNullLists_ReturnsFlatList()
+        public void ToFlatListNonNullListsReturnsFlatList()
         {
             // Arrange
             List<List<int>?> collection = new List<List<int>?>
@@ -217,7 +217,7 @@ namespace CosmicLexicon.Foundation.Structures
         }
 
         [Fact]
-        public void ToFlatList_NullLists_ReturnsEmptyList()
+        public void ToFlatListNullListsReturnsEmptyList()
         {
             // Arrange
             List<List<int>?> collection = new List<List<int>?> { null, null };

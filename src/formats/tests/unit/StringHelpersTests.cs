@@ -128,7 +128,7 @@ namespace CosmicLexicon.Foundation.xText.Tests
 
         // Test Case 5.1.1: Valid Input with Custom Formatter
         [Fact]
-        public void FormatWithFormatter_ValidInputWithCustomFormatter_UsesFormatter()
+        public void FormatWithFormatterValidInputWithCustomFormatterUsesFormatter()
         {
             // Collaborators to Mock: IStringFormatter
             var mockFormatter = new Mock<IStringFormatter>();
@@ -151,7 +151,7 @@ namespace CosmicLexicon.Foundation.xText.Tests
 
         // Test Case 5.1.2: Null Input with Custom Formatter
         [Fact]
-        public void FormatWithFormatter_NullInputWithCustomFormatter_ReturnsEmptyAndDoesNotCallFormatter()
+        public void FormatWithFormatterNullInputWithCustomFormatterReturnsEmptyAndDoesNotCallFormatter()
         {
             // Collaborators to Mock: IStringFormatter
             var mockFormatter = new Mock<IStringFormatter>();
@@ -170,7 +170,7 @@ namespace CosmicLexicon.Foundation.xText.Tests
 
         // Test Case 5.1.3: Null Formatter Provided
         [Fact]
-        public void FormatWithFormatter_NullFormatterProvided_FallsBackToDefaultToStringBehavior()
+        public void FormatWithFormatterNullFormatterProvidedFallsBackToDefaultToStringBehavior()
         {
             // Collaborators to Mock: None (as the formatter is null)
             // Test Data

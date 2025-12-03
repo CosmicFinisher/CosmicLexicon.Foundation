@@ -3,7 +3,7 @@ using CosmicLexicon.Foundation.Structures;
 public class LinkedListHelpersTests
 {
     [Fact]
-    public void ToList_ConvertsLinkedListToList()
+    public void ToListConvertsLinkedListToList()
     {
         // Arrange
         var node1 = new Node { Value = 1 };
@@ -23,7 +23,7 @@ public class LinkedListHelpersTests
     }
 
     [Fact]
-    public void ToList_HandlesCircularReference()
+    public void ToListHandlesCircularReference()
     {
         // Arrange
         var node1 = new Node { Value = 1 };

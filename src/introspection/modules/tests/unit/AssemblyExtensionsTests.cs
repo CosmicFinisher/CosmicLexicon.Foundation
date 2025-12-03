@@ -10,7 +10,7 @@ namespace CosmicLexicon.Foundation.Introspection.Modules
     public class AssemblyExtensionsTests
     {
         [Fact]
-        public void QueryTypes_All_ReturnsAllDefinedTypes()
+        public void QueryTypesAllReturnsAllDefinedTypes()
         {
             // Arrange
             Assembly assembly = typeof(AssemblyExtensionsTests).Assembly;
@@ -23,7 +23,7 @@ namespace CosmicLexicon.Foundation.Introspection.Modules
         }
 
         [Fact]
-        public void GetTypes_All_ReturnsAllTypes()
+        public void GetTypesAllReturnsAllTypes()
         {
             // Arrange
             Assembly assembly = typeof(AssemblyExtensionsTests).Assembly;
@@ -36,7 +36,7 @@ namespace CosmicLexicon.Foundation.Introspection.Modules
         }
 
         [Fact]
-        public void FilterTypesByInterface_ValidInterface_ReturnsFilteredTypes()
+        public void FilterTypesByInterfaceValidInterfaceReturnsFilteredTypes()
         {
             // Arrange
             Assembly assembly = typeof(AssemblyExtensionsTests).Assembly;
@@ -51,7 +51,7 @@ namespace CosmicLexicon.Foundation.Introspection.Modules
         }
 
         [Fact]
-        public void FilterTypesByBaseType_ValidBaseClass_ReturnsFilteredTypes()
+        public void FilterTypesByBaseTypeValidBaseClassReturnsFilteredTypes()
         {
             // Arrange
             Assembly assembly = typeof(AssemblyExtensionsTests).Assembly;
@@ -66,7 +66,7 @@ namespace CosmicLexicon.Foundation.Introspection.Modules
         }
 
         [Fact]
-        public void CompareTypeDefenition_SameType_ReturnsTrue()
+        public void CompareTypeDefenitionSameTypeReturnsTrue()
         {
             // Arrange
             Type type1 = typeof(string);
@@ -80,7 +80,7 @@ namespace CosmicLexicon.Foundation.Introspection.Modules
         }
 
         [Fact]
-        public void GetTypeDefenitionIfItIsGeneric_GenericType_ReturnsGenericTypeDefinition()
+        public void GetTypeDefenitionIfItIsGenericGenericTypeReturnsGenericTypeDefinition()
         {
             // Arrange
             Type type = typeof(List<string>);

@@ -28,7 +28,7 @@ namespace CosmicLexicon.Foundation.Host
         [InlineData(typeof(bool), "false", false)]
         [InlineData(typeof(Guid), "a1a2a3a4-b1b2-c1c2-d1d2-e1e2e3e4e5e6", "a1a2a3a4-b1b2-c1c2-d1d2-e1e2e3e4e5e6")]
         [InlineData(typeof(TimeSpan), "01:00:00", "01:00:00")]
-        public void ParseToObject_PrimitiveAndCommonTypes_ReturnsParsedObject(Type propertyType, string value, object expected)
+        public void ParseToObjectPrimitiveAndCommonTypesReturnsParsedObject(Type propertyType, string value, object expected)
         {
             // Act
             object result = TypeHelpers.ParseToObject(propertyType, value);
@@ -65,7 +65,7 @@ namespace CosmicLexicon.Foundation.Host
         [Theory]
         [InlineData(typeof(TestEnum), "Value1", TestEnum.Value1)]
         [InlineData(typeof(TestEnum), "Value2", TestEnum.Value2)]
-        public void ParseToObject_EnumTypes_ReturnsParsedObject(Type propertyType, string value, object expected)
+        public void ParseToObjectEnumTypesReturnsParsedObject(Type propertyType, string value, object expected)
         {
             // Act
             object result = TypeHelpers.ParseToObject(propertyType, value);
@@ -81,7 +81,7 @@ namespace CosmicLexicon.Foundation.Host
         [InlineData(typeof(bool?), "", null)]
         [InlineData(typeof(DateTime?), "2023-01-01", "2023-01-01T00:00:00.0000000")]
         [InlineData(typeof(Guid?), "a1a2a3a4-b1b2-c1c2-d1d2-e1e2e3e4e5e6", "a1a2a3a4-b1b2-c1c2-d1d2-e1e2e3e4e5e6")]
-        public void ParseToObject_NullableTypes_ReturnsParsedObject(Type propertyType, string value, object expected)
+        public void ParseToObjectNullableTypesReturnsParsedObject(Type propertyType, string value, object expected)
         {
             // Act
             object result = TypeHelpers.ParseToObject(propertyType, value);
@@ -102,7 +102,7 @@ namespace CosmicLexicon.Foundation.Host
         }
 
         [Fact]
-        public void ParseToObject_EmptyStringForNonNullableType_ThrowsFormatException()
+        public void ParseToObjectEmptyStringForNonNullableTypeThrowsFormatException()
         {
             // Arrange
             Type propertyType = typeof(int);
@@ -113,7 +113,7 @@ namespace CosmicLexicon.Foundation.Host
         }
 
         [Fact]
-        public void ParseToObject_WhitespaceStringForNonNullableType_ThrowsFormatException()
+        public void ParseToObjectWhitespaceStringForNonNullableTypeThrowsFormatException()
         {
             // Arrange
             Type propertyType = typeof(int);
@@ -128,7 +128,7 @@ namespace CosmicLexicon.Foundation.Host
         public class CustomClass { }
 
         [Fact]
-        public void ParseToObject_InvalidCast_ThrowsInvalidCastException()
+        public void ParseToObjectInvalidCastThrowsInvalidCastException()
         {
             // Arrange
             Type propertyType = typeof(CustomClass);
@@ -140,7 +140,7 @@ namespace CosmicLexicon.Foundation.Host
         [Theory]
         [InlineData("3.402824E+38")] // Value slightly above float.MaxValue
         [InlineData("-3.402824E+38")] // Value slightly below float.MinValue
-        public void ParseToObject_FloatingPointOverflow_ClampsToFloatMinMax(string value)
+        public void ParseToObjectFloatingPointOverflowClampsToFloatMinMax(string value)
         {
             // Arrange
             Type propertyType = typeof(float);
@@ -156,7 +156,7 @@ namespace CosmicLexicon.Foundation.Host
         [Theory]
         [InlineData("1.7976931348623158E+308")] // Value slightly above double.MaxValue
         [InlineData("-1.7976931348623158E+308")] // Value slightly below double.MinValue
-        public void ParseToObject_FloatingPointOverflow_ClampsToDoubleMinMax(string value)
+        public void ParseToObjectFloatingPointOverflowClampsToDoubleMinMax(string value)
         {
             // Arrange
             Type propertyType = typeof(double);
@@ -170,7 +170,7 @@ namespace CosmicLexicon.Foundation.Host
         }
 
         [Fact]
-        public void ParseToObject_UnsupportedType_ThrowsInvalidCastException()
+        public void ParseToObjectUnsupportedTypeThrowsInvalidCastException()
         {
             // Arrange
             // Example of a type that Convert.ChangeType cannot handle without a custom TypeConverter

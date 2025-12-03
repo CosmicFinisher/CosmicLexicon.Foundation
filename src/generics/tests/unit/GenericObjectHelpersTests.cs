@@ -7,7 +7,7 @@ namespace CosmicLexicon.Foundation.xGenerics
     public class GenericObjectHelpersTests
     {
         [Fact]
-        public void MakeShallowCopy_NullObject_ReturnsDefault()
+        public void MakeShallowCopyNullObjectReturnsDefault()
         {
             // Arrange
             object inputObject = null;
@@ -20,7 +20,7 @@ namespace CosmicLexicon.Foundation.xGenerics
         }
 
         [Fact]
-        public void MakeShallowCopy_PrimitiveType_ReturnsSameValue()
+        public void MakeShallowCopyPrimitiveTypeReturnsSameValue()
         {
             // Arrange
             int inputObject = 5;
@@ -33,7 +33,7 @@ namespace CosmicLexicon.Foundation.xGenerics
         }
 
         [Fact]
-        public void MakeShallowCopy_StringType_ReturnsSameValue()
+        public void MakeShallowCopyStringTypeReturnsSameValue()
         {
             // Arrange
             string inputObject = "test";
@@ -46,7 +46,7 @@ namespace CosmicLexicon.Foundation.xGenerics
         }
 
         [Fact]
-        public void MakeShallowCopy_SimpleObject_ReturnsShallowCopy()
+        public void MakeShallowCopySimpleObjectReturnsShallowCopy()
         {
             // Arrange
             var inputObject = new SimpleObject { Value = 10 };
@@ -61,7 +61,7 @@ namespace CosmicLexicon.Foundation.xGenerics
         }
 
         [Fact]
-        public void MakeShallowCopy_SimpleObjectSimpleTypesOnly_ReturnsDefault()
+        public void MakeShallowCopySimpleObjectSimpleTypesOnlyReturnsDefault()
         {
             // Arrange
             var inputObject = new SimpleObject { Value = 10 };
@@ -74,7 +74,7 @@ namespace CosmicLexicon.Foundation.xGenerics
         }
 
         [Fact]
-        public void MakeShallowCopy_Array_ReturnsShallowCopy()
+        public void MakeShallowCopyArrayReturnsShallowCopy()
         {
             // Arrange
             int[] inputArray = { 1, 2, 3 };

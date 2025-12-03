@@ -12,7 +12,7 @@ namespace CosmicLexicon.Foundation.Introspection.Modules
     public class TypeExtensionsTests
     {
         [Fact]
-        public void IsNullable_ValueType_ReturnsFalse()
+        public void IsNullableValueTypeReturnsFalse()
         {
             // Arrange
             Type type = typeof(int);
@@ -25,7 +25,7 @@ namespace CosmicLexicon.Foundation.Introspection.Modules
         }
 
         [Fact]
-        public void IsNullable_ReferenceType_ReturnsTrue()
+        public void IsNullableReferenceTypeReturnsTrue()
         {
             // Arrange
             Type type = typeof(string);
@@ -38,7 +38,7 @@ namespace CosmicLexicon.Foundation.Introspection.Modules
         }
 
         [Fact]
-        public void GetAggregatedConstructorParamTypes_HasConstructors_ReturnsParameterTypes()
+        public void GetAggregatedConstructorParamTypesHasConstructorsReturnsParameterTypes()
         {
             // Arrange
             Type type = typeof(TestClass);
@@ -53,7 +53,7 @@ namespace CosmicLexicon.Foundation.Introspection.Modules
         }
 
         [Fact]
-        public void ShouldGenericEquals_NoGenericParameters_ReturnsTrue()
+        public void ShouldGenericEqualsNoGenericParametersReturnsTrue()
         {
             // Arrange
             Type type = typeof(string);
@@ -66,7 +66,7 @@ namespace CosmicLexicon.Foundation.Introspection.Modules
         }
 
         [Fact]
-        public void ShouldGenericEquals_HasGenericParameters_ReturnsFalse()
+        public void ShouldGenericEqualsHasGenericParametersReturnsFalse()
         {
             // Arrange
             Type type = typeof(List<string>);
@@ -79,7 +79,7 @@ namespace CosmicLexicon.Foundation.Introspection.Modules
         }
 
         [Fact]
-        public void GuidEqual_EqualGuids_ReturnsTrue()
+        public void GuidEqualEqualGuidsReturnsTrue()
         {
             // Arrange
             Type type1 = typeof(string);
@@ -93,7 +93,7 @@ namespace CosmicLexicon.Foundation.Introspection.Modules
         }
 
         [Fact]
-        public void HasInterface_ImplementsInterface_ReturnsTrue()
+        public void HasInterfaceImplementsInterfaceReturnsTrue()
         {
             // Arrange
             Type type = typeof(TestClassImplementingInterface);

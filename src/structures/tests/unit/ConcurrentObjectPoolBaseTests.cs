@@ -9,7 +9,7 @@ namespace CosmicLexicon.Foundation.Structures
     public partial class ConcurrentObjectPoolBaseTests
     {
         [Fact]
-        public void Seed_AddsObjectsToPool()
+        public void SeedAddsObjectsToPool()
         {
             // Arrange
             var pool = new ConcreteObjectPool();
@@ -23,7 +23,7 @@ namespace CosmicLexicon.Foundation.Structures
         }
 
         [Fact]
-        public void Dispose_DisposesDisposableObjects()
+        public void DisposeDisposesDisposableObjects()
         {
             // Arrange
             var pool = new ConcreteObjectPool();

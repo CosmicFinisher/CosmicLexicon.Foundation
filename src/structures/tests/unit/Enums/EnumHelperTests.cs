@@ -15,7 +15,7 @@ namespace CosmicLexicon.Foundation.Structures.Enums
         }
 
         [Fact]
-        public void MakeArray_TReturn_ReturnsArrayOfCorrectSize()
+        public void MakeArrayTReturnReturnsArrayOfCorrectSize()
         {
             // Act
             int[] result = EnumHelper.MakeArray<TestEnum, int>();
@@ -25,7 +25,7 @@ namespace CosmicLexicon.Foundation.Structures.Enums
         }
 
         [Fact]
-        public void MakeArray_ReturnsArrayOfCorrectSize()
+        public void MakeArrayReturnsArrayOfCorrectSize()
         {
             // Act
             TestEnum[] result = EnumHelper.MakeArray<TestEnum>();

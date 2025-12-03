@@ -8,7 +8,7 @@ namespace CosmicLexicon.Foundation.Host
     public class IComparableExtensionsNewTests
     {
         [Fact]
-        public void Between_InvertedRange_ReturnsFalse()
+        public void BetweenInvertedRangeReturnsFalse()
         {
             // Arrange
             int value = 5;
@@ -23,7 +23,7 @@ namespace CosmicLexicon.Foundation.Host
         }
 
         [Fact]
-        public void Between_DateTime_ValueIsBetweenMinAndMax_ReturnsTrue()
+        public void BetweenDateTimeValueIsBetweenMinAndMaxReturnsTrue()
         {
             // Arrange
             DateTime value = new DateTime(2023, 1, 5);
@@ -38,7 +38,7 @@ namespace CosmicLexicon.Foundation.Host
         }
 
         [Fact]
-        public void Between_Guid_ValueIsBetweenMinAndMax_ReturnsTrue()
+        public void BetweenGuidValueIsBetweenMinAndMaxReturnsTrue()
         {
             // Arrange
             Guid value = new Guid("00000000-0000-0000-0000-000000000002");
@@ -53,7 +53,7 @@ namespace CosmicLexicon.Foundation.Host
         }
 
         [Fact]
-        public void Clamp_InvertedRange_ValueBelowMin_ReturnsCorrectClampedValue()
+        public void ClampInvertedRangeValueBelowMinReturnsCorrectClampedValue()
         {
             // Arrange
             int value = 0;
@@ -70,7 +70,7 @@ namespace CosmicLexicon.Foundation.Host
         }
 
         [Fact]
-        public void Clamp_InvertedRange_ValueAboveMax_ReturnsCorrectClampedValue()
+        public void ClampInvertedRangeValueAboveMaxReturnsCorrectClampedValue()
         {
             // Arrange
             int value = 15;
@@ -87,7 +87,7 @@ namespace CosmicLexicon.Foundation.Host
         }
 
         [Fact]
-        public void Clamp_InvertedRange_ValueBetweenInvertedMinMax_ReturnsCorrectClampedValue()
+        public void ClampInvertedRangeValueBetweenInvertedMinMaxReturnsCorrectClampedValue()
         {
             // Arrange
             int value = 5;
@@ -104,7 +104,7 @@ namespace CosmicLexicon.Foundation.Host
         }
 
         [Fact]
-        public void Clamp_DateTime_ValueIsBetweenMinAndMax_ReturnsValue()
+        public void ClampDateTimeValueIsBetweenMinAndMaxReturnsValue()
         {
             // Arrange
             DateTime value = new DateTime(2023, 1, 5);
@@ -119,7 +119,7 @@ namespace CosmicLexicon.Foundation.Host
         }
 
         [Fact]
-        public void Max_DateTime_ReturnsMax()
+        public void MaxDateTimeReturnsMax()
         {
             // Arrange
             DateTime inputA = new DateTime(2023, 1, 10);
@@ -133,7 +133,7 @@ namespace CosmicLexicon.Foundation.Host
         }
 
         [Fact]
-        public void Min_DateTime_ReturnsMin()
+        public void MinDateTimeReturnsMin()
         {
             // Arrange
             DateTime inputA = new DateTime(2023, 1, 10);

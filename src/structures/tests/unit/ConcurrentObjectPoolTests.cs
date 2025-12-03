@@ -8,7 +8,7 @@ namespace CosmicLexicon.Foundation.Structures
         public class ConcurrentObjectPoolTests
         {
             [Fact]
-            public void GenerateObject_ReturnsObjectFromFactory()
+            public void GenerateObjectReturnsObjectFromFactory()
             {
                 // Arrange
                 var pool = new ConcurrentObjectPool<object>(() => new object());
@@ -21,7 +21,7 @@ namespace CosmicLexicon.Foundation.Structures
             }
 
             [Fact]
-            public void GenerateObject_ThrowsExceptionWhenFactoryReturnsNull()
+            public void GenerateObjectThrowsExceptionWhenFactoryReturnsNull()
             {
                 // Arrange
                 var pool = new ConcurrentObjectPool<object>(() => null);
@@ -31,7 +31,7 @@ namespace CosmicLexicon.Foundation.Structures
             }
 
             [Fact]
-            public void GenerateObject_ThrowsExceptionWhenFactoryReturnsWrongType()
+            public void GenerateObjectThrowsExceptionWhenFactoryReturnsWrongType()
             {
                 // Arrange
                 var pool = new ConcurrentObjectPool<string>(() => 1);

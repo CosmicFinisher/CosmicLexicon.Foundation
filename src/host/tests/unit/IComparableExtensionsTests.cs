@@ -7,7 +7,7 @@ namespace CosmicLexicon.Foundation.Host;
 public class IComparableExtensionsTests
 {
     [Fact]
-    public void Between_ValueBetweenMinAndMax_ReturnsTrue()
+    public void BetweenValueBetweenMinAndMaxReturnsTrue()
     {
         // Arrange
         int value = 5;
@@ -22,7 +22,7 @@ public class IComparableExtensionsTests
     }
 
     [Fact]
-    public void Between_ValueLessThanMin_ReturnsFalse()
+    public void BetweenValueLessThanMinReturnsFalse()
     {
         // Arrange
         int value = 0;
@@ -37,7 +37,7 @@ public class IComparableExtensionsTests
     }
 
     [Fact]
-    public void Between_ValueGreaterThanMax_ReturnsFalse()
+    public void BetweenValueGreaterThanMaxReturnsFalse()
     {
         // Arrange
         int value = 11;
@@ -52,7 +52,7 @@ public class IComparableExtensionsTests
     }
 
     [Fact]
-    public void Clamp_ValueBetweenMinAndMax_ReturnsValue()
+    public void ClampValueBetweenMinAndMaxReturnsValue()
     {
         // Arrange
         int value = 5;
@@ -67,7 +67,7 @@ public class IComparableExtensionsTests
     }
 
     [Fact]
-    public void Clamp_ValueLessThanMin_ReturnsMin()
+    public void ClampValueLessThanMinReturnsMin()
     {
         // Arrange
         int value = 0;
@@ -82,7 +82,7 @@ public class IComparableExtensionsTests
     }
 
     [Fact]
-    public void Clamp_ValueGreaterThanMax_ReturnsMax()
+    public void ClampValueGreaterThanMaxReturnsMax()
     {
         // Arrange
         int value = 11;
@@ -97,7 +97,7 @@ public class IComparableExtensionsTests
     }
 
     [Fact]
-    public void Max_InputAGreaterThanInputB_ReturnsInputA()
+    public void MaxInputAGreaterThanInputBReturnsInputA()
     {
         // Arrange
         int inputA = 10;
@@ -111,7 +111,7 @@ public class IComparableExtensionsTests
     }
 
     [Fact]
-    public void Max_InputBGreaterThanInputA_ReturnsInputB()
+    public void MaxInputBGreaterThanInputAReturnsInputB()
     {
         // Arrange
         int inputA = 5;
@@ -125,7 +125,7 @@ public class IComparableExtensionsTests
     }
 
     [Fact]
-    public void Min_InputALessThanInputB_ReturnsInputA()
+    public void MinInputALessThanInputBReturnsInputA()
     {
         // Arrange
         int inputA = 5;
@@ -139,7 +139,7 @@ public class IComparableExtensionsTests
     }
 
     [Fact]
-    public void Min_InputBLessThanInputA_ReturnsInputB()
+    public void MinInputBLessThanInputAReturnsInputB()
     {
         // Arrange
         int inputA = 10;

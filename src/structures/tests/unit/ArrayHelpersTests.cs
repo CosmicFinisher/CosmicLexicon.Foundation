@@ -9,7 +9,7 @@ namespace CosmicLexicon.Foundation.Structures
     public class ArrayHelpersTests
     {
         [Fact]
-        public void FillArrayElements_WithValidArray_FillsArrayWithValue()
+        public void FillArrayElementsWithValidArrayFillsArrayWithValue()
         {
             // Arrange
             int[] array = new int[5];
@@ -26,7 +26,7 @@ namespace CosmicLexicon.Foundation.Structures
         }
 
         [Fact]
-        public void FillArrayElements_WithStartIndex_FillsArrayFromStartIndex()
+        public void FillArrayElementsWithStartIndexFillsArrayFromStartIndex()
         {
             // Arrange
             int[] array = new int[5] { 1, 2, 3, 4, 5 };
@@ -45,7 +45,7 @@ namespace CosmicLexicon.Foundation.Structures
         }
 
         [Fact]
-        public void FillArrayElements_WithNullArray_ThrowsArgumentNullException()
+        public void FillArrayElementsWithNullArrayThrowsArgumentNullException()
         {
             // Arrange
             int[] array = null;
@@ -56,7 +56,7 @@ namespace CosmicLexicon.Foundation.Structures
         }
 
         [Fact]
-        public void FillArrayElement_WithValidParameters_UpdatesElement()
+        public void FillArrayElementWithValidParametersUpdatesElement()
         {
             // Arrange
             int[] array = new int[5] { 1, 2, 3, 4, 5 };
@@ -76,7 +76,7 @@ namespace CosmicLexicon.Foundation.Structures
         }
 
         [Fact]
-        public void FillArrayElement_WithStartIndex_SearchesFromStartIndex()
+        public void FillArrayElementWithStartIndexSearchesFromStartIndex()
         {
             // Arrange
             int[] array = new int[5] { 3, 2, 3, 4, 5 };
@@ -97,7 +97,7 @@ namespace CosmicLexicon.Foundation.Structures
         }
 
         [Fact]
-        public void FillArrayElement_WhenNoElementMatches_ReturnsFalse()
+        public void FillArrayElementWhenNoElementMatchesReturnsFalse()
         {
             // Arrange
             int[] array = new int[5] { 1, 2, 3, 4, 5 };
@@ -118,7 +118,7 @@ namespace CosmicLexicon.Foundation.Structures
         }
 
         [Fact]
-        public void FillArrayElement_WithNullArray_ThrowsArgumentNullException()
+        public void FillArrayElementWithNullArrayThrowsArgumentNullException()
         {
             // Arrange
             int[] array = null;
@@ -130,7 +130,7 @@ namespace CosmicLexicon.Foundation.Structures
         }
 
         [Fact]
-        public void FillArrayElement_WithNullFinder_ThrowsArgumentNullException()
+        public void FillArrayElementWithNullFinderThrowsArgumentNullException()
         {
             // Arrange
             int[] array = new int[5];
@@ -142,7 +142,7 @@ namespace CosmicLexicon.Foundation.Structures
         }
 
         [Fact]
-        public void FillArrayElement_WithNullProducer_ThrowsArgumentNullException()
+        public void FillArrayElementWithNullProducerThrowsArgumentNullException()
         {
             // Arrange
             int[] array = new int[5];
@@ -154,7 +154,7 @@ namespace CosmicLexicon.Foundation.Structures
         }
 
         [Fact]
-        public void FillArrayElement_WithInvalidStartIndex_ThrowsArgumentOutOfRangeException()
+        public void FillArrayElementWithInvalidStartIndexThrowsArgumentOutOfRangeException()
         {
             // Arrange
             int[] array = new int[5];
@@ -167,7 +167,7 @@ namespace CosmicLexicon.Foundation.Structures
         }
 
         [Fact]
-        public void FillArrayElement_WithStartIndexGreaterThanLength_ThrowsArgumentOutOfRangeException()
+        public void FillArrayElementWithStartIndexGreaterThanLengthThrowsArgumentOutOfRangeException()
         {
             // Arrange
             int[] array = new int[5];
@@ -180,7 +180,7 @@ namespace CosmicLexicon.Foundation.Structures
         }
 
         [Fact]
-        public void FillArrayElement_EmptyArray_ReturnsFalse()
+        public void FillArrayElementEmptyArrayReturnsFalse()
         {
             // Arrange
             int[] array = new int[0];
@@ -194,7 +194,7 @@ namespace CosmicLexicon.Foundation.Structures
             Assert.False(result);
         }
         [Fact]
-        public void Concat_WithEmptyAdditions_ReturnsOriginalCollection()
+        public void ConcatWithEmptyAdditionsReturnsOriginalCollection()
         {
             // Arrange
             var arr = new int[] { 1, 2, 3 };
@@ -211,7 +211,7 @@ namespace CosmicLexicon.Foundation.Structures
         public class FillArrayElementTests
         {
             [Fact]
-            public void AddRange_AddsOnlyItemsThatShouldBeAdded()
+            public void AddRangeAddsOnlyItemsThatShouldBeAdded()
             {
                 // Arrange
                 var collection = new ConcreteCollection();
@@ -230,7 +230,7 @@ namespace CosmicLexicon.Foundation.Structures
             }
 
             [Fact]
-            public void CopyTo_CopiesToArrayCorrectly()
+            public void CopyToCopiesToArrayCorrectly()
             {
                 // Arrange
                 var collection = new ConcreteCollection();
@@ -282,7 +282,7 @@ namespace CosmicLexicon.Foundation.Structures
                 }
             }
             [Fact]
-            public void FillArrayElements_ValidInput_ReturnsFilledArray()
+            public void FillArrayElementsValidInputReturnsFilledArray()
             {
                 // Arrange
                 int[] array = new int[3];
@@ -296,7 +296,7 @@ namespace CosmicLexicon.Foundation.Structures
             }
 
             [Fact]
-            public void FillArrayElements_StartIndex_ReturnsPartiallyFilledArray()
+            public void FillArrayElementsStartIndexReturnsPartiallyFilledArray()
             {
                 // Arrange
                 int[] array = new int[3];
@@ -311,7 +311,7 @@ namespace CosmicLexicon.Foundation.Structures
             }
 
             [Fact]
-            public void FillArrayElements_NullArray_ThrowsArgumentNullException()
+            public void FillArrayElementsNullArrayThrowsArgumentNullException()
             {
                 // Arrange
                 int[] array = null;
@@ -322,7 +322,7 @@ namespace CosmicLexicon.Foundation.Structures
             }
 
             [Fact]
-            public void FillArrayElements_EmptyArray_ReturnsEmptyArray()
+            public void FillArrayElementsEmptyArrayReturnsEmptyArray()
             {
                 // Arrange
                 int[] array = new int[0];
@@ -336,7 +336,7 @@ namespace CosmicLexicon.Foundation.Structures
             }
 
             [Fact]
-            public void FillArrayElement_ElementFound_ReturnsTrueAndUpdatesArray()
+            public void FillArrayElementElementFoundReturnsTrueAndUpdatesArray()
             {
                 // Arrange
                 int[] array = new int[] { 1, 2, 3 };
@@ -359,7 +359,7 @@ namespace CosmicLexicon.Foundation.Structures
             }
 
             [Fact]
-            public void FillArrayElement_ElementNotFound_ReturnsFalseAndDoesNotUpdateArray()
+            public void FillArrayElementElementNotFoundReturnsFalseAndDoesNotUpdateArray()
             {
                 // Arrange
                 int[] array = new int[] { 1, 2, 3 };
@@ -376,7 +376,7 @@ namespace CosmicLexicon.Foundation.Structures
             }
 
             [Fact]
-            public void FillArrayElement_NullArray_ThrowsArgumentNullException()
+            public void FillArrayElementNullArrayThrowsArgumentNullException()
             {
                 // Arrange
                 int[] array = null;
@@ -388,7 +388,7 @@ namespace CosmicLexicon.Foundation.Structures
             }
 
             [Fact]
-            public void FillArrayElement_StartIndexOutOfRange_ThrowsArgumentOutOfRangeException()
+            public void FillArrayElementStartIndexOutOfRangeThrowsArgumentOutOfRangeException()
             {
                 // Arrange
                 int[] array = new int[] { 1, 2, 3 };
@@ -401,7 +401,7 @@ namespace CosmicLexicon.Foundation.Structures
             }
 
             [Fact]
-            public void FillArrayElement_NullProducer_ThrowsArgumentNullException()
+            public void FillArrayElementNullProducerThrowsArgumentNullException()
             {
                 // Arrange
                 int[] array = new int[] { 1, 2, 3 };
@@ -413,7 +413,7 @@ namespace CosmicLexicon.Foundation.Structures
             }
 
             [Fact]
-            public void FillArrayElement_NullFinder_ThrowsArgumentNullException()
+            public void FillArrayElementNullFinderThrowsArgumentNullException()
             {
                 // Arrange
                 int[] array = new int[] { 1, 2, 3 };
@@ -425,7 +425,7 @@ namespace CosmicLexicon.Foundation.Structures
             }
 
             [Fact]
-            public void FillArrayElement_EmptyArray_ReturnsFalse()
+            public void FillArrayElementEmptyArrayReturnsFalse()
             {
                 // Arrange
                 int[] array = new int[0];

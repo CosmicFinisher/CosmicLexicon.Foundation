@@ -9,7 +9,7 @@ namespace CosmicLexicon.Foundation.Transport
     public class PathHelpersTests
     {
         [Fact]
-        public void QuoteIfNeeded_PathWithSpaces_AddsQuotes()
+        public void QuoteIfNeededPathWithSpacesAddsQuotes()
         {
             // Arrange
             string path = "C:\\Program Files\\Test";
@@ -22,7 +22,7 @@ namespace CosmicLexicon.Foundation.Transport
         }
         
         [Fact]
-        public void QuoteIfNeeded_PathWithoutSpaces_ReturnsUnchanged()
+        public void QuoteIfNeededPathWithoutSpacesReturnsUnchanged()
         {
             // Arrange
             string path = "C:\\ProgramFiles\\Test";
@@ -35,7 +35,7 @@ namespace CosmicLexicon.Foundation.Transport
         }
         
         [Fact]
-        public void QuoteIfNeeded_NullPath_ReturnsNull()
+        public void QuoteIfNeededNullPathReturnsNull()
         {
             // Act
             string? result = PathHelpers.QuoteIfNeeded(null);
@@ -45,7 +45,7 @@ namespace CosmicLexicon.Foundation.Transport
         }
         
         [Fact]
-        public void TrimSlash_PathWithSlash_RemovesTrailingSlash()
+        public void TrimSlashPathWithSlashRemovesTrailingSlash()
         {
             // Arrange
             string path = "C:\\Test\\";
@@ -58,7 +58,7 @@ namespace CosmicLexicon.Foundation.Transport
         }
         
         [Fact]
-        public void TrimSlash_PathWithoutSlash_ReturnsUnchanged()
+        public void TrimSlashPathWithoutSlashReturnsUnchanged()
         {
             // Arrange
             string path = "C:\\Test";
@@ -71,7 +71,7 @@ namespace CosmicLexicon.Foundation.Transport
         }
         
         [Fact]
-        public void TrimSlash_EmptyString_ReturnsEmptyString()
+        public void TrimSlashEmptyStringReturnsEmptyString()
         {
             // Arrange
             string path = string.Empty;
@@ -84,7 +84,7 @@ namespace CosmicLexicon.Foundation.Transport
         }
         
         [Fact]
-        public void TrimSlash_NullString_ReturnsNull()
+        public void TrimSlashNullStringReturnsNull()
         {
             // Arrange
             string? path = null;
@@ -97,7 +97,7 @@ namespace CosmicLexicon.Foundation.Transport
         }
         
         [Fact]
-        public void MustBeAbsolute_AbsolutePath_ReturnsPath()
+        public void MustBeAbsoluteAbsolutePathReturnsPath()
         {
             // Arrange
             string path = "C:\\Test";
@@ -110,7 +110,7 @@ namespace CosmicLexicon.Foundation.Transport
         }
         
         [Fact]
-        public void MustBeAbsolute_RelativePath_ThrowsArgumentException()
+        public void MustBeAbsoluteRelativePathThrowsArgumentException()
         {
             // Arrange
             string path = "Test\\SubFolder";

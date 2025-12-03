@@ -7,7 +7,7 @@ namespace CosmicLexicon.Foundation.Structures
     public class ListExtensions2Tests
     {
         [Fact]
-        public void ToReadOnly_ValidItem_ReturnsReadOnlyCollection()
+        public void ToReadOnlyValidItemReturnsReadOnlyCollection()
         {
             // Arrange
             int item = 5;
@@ -22,7 +22,7 @@ namespace CosmicLexicon.Foundation.Structures
         }
 
         [Fact]
-        public void NullCheck_NonNullCollection_ReturnsOriginalCollection()
+        public void NullCheckNonNullCollectionReturnsOriginalCollection()
         {
             // Arrange
             IReadOnlyCollection<int> collection = new List<int> { 1, 2, 3 };
@@ -35,7 +35,7 @@ namespace CosmicLexicon.Foundation.Structures
         }
 
         [Fact]
-        public void NullCheck_NullCollection_ReturnsEmptyCollection()
+        public void NullCheckNullCollectionReturnsEmptyCollection()
         {
             // Arrange
             IReadOnlyCollection<int> collection = null;

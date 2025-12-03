@@ -7,7 +7,7 @@ namespace CosmicLexicon.Foundation.Host;
 public class TypeHelpersTests
 {
     [Fact]
-    public void ParseToObject_ValidIntString_ReturnsInt()
+    public void ParseToObjectValidIntStringReturnsInt()
     {
         // Arrange
         string value = "123";
@@ -22,7 +22,7 @@ public class TypeHelpersTests
     }
 
     [Fact]
-    public void ParseToObject_ValidGuidString_ReturnsGuid()
+    public void ParseToObjectValidGuidStringReturnsGuid()
     {
         // Arrange
         string value = "a7e7b3b0-5b5a-4b4a-8a1a-2b2b2b2b2b2b";
@@ -37,7 +37,7 @@ public class TypeHelpersTests
     }
 
     [Fact]
-    public void ParseToObject_InvalidGuidString_ThrowsFormatException()
+    public void ParseToObjectInvalidGuidStringThrowsFormatException()
     {
         // Arrange
         string value = "invalid-guid";
@@ -48,7 +48,7 @@ public class TypeHelpersTests
     }
 
     [Fact]
-    public void ParseToObject_ValidTimeSpanString_ReturnsTimeSpan()
+    public void ParseToObjectValidTimeSpanStringReturnsTimeSpan()
     {
         // Arrange
         string value = "00:01:00";
@@ -63,7 +63,7 @@ public class TypeHelpersTests
     }
 
     [Fact]
-    public void ParseToObject_InvalidTimeSpanString_ThrowsFormatException()
+    public void ParseToObjectInvalidTimeSpanStringThrowsFormatException()
     {
         // Arrange
         string value = "invalid-timespan";
@@ -74,7 +74,7 @@ public class TypeHelpersTests
     }
 
     [Fact]
-    public void ParseToObject_ValidEnumString_ReturnsEnum()
+    public void ParseToObjectValidEnumStringReturnsEnum()
     {
         // Arrange
         string value = "Value1";
@@ -89,7 +89,7 @@ public class TypeHelpersTests
     }
 
     [Fact]
-    public void ParseToObject_InvalidEnumString_ThrowsFormatException()
+    public void ParseToObjectInvalidEnumStringThrowsFormatException()
     {
         // Arrange
         string value = "InvalidValue";
@@ -100,7 +100,7 @@ public class TypeHelpersTests
     }
 
     [Fact]
-    public void ParseToObject_EmptyStringAndNullableType_ReturnsNull()
+    public void ParseToObjectEmptyStringAndNullableTypeReturnsNull()
     {
         // Arrange
         string value = "";
@@ -114,7 +114,7 @@ public class TypeHelpersTests
     }
 
     [Fact]
-    public void ParseToObject_StringValue_ReturnsString()
+    public void ParseToObjectStringValueReturnsString()
     {
         // Arrange
         string value = "test";

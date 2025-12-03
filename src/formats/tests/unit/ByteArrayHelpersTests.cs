@@ -200,7 +200,7 @@ namespace CosmicLexicon.Foundation.xText
 
         // Test Case 5.2.1: Valid UTF8 Encoding Conversion
         [Fact]
-        public void ToString_ValidUtf8EncodingConversion_UsesEncodingGetString()
+        public void ToStringValidUtf8EncodingConversionUsesEncodingGetString()
         {
             // Collaborators to Mock: System.Text.Encoding (or a specific implementation like UTF8Encoding)
             var mockEncoding = new Mock<UTF8Encoding>();
@@ -225,7 +225,7 @@ namespace CosmicLexicon.Foundation.xText
 
         // Test Case 5.2.2: Null Encoding Provided (Default Behavior)
         [Fact]
-        public void ToString_NullEncodingProvided_UsesEncodingDefault()
+        public void ToStringNullEncodingProvidedUsesEncodingDefault()
         {
             // Collaborators to Mock: None, as we are testing the default behavior of the static method.
             // Test Data
