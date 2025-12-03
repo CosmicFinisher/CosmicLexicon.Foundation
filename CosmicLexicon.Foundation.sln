@@ -125,17 +125,17 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Identity", "Identity", "{1C
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Cryptography", "Cryptography", "{A66CA9D5-6B32-B71A-7313-F10E39732AF0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CosmicLexicon.Foundation.Cryptography", "src\cryptography\src\CosmicLexicon.Foundation.Cryptography.csproj", "{1FBCD002-FEAF-4F63-8430-E46FC0DE3ADA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CosmicLexicon.Foundation.Cryptography", "src\security\cryptography\src\CosmicLexicon.Foundation.Cryptography.csproj", "{1FBCD002-FEAF-4F63-8430-E46FC0DE3ADA}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{EF4A0F55-B70C-E6AB-E9D0-7942E61BA905}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CosmicLexicon.Foundation.Cryptography.UnitTest", "src\cryptography\tests\unit\CosmicLexicon.Foundation.Cryptography.UnitTest.csproj", "{D9D37C0F-4B84-4462-9C4C-CBB13D4662F7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CosmicLexicon.Foundation.Cryptography.UnitTest", "src\security\cryptography\tests\unit\CosmicLexicon.Foundation.Cryptography.UnitTest.csproj", "{D9D37C0F-4B84-4462-9C4C-CBB13D4662F7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CosmicLexicon.Foundation.Identity", "src\identity\src\CosmicLexicon.Foundation.Identity.csproj", "{805490E6-73E7-44B2-94D4-30E3C42E33C9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CosmicLexicon.Foundation.Identity", "src\security\identity\src\CosmicLexicon.Foundation.Identity.csproj", "{805490E6-73E7-44B2-94D4-30E3C42E33C9}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{1E251923-65A7-F629-C8D7-0BE43096A2BB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CosmicLexicon.Foundation.Identity.UnitTest", "src\identity\tests\unit\CosmicLexicon.Foundation.Identity.UnitTest.csproj", "{A203606B-766B-453B-ACA9-631EFEC7B26A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CosmicLexicon.Foundation.Identity.UnitTest", "src\security\identity\tests\unit\CosmicLexicon.Foundation.Identity.UnitTest.csproj", "{A203606B-766B-453B-ACA9-631EFEC7B26A}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Formats", "Formats", "{AA8F73D5-AC14-AFC1-52FB-D818A464B4AD}"
 EndProject
