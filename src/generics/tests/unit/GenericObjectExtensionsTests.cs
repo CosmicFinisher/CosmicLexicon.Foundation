@@ -1,21 +1,15 @@
-using Xunit;
-using OpenEchoSystem.Core.xGenerics;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-
-namespace OpenEchoSystem.Core.xGenerics.Tests
+namespace CosmicLexicon.Foundation.Generics.UnitTest
 {
     using Xunit;
-    using OpenEchoSystem.Core.xGenerics;
     using System;
     using System.Collections.Generic;
     using System.Linq;
+    using CosmicLexicon.Foundation.Generics;
 
     public class GenericObjectExtensionsTests
     {
         [Fact]
-        public void Check_PredicateAndDefaultValue_PredicateTrue_ReturnsInputObject()
+        public void CheckPredicateAndDefaultValuePredicateTrueReturnsInputObject()
         {
             // Arrange
             int inputObject = 5;
@@ -30,7 +24,7 @@ namespace OpenEchoSystem.Core.xGenerics.Tests
         }
 
         [Fact]
-        public void Check_PredicateAndDefaultValue_PredicateFalse_ReturnsDefaultValue()
+        public void CheckPredicateAndDefaultValuePredicateFalseReturnsDefaultValue()
         {
             // Arrange
             int inputObject = -5;
@@ -45,7 +39,7 @@ namespace OpenEchoSystem.Core.xGenerics.Tests
         }
 
         [Fact]
-        public void Check_PredicateAndDefaultValueFunc_PredicateTrue_ReturnsInputObject()
+        public void CheckPredicateAndDefaultValueFuncPredicateTrueReturnsInputObject()
         {
             // Arrange
             int inputObject = 5;
@@ -60,7 +54,7 @@ namespace OpenEchoSystem.Core.xGenerics.Tests
         }
 
         [Fact]
-        public void Check_PredicateAndDefaultValueFunc_PredicateFalse_ReturnsDefaultValue()
+        public void CheckPredicateAndDefaultValueFuncPredicateFalseReturnsDefaultValue()
         {
             // Arrange
             int inputObject = -5;
@@ -75,7 +69,7 @@ namespace OpenEchoSystem.Core.xGenerics.Tests
         }
 
         [Fact]
-        public void Check_DefaultValue_ObjectNotNull_ReturnsInputObject()
+        public void CheckDefaultValueObjectNotNullReturnsInputObject()
         {
             // Arrange
             string inputObject = "test";
@@ -89,7 +83,7 @@ namespace OpenEchoSystem.Core.xGenerics.Tests
         }
 
         [Fact]
-        public void Check_DefaultValue_ObjectNull_ReturnsDefaultValue()
+        public void CheckDefaultValueObjectNullReturnsDefaultValue()
         {
             // Arrange
             string inputObject = null;
@@ -103,7 +97,7 @@ namespace OpenEchoSystem.Core.xGenerics.Tests
         }
 
         [Fact]
-        public void Check_DefaultValueFunc_ObjectNotNull_ReturnsInputObject()
+        public void CheckDefaultValueFuncObjectNotNullReturnsInputObject()
         {
             // Arrange
             string inputObject = "test";
@@ -117,7 +111,7 @@ namespace OpenEchoSystem.Core.xGenerics.Tests
         }
 
         [Fact]
-        public void Check_DefaultValueFunc_ObjectNull_ReturnsDefaultValue()
+        public void CheckDefaultValueFuncObjectNullReturnsDefaultValue()
         {
             // Arrange
             string inputObject = null;
@@ -131,7 +125,7 @@ namespace OpenEchoSystem.Core.xGenerics.Tests
         }
 
         [Fact]
-        public void Is_PredicateTrue_ReturnsTrue()
+        public void IsPredicateTrueReturnsTrue()
         {
             // Arrange
             int inputObject = 5;
@@ -145,7 +139,7 @@ namespace OpenEchoSystem.Core.xGenerics.Tests
         }
 
         [Fact]
-        public void Is_PredicateFalse_ReturnsFalse()
+        public void IsPredicateFalseReturnsFalse()
         {
             // Arrange
             int inputObject = -5;
@@ -160,7 +154,7 @@ namespace OpenEchoSystem.Core.xGenerics.Tests
         }
 
         [Fact]
-        public void ThrowIf_PredicateTrue_ThrowsException()
+        public void ThrowIfPredicateTrueThrowsException()
         {
             // Arrange
             int item = 5;
@@ -172,7 +166,7 @@ namespace OpenEchoSystem.Core.xGenerics.Tests
         }
 
         [Fact]
-        public void ThrowIf_PredicateFalse_ReturnsItem()
+        public void ThrowIfPredicateFalseReturnsItem()
         {
             // Arrange
             int item = -5;
@@ -187,7 +181,7 @@ namespace OpenEchoSystem.Core.xGenerics.Tests
         }
 
         [Fact]
-        public void ThrowIfNot_PredicateFalse_ThrowsException()
+        public void ThrowIfNotPredicateFalseThrowsException()
         {
             // Arrange
             int item = -5;
@@ -199,7 +193,7 @@ namespace OpenEchoSystem.Core.xGenerics.Tests
         }
 
         [Fact]
-        public void ThrowIfNot_PredicateTrue_ReturnsItem()
+        public void ThrowIfNotPredicateTrueReturnsItem()
         {
             // Arrange
             int item = 5;
@@ -214,7 +208,7 @@ namespace OpenEchoSystem.Core.xGenerics.Tests
         }
 
         [Fact]
-        public void ThrowIfNotNull_ObjectNotNull_ThrowsException()
+        public void ThrowIfNotNullObjectNotNullThrowsException()
         {
             // Arrange
             string item = "test";
@@ -225,7 +219,7 @@ namespace OpenEchoSystem.Core.xGenerics.Tests
         }
 
         [Fact]
-        public void ThrowIfNotNull_ObjectNull_ReturnsNull()
+        public void ThrowIfNotNullObjectNullReturnsNull()
         {
             // Arrange
             string item = null;
@@ -239,7 +233,7 @@ namespace OpenEchoSystem.Core.xGenerics.Tests
         }
 
         [Fact]
-        public void ThrowIfNotNullOrEmpty_CollectionNotEmpty_ThrowsException()
+        public void ThrowIfNotNullOrEmptyCollectionNotEmptyThrowsException()
         {
             // Arrange
             List<int> item = new List<int>() { 1, 2, 3 };
@@ -250,7 +244,7 @@ namespace OpenEchoSystem.Core.xGenerics.Tests
         }
 
         [Fact]
-        public void ThrowIfNotNullOrEmpty_CollectionNullOrEmpty_ReturnsNull()
+        public void ThrowIfNotNullOrEmptyCollectionNullOrEmptyReturnsNull()
         {
             // Arrange
             List<int> item = null;
@@ -264,7 +258,7 @@ namespace OpenEchoSystem.Core.xGenerics.Tests
         }
 
         [Fact]
-        public void Times_ExecutesFunctionCorrectNumberOfTimes()
+        public void TimesExecutesFunctionCorrectNumberOfTimes()
         {
             // Arrange
             int count = 3;
@@ -280,7 +274,7 @@ namespace OpenEchoSystem.Core.xGenerics.Tests
         }
 
         [Fact]
-        public void Times_ExecutesActionCorrectNumberOfTimes()
+        public void TimesExecutesActionCorrectNumberOfTimes()
         {
             // Arrange
             int count = 3;
@@ -295,7 +289,7 @@ namespace OpenEchoSystem.Core.xGenerics.Tests
         }
 
         [Fact]
-        public void When_PredicateTrue_ExecutesMethod()
+        public void WhenPredicateTrueExecutesMethod()
         {
             // Arrange
             string obj = "test";
@@ -310,7 +304,7 @@ namespace OpenEchoSystem.Core.xGenerics.Tests
         }
 
         [Fact]
-        public void When_PredicateFalse_ReturnsOriginalObject()
+        public void WhenPredicateFalseReturnsOriginalObject()
         {
             // Arrange
             string obj = "test";
@@ -324,7 +318,7 @@ namespace OpenEchoSystem.Core.xGenerics.Tests
             Assert.Equal("test", result);
         }
         [Fact]
-        public void Is_ObjectsAreEqual_ReturnsTrue()
+        public void IsObjectsAreEqualReturnsTrue()
         {
             // Arrange
             int inputObject = 5;
@@ -338,7 +332,7 @@ namespace OpenEchoSystem.Core.xGenerics.Tests
         }
 
         [Fact]
-        public void Is_ObjectsAreNotEqual_ReturnsFalse()
+        public void IsObjectsAreNotEqualReturnsFalse()
         {
             // Arrange
             int inputObject = 5;
@@ -352,7 +346,7 @@ namespace OpenEchoSystem.Core.xGenerics.Tests
         }
 
         [Fact]
-        public void ThrowIfDefault_ObjectIsDefault_ThrowsException()
+        public void ThrowIfDefaultObjectIsDefaultThrowsException()
         {
             // Arrange
             int item = 0;
@@ -363,7 +357,7 @@ namespace OpenEchoSystem.Core.xGenerics.Tests
         }
 
         [Fact]
-        public void ThrowIfDefault_ObjectIsNotDefault_ReturnsObject()
+        public void ThrowIfDefaultObjectIsNotDefaultReturnsObject()
         {
             // Arrange
             int item = 5;
@@ -377,7 +371,7 @@ namespace OpenEchoSystem.Core.xGenerics.Tests
         }
 
         [Fact]
-        public void ThrowIfDefault_ObjectIsDefaultWithName_ThrowsArgumentNullException()
+        public void ThrowIfDefaultObjectIsDefaultWithNameThrowsArgumentNullException()
         {
             // Arrange
             string item = null;
@@ -388,7 +382,7 @@ namespace OpenEchoSystem.Core.xGenerics.Tests
         }
 
         [Fact]
-        public void ThrowIfDefault_ObjectIsNotDefaultWithName_ReturnsObject()
+        public void ThrowIfDefaultObjectIsNotDefaultWithNameReturnsObject()
         {
             // Arrange
             string item = "test";
@@ -402,7 +396,7 @@ namespace OpenEchoSystem.Core.xGenerics.Tests
         }
 
         [Fact]
-        public void ThrowIfNotDefault_ObjectIsDefault_ReturnsObject()
+        public void ThrowIfNotDefaultObjectIsDefaultReturnsObject()
         {
             // Arrange
             int item = 0;

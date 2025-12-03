@@ -1,11 +1,9 @@
-using System;
 using System.Collections.Concurrent;
 using System.ComponentModel;
 using System.Globalization; // Added for CultureInfo
-using System.Linq;
 using System.Reflection;
 
-namespace OpenEchoSystem.Core.xGenerics
+namespace CosmicLexicon.Foundation.Generics
 {
     [EditorBrowsable(EditorBrowsableState.Never)]
     public static class GenericObjectHelpers

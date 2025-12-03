@@ -1,10 +1,4 @@
-using Xunit;
-using OpenEchoSystem.Core.xGlobalization;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-
-namespace OpenEchoSystem.Core.xGlobalization
+namespace CosmicLexicon.Foundation.Globalization.UnitTest
 {
     public class TimeSpanExtensionsTests
     {

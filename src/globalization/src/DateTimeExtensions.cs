@@ -1,10 +1,8 @@
-namespace OpenEchoSystem.Core.xGlobalization;
+namespace CosmicLexicon.Foundation.Globalization;
 
 using System;
-using System.Collections.Generic;
 using System.ComponentModel;
 using System.Globalization;
-using System.Text;
 
 public static class DateTimeExtensions
 {

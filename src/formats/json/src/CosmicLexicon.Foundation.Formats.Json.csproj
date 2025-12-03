@@ -1,0 +1,11 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>$(NetPrimaryTargetFramework)</TargetFramework>
+    <EnableSharedUnitTestDependencies>true</EnableSharedUnitTestDependencies>
+</PropertyGroup>
+
+  <ItemGroup>
+  </ItemGroup>
+
+</Project>

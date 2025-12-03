@@ -35,12 +35,12 @@ Current Version: 9.0.0 (.NET 9 baseline)
 
 1. **Project File Updates**<PropertyGroup>
     <TargetFramework>$(NetPrimaryTargetFramework)</TargetFramework>
-    <RootNamespace>OpenEchoSystem.Core.x{Component}</RootNamespace>
+    <RootNamespace>ConsmicLexicon.Foundation.x{Component}</RootNamespace>
     <EnableSharedKernelDependencies>true</EnableSharedKernelDependencies>
 </PropertyGroup>
 2. **Package References**<ItemGroup>
-    <PackageReference Include="OpenEchoSystem.Core" Version="9.0.0" />
-    <PackageReference Include="OpenEchoSystem.Core.xCollections" Version="9.0.0" />
+    <PackageReference Include="ConsmicLexicon.Foundation" Version="9.0.0" />
+    <PackageReference Include="ConsmicLexicon.Foundation.xCollections" Version="9.0.0" />
     <!-- Add other components as needed -->
 </ItemGroup>
 3. **Code Updates**
@@ -92,12 +92,12 @@ Current Version: 9.0.0 (.NET 9 baseline)
 ## Migration Tools
 
 ### Automated Updates# Install migration tool
-dotnet tool install -g OpenEchoSystem.Core.xMigration
+dotnet tool install -g ConsmicLexicon.Foundation.xMigration
 
 # Run migration
 dotnet openEchoSystem-migrate
 ### Compatibility Analyzer# Install analyzer
-dotnet add package OpenEchoSystem.Core.xAnalyzers
+dotnet add package ConsmicLexicon.Foundation.xAnalyzers
 
 # Run analysis
 dotnet openEchoSystem-analyze
@@ -140,8 +140,8 @@ dotnet openEchoSystem-analyze
 
 - [Getting Started Guide](../docs/guides/getting-started.md)
 - [API Documentation](../docs/api/index.md)
-- [Known Issues](https://github.com/Rosyllionce/OpenEchoSystem.Core/issues)
-- [Migration Support](https://github.com/Rosyllionce/OpenEchoSystem.Core/discussions)
+- [Known Issues](https://github.com/ConsmicFinisher/ConsmicLexicon.Foundation/issues)
+- [Migration Support](https://github.com/ConsmicFinisher/ConsmicLexicon.Foundation/discussions)
 
 ## Version History
 

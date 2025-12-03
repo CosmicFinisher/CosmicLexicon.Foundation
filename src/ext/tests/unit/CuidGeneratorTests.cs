@@ -1,9 +1,4 @@
-using Xunit;
-using OpenEchoSystem.Core.xExtensions;
-using System;
-using System.Text.RegularExpressions;
-
-namespace OpenEchoSystem.Core.xExtensions.Tests
+namespace CosmicLexicon.Foundation.Extensions.UnitTest
 {
     public class CuidGeneratorTests
     {

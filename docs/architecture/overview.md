@@ -7,68 +7,68 @@ The Core Framework is built on .NET 9's latest features, emphasizing performance
 ## Component Architecture 
 Core Framework
 ### Collections
-- OpenEchoSystem.Core.xCollections # Thread-safe collections
-- OpenEchoSystem.Core.xCollections.Generic # Generic collections
+- ConsmicLexicon.Foundation.xCollections # Thread-safe collections
+- ConsmicLexicon.Foundation.xCollections.Generic # Generic collections
 
 ### Diagnostics
-- OpenEchoSystem.Core.xDiagnostics # Debugging and profiling
+- ConsmicLexicon.Foundation.xDiagnostics # Debugging and profiling
 
 ### Exceptions
-- OpenEchoSystem.Core.xExceptions # Error handling
+- ConsmicLexicon.Foundation.xExceptions # Error handling
 
 ### Extensions
-- OpenEchoSystem.Core.xExtensions # Framework extensions
+- ConsmicLexicon.Foundation.xExtensions # Framework extensions
 
 ### Generics
-- OpenEchoSystem.Core.xGenerics # Generic utilities
+- ConsmicLexicon.Foundation.xGenerics # Generic utilities
 
 ### Globalization
-- OpenEchoSystem.Core.xGlobalization # Localization support
+- ConsmicLexicon.Foundation.xGlobalization # Localization support
 
 ### IO
-- OpenEchoSystem.Core.xIO # Async I/O operations
+- ConsmicLexicon.Foundation.xIO # Async I/O operations
 
 ### LINQ
-- OpenEchoSystem.Core.xLinq # LINQ extensions
+- ConsmicLexicon.Foundation.xLinq # LINQ extensions
 
 ### Networking
-- OpenEchoSystem.Core.xNet # Network operations
+- ConsmicLexicon.Foundation.xNet # Network operations
 
 ### Reflection
-- OpenEchoSystem.Core.xReflection # Reflection utilities
-- OpenEchoSystem.Core.xReflection.Assembly # Assembly handling
+- ConsmicLexicon.Foundation.xReflection # Reflection utilities
+- ConsmicLexicon.Foundation.xReflection.Assembly # Assembly handling
 
 ### Runtime
-- OpenEchoSystem.Core.xRuntime # Runtime services
-- OpenEchoSystem.Core.xRuntime.Serialization # Serialization
-- OpenEchoSystem.Core.xRuntime.InteropServices # Interop
+- ConsmicLexicon.Foundation.xRuntime # Runtime services
+- ConsmicLexicon.Foundation.xRuntime.Serialization # Serialization
+- ConsmicLexicon.Foundation.xRuntime.InteropServices # Interop
 
 ### Security
-- OpenEchoSystem.Core.xSecurity # Security features
-- OpenEchoSystem.Core.xSecurity.Cryptography # Cryptography
+- ConsmicLexicon.Foundation.xSecurity # Security features
+- ConsmicLexicon.Foundation.xSecurity.Cryptography # Cryptography
 
 ### Text
-- OpenEchoSystem.Core.xText # Text processing
-- OpenEchoSystem.Core.xText.Json # JSON handling
-- OpenEchoSystem.Core.xText.RegularExpressions # Regex
+- ConsmicLexicon.Foundation.xText # Text processing
+- ConsmicLexicon.Foundation.xText.Json # JSON handling
+- ConsmicLexicon.Foundation.xText.RegularExpressions # Regex
 
 ### Threading
-- OpenEchoSystem.Core.xThreading # Threading primitives
-- OpenEchoSystem.Core.xThreading.Tasks # TPL extensions
-- OpenEchoSystem.Core.xThreading.Timers # High-precision timing
+- ConsmicLexicon.Foundation.xThreading # Threading primitives
+- ConsmicLexicon.Foundation.xThreading.Tasks # TPL extensions
+- ConsmicLexicon.Foundation.xThreading.Timers # High-precision timing
   
 ## Implementation Details
 
 ### Collections Framework
 [View Collections API Documentation](../api/collections/index.md)
 
-#### OpenEchoSystem.Core.Collections
+#### ConsmicLexicon.Foundation.Collections
 - Modern thread-safe collections optimized for .NET 9
 - Lock-free implementations using new hardware intrinsics
 - Memory-efficient data structures
 - [Implementation Details](../../src/collections/README.Core.Collections.md)
 
-#### OpenEchoSystem.Core.Collections.Generic
+#### ConsmicLexicon.Foundation.Collections.Generic
 - Advanced generic collections with AOT support
 - Span<T> and Memory<T> optimizations
 - Zero-allocation operations
@@ -76,19 +76,19 @@ Core Framework
 
 ### Text Processing Framework
 
-#### OpenEchoSystem.Core.xText
+#### ConsmicLexicon.Foundation.xText
 - Modern string manipulation utilities
 - UTF-8 string optimizations
 - Efficient text transformations
 - [Implementation Details](../../src/text/README.Core.Text.md)
 
-#### OpenEchoSystem.Core.xText.Json
+#### ConsmicLexicon.Foundation.xText.Json
 - High-performance JSON operations
 - Source generator-based serialization
 - UTF-8 JSON parsing
 - [Implementation Details](../../src/text/json/README.Core.Text.Json.md)
 
-#### OpenEchoSystem.Core.Text.RegularExpressions
+#### ConsmicLexicon.Foundation.Text.RegularExpressions
 - Source-generated regex engines
 - SIMD-accelerated pattern matching
 - Thread-safe regex operations
@@ -96,19 +96,19 @@ Core Framework
 
 ### Threading Framework
 
-#### OpenEchoSystem.Core.Threading
+#### ConsmicLexicon.Foundation.Threading
 - Modern synchronization primitives
 - Thread pool optimizations
 - Lock-free algorithms
 - [Implementation Details](../../src/threading/README.Core.Threading.md)
 
-#### OpenEchoSystem.Core.Threading.Tasks
+#### ConsmicLexicon.Foundation.Threading.Tasks
 - Enhanced async/await patterns
 - Parallel processing optimizations
 - Task scheduling improvements
 - [Implementation Details](../../src/threading/tasks/README.Core.Threading.Tasks.md)
 
-#### OpenEchoSystem.Core.Threading.Timers
+#### ConsmicLexicon.Foundation.Threading.Timers
 - High-resolution timing operations
 - Precision scheduling
 - Timer management utilities

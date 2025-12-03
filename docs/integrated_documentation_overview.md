@@ -1,6 +1,6 @@
-# Integrated Documentation Overview: OpenEchoSystem.Core Utilities and Extensions
+# Integrated Documentation Overview: CosmicLexicon.Foundation Utilities and Extensions
 
-This document provides a comprehensive overview of the OpenEchoSystem.Core foundational library, integrating information from various project documentation files. It aims to be a central resource for understanding the library's purpose, architecture, development process, and current status, aligning with the goals outlined in the PRD Master Plan and high-level acceptance tests.
+This document provides a comprehensive overview of the CosmicLexicon.Foundation foundational library, integrating information from various project documentation files. It aims to be a central resource for understanding the library's purpose, architecture, development process, and current status, aligning with the goals outlined in the PRD Master Plan and high-level acceptance tests.
 
 ## Table of Contents
 
@@ -49,7 +49,7 @@ This document provides a comprehensive overview of the OpenEchoSystem.Core found
     *   [Optimization Report](#optimization-report)
     *   [Security Report](#security-report)
 8.  [API Reference](#api-reference)
-    *   [OpenEchoSystem.Core.Collections API Reference](#corecollections-api-reference)
+    *   [CosmicLexicon.Foundation.Structures API Reference](#corecollections-api-reference)
 9.  [Migration and Versioning](#migration-and-versioning)
     *   [Version Strategy](#version-strategy)
     *   [Migration Guidelines](#migration-guidelines)
@@ -90,14 +90,14 @@ This document provides a comprehensive overview of the OpenEchoSystem.Core found
 
 ### Project Goal
 
-The goal of this project is to enhance the OpenEchoSystem.Core library by fixing errors, adding missing features, improving code comments, and expanding test coverage in the `src/` directory. This will result in a more stable, reliable, and well-documented foundation for other projects.
+The goal of this project is to enhance the CosmicLexicon.Foundation library by fixing errors, adding missing features, improving code comments, and expanding test coverage in the `src/` directory. This will result in a more stable, reliable, and well-documented foundation for other projects.
 
 ### Core Principles
 
-*   **System-Only Dependencies:** `OpenEchoSystem.Core` strictly depends *only* on `System.*` assemblies from the .NET Base Class Library (BCL). No references to `Microsoft.Extensions.*`, other framework areas (e.g., `AreaX`), or third-party libraries are permitted. This ensures maximum portability, minimal external coupling, and a stable foundation.
-*   **Functional Grouping:** Components within `OpenEchoSystem.Core` are organized into namespaces and folders that mirror the functional context of their `System.*` counterparts (e.g., `OpenEchoSystem.Core.xIO` for `System.IO` related utilities).
-*   **Stability & Reliability:** Code in `OpenEchoSystem.Core` must be highly stable, well-tested, and performant, as it underpins the entire framework.
-*   **No Business Logic:** `OpenEchoSystem.Core` must remain free of any application-specific or business domain logic.
+*   **System-Only Dependencies:** `CosmicLexicon.Foundation` strictly depends *only* on `System.*` assemblies from the .NET Base Class Library (BCL). No references to `Microsoft.Extensions.*`, other framework areas (e.g., `AreaX`), or third-party libraries are permitted. This ensures maximum portability, minimal external coupling, and a stable foundation.
+*   **Functional Grouping:** Components within `CosmicLexicon.Foundation` are organized into namespaces and folders that mirror the functional context of their `System.*` counterparts (e.g., `CosmicLexicon.Foundation.Transport` for `System.IO` related utilities).
+*   **Stability & Reliability:** Code in `CosmicLexicon.Foundation` must be highly stable, well-tested, and performant, as it underpins the entire framework.
+*   **No Business Logic:** `CosmicLexicon.Foundation` must remain free of any application-specific or business domain logic.
 
 ### Key Features
 
@@ -297,9 +297,9 @@ A security audit of `JsonExtensions.cs` identified a high-severity vulnerability
 
 ## API Reference
 
-### OpenEchoSystem.Core.Collections API Reference
+### CosmicLexicon.Foundation.Structures API Reference
 
-Provides an overview of the OpenEchoSystem.Core.Collections namespace, detailing key components like `BaseCollection<TItem>`, `ListExtensions`, and `IEnumerableExtensions`, along with usage examples, best practices, and common pitfalls.
+Provides an overview of the CosmicLexicon.Foundation.Structures namespace, detailing key components like `BaseCollection<TItem>`, `ListExtensions`, and `IEnumerableExtensions`, along with usage examples, best practices, and common pitfalls.
 
 ## Migration and Versioning
 

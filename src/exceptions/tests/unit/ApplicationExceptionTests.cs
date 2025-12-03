@@ -1,16 +1,12 @@
-using OpenEchoSystem.Core.xExceptions;
-using System;
-using Xunit;
-
-namespace OpenEchoSystem.Core.xExceptions
+namespace CosmicLexicon.Foundation.Exceptions.UnitTest
 {
     public class ApplicationExceptionTests
     {
         [Fact]
-        public void Constructor_Default_CreatesInstance()
+        public void ConstructorDefaultCreatesInstance()
         {
             // Act
-            var exception = new OpenEchoSystem.Core.xExceptions.ApplicationException();
+            var exception = new Exceptions.ApplicationException();
             
             // Assert
             Assert.NotNull(exception);
@@ -19,13 +15,13 @@ namespace OpenEchoSystem.Core.xExceptions
         }
         
         [Fact]
-        public void Constructor_WithMessage_SetsMessage()
+        public void ConstructorWithMessageSetsMessage()
         {
             // Arrange
             string message = "Test exception message";
             
             // Act
-            var exception = new OpenEchoSystem.Core.xExceptions.ApplicationException(message);
+            var exception = new Exceptions.ApplicationException(message);
             
             // Assert
             Assert.Equal(message, exception.Message);
@@ -34,14 +30,14 @@ namespace OpenEchoSystem.Core.xExceptions
         }
         
         [Fact]
-        public void Constructor_WithMessageAndInnerException_SetsMessageAndInnerException()
+        public void ConstructorWithMessageAndInnerExceptionSetsMessageAndInnerException()
         {
             // Arrange
             string message = "Test exception message";
             var innerException = new InvalidOperationException("Inner exception");
             
             // Act
-            var exception = new OpenEchoSystem.Core.xExceptions.ApplicationException(message, innerException);
+            var exception = new Exceptions.ApplicationException(message, innerException);
             
             // Assert
             Assert.Equal(message, exception.Message);
@@ -50,14 +46,14 @@ namespace OpenEchoSystem.Core.xExceptions
         }
         
         [Fact]
-        public void Constructor_WithMessageAndErrorCode_SetsMessageAndErrorCode()
+        public void ConstructorWithMessageAndErrorCodeSetsMessageAndErrorCode()
         {
             // Arrange
             string message = "Test exception message";
             int errorCode = 42;
             
             // Act
-            var exception = new OpenEchoSystem.Core.xExceptions.ApplicationException(message, errorCode);
+            var exception = new Exceptions.ApplicationException(message, errorCode);
             
             // Assert
             Assert.Equal(message, exception.Message);
@@ -66,7 +62,7 @@ namespace OpenEchoSystem.Core.xExceptions
         }
         
         [Fact]
-        public void Constructor_WithMessageErrorCodeAndInnerException_SetsAllProperties()
+        public void ConstructorWithMessageErrorCodeAndInnerExceptionSetsAllProperties()
         {
             // Arrange
             string message = "Test exception message";
@@ -74,7 +70,7 @@ namespace OpenEchoSystem.Core.xExceptions
             var innerException = new InvalidOperationException("Inner exception");
             
             // Act
-            var exception = new OpenEchoSystem.Core.xExceptions.ApplicationException(message, errorCode, innerException);
+            var exception = new Exceptions.ApplicationException(message, errorCode, innerException);
             
             // Assert
             Assert.Equal(message, exception.Message);
@@ -83,14 +79,14 @@ namespace OpenEchoSystem.Core.xExceptions
         }
 
         [Fact]
-        public void Constructor_WithMessageAndNonZeroErrorCode_SetsMessageAndErrorCode()
+        public void ConstructorWithMessageAndNonZeroErrorCodeSetsMessageAndErrorCode()
         {
             // Arrange
             string message = "Another test exception message";
             int errorCode = 100; // Use a non-zero error code
 
             // Act
-            var exception = new OpenEchoSystem.Core.xExceptions.ApplicationException(message, errorCode);
+            var exception = new Exceptions.ApplicationException(message, errorCode);
 
             // Assert
             Assert.Equal(message, exception.Message);
@@ -99,10 +95,10 @@ namespace OpenEchoSystem.Core.xExceptions
         }
 
         [Fact]
-        public void ErrorCode_CanBeSet()
+        public void ErrorCodeCanBeSet()
         {
             // Arrange
-            var exception = new OpenEchoSystem.Core.xExceptions.ApplicationException();
+            var exception = new Exceptions.ApplicationException();
             int errorCode = 42;
 
             // Act
@@ -113,14 +109,14 @@ namespace OpenEchoSystem.Core.xExceptions
         }
 
         [Fact]
-        public void Constructor_WithMessageAndCustomStringErrorCode_SetsMessageAndCustomStringErrorCode()
+        public void ConstructorWithMessageAndCustomStringErrorCodeSetsMessageAndCustomStringErrorCode()
         {
             // Arrange
             string message = "Test exception with custom string error code";
             string customErrorCode = "CUSTOM_ERROR_STRING_001";
 
             // Act
-            var exception = new OpenEchoSystem.Core.xExceptions.ApplicationException(message, customErrorCode);
+            var exception = new Exceptions.ApplicationException(message, customErrorCode);
 
             // Assert
             Assert.Equal(message, exception.Message);
@@ -130,7 +126,7 @@ namespace OpenEchoSystem.Core.xExceptions
         }
 
         [Fact]
-        public void Constructor_WithMessageCustomStringErrorCodeAndInnerException_SetsAllProperties()
+        public void ConstructorWithMessageCustomStringErrorCodeAndInnerExceptionSetsAllProperties()
         {
             // Arrange
             string message = "Test exception with custom string error code and inner exception";
@@ -138,7 +134,7 @@ namespace OpenEchoSystem.Core.xExceptions
             var innerException = new InvalidOperationException("Inner exception for string error code");
 
             // Act
-            var exception = new OpenEchoSystem.Core.xExceptions.ApplicationException(message, customErrorCode, innerException);
+            var exception = new Exceptions.ApplicationException(message, customErrorCode, innerException);
 
             // Assert
             Assert.Equal(message, exception.Message);
@@ -148,10 +144,10 @@ namespace OpenEchoSystem.Core.xExceptions
         }
 
         [Fact]
-        public void CustomStringErrorCode_CanBeSet()
+        public void CustomStringErrorCodeCanBeSet()
         {
             // Arrange
-            var exception = new OpenEchoSystem.Core.xExceptions.ApplicationException();
+            var exception = new Exceptions.ApplicationException();
             string customErrorCode = "ANOTHER_CUSTOM_ERROR_STRING";
             
             // Act

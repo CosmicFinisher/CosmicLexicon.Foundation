@@ -1,10 +1,10 @@
 using Xunit;
 using System.Collections.Generic;
-using OpenEchoSystem.Core.xCollections;
-using OpenEchoSystem.Core.xText;
+using ConsmicLexicon.Foundation.xCollections;
+using ConsmicLexicon.Foundation.xText;
 using System;
 
-namespace OpenEchoSystem.Core.xTests
+namespace ConsmicLexicon.Foundation.xTests
 {
     public class HighLevelAcceptanceTests
     {

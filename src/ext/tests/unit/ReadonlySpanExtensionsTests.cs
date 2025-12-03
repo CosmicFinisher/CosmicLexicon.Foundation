@@ -1,9 +1,6 @@
-using Xunit;
-using OpenEchoSystem.Core.xExtensions;
-using System;
 using System.Globalization;
 
-namespace OpenEchoSystem.Core.xExtensions.Tests
+namespace CosmicLexicon.Foundation.Extensions.UnitTest
 {
     public class ReadonlySpanExtensionsTests
     {

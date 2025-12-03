@@ -1,0 +1,9 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+	  <TargetFramework>$(NetPrimaryTargetFramework)</TargetFramework>
+	  <EnableSharedUnitTestDependencies>true</EnableSharedUnitTestDependencies>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\CosmicLexicon.Foundation.Transport.Net.csproj" />
+  </ItemGroup>
+</Project> 

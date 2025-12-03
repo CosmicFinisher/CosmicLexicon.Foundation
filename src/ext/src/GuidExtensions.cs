@@ -1,9 +1,7 @@
-namespace OpenEchoSystem.Core.xExtensions;
+namespace CosmicLexicon.Foundation.Extensions;
 
 using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Text;
 
 [EditorBrowsable(EditorBrowsableState.Never)]
 public static class GuidExtensions

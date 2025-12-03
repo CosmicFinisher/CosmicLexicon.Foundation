@@ -1,19 +1,13 @@
-using Xunit;
-using OpenEchoSystem.Core.xDiagnostics;
-using System;
-using System.IO;
-
-namespace OpenEchoSystem.Core.xDiagnostics
+namespace CosmicLexicon.Foundation.Diagnostics.UnitTest
 {
     using Xunit;
-    using OpenEchoSystem.Core.xDiagnostics;
     using System;
     using System.IO;
 
     public class LoggerTests
     {
         [Fact]
-        public void Log_LogsMessageToConsole()
+        public void LogLogsMessageToConsole()
         {
             // Arrange
             var logger = new Logger();

@@ -1,4 +1,4 @@
-# Table of Contents: OpenEchoSystem.Core Utilities and Extensions Research
+# Table of Contents: ConsmicLexicon.Foundation Utilities and Extensions Research
 
 1.  [Executive Summary](executive_summary_part1.md)
 2.  Methodology

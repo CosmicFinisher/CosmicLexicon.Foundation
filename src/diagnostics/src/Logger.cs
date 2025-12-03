@@ -1,4 +1,4 @@
-namespace OpenEchoSystem.Core.xDiagnostics
+namespace CosmicLexicon.Foundation.Diagnostics
 {
     public class Logger
     {

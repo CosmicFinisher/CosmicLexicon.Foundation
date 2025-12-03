@@ -9,12 +9,12 @@
 
 ### Installation
 
-1. Add NuGet packages:dotnet add package OpenEchoSystem.Core              # Core utilities
-dotnet add package OpenEchoSystem.Core.xCollections  # Collections
-dotnet add package OpenEchoSystem.Core.xThreading    # Threading utilities
-2. Import namespaces:using OpenEchoSystem.Core;
-using OpenEchoSystem.Core.xCollections;
-using OpenEchoSystem.Core.xThreading;
+1. Add NuGet packages:dotnet add package ConsmicLexicon.Foundation              # Core utilities
+dotnet add package ConsmicLexicon.Foundation.xCollections  # Collections
+dotnet add package ConsmicLexicon.Foundation.xThreading    # Threading utilities
+2. Import namespaces:using ConsmicLexicon.Foundation;
+using ConsmicLexicon.Foundation.xCollections;
+using ConsmicLexicon.Foundation.xThreading;
 ## Core Components
 
 ### Collections// Thread-safe collections
@@ -98,11 +98,11 @@ public Result<int> Calculate()
 - [Detailed Documentation](../../README.md)
 - [Design Decisions](../../research/design-decisions.md)
 - [Version History](../../research/migration-and-versioning.md)
-- [Known Issues](https://github.com/Rosyllionce/OpenEchoSystem.Core/issues)
+- [Known Issues](https://github.com/ConsmicFinisher/ConsmicLexicon.Foundation/issues)
 
 ## Need Help?
 
 - Review our [FAQ](../faq.md)
 - Check [Common Issues](../troubleshooting.md)
 <!-- - Join our [Discord Community](https://discord.gg/openEmergent) -->
-- Submit an [Issue](https://github.com/Rosyllionce/OpenEchoSystem.Core/issues)
+- Submit an [Issue](https://github.com/ConsmicFinisher/ConsmicLexicon.Foundation/issues)

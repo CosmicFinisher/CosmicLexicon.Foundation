@@ -1,6 +1,6 @@
-# OpenEchoSystem.Core.Generics CS8603 Warning Diagnosis Report
+# ConsmicLexicon.Foundation.Generics CS8603 Warning Diagnosis Report
 
-**Target Feature:** OpenEchoSystem.Core.Generics.UnitTest
+**Target Feature:** ConsmicLexicon.Foundation.Generics.UnitTest
 
 **Warning:** CS8603 - Possible null reference return.
 

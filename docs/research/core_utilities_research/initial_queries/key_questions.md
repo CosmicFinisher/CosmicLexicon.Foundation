@@ -1,6 +1,6 @@
-# Key Research Questions: OpenEchoSystem.Core Utilities and Extensions
+# Key Research Questions: ConsmicLexicon.Foundation Utilities and Extensions
 
-To effectively inform the SPARC Specification phase for improving the `OpenEchoSystem.Core` library, the following key questions will guide the research:
+To effectively inform the SPARC Specification phase for improving the `ConsmicLexicon.Foundation` library, the following key questions will guide the research:
 
 ## General Questions
 
@@ -14,7 +14,7 @@ To effectively inform the SPARC Specification phase for improving the `OpenEchoS
 
 1.  **Collections:**
     *   Are there known issues or missing functionalities in the existing collection helpers or extensions?
-    *   Is the split between `OpenEchoSystem.Core.xCollections` (non-generic) and `OpenEchoSystem.Core.xCollections.Generic` appropriate and consistently applied?
+    *   Is the split between `ConsmicLexicon.Foundation.xCollections` (non-generic) and `ConsmicLexicon.Foundation.xCollections.Generic` appropriate and consistently applied?
     *   Are there any custom generic collection implementations that are overly complex or not truly foundational?
     *   Is test coverage adequate for all collection utilities and extensions?
 2.  **IO:**

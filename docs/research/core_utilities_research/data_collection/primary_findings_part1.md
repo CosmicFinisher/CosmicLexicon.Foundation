@@ -1,10 +1,10 @@
-# Primary Findings: OpenEchoSystem.Core Utilities and Extensions Research (Part 1)
+# Primary Findings: ConsmicLexicon.Foundation Utilities and Extensions Research (Part 1)
 
-This document details the initial primary findings from the research into the `OpenEchoSystem.Core` library, focusing on identifying areas for error fixing, feature addition, commenting, and testing. The research is guided by the core principles outlined in `README.Core.md` and the specific goals of each module as described in their respective README files.
+This document details the initial primary findings from the research into the `ConsmicLexicon.Foundation` library, focusing on identifying areas for error fixing, feature addition, commenting, and testing. The research is guided by the core principles outlined in `README.Core.md` and the specific goals of each module as described in their respective README files.
 
 ## General Observations
 
-*   The `OpenEchoSystem.Core` library is structured into several distinct modules based on functional areas mirroring `System.*` namespaces. This organization is clear and aligns with the stated principles.
+*   The `ConsmicLexicon.Foundation` library is structured into several distinct modules based on functional areas mirroring `System.*` namespaces. This organization is clear and aligns with the stated principles.
 *   Each module generally has a dedicated README file providing a high-level overview and specific rules. However, the level of detail and completeness in these READMEs varies.
 *   The project includes test files for many of the source files, indicated by the "Tests.cs" suffix. This suggests an existing effort towards testing, but the comprehensiveness of these tests needs further evaluation.
 *   Initial attempts to use the AI search tool for general C# library best practices, common errors, commenting, and testing best practices resulted in errors ("No search results found"). This indicates a potential issue with the search tool or the queries used and will require further investigation or alternative approaches for gathering external information.
@@ -13,7 +13,7 @@ This document details the initial primary findings from the research into the `O
 
 ### Collections (`src/collections/`)
 
-*   The `README.Core.Collections.md` file outlines the goal of providing common interfaces, base classes, and utilities for collections, augmenting `System.Collections`. It also mentions a preference for generic collections in `OpenEchoSystem.Core.xCollections.Generic`.
+*   The `README.Core.Collections.md` file outlines the goal of providing common interfaces, base classes, and utilities for collections, augmenting `System.Collections`. It also mentions a preference for generic collections in `ConsmicLexicon.Foundation.xCollections.Generic`.
 *   The file listing for `src/collections/src/` shows a mix of generic and non-generic related files (e.g., `ArrayHelpers.cs`, `ListExtensions.cs`, `ObservableListT.cs`, `ConcurrentObjectPoolT.cs`).
 *   There are several test files present (e.g., `ArrayHelpersTests.cs`, `ListExtensionsTests.cs`, `ObservableListTTests.cs`).
 *   **Potential Areas for Investigation:**
@@ -25,7 +25,7 @@ This document details the initial primary findings from the research into the `O
 ### Diagnostics (`src/diagnostics/`)
 
 *   The `README.Core.Diagnostics.md` file indicates the goal of providing utilities for tracing, debugging, and performance monitoring, complementing `System.Diagnostics`. It explicitly states this is not for a full logging framework.
-*   The file listing for `src/diagnostics/src/` shows `LoggerTests.cs` and `OpenEchoSystem.Core.xDiagnostics.csproj`. The presence of `LoggerTests.cs` suggests some form of logging utility might exist, which could potentially contradict the README's statement about not being a full logging framework.
+*   The file listing for `src/diagnostics/src/` shows `LoggerTests.cs` and `ConsmicLexicon.Foundation.xDiagnostics.csproj`. The presence of `LoggerTests.cs` suggests some form of logging utility might exist, which could potentially contradict the README's statement about not being a full logging framework.
 *   **Potential Areas for Investigation:**
     *   Examine the content of `LoggerTests.cs` and any associated source files to understand the nature of the "logging utility" and determine if it aligns with the "not for a full logging framework" rule.
     *   Identify any missing, lightweight diagnostic utilities that would be valuable (e.g., improved assertion helpers, simple performance timers).
@@ -37,7 +37,7 @@ This document details the initial primary findings from the research into the `O
 *   The file listing for `src/exceptions/src/` shows `ApplicationException.cs` and `ApplicationExceptionTests.cs`.
 *   **Potential Areas for Investigation:**
     *   Review the implementation of `ApplicationException.cs`. Does it follow the .NET exception design guidelines and is it serializable?
-    *   Is `ApplicationException` the only custom exception needed, or are there other foundational error conditions in `OpenEchoSystem.Core` that warrant custom exception types?
+    *   Is `ApplicationException` the only custom exception needed, or are there other foundational error conditions in `ConsmicLexicon.Foundation` that warrant custom exception types?
     *   Assess the commenting and test coverage for the existing exception types.
 
 ### Generics (`src/generics/`)
@@ -74,7 +74,7 @@ This document details the initial primary findings from the research into the `O
 *   The file listing for `src/net/src/` shows `NetExtensions.cs` and `NetExtensionsTests.cs`.
 *   **Potential Areas for Investigation:**
     *   Examine the implementation of the internet connectivity check in `NetExtensions.cs`. How is it implemented and does it rely only on `System.*` assemblies?
-    *   Are there other foundational networking utilities that would be appropriate for `OpenEchoSystem.Core.xNet` (e.g., basic URI manipulation helpers, simple network address utilities)?
+    *   Are there other foundational networking utilities that would be appropriate for `ConsmicLexicon.Foundation.xNet` (e.g., basic URI manipulation helpers, simple network address utilities)?
     *   Assess the commenting and test coverage for the existing network utilities.
 
 ### Reflection (`src/reflection/`)
@@ -101,10 +101,10 @@ This document details the initial primary findings from the research into the `O
 ### Security (`src/security/`)
 
 *   The `README.Core.Security.md` file states the goal of providing base utilities related to security concepts, augmenting `System.Security`. It mentions `Cryptography/` as a sub-namespace and emphasizes caution and providing building blocks, not complete solutions.
-*   The file listing for `src/security/src/` shows `OpenEchoSystem.Core.xSecurity.csproj`. There is a subdirectory `crypto/` with its own README and files.
+*   The file listing for `src/security/src/` shows `ConsmicLexicon.Foundation.xSecurity.csproj`. There is a subdirectory `crypto/` with its own README and files.
 *   **Potential Areas for Investigation:**
     *   Examine the contents and README of the `crypto/` subdirectory to understand the specific cryptographic utilities provided. Do they adhere to the rule of *not* implementing custom algorithms and only using `System.Security.Cryptography`?
-    *   Are there other foundational security-related utilities that would be appropriate for `OpenEchoSystem.Core.xSecurity` (e.g., secure random number generation helpers)?
+    *   Are there other foundational security-related utilities that would be appropriate for `ConsmicLexicon.Foundation.xSecurity` (e.g., secure random number generation helpers)?
     *   Assess the commenting and test coverage in this module and its submodules, with a strong focus on correctness and security implications.
 
 ### Text (`src/text/`)

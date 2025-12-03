@@ -6,7 +6,7 @@
 
 ## Overview and Purpose
 
-The `ApplicationException` class serves as a base class for application-specific exceptions within the OpenEchoSystem.Core.xExceptions namespace. Its primary purpose is to provide a standardized way to represent errors that occur during the normal execution flow of the application, allowing for the inclusion of an application-specific error code in addition to the standard exception information. This class is intended to be used as a foundation for creating more specific exception types if needed, or to be thrown directly for general application errors.
+The `ApplicationException` class serves as a base class for application-specific exceptions within the ConsmicLexicon.Foundation.xExceptions namespace. Its primary purpose is to provide a standardized way to represent errors that occur during the normal execution flow of the application, allowing for the inclusion of an application-specific error code in addition to the standard exception information. This class is intended to be used as a foundation for creating more specific exception types if needed, or to be thrown directly for general application errors.
 
 ## Structure
 

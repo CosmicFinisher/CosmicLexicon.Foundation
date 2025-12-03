@@ -1,13 +1,13 @@
 # Reflection Assembly Test Failures Diagnosis
 
-This document provides a diagnosis of the failing tests in the `OpenEchoSystem.Core.Reflection.Assembly.UnitTest` project, along with suggestions for fixing them.
+This document provides a diagnosis of the failing tests in the `ConsmicLexicon.Foundation.Reflection.Assembly.UnitTest` project, along with suggestions for fixing them.
 
 ## Failing Tests
 
-- `OpenEchoSystem.Core.xReflection.xAssembly.PropertyInfoExtensionsTests.TryGetCustomAttributeWithNoAttributeReturnsFalseAndNull`
-- `OpenEchoSystem.Core.xReflection.xAssembly.PropertyInfoExtensionsTests.IsAccessibleFromSetterWithProtectedInternalSetterReturnsFalse`
-- `OpenEchoSystem.Core.xReflection.xAssembly.PropertyInfoExtensionsTests.HasAnInaccessibleSetterWithProtectedInternalSetterReturnsTrue`
-- `OpenEchoSystem.Core.xReflection.xAssembly.PropertyInfoExtensionsTests.IsNullableWithNullablePropertyReturnsTrue`
+- `ConsmicLexicon.Foundation.xReflection.xAssembly.PropertyInfoExtensionsTests.TryGetCustomAttributeWithNoAttributeReturnsFalseAndNull`
+- `ConsmicLexicon.Foundation.xReflection.xAssembly.PropertyInfoExtensionsTests.IsAccessibleFromSetterWithProtectedInternalSetterReturnsFalse`
+- `ConsmicLexicon.Foundation.xReflection.xAssembly.PropertyInfoExtensionsTests.HasAnInaccessibleSetterWithProtectedInternalSetterReturnsTrue`
+- `ConsmicLexicon.Foundation.xReflection.xAssembly.PropertyInfoExtensionsTests.IsNullableWithNullablePropertyReturnsTrue`
 
 ## Diagnosis
 

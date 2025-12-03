@@ -1,0 +1,7 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>$(NetPrimaryTargetFramework)</TargetFramework>
+    <EnableSharedKernelDependencies>true</EnableSharedKernelDependencies>
+   
+  </PropertyGroup>
+</Project>

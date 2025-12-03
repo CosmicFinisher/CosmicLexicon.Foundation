@@ -1,6 +1,6 @@
-# Key Insights: OpenEchoSystem.Core Utilities and Extensions Research (Part 1)
+# Key Insights: ConsmicLexicon.Foundation Utilities and Extensions Research (Part 1)
 
-This document presents the key insights derived from the integrated model and the initial research phase of the `OpenEchoSystem.Core` library. These insights highlight the most important considerations for improving the library and informing the SPARC Specification phase.
+This document presents the key insights derived from the integrated model and the initial research phase of the `ConsmicLexicon.Foundation` library. These insights highlight the most important considerations for improving the library and informing the SPARC Specification phase.
 
 ## Insight 1: Test Coverage is a Critical Need
 
@@ -22,4 +22,4 @@ The presence of non-generic collection helpers in the `Collections` module raise
 
 The use of `System.Text.Json` in the `Text` module, while part of the BCL, requires careful consideration to avoid introducing unwanted dependencies or features not strictly "core." **Action:** Evaluate the usage of `System.Text.Json` and ensure it remains lightweight and foundational.
 
-These key insights provide a clear direction for the next phase of research and development. By focusing on these areas, the `OpenEchoSystem.Core` library can be further improved to meet its goals of providing a stable, reliable, and well-documented foundation for other projects.
+These key insights provide a clear direction for the next phase of research and development. By focusing on these areas, the `ConsmicLexicon.Foundation` library can be further improved to meet its goals of providing a stable, reliable, and well-documented foundation for other projects.

@@ -1,8 +1,6 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
-using System.Text;
 
-namespace OpenEchoSystem.Core.xGenerics
+namespace CosmicLexicon.Foundation.Generics
 {
     //
     // Summary:

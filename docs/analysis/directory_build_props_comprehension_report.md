@@ -4,7 +4,7 @@
 
 The `src/Directory.Build.props` file is an MSBuild property file that serves as a central configuration point for all .NET projects located within the `src` directory and its subdirectories. Its primary purpose is to define common build properties, NuGet packaging settings, and shared item groups (like license files and icons) that apply consistently across multiple projects in the solution. This approach promotes uniformity in project builds and package generation, reducing redundancy and potential configuration drift between individual projects.
 
-This file is foundational for the project's build system, directly contributing to the AI verifiable outcomes outlined in `PRDMasterPlan.md` by ensuring consistent and correct compilation and packaging of the OpenEchoSystem.Core components. It underpins the "Framework Scaffolding" and "DevOps Foundations" aspects of the plan, as the ability to successfully build and package these libraries is a prerequisite for subsequent development and deployment tasks.
+This file is foundational for the project's build system, directly contributing to the AI verifiable outcomes outlined in `PRDMasterPlan.md` by ensuring consistent and correct compilation and packaging of the ConsmicLexicon.Foundation components. It underpins the "Framework Scaffolding" and "DevOps Foundations" aspects of the plan, as the ability to successfully build and package these libraries is a prerequisite for subsequent development and deployment tasks.
 
 ## 2. Structure and Main Components
 
@@ -12,12 +12,12 @@ The file is structured using standard MSBuild XML elements:
 
 *   **Project Root Element:** The entire configuration is encapsulated within the `<Project>` tag.
 *   **Product Information (`PropertyGroup`):**
-    *   [`ProductName`](src/Directory.Build.props:4): Defines the product name as "OpenEchoSystem.Core".
-    *   [`ProjectTitle`](src/Directory.Build.props:5): Provides a descriptive title for the project, "OpenEmergent Foundation Framework Core Library".
+    *   [`ProductName`](src/Directory.Build.props:4): Defines the product name as "ConsmicLexicon.Foundation".
+    *   [`ProjectTitle`](src/Directory.Build.props:5): Provides a descriptive title for the project, "Cosmic Lexicon Foundation Framework Library".
 *   **NuGet Packaging Settings (`PropertyGroup Label="NugetPackagingSettings"`):**
     *   [`PackageVersion`](src/Directory.Build.props:9): Sets the NuGet package version to "0.9.0".
-    *   [`Authors`](src/Directory.Build.props:10): Specifies "Rosyllionce Alpha Team" as the package authors.
-    *   [`Company`](src/Directory.Build.props:11): Sets the company name to "Rosyllionce".
+    *   [`Authors`](src/Directory.Build.props:10): Specifies "COSMIC FINISHER ALPHA" as the package authors.
+    *   [`Company`](src/Directory.Build.props:11): Sets the company name to "Consmic Finisher".
     *   [`Description`](src/Directory.Build.props:12): Provides a brief description for the NuGet package.
     *   [`PackageLicenseExpression`](src/Directory.Build.props:13): Indicates the license as "Apache-2.0".
     *   [`RepositoryUrl`](src/Directory.Build.props:14) and [`PackageProjectUrl`](src/Directory.Build.props:15): Link to the project's GitHub repository.
@@ -51,7 +51,7 @@ During the static code analysis of `src/Directory.Build.props`, several potentia
     *   **Suggestion:** Consider using well-known MSBuild properties, environment variables, or more robust pathing strategies (e.g., relative to the solution file) to define these critical locations, making the build system more resilient to structural changes.
 
 2.  **Commented-out `PackageId` (`Modularity Assessment - Clarity`):**
-    *   Line 8, `<PackageId>OpenEchoSystem.Core</PackageId>`, is commented out.
+    *   Line 8, `<PackageId>ConsmicLexicon.Foundation</PackageId>`, is commented out.
     *   **Concern:** If the intention is for all projects to share a common `PackageId`, this should be uncommented. If individual projects are meant to define their own `PackageId` or rely on the default derivation from the project name, the comment is appropriate but could benefit from a clarifying comment explaining the rationale. This impacts the modularity assessment as it affects how packages are uniquely identified.
     *   **Suggestion:** Add a clear comment explaining why `PackageId` is commented out, or uncomment it if a universal ID is desired.
 
@@ -67,7 +67,7 @@ During the static code analysis of `src/Directory.Build.props`, several potentia
 
 ## 5. Contribution to PRDMasterPlan.md and AI Verifiable Outcomes
 
-This `Directory.Build.props` file is a critical component in achieving the foundational high-level acceptance tests related to the build and packaging of the OpenEchoSystem.Core libraries. Its correct configuration ensures:
+This `Directory.Build.props` file is a critical component in achieving the foundational high-level acceptance tests related to the build and packaging of the ConsmicLexicon.Foundation libraries. Its correct configuration ensures:
 
 *   **Consistent Builds:** All projects within `src` adhere to the same versioning, authoring, and licensing standards.
 *   **Automated Packaging:** NuGet packages are automatically generated on build, containing essential metadata and assets.
