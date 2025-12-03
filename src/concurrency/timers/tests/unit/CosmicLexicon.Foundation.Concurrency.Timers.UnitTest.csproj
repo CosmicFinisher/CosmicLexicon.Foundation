@@ -4,6 +4,6 @@
     <EnableSharedUnitTestDependencies>true</EnableSharedUnitTestDependencies>
   </PropertyGroup>
   <ItemGroup>
-    <ProjectReference Include="$(MSBuildThisFileDirectory)..\..\src\CosmicLexicon.Foundation.Threading.Timers.csproj" />
+    <ProjectReference Include="$(MSBuildThisFileDirectory)..\..\src\CosmicLexicon.Foundation.Concurrency.Timers.csproj" />
   </ItemGroup>
 </Project> 

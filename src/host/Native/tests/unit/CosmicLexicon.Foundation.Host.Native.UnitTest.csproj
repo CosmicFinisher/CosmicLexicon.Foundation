@@ -4,6 +4,6 @@
     <EnableSharedUnitTestDependencies>true</EnableSharedUnitTestDependencies>
   </PropertyGroup>
   <ItemGroup>
-    <ProjectReference Include="$(MSBuildThisFileDirectory)..\..\src\CosmicLexicon.Foundation.Runtime.InteropServices.csproj" />
+    <ProjectReference Include="$(MSBuildThisFileDirectory)..\..\src\CosmicLexicon.Foundation.Host.Native.csproj" />
   </ItemGroup>
 </Project> 
