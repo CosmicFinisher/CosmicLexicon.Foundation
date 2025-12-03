@@ -1,9 +1,9 @@
 using System;
 using System.Linq;
 using Xunit;
-using OpenEchoSystem.Core.xReflection;
+using CosmicLexicon.Foundation.xReflection;
 
-namespace OpenEchoSystem.Core.xReflection
+namespace CosmicLexicon.Foundation.xReflection
 {
     public class FastActivatorTests
     {

@@ -1,6 +1,6 @@
 using System.Text;
 
-namespace OpenEchoSystem.Core.xExtensions;
+namespace CosmicLexicon.Foundation.xExtensions;
 
 /// <summary>
 /// Generate CUIDs (Custom Unique Identifier (ID))

@@ -1,10 +1,10 @@
 using Xunit;
-using OpenEchoSystem.Core.xReflection.xAssembly;
-using OpenEchoSystem.Core.xReflection.xAssembly;
+using CosmicLexicon.Foundation.xReflection.xAssembly;
+using CosmicLexicon.Foundation.xReflection.xAssembly;
 using System;
 using System.Collections.Generic;
 
-namespace OpenEchoSystem.Core.xReflection.xAssembly.Tests
+namespace CosmicLexicon.Foundation.xReflection.xAssembly.Tests
 {
     public class GenericTypeExtensionsTests
     {

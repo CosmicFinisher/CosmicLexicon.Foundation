@@ -1,6 +1,6 @@
-### `OpenEchoSystem.Core/Text/Json/`
-*   **Full Path in Tree:** `OpenEchoSystem.Core/Text/Json/`
-*   **Namespace:** `OpenEchoSystem.Core.xText.Json`
+### `ConsmicLexicon.Foundation/Text/Json/`
+*   **Full Path in Tree:** `ConsmicLexicon.Foundation/Text/Json/`
+*   **Namespace:** `ConsmicLexicon.Foundation.xText.Json`
 *   **Goal:** To provide utilities and custom converters specifically for `System.Text.Json`, if such low-level utilities are needed in `Core`.
 *   **Purpose:** Offers helper methods or `JsonConverter<T>` implementations that are foundational and don't introduce unwanted dependencies.
 *   **Description:** Contains types that assist with `System.Text.Json` serialization and deserialization. Use with extreme caution in `Core`.

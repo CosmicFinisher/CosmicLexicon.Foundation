@@ -1,4 +1,4 @@
-namespace OpenEchoSystem.Core.xGlobalization;
+namespace CosmicLexicon.Foundation.xGlobalization;
 
 using System.Collections.Generic;
 using System.Text;

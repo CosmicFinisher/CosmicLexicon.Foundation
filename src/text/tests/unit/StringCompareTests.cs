@@ -1,7 +1,7 @@
-using OpenEchoSystem.Core.xText.xString;
+using CosmicLexicon.Foundation.xText.xString;
 using Xunit;
 
-namespace OpenEchoSystem.Core.xText
+namespace CosmicLexicon.Foundation.xText
 {
     public class StringCompareTests
     {

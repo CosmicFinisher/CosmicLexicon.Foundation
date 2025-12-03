@@ -1,9 +1,9 @@
 using Xunit;
-using OpenEchoSystem.Core.xGlobalization;
+using CosmicLexicon.Foundation.xGlobalization;
 using System;
 using System.Globalization;
 
-namespace OpenEchoSystem.Core.xGlobalization
+namespace CosmicLexicon.Foundation.xGlobalization
 {
     public class DateTimeExtensionsTests
     {

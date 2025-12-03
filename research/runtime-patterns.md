@@ -27,17 +27,17 @@ runtime/
 ### Namespace Organization
 
 ```csharp
-namespace OpenEchoSystem.Core.xRuntime
+namespace ConsmicLexicon.Foundation.xRuntime
 {
     // Base runtime functionality
 }
 
-namespace OpenEchoSystem.Core.xRuntime.Serialization
+namespace ConsmicLexicon.Foundation.xRuntime.Serialization
 {
     // Serialization components
 }
 
-namespace OpenEchoSystem.Core.xRuntime.InteropServices
+namespace ConsmicLexicon.Foundation.xRuntime.InteropServices
 {
     // Interop functionality
 }

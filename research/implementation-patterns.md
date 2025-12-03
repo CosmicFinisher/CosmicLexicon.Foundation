@@ -64,7 +64,7 @@ src/
 1. Main Projects (.NET 9)<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>$(NetPrimaryTargetFramework)</TargetFramework>
-    <RootNamespace>OpenEchoSystem.Core.x{Component}</RootNamespace>
+    <RootNamespace>ConsmicLexicon.Foundation.x{Component}</RootNamespace>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <EnablePreviewFeatures>true</EnablePreviewFeatures>
@@ -268,6 +268,6 @@ public async ValueTask<T> ProcessAsync<T>(T input,
 - [Design Decisions](design-decisions.md)
 
 ### Package References
-- [Core Framework NuGet](https://www.nuget.org/packages/OpenEchoSystem.Core/)
-- [Collections Package](https://www.nuget.org/packages/OpenEchoSystem.Core.xCollections/)
-- [Threading Package](https://www.nuget.org/packages/OpenEchoSystem.Core.xThreading/)
+- [Core Framework NuGet](https://www.nuget.org/packages/ConsmicLexicon.Foundation/)
+- [Collections Package](https://www.nuget.org/packages/ConsmicLexicon.Foundation.xCollections/)
+- [Threading Package](https://www.nuget.org/packages/ConsmicLexicon.Foundation.xThreading/)

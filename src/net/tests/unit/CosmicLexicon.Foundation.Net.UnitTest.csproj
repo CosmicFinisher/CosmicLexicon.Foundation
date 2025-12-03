@@ -1,10 +1,10 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
 	  <TargetFramework>$(NetPrimaryTargetFramework)</TargetFramework>
-    <RootNamespace>OpenEchoSystem.Core.xNet</RootNamespace>
+    <RootNamespace>CosmicLexicon.Foundation.xNet</RootNamespace>
 	  <EnableSharedUnitTestDependencies>true</EnableSharedUnitTestDependencies>
   </PropertyGroup>
   <ItemGroup>
-    <ProjectReference Include="$(MSBuildThisFileDirectory)..\..\src\OpenEchoSystem.Core.Net.csproj" />
+    <ProjectReference Include="$(MSBuildThisFileDirectory)..\..\src\CosmicLexicon.Foundation.Net.csproj" />
   </ItemGroup>
 </Project> 

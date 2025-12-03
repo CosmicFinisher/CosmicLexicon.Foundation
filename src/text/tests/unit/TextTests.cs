@@ -1,9 +1,9 @@
 using Xunit;
 
-namespace OpenEchoSystem.Core.xText
+namespace CosmicLexicon.Foundation.xText
 {
     
-    using OpenEchoSystem.Core.xText.xString;
+    using CosmicLexicon.Foundation.xText.xString;
 
     public class TextTests
     {

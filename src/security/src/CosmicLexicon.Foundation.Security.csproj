@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>$(NetPrimaryTargetFramework)</TargetFramework>
-    <RootNamespace>OpenEchoSystem.Core.xSecurity</RootNamespace>
+    <RootNamespace>CosmicLexicon.Foundation.xSecurity</RootNamespace>
     <EnableSharedKernelDependencies>true</EnableSharedKernelDependencies>
 	  
   </PropertyGroup>

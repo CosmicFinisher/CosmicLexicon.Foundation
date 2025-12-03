@@ -5,7 +5,7 @@ using System.Linq;
 using System.Reflection;
 using System.Text;
 
-namespace OpenEchoSystem.Core.xReflection.xAssembly
+namespace CosmicLexicon.Foundation.xReflection.xAssembly
 {
     [EditorBrowsable(EditorBrowsableState.Never)]
     public static class PropertyInfoExtensions

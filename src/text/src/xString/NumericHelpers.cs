@@ -1,6 +1,6 @@
 using System.ComponentModel;
 
-namespace OpenEchoSystem.Core.xText.xString // Adjusted namespace
+namespace CosmicLexicon.Foundation.xText.xString // Adjusted namespace
 {
     [EditorBrowsable(EditorBrowsableState.Never)]
     public static class NumericHelpers

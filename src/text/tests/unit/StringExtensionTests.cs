@@ -1,8 +1,8 @@
 using System;
 using Xunit;
-using OpenEchoSystem.Core.xText.xString; // Corrected namespace for StringExtension
+using CosmicLexicon.Foundation.xText.xString; // Corrected namespace for StringExtension
 
-namespace OpenEchoSystem.Core.xText
+namespace CosmicLexicon.Foundation.xText
 {
     public class StringExtensionTests
     {

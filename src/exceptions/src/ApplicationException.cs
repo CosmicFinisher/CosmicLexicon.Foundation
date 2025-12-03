@@ -1,6 +1,6 @@
 using System.Runtime.Serialization;
 
-namespace OpenEchoSystem.Core.xExceptions
+namespace CosmicLexicon.Foundation.xExceptions
 {
     /// <summary>
     /// Represents an application-specific exception that occurs during execution.

@@ -1,8 +1,8 @@
 using Xunit;
-using OpenEchoSystem.Core.xReflection.xAssembly;
-using OpenEchoSystem.Core.xReflection.xAssembly;
+using CosmicLexicon.Foundation.xReflection.xAssembly;
+using CosmicLexicon.Foundation.xReflection.xAssembly;
 
-namespace OpenEchoSystem.Core.xReflection.xAssembly.Tests
+namespace CosmicLexicon.Foundation.xReflection.xAssembly.Tests
 {
     public class InterfaceFilterTests
     {

@@ -1,8 +1,8 @@
 using System;
 using Xunit;
-using OpenEchoSystem.Core.xText.xString;
+using CosmicLexicon.Foundation.xText.xString;
 
-namespace OpenEchoSystem.Core.xText
+namespace CosmicLexicon.Foundation.xText
 {
     public class GenericStringFormatterTests
     {

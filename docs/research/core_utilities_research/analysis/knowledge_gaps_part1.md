@@ -1,11 +1,11 @@
-# Knowledge Gaps: OpenEchoSystem.Core Utilities and Extensions Research (Part 1)
+# Knowledge Gaps: ConsmicLexicon.Foundation Utilities and Extensions Research (Part 1)
 
-This document outlines the initial knowledge gaps identified during the first pass of research into the `OpenEchoSystem.Core` library. These gaps represent areas where more information or deeper analysis is required to fully understand the current state of the code, identify necessary improvements, and inform the SPARC Specification phase.
+This document outlines the initial knowledge gaps identified during the first pass of research into the `ConsmicLexicon.Foundation` library. These gaps represent areas where more information or deeper analysis is required to fully understand the current state of the code, identify necessary improvements, and inform the SPARC Specification phase.
 
 ## General Knowledge Gaps
 
-1.  **Absence of a User Blueprint:** The primary user blueprint file was not found. While the `README.Core.md` and module-specific READMEs provide some context, a comprehensive blueprint would offer a clearer vision of the desired end state, priorities, and specific requirements for the `OpenEchoSystem.Core` library. This gap makes it challenging to definitively identify "missing features" from a user perspective.
-2.  **AI Search Tool Issues:** The AI search tool failed to return results for general queries about C# library development best practices, common errors, commenting, and testing. This hinders the ability to gather external insights and compare the current state of `OpenEchoSystem.Core` against established industry standards.
+1.  **Absence of a User Blueprint:** The primary user blueprint file was not found. While the `README.Core.md` and module-specific READMEs provide some context, a comprehensive blueprint would offer a clearer vision of the desired end state, priorities, and specific requirements for the `ConsmicLexicon.Foundation` library. This gap makes it challenging to definitively identify "missing features" from a user perspective.
+2.  **AI Search Tool Issues:** The AI search tool failed to return results for general queries about C# library development best practices, common errors, commenting, and testing. This hinders the ability to gather external insights and compare the current state of `ConsmicLexicon.Foundation` against established industry standards.
 3.  **Comprehensive Test Coverage Assessment:** While test files exist, a detailed analysis of their coverage is needed. It's unclear which parts of the code are well-tested, which have minimal coverage, and which have no tests at all. Tools for static analysis of test coverage would be beneficial here.
 4.  **Code Quality and Error Identification:** A systematic review of the C# source code is required to identify potential errors, code smells, or areas that do not align with the stated core principles. This requires a deeper code analysis than was performed in the initial pass.
 5.  **Consistency in Documentation and Commenting:** The initial review of README files suggests potential inconsistencies in the level of detail and clarity across different modules. A thorough assessment of inline code comments is also needed.
@@ -15,7 +15,7 @@ This document outlines the initial knowledge gaps identified during the first pa
 ### Collections (`src/collections/`)
 
 *   **Non-Generic vs. Generic Usage:** Clarification is needed on the intended long-term role of non-generic collection helpers. Should they be maintained, or is the focus strictly on generic collections moving forward?
-*   **Completeness of Generic Extensions:** Are there other commonly used generic collection extension methods that are missing from `OpenEchoSystem.Core.xCollections.Generic`?
+*   **Completeness of Generic Extensions:** Are there other commonly used generic collection extension methods that are missing from `ConsmicLexicon.Foundation.xCollections.Generic`?
 *   **Test Coverage Detail:** Specific test coverage metrics for each file in this module are unknown.
 
 ### Diagnostics (`src/diagnostics/`)
@@ -25,7 +25,7 @@ This document outlines the initial knowledge gaps identified during the first pa
 
 ### Exceptions (`src/exceptions/`)
 
-*   **Necessity of Additional Custom Exceptions:** Are there specific error scenarios within `OpenEchoSystem.Core` that are not adequately represented by `ApplicationException` or standard .NET exceptions, warranting new custom exception types?
+*   **Necessity of Additional Custom Exceptions:** Are there specific error scenarios within `ConsmicLexicon.Foundation` that are not adequately represented by `ApplicationException` or standard .NET exceptions, warranting new custom exception types?
 *   **Serialization Implementation Details:** Confirmation is needed that `ApplicationException` is correctly implemented for serialization according to .NET guidelines.
 
 ### Generics (`src/generics/`)
@@ -46,7 +46,7 @@ This document outlines the initial knowledge gaps identified during the first pa
 ### Net (`src/net/`)
 
 *   **Internet Connectivity Check Implementation:** A detailed review of the `HasInternetConnectionAsync` implementation is needed to ensure it is robust and adheres to the "System-Only Dependencies" principle.
-*   **Scope of Net Utilities:** Clarification is needed on the intended scope of `OpenEchoSystem.Core.xNet`. What other foundational networking utilities would be appropriate without becoming too high-level or dependent?
+*   **Scope of Net Utilities:** Clarification is needed on the intended scope of `ConsmicLexicon.Foundation.xNet`. What other foundational networking utilities would be appropriate without becoming too high-level or dependent?
 
 ### Reflection (`src/reflection/`)
 

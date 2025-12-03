@@ -1,8 +1,8 @@
-using OpenEchoSystem.Core.xText.xString;
+using CosmicLexicon.Foundation.xText.xString;
 using System.Reflection.Metadata;
 using Xunit;
 
-namespace OpenEchoSystem.Core.xText
+namespace CosmicLexicon.Foundation.xText
 {
     public sealed class StringConcatExtensionTests
     {
@@ -38,7 +38,7 @@ namespace OpenEchoSystem.Core.xText
         {
             var @strings = GetStrings();
 
-            // Calling the Concat extension method from OpenEchoSystem.Net.Core.xLinqExtensions
+            // Calling the Concat extension method from CosmicLexicon.Net.Core.xLinqExtensions
             var actualString = StringHelpers.Concat(@strings).ToString();
 
             var expected = GetExpectedConcatenatedStringSimple();

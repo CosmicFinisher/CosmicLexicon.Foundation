@@ -1,16 +1,16 @@
 <Project>
 
 	<PropertyGroup>
-		<ProductName>OpenEchoSystem.Core</ProductName>
-		<ProjectTitle>Open Echo System Framework Core Library</ProjectTitle>
+		<ProductName>CosmicLexicon.Foundation</ProductName>
+		<ProjectTitle>Cosmic_Lexicon Framework Foundation Library</ProjectTitle>
 	</PropertyGroup>
 	<PropertyGroup Label="NugetPackagingSettings">
-		<!--<PackageId>OpenEchoSystem.Core</PackageId>-->
-		<Authors>OpenEmergent Alpha Team</Authors>
-		<Company>OpenEmergent</Company>
-		<Description>A foundation framework core library for Rosyllionce projects.</Description>
+		<!--<PackageId>CosmicLexicon.Foundation</PackageId>-->
+		<Authors>COSMIC FINISHER ALPHA</Authors>
+		<Company>Cosmic Finisher</Company>
+		<Description>A foundation framework core library for Cosmic Containment projects.</Description>
 		<PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
-		<RepositoryUrl>https://github.com/Rosyllionce/OpenEchoSystem.Core.git</RepositoryUrl>
+		<RepositoryUrl>https://github.com/CosmicFinisher/CosmicLexicon.Foundation.git</RepositoryUrl>
 		<PackageProjectUrl>$(RepositoryUrl)</PackageProjectUrl>
 		<PackageIcon>icon.png</PackageIcon>
 		<RepositoryType>git</RepositoryType>

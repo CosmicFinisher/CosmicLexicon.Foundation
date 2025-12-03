@@ -1,8 +1,8 @@
-# Test Plan for OpenEchoSystem.Core.xText Module Granular Testing
+# Test Plan for ConsmicLexicon.Foundation.xText Module Granular Testing
 
 ## 1. Introduction
 
-This document outlines the detailed granular test plan for the `OpenEchoSystem.Core.xText` module, specifically targeting critical functions and classes within the [`src/text/src/xString/`](src/text/src/xString/) directory. The primary goal is to significantly increase code coverage from its current low of 9.75% line coverage and 7.53% branch coverage, as identified in [`docs/analysis/code_analysis_report.md`](docs/analysis/code_analysis_report.md), by implementing comprehensive unit tests. This plan adheres to London School Test-Driven Development (TDD) principles, emphasizing interaction-based testing and collaborator mocking, and defines a robust recursive testing strategy to ensure continuous stability and early regression detection. Every element within this test plan, from scope definition to individual test case outcomes, is designed to be AI verifiable.
+This document outlines the detailed granular test plan for the `ConsmicLexicon.Foundation.xText` module, specifically targeting critical functions and classes within the [`src/text/src/xString/`](src/text/src/xString/) directory. The primary goal is to significantly increase code coverage from its current low of 9.75% line coverage and 7.53% branch coverage, as identified in [`docs/analysis/code_analysis_report.md`](docs/analysis/code_analysis_report.md), by implementing comprehensive unit tests. This plan adheres to London School Test-Driven Development (TDD) principles, emphasizing interaction-based testing and collaborator mocking, and defines a robust recursive testing strategy to ensure continuous stability and early regression detection. Every element within this test plan, from scope definition to individual test case outcomes, is designed to be AI verifiable.
 
 ## 2. Test Scope
 
@@ -13,11 +13,11 @@ The granular tests defined in this plan directly contribute to the successful ac
     *   **Task 4.1: Expand test coverage to address identified gaps.**
         *   **AI Verifiable Deliverable/Completion Criteria:** Test coverage is expanded, and a script can verify that the new tests cover the previously identified gaps.
 
-This test plan specifically details the unit tests required to address the identified test coverage gaps within the `OpenEchoSystem.Core.xText` module, thereby contributing directly to Task 4.1's deliverable and the overarching Phase 4 goal of improved test coverage and a 100% test pass rate.
+This test plan specifically details the unit tests required to address the identified test coverage gaps within the `ConsmicLexicon.Foundation.xText` module, thereby contributing directly to Task 4.1's deliverable and the overarching Phase 4 goal of improved test coverage and a 100% test pass rate.
 
 ## 3. Test Strategy: London School TDD Principles
 
-Our testing strategy for the `OpenEchoSystem.Core.xText` module will strictly adhere to London School TDD principles. This approach focuses on testing the observable behavior of a unit (class or method) by examining its interactions with its collaborators rather than inspecting its internal state.
+Our testing strategy for the `ConsmicLexicon.Foundation.xText` module will strictly adhere to London School TDD principles. This approach focuses on testing the observable behavior of a unit (class or method) by examining its interactions with its collaborators rather than inspecting its internal state.
 
 *   **Interaction-Based Testing:** Tests will assert that the unit under test sends the correct messages (method calls) with the correct arguments to its collaborators at the correct times, and that it reacts appropriately to messages received from its collaborators.
 *   **Mocking Collaborators:** For any external dependencies or collaborators (e.g., `System.Text.Encoding`, custom formatters like `IStringFormatter`), mock objects will be used. These mocks will simulate the behavior of real collaborators, allowing us to isolate the unit under test and verify its interactions without relying on the actual implementation of the dependencies. This ensures that failures are attributed directly to the unit being tested.
@@ -35,7 +35,7 @@ Test suites or subsets thereof will be re-executed based on the following Softwa
     *   **AI Verifiable Criterion:** Test runner output indicates all relevant unit tests pass for the changed files.
 *   **Pull Request (PR) Submission:** All unit tests related to the changed module(s) and their direct dependencies will be executed as part of the CI pipeline.
     *   **AI Verifiable Criterion:** CI pipeline report confirms 100% pass rate for `@Unit` and `@Feature:xText` tagged tests in affected areas.
-*   **Nightly Builds:** A full suite of all `@Unit` and `@Regression` tagged tests across the entire `OpenEchoSystem.Core` library will be executed.
+*   **Nightly Builds:** A full suite of all `@Unit` and `@Regression` tagged tests across the entire `ConsmicLexicon.Foundation` library will be executed.
     *   **AI Verifiable Criterion:** Automated nightly build report shows 100% pass rate for all `@Unit` and `@Regression` tests.
 *   **Pre-Release Builds:** All `@Unit`, `@Integration`, and `@Regression` tests will be executed, along with a selected subset of high-level acceptance tests.
     *   **AI Verifiable Criterion:** Pre-release CI/CD pipeline report confirms 100% pass rate across all test categories and the specified high-level acceptance test subset.
@@ -49,16 +49,16 @@ Tests will be categorized and tagged to facilitate efficient subset selection fo
 *   **`@Unit`:** Granular tests focusing on isolated units of code, with collaborators mocked. These form the foundation of our test suite.
 *   **`@Integration`:** (Less focus for this granular plan, but for future context) Tests verifying interactions between multiple units or components without mocking all external systems.
 *   **`@Regression`:** Critical tests identified as essential for maintaining core system functionality and preventing regressions. All new `@Unit` tests will implicitly be included in the regression suite.
-*   **`@Feature:xText`:** Tags all tests specifically related to the `OpenEchoSystem.Core.xText` module, allowing for targeted execution.
+*   **`@Feature:xText`:** Tags all tests specifically related to the `ConsmicLexicon.Foundation.xText` module, allowing for targeted execution.
 
 ### 4.3. Test Subset Selection for Regression Triggers
 
 *   **Local Development:** Run tests tagged `@Unit` and `@Feature:xText` that correspond to the actively modified files or features.
 *   **PR Submission:** Execute all tests tagged `@Unit` and `@Feature:xText` within the `src/text/` module and any other modules directly impacted by the changes in the PR.
-*   **Nightly Builds:** Run all tests tagged `@Unit` and `@Regression` across the entire `OpenEchoSystem.Core` project.
+*   **Nightly Builds:** Run all tests tagged `@Unit` and `@Regression` across the entire `ConsmicLexicon.Foundation` project.
 *   **Pre-Release Builds:** Execute all tests (all `@Unit`, `@Integration`, and `@Regression` tests) and a representative set of high-level acceptance tests (e.g., those verifying core user flows).
 
-## 5. Detailed Test Cases for OpenEchoSystem.Core.xText Module
+## 5. Detailed Test Cases for ConsmicLexicon.Foundation.xText Module
 
 This section details specific test cases for key functions and classes within `src/text/src/xString/`, outlining the AI Verifiable End Result from `PRDMasterPlan.md` they target, the interactions to test, required mock configurations, precise observable outcomes, and recursive testing scope guidance.
 
@@ -245,4 +245,4 @@ This section details specific test cases for key functions and classes within `s
 
 ## 6. Conclusion
 
-This detailed granular test plan for the `OpenEchoSystem.Core.xText` module, focusing on the `src/text/src/xString/` directory, has been meticulously crafted to ensure comprehensive test coverage and adherence to robust testing principles. By explicitly adopting London School TDD, we will verify the observable behaviors of units through their interactions with mocked collaborators, rather than their internal states. The comprehensive recursive testing strategy, with clearly defined triggers, prioritization, and test subset selection, will ensure that continuous regression testing is an integral part of the development lifecycle, catching issues early and maintaining system stability. Every test case and phase detailed herein includes AI verifiable completion criteria, directly aligning with the AI Verifiable End Results outlined in [`docs/PRDMasterPlan.md`](docs/PRDMasterPlan.md). This document serves as a clear and actionable guide for human programmers and subsequent AI testing agents, ensuring that the `OpenEchoSystem.Core.xText` module is thoroughly tested and robust.
+This detailed granular test plan for the `ConsmicLexicon.Foundation.xText` module, focusing on the `src/text/src/xString/` directory, has been meticulously crafted to ensure comprehensive test coverage and adherence to robust testing principles. By explicitly adopting London School TDD, we will verify the observable behaviors of units through their interactions with mocked collaborators, rather than their internal states. The comprehensive recursive testing strategy, with clearly defined triggers, prioritization, and test subset selection, will ensure that continuous regression testing is an integral part of the development lifecycle, catching issues early and maintaining system stability. Every test case and phase detailed herein includes AI verifiable completion criteria, directly aligning with the AI Verifiable End Results outlined in [`docs/PRDMasterPlan.md`](docs/PRDMasterPlan.md). This document serves as a clear and actionable guide for human programmers and subsequent AI testing agents, ensuring that the `ConsmicLexicon.Foundation.xText` module is thoroughly tested and robust.

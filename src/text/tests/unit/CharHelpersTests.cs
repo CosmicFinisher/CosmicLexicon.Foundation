@@ -1,7 +1,7 @@
 using Xunit;
-using OpenEchoSystem.Core.xText.xString; // Ensure this namespace is correct for CharHelpers
+using CosmicLexicon.Foundation.xText.xString; // Ensure this namespace is correct for CharHelpers
 
-namespace OpenEchoSystem.Core.xText.Tests
+namespace CosmicLexicon.Foundation.xText.Tests
 {
     public class CharHelpersTests
     {

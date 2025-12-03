@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace OpenEchoSystem.Core.xRuntime
+namespace CosmicLexicon.Foundation.xRuntime
 {
     using System;
 

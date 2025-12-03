@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 
-namespace OpenEchoSystem.Core.xLinq
+namespace CosmicLexicon.Foundation.xLinq
 {
     [EditorBrowsable(EditorBrowsableState.Never)]
     public static class EnumerableHelpers

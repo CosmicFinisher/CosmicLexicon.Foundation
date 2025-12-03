@@ -1,8 +1,8 @@
-using OpenEchoSystem.Core.xExceptions;
+using CosmicLexicon.Foundation.xExceptions;
 using System;
 using Xunit;
 
-namespace OpenEchoSystem.Core.xExceptions
+namespace CosmicLexicon.Foundation.xExceptions
 {
     public class ApplicationExceptionTests
     {
@@ -10,7 +10,7 @@ namespace OpenEchoSystem.Core.xExceptions
         public void Constructor_Default_CreatesInstance()
         {
             // Act
-            var exception = new OpenEchoSystem.Core.xExceptions.ApplicationException();
+            var exception = new CosmicLexicon.Foundation.xExceptions.ApplicationException();
             
             // Assert
             Assert.NotNull(exception);
@@ -25,7 +25,7 @@ namespace OpenEchoSystem.Core.xExceptions
             string message = "Test exception message";
             
             // Act
-            var exception = new OpenEchoSystem.Core.xExceptions.ApplicationException(message);
+            var exception = new CosmicLexicon.Foundation.xExceptions.ApplicationException(message);
             
             // Assert
             Assert.Equal(message, exception.Message);
@@ -41,7 +41,7 @@ namespace OpenEchoSystem.Core.xExceptions
             var innerException = new InvalidOperationException("Inner exception");
             
             // Act
-            var exception = new OpenEchoSystem.Core.xExceptions.ApplicationException(message, innerException);
+            var exception = new CosmicLexicon.Foundation.xExceptions.ApplicationException(message, innerException);
             
             // Assert
             Assert.Equal(message, exception.Message);
@@ -57,7 +57,7 @@ namespace OpenEchoSystem.Core.xExceptions
             int errorCode = 42;
             
             // Act
-            var exception = new OpenEchoSystem.Core.xExceptions.ApplicationException(message, errorCode);
+            var exception = new CosmicLexicon.Foundation.xExceptions.ApplicationException(message, errorCode);
             
             // Assert
             Assert.Equal(message, exception.Message);
@@ -74,7 +74,7 @@ namespace OpenEchoSystem.Core.xExceptions
             var innerException = new InvalidOperationException("Inner exception");
             
             // Act
-            var exception = new OpenEchoSystem.Core.xExceptions.ApplicationException(message, errorCode, innerException);
+            var exception = new CosmicLexicon.Foundation.xExceptions.ApplicationException(message, errorCode, innerException);
             
             // Assert
             Assert.Equal(message, exception.Message);
@@ -90,7 +90,7 @@ namespace OpenEchoSystem.Core.xExceptions
             int errorCode = 100; // Use a non-zero error code
 
             // Act
-            var exception = new OpenEchoSystem.Core.xExceptions.ApplicationException(message, errorCode);
+            var exception = new CosmicLexicon.Foundation.xExceptions.ApplicationException(message, errorCode);
 
             // Assert
             Assert.Equal(message, exception.Message);
@@ -102,7 +102,7 @@ namespace OpenEchoSystem.Core.xExceptions
         public void ErrorCode_CanBeSet()
         {
             // Arrange
-            var exception = new OpenEchoSystem.Core.xExceptions.ApplicationException();
+            var exception = new CosmicLexicon.Foundation.xExceptions.ApplicationException();
             int errorCode = 42;
 
             // Act
@@ -120,7 +120,7 @@ namespace OpenEchoSystem.Core.xExceptions
             string customErrorCode = "CUSTOM_ERROR_STRING_001";
 
             // Act
-            var exception = new OpenEchoSystem.Core.xExceptions.ApplicationException(message, customErrorCode);
+            var exception = new CosmicLexicon.Foundation.xExceptions.ApplicationException(message, customErrorCode);
 
             // Assert
             Assert.Equal(message, exception.Message);
@@ -138,7 +138,7 @@ namespace OpenEchoSystem.Core.xExceptions
             var innerException = new InvalidOperationException("Inner exception for string error code");
 
             // Act
-            var exception = new OpenEchoSystem.Core.xExceptions.ApplicationException(message, customErrorCode, innerException);
+            var exception = new CosmicLexicon.Foundation.xExceptions.ApplicationException(message, customErrorCode, innerException);
 
             // Assert
             Assert.Equal(message, exception.Message);
@@ -151,7 +151,7 @@ namespace OpenEchoSystem.Core.xExceptions
         public void CustomStringErrorCode_CanBeSet()
         {
             // Arrange
-            var exception = new OpenEchoSystem.Core.xExceptions.ApplicationException();
+            var exception = new CosmicLexicon.Foundation.xExceptions.ApplicationException();
             string customErrorCode = "ANOTHER_CUSTOM_ERROR_STRING";
             
             // Act

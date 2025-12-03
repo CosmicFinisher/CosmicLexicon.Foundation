@@ -9,7 +9,7 @@ using System.Reflection;
 using System.Text;
 using System.Text.RegularExpressions;
 
-namespace OpenEchoSystem.Core.xText.xString
+namespace CosmicLexicon.Foundation.xText.xString
 {
     //
     // Summary:

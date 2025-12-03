@@ -1,7 +1,7 @@
 using System.ComponentModel;
 using System.Text;
 
-namespace OpenEchoSystem.Core.xText.xString
+namespace CosmicLexicon.Foundation.xText.xString
 {
     [EditorBrowsable(EditorBrowsableState.Never)]
     public static class StringExtensions

@@ -1,8 +1,8 @@
-# OpenEchoSystem.Core.Text
+# ConsmicLexicon.Foundation.Text
 
 ## Overview
 
-OpenEchoSystem.Core.Text provides high-performance text processing utilities, including string manipulation, JSON handling, and regular expressions support. It focuses on efficient text operations while maintaining security and performance.
+ConsmicLexicon.Foundation.Text provides high-performance text processing utilities, including string manipulation, JSON handling, and regular expressions support. It focuses on efficient text operations while maintaining security and performance.
 
 ## Features
 
@@ -37,9 +37,9 @@ OpenEchoSystem.Core.Text provides high-performance text processing utilities, in
 - Visual Studio 2025+ or VS Code
 
 ### Installation
-Add the package reference to your project:<PackageReference Include="OpenEchoSystem.Core.Text" Version="1.0.0" />
-### Basic Usage using OpenEchoSystem.Core.Text;
-using OpenEchoSystem.Core.Text.Json;
+Add the package reference to your project:<PackageReference Include="ConsmicLexicon.Foundation.Text" Version="1.0.0" />
+### Basic Usage using ConsmicLexicon.Foundation.Text;
+using ConsmicLexicon.Foundation.Text.Json;
 
 // Use text processing features
 var result = text.ToPooledString();

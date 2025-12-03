@@ -1,8 +1,8 @@
-# OpenEchoSystem.Core.Reflection
+# ConsmicLexicon.Foundation.Reflection
 
 ## Overview
 
-OpenEchoSystem.Core.Reflection provides optimized reflection utilities and type system operations for .NET applications. It focuses on performance while providing powerful reflection capabilities.
+ConsmicLexicon.Foundation.Reflection provides optimized reflection utilities and type system operations for .NET applications. It focuses on performance while providing powerful reflection capabilities.
 
 ## Features
 
@@ -37,8 +37,8 @@ OpenEchoSystem.Core.Reflection provides optimized reflection utilities and type 
 - Visual Studio 2025+ or VS Code
 
 ### Installation
-Add the package reference to your project:<PackageReference Include="OpenEchoSystem.Core.Reflection" Version="1.0.0" />
-### Basic Usage using OpenEchoSystem.Core.Reflection;
+Add the package reference to your project:<PackageReference Include="ConsmicLexicon.Foundation.Reflection" Version="1.0.0" />
+### Basic Usage using ConsmicLexicon.Foundation.Reflection;
 
 // Use reflection features
 var typeInfo = TypeCache.GetTypeInfo(typeof(MyClass));

@@ -1,10 +1,10 @@
-# Methodology: OpenEchoSystem.Core Utilities and Extensions Research
+# Methodology: ConsmicLexicon.Foundation Utilities and Extensions Research
 
-This research employed a structured, recursive approach to investigate the `OpenEchoSystem.Core` library and identify areas for improvement. The methodology consisted of the following stages:
+This research employed a structured, recursive approach to investigate the `ConsmicLexicon.Foundation` library and identify areas for improvement. The methodology consisted of the following stages:
 
 1.  **Initialization and Scoping:**
     *   Reviewed the research goal: To understand the core requirements for fixing errors, adding missing features, comments, and tests to the C# files in the `src/` directory.
-    *   Defined the research scope: Focused on the `OpenEchoSystem.Core` library and its modules, guided by the principles outlined in `README.Core.md`.
+    *   Defined the research scope: Focused on the `ConsmicLexicon.Foundation` library and its modules, guided by the principles outlined in `README.Core.md`.
     *   Listed key research questions: Developed a set of questions to guide the investigation, covering general library design principles and module-specific concerns.
     *   Brainstormed potential information sources: Identified relevant documentation, code files, and external resources (including the AI search tool).
 2.  **Initial Data Collection:**

@@ -1,8 +1,0 @@
-<Project Sdk="Microsoft.NET.Sdk">
-  <PropertyGroup>
-    <TargetFramework>$(NetPrimaryTargetFramework)</TargetFramework>
-    <RootNamespace>OpenEchoSystem.Core.xCollections.Generic</RootNamespace>
-    <EnableSharedKernelDependencies>true</EnableSharedKernelDependencies>
-	  
-  </PropertyGroup>
-</Project> 

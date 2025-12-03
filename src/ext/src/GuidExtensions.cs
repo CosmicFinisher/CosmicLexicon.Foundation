@@ -1,4 +1,4 @@
-namespace OpenEchoSystem.Core.xExtensions;
+namespace CosmicLexicon.Foundation.xExtensions;
 
 using System;
 using System.Collections.Generic;

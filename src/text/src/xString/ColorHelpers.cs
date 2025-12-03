@@ -1,7 +1,7 @@
 using System.ComponentModel;
 using System.Drawing;
 
-namespace OpenEchoSystem.Core.xText.xString
+namespace CosmicLexicon.Foundation.xText.xString
 {
     [EditorBrowsable(EditorBrowsableState.Never)]
     public static class ColorHelpers

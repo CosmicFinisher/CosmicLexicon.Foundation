@@ -5,7 +5,7 @@ using System.Text.Json.Serialization;
 using System.Text.Json.Serialization.Metadata;
 
 
-namespace OpenEchoSystem.Core.xText.Json;
+namespace CosmicLexicon.Foundation.xText.Json;
 
 public static class JsonExtensions
 {

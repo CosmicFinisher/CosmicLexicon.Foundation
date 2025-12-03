@@ -1,10 +1,10 @@
 using System;
 using System.Collections.Generic;
-using OpenEchoSystem.Core.xRuntime;
+using CosmicLexicon.Foundation.xRuntime;
 using Xunit;
 using System.Globalization;
 
-namespace OpenEchoSystem.Core.xRuntime
+namespace CosmicLexicon.Foundation.xRuntime
 {
     public class TypeHelpersNewTests
     {

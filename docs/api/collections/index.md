@@ -1,8 +1,8 @@
-# OpenEchoSystem.Core.Collections API Reference
+# ConsmicLexicon.Foundation.Collections API Reference
 
 ## Overview
 
-The OpenEchoSystem.Core.Collections namespace provides enhanced collection types and utilities designed for high-performance, type-safe operations in .NET applications.
+The ConsmicLexicon.Foundation.Collections namespace provides enhanced collection types and utilities designed for high-performance, type-safe operations in .NET applications.
 
 ## Key Components
 

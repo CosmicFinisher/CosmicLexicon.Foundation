@@ -1,7 +1,7 @@
 using Xunit;
-using OpenEchoSystem.Core.xReflection;
+using CosmicLexicon.Foundation.xReflection;
 
-namespace OpenEchoSystem.Core.xReflection.Tests
+namespace CosmicLexicon.Foundation.xReflection.Tests
 {
     public class VersionInfoTests
     {

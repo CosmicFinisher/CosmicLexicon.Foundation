@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace OpenEchoSystem.Core.xIO
+namespace CosmicLexicon.Foundation.xIO
 {
     /// <summary>
     /// Provides helper methods for working with file paths.

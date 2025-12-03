@@ -1,6 +1,6 @@
-﻿using OpenEchoSystem.Core.xExtensions.RunTime;
+﻿using ConsmicLexicon.Foundation.xExtensions.RunTime;
 
-namespace OpenEchoSystem.Core.xReflection.Assembly;
+namespace ConsmicLexicon.Foundation.xReflection.Assembly;
 
 internal interface IUnitOfWork : IDisposable, IAsyncDisposable, INotEngaged
 {

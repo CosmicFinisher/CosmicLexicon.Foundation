@@ -1,8 +1,8 @@
-# OpenEchoSystem.Core.Diagnostics
+# ConsmicLexicon.Foundation.Diagnostics
 
 ## Overview
 
-OpenEchoSystem.Core.Diagnostics provides debugging and performance monitoring tools for .NET applications. It offers comprehensive diagnostic capabilities for development and production environments.
+ConsmicLexicon.Foundation.Diagnostics provides debugging and performance monitoring tools for .NET applications. It offers comprehensive diagnostic capabilities for development and production environments.
 
 ## Features
 
@@ -37,8 +37,8 @@ OpenEchoSystem.Core.Diagnostics provides debugging and performance monitoring to
 - Visual Studio 2025+ or VS Code
 
 ### Installation
-Add the package reference to your project:<PackageReference Include="OpenEchoSystem.Core.Diagnostics" Version="1.0.0" />
-### Basic Usage using OpenEchoSystem.Core.Diagnostics;
+Add the package reference to your project:<PackageReference Include="ConsmicLexicon.Foundation.Diagnostics" Version="1.0.0" />
+### Basic Usage using ConsmicLexicon.Foundation.Diagnostics;
 
 // Use diagnostic features
 using var perfCounter = new PerformanceTracker("Operation");

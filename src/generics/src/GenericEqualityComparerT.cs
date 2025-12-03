@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace OpenEchoSystem.Core.xGenerics
+namespace CosmicLexicon.Foundation.xGenerics
 {
     //
     // Summary:

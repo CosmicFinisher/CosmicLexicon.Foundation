@@ -4,7 +4,7 @@ using System.ComponentModel;
 using System.Linq;
 using System.Reflection;
 
-namespace OpenEchoSystem.Core.xReflection.xAssembly
+namespace CosmicLexicon.Foundation.xReflection.xAssembly
 {
 
     [EditorBrowsable(EditorBrowsableState.Never)]

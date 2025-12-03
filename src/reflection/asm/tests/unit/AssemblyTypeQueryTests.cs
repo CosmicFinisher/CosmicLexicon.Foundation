@@ -1,7 +1,7 @@
-using OpenEchoSystem.Core.xReflection.xAssembly;
+using CosmicLexicon.Foundation.xReflection.xAssembly;
 using Xunit;
 
-namespace OpenEchoSystem.Core.xCollections
+namespace CosmicLexicon.Foundation.Structures
 {
     public class AssemblyTypeQueryTests
     {

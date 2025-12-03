@@ -2,7 +2,7 @@
 
 A modern, high-performance .NET framework designed for cloud-native applications and enterprise systems. Built on .NET 9's latest features with a focus on performance, security, and developer productivity.
 
-[![NuGet](https://img.shields.io/nuget/v/OpenEchoSystem.Core.xsvg)](https://www.nuget.org/packages/OpenEchoSystem.Core/)
+[![NuGet](https://img.shields.io/nuget/v/ConsmicLexicon.Foundation.xsvg)](https://www.nuget.org/packages/ConsmicLexicon.Foundation/)
 
 ## Documentation
 
@@ -45,17 +45,17 @@ A modern, high-performance .NET framework designed for cloud-native applications
 dotnet --version # Must be .NET 9.0 or higher
 ### Installation
 # Install core package
-dotnet add package OpenEchoSystem.Core
+dotnet add package ConsmicLexicon.Foundation
 
 # Install specific modules
-dotnet add package OpenEchoSystem.Core.xCollections  # For collections
-dotnet add package OpenEchoSystem.Core.xThreading    # For threading
-dotnet add package OpenEchoSystem.Core.xSecurity     # For security features
+dotnet add package ConsmicLexicon.Foundation.xCollections  # For collections
+dotnet add package ConsmicLexicon.Foundation.xThreading    # For threading
+dotnet add package ConsmicLexicon.Foundation.xSecurity     # For security features
 ### Quick Example
-using OpenEchoSystem.Core;
-using OpenEchoSystem.Core.xCollections;
-using OpenEchoSystem.Core.xThreading;
-using OpenEchoSystem.Core.xSecurity;
+using ConsmicLexicon.Foundation;
+using ConsmicLexicon.Foundation.xCollections;
+using ConsmicLexicon.Foundation.xThreading;
+using ConsmicLexicon.Foundation.xSecurity;
 
 // Create a thread-safe collection
 var safeCollection = new ConcurrentHashSet<string>();
@@ -88,7 +88,7 @@ We welcome contributions! See our [Contributing Guide](CONTRIBUTING.md) for:
 
 - [Release Notes](CHANGELOG.md)
 - [Roadmap](docs/architecture/overview.md#future-directions)
-- [Known Issues](https://github.com/Rosyllionce/OpenEchoSystem.Core/issues)
+- [Known Issues](https://github.com/ConsmicFinisher/ConsmicLexicon.Foundation/issues)
 
 ## Additional Resources
 

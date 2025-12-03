@@ -1,12 +1,12 @@
 using Xunit;
-using OpenEchoSystem.Core.xDiagnostics;
+using CosmicLexicon.Foundation.xDiagnostics;
 using System;
 using System.IO;
 
-namespace OpenEchoSystem.Core.xDiagnostics
+namespace CosmicLexicon.Foundation.xDiagnostics
 {
     using Xunit;
-    using OpenEchoSystem.Core.xDiagnostics;
+    using CosmicLexicon.Foundation.xDiagnostics;
     using System;
     using System.IO;
 

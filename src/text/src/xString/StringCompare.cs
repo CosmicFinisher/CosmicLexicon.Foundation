@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace OpenEchoSystem.Core.xText.xString // Updated namespace
+namespace CosmicLexicon.Foundation.xText.xString // Updated namespace
 {
     //
     // Summary:

@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel;
 
-namespace OpenEchoSystem.Core.xGenerics
+namespace CosmicLexicon.Foundation.xGenerics
 {
     [EditorBrowsable(EditorBrowsableState.Never)]
     public static class ObjectExtensions

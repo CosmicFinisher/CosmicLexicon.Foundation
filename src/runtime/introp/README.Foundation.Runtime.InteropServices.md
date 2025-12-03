@@ -1,6 +1,6 @@
-### `OpenEchoSystem.Core/Runtime/InteropServices/`
-*   **Full Path in Tree:** `OpenEchoSystem.Core/Runtime/InteropServices/`
-*   **Namespace:** `OpenEchoSystem.Core.xRuntime.InteropServices`
+### `ConsmicLexicon.Foundation/Runtime/InteropServices/`
+*   **Full Path in Tree:** `ConsmicLexicon.Foundation/Runtime/InteropServices/`
+*   **Namespace:** `ConsmicLexicon.Foundation.xRuntime.InteropServices`
 *   **Goal:** To provide utilities for Platform Invocation Services (P/Invoke) and COM interoperability, extending `System.Runtime.InteropServices`.
 *   **Purpose:** Offers helper methods or common structures for interacting with unmanaged code or COM components.
 *   **Description:** Contains types that facilitate communication between managed and unmanaged code.

@@ -1,10 +1,10 @@
 using System;
 using System.Text;
 using Xunit;
-using OpenEchoSystem.Core.xText.xString;
+using CosmicLexicon.Foundation.xText.xString;
 using Moq; // Added for mocking
 
-namespace OpenEchoSystem.Core.xText
+namespace CosmicLexicon.Foundation.xText
 {
     public class ByteArrayHelpersTests
     {

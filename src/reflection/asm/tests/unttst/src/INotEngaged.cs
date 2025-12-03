@@ -1,4 +1,4 @@
-﻿namespace OpenEchoSystem.Core.xReflection.Assembly
+﻿namespace ConsmicLexicon.Foundation.xReflection.Assembly
 {
     internal interface INotEngaged
     {

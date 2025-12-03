@@ -9,9 +9,9 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Resources;
-using OpenEchoSystem.Core.xGenerics;
+using CosmicLexicon.Foundation.xGenerics;
 
-namespace OpenEchoSystem.Core.xReflection
+namespace CosmicLexicon.Foundation.xReflection
 {
     //
     // Summary:

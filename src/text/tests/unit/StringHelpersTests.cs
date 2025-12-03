@@ -1,11 +1,11 @@
 using System;
 using System.Globalization;
 using Xunit;
-using OpenEchoSystem.Core.xText;
-using OpenEchoSystem.Core.xText.xString;
+using CosmicLexicon.Foundation.xText;
+using CosmicLexicon.Foundation.xText.xString;
 using Moq; // Added for mocking
 
-namespace OpenEchoSystem.Core.xText.Tests
+namespace CosmicLexicon.Foundation.xText.Tests
 {
     
     public class StringHelpersTests

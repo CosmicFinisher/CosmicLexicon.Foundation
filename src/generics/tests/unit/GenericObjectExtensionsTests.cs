@@ -1,13 +1,13 @@
 using Xunit;
-using OpenEchoSystem.Core.xGenerics;
+using CosmicLexicon.Foundation.xGenerics;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace OpenEchoSystem.Core.xGenerics.Tests
+namespace CosmicLexicon.Foundation.xGenerics.Tests
 {
     using Xunit;
-    using OpenEchoSystem.Core.xGenerics;
+    using CosmicLexicon.Foundation.xGenerics;
     using System;
     using System.Collections.Generic;
     using System.Linq;

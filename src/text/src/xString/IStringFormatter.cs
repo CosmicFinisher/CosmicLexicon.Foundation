@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace OpenEchoSystem.Core.xText.xString
+namespace CosmicLexicon.Foundation.xText.xString
 {
     //
     // Summary:

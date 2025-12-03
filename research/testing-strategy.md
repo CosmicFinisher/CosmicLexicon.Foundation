@@ -30,7 +30,7 @@ threading/
 ### Modern Test Project Configuration<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
    <TargetFramework>$(NetPrimaryTargetFramework)</TargetFramework>
-    <RootNamespace>OpenEchoSystem.Core.x{Component}</RootNamespace>
+    <RootNamespace>ConsmicLexicon.Foundation.x{Component}</RootNamespace>
     <EnableSharedUnitTestDependencies>true</EnableSharedUnitTestDependencies>
   </PropertyGroup>
   

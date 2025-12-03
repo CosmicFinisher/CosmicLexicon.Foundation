@@ -1,10 +1,10 @@
-# Integrated Model: OpenEchoSystem.Core Utilities and Extensions Research (Part 1)
+# Integrated Model: ConsmicLexicon.Foundation Utilities and Extensions Research (Part 1)
 
-This document presents an integrated model based on the findings from the initial research phase of the `OpenEchoSystem.Core` library. This model combines the identified patterns, contradictions, and expert insights to provide a holistic view of the library's current state and potential areas for improvement.
+This document presents an integrated model based on the findings from the initial research phase of the `ConsmicLexicon.Foundation` library. This model combines the identified patterns, contradictions, and expert insights to provide a holistic view of the library's current state and potential areas for improvement.
 
 ## Core Components
 
-The `OpenEchoSystem.Core` library consists of the following core components:
+The `ConsmicLexicon.Foundation` library consists of the following core components:
 
 *   **Functional Modules:** The library is divided into modules based on functional areas mirroring `System.*` namespaces (e.g., `Collections`, `Diagnostics`, `IO`, `Text`).
 *   **README Documentation:** Each module includes a `README.Core.{ModuleName}.md` file that provides an overview of the module's purpose, goals, and rules.
@@ -35,4 +35,4 @@ Based on this integrated model, the following action plan is proposed:
 5.  **Refine Documentation:** Improve the clarity and completeness of code comments and documentation, following established best practices.
 6.  **Address Code Quality Issues:** Conduct a systematic review of the C# source code to identify potential errors, code smells, or areas that do not align with the stated core principles.
 
-This action plan will guide the next phase of research and development for the `OpenEchoSystem.Core` library, ensuring it meets its goals of providing a stable, reliable, and well-documented foundation for other projects.
+This action plan will guide the next phase of research and development for the `ConsmicLexicon.Foundation` library, ensuring it meets its goals of providing a stable, reliable, and well-documented foundation for other projects.

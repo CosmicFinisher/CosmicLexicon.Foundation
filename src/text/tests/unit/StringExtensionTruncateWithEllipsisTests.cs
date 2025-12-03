@@ -1,8 +1,8 @@
 using System; // Added for ArgumentOutOfRangeException
 using Xunit;
-using OpenEchoSystem.Core.xText.xString; // Ensure this namespace is correct for StringExtension
+using CosmicLexicon.Foundation.xText.xString; // Ensure this namespace is correct for StringExtension
 
-namespace OpenEchoSystem.Core.xText.Tests
+namespace CosmicLexicon.Foundation.xText.Tests
 {
     public class StringExtensionTruncateWithEllipsisTests
     {

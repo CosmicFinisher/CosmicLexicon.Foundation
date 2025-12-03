@@ -1,4 +1,4 @@
-using OpenEchoSystem.Core.xLinq;
+using CosmicLexicon.Foundation.xLinq;
 using System.Buffers;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 
-namespace OpenEchoSystem.Core.xLinq
+namespace CosmicLexicon.Foundation.xLinq
 {
     //
     // Summary:

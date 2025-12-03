@@ -2,7 +2,7 @@ using System;
 using System.Net;
 using System.Threading.Tasks;
 
-namespace OpenEchoSystem.Core.xNet
+namespace CosmicLexicon.Foundation.xNet
 {
     public static class NetExtensions
     {

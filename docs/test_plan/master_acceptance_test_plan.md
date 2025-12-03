@@ -1,11 +1,11 @@
-# Master Acceptance Test Plan: OpenEchoSystem.Core Utilities and Extensions
+# Master Acceptance Test Plan: ConsmicLexicon.Foundation Utilities and Extensions
 
 ## 1. Introduction
 
-This document outlines the master acceptance test plan for the OpenEchoSystem.Core Utilities and Extensions project. The purpose of this plan is to define the strategy, key scenarios, and overall approach for verifying the successful completion of the project, ensuring that the library provides a stable, reliable, and well-documented foundation for other projects. This plan is based on the findings and recommendations from the following research reports:
+This document outlines the master acceptance test plan for the ConsmicLexicon.Foundation Utilities and Extensions project. The purpose of this plan is to define the strategy, key scenarios, and overall approach for verifying the successful completion of the project, ensuring that the library provides a stable, reliable, and well-documented foundation for other projects. This plan is based on the findings and recommendations from the following research reports:
 
-*   Executive Summary: OpenEchoSystem.Core Utilities and Extensions Research (Part 1)
-*   High-Level Test Strategy Report: OpenEchoSystem.Core Utilities and Extensions
+*   Executive Summary: ConsmicLexicon.Foundation Utilities and Extensions Research (Part 1)
+*   High-Level Test Strategy Report: ConsmicLexicon.Foundation Utilities and Extensions
 
 ## 2. Test Strategy
 
@@ -29,7 +29,7 @@ The strategy avoids characteristics of bad high-level tests, such as:
 The acceptance tests will be conducted in the following phases:
 
 *   **Phase 1: Core Functionality Tests**
-    *   Focus: Validating the core functionality of individual modules within the OpenEchoSystem.Core library.
+    *   Focus: Validating the core functionality of individual modules within the ConsmicLexicon.Foundation library.
     *   Examples: Collection manipulation, string processing, date and time handling, reflection.
 *   **Phase 2: Extension Functionality Tests**
     *   Focus: Validating the functionality of extension methods and utilities.
@@ -90,4 +90,4 @@ Each test case will have a clearly defined AI verifiable completion criterion. T
 
 ## 8. Conclusion
 
-This master acceptance test plan provides a roadmap for ensuring the quality and reliability of the OpenEchoSystem.Core Utilities and Extensions project. By adhering to the guiding principles and implementing the recommended test phases, scenarios, and coverage, we can build a stable, well-documented, and maintainable foundation for other projects.
+This master acceptance test plan provides a roadmap for ensuring the quality and reliability of the ConsmicLexicon.Foundation Utilities and Extensions project. By adhering to the guiding principles and implementing the recommended test phases, scenarios, and coverage, we can build a stable, well-documented, and maintainable foundation for other projects.

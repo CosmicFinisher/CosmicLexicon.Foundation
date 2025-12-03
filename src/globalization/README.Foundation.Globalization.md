@@ -1,8 +1,8 @@
-# OpenEchoSystem.Core.Globalization
+# ConsmicLexicon.Foundation.Globalization
 
 ## Overview
 
-OpenEchoSystem.Core.Globalization provides culture-aware operations and localization utilities for .NET applications. It focuses on proper handling of cultural differences in data formatting and processing.
+ConsmicLexicon.Foundation.Globalization provides culture-aware operations and localization utilities for .NET applications. It focuses on proper handling of cultural differences in data formatting and processing.
 
 ## Features
 
@@ -37,8 +37,8 @@ OpenEchoSystem.Core.Globalization provides culture-aware operations and localiza
 - Visual Studio 2025+ or VS Code
 
 ### Installation
-Add the package reference to your project:<PackageReference Include="OpenEchoSystem.Core.Globalization" Version="1.0.0" />
-### Basic Usage using OpenEchoSystem.Core.Globalization;
+Add the package reference to your project:<PackageReference Include="ConsmicLexicon.Foundation.Globalization" Version="1.0.0" />
+### Basic Usage using ConsmicLexicon.Foundation.Globalization;
 
 // Use globalization features
 var formatter = new CultureAwareFormatter();

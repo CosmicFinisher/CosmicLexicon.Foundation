@@ -1,8 +1,8 @@
-# OpenEchoSystem.Core.Threading
+# ConsmicLexicon.Foundation.Threading
 
 ## Overview
 
-OpenEchoSystem.Core.Threading provides advanced threading primitives and utilities for modern concurrent programming in .NET applications. It offers enhanced threading capabilities, task parallel library extensions, and high-precision timing utilities.
+ConsmicLexicon.Foundation.Threading provides advanced threading primitives and utilities for modern concurrent programming in .NET applications. It offers enhanced threading capabilities, task parallel library extensions, and high-precision timing utilities.
 
 ## Features
 
@@ -38,9 +38,9 @@ OpenEchoSystem.Core.Threading provides advanced threading primitives and utiliti
 - Visual Studio 2025+ or VS Code
 
 ### Installation
-Add the package reference to your project:<PackageReference Include="OpenEchoSystem.Core.Threading" Version="1.0.0" />
-### Basic Usage using OpenEchoSystem.Core.Threading;
-using OpenEchoSystem.Core.Threading.Tasks;
+Add the package reference to your project:<PackageReference Include="ConsmicLexicon.Foundation.Threading" Version="1.0.0" />
+### Basic Usage using ConsmicLexicon.Foundation.Threading;
+using ConsmicLexicon.Foundation.Threading.Tasks;
 
 // Use advanced threading features
 using var asyncLock = new AsyncLock();

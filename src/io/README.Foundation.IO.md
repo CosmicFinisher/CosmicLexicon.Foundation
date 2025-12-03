@@ -1,8 +1,8 @@
-# OpenEchoSystem.Core.IO
+# ConsmicLexicon.Foundation.IO
 
 ## Overview
 
-OpenEchoSystem.Core.IO provides enhanced IO operations and utilities for .NET applications. It focuses on performance and reliability while extending standard IO capabilities.
+ConsmicLexicon.Foundation.IO provides enhanced IO operations and utilities for .NET applications. It focuses on performance and reliability while extending standard IO capabilities.
 
 ## Features
 
@@ -38,8 +38,8 @@ OpenEchoSystem.Core.IO provides enhanced IO operations and utilities for .NET ap
 - Visual Studio 2025+ or VS Code
 
 ### Installation
-Add the package reference to your project:<PackageReference Include="OpenEchoSystem.Core.IO" Version="1.0.0" />
-### Basic Usage using OpenEchoSystem.Core.IO;
+Add the package reference to your project:<PackageReference Include="ConsmicLexicon.Foundation.IO" Version="1.0.0" />
+### Basic Usage using ConsmicLexicon.Foundation.IO;
 
 // Use IO features
 using var buffer = BufferPool.Rent(1024);

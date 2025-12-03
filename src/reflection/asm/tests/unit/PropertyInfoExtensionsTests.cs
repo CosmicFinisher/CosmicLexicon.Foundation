@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 using Xunit;
-using OpenEchoSystem.Core.xReflection.xAssembly;
+using CosmicLexicon.Foundation.xReflection.xAssembly;
 
-namespace OpenEchoSystem.Core.xReflection.xAssembly
+namespace CosmicLexicon.Foundation.xReflection.xAssembly
 {
     public class PropertyInfoExtensionsTests
     {

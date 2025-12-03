@@ -1,4 +1,4 @@
-namespace OpenEchoSystem.Core.xText.xString
+namespace CosmicLexicon.Foundation.xText.xString
 {
     //
     // Summary:

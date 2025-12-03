@@ -1,4 +1,4 @@
-namespace OpenEchoSystem.Core.xText.Json
+namespace CosmicLexicon.Foundation.xText.Json
 {
     public enum TestEnumExample
     {

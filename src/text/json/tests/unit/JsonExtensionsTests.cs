@@ -2,10 +2,10 @@ using System;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 using Xunit;
-using OpenEchoSystem.Core.xText.Json;
+using CosmicLexicon.Foundation.xText.Json;
 using Xunit.Sdk;
 
-namespace OpenEchoSystem.Core.xText.Json
+namespace CosmicLexicon.Foundation.xText.Json
 {
     public class JsonExtensionsTests
     {

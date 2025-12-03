@@ -1,7 +1,7 @@
 using System.ComponentModel;
 using System.Text;
 
-namespace OpenEchoSystem.Core.xRuntime
+namespace CosmicLexicon.Foundation.xRuntime
 {
     //
     // Summary:

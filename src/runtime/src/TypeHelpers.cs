@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace OpenEchoSystem.Core.xRuntime
+namespace CosmicLexicon.Foundation.xRuntime
 {
     public static class TypeHelpers
     {

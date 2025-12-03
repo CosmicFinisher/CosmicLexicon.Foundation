@@ -1,6 +1,6 @@
 using System;
 
-namespace OpenEchoSystem.Core.xReflection
+namespace CosmicLexicon.Foundation.xReflection
 {
     public struct CustomStruct
     {

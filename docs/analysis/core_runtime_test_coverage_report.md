@@ -1,6 +1,6 @@
-# OpenEchoSystem.Core.Runtime Test Coverage Report
+# ConsmicLexicon.Foundation.Runtime Test Coverage Report
 
-This report provides an overview of the test coverage for the `OpenEchoSystem.Core.xRuntime` module.
+This report provides an overview of the test coverage for the `ConsmicLexicon.Foundation.xRuntime` module.
 
 ## Coverage Summary
 

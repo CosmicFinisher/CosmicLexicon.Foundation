@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using System.Resources;
 using System.Text;
 
-namespace OpenEchoSystem.Core.xText.xString
+namespace CosmicLexicon.Foundation.xText.xString
 {
     public sealed class GenericStringFormatter : IFormatProvider, ICustomFormatter, IStringFormatter
     {

@@ -1,8 +1,8 @@
 using Xunit;
-using OpenEchoSystem.Core.xNet;
+using CosmicLexicon.Foundation.xNet;
 using System.Threading.Tasks;
 
-namespace OpenEchoSystem.Core.xNet
+namespace CosmicLexicon.Foundation.xNet
 {
     public class NetExtensionsTests
     {

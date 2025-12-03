@@ -1,8 +1,8 @@
-# OpenEchoSystem.Core.Linq
+# ConsmicLexicon.Foundation.Linq
 
 ## Overview
 
-OpenEchoSystem.Core.Linq provides enhanced LINQ operations and query optimization utilities for .NET applications. It focuses on performance while extending standard LINQ capabilities.
+ConsmicLexicon.Foundation.Linq provides enhanced LINQ operations and query optimization utilities for .NET applications. It focuses on performance while extending standard LINQ capabilities.
 
 ## Features
 
@@ -37,8 +37,8 @@ OpenEchoSystem.Core.Linq provides enhanced LINQ operations and query optimizatio
 - Visual Studio 2025+ or VS Code
 
 ### Installation
-Add the package reference to your project:<PackageReference Include="OpenEchoSystem.Core.Linq" Version="1.0.0" />
-### Basic Usage using OpenEchoSystem.Core.Linq;
+Add the package reference to your project:<PackageReference Include="ConsmicLexicon.Foundation.Linq" Version="1.0.0" />
+### Basic Usage using ConsmicLexicon.Foundation.Linq;
 
 // Use enhanced LINQ features
 var result = collection.WhereNotNull().BatchBy(100);

@@ -1,10 +1,10 @@
 using Xunit;
-using OpenEchoSystem.Core.xReflection;
+using CosmicLexicon.Foundation.xReflection;
 using System;
 using System.Linq;
 using System.Reflection;
 
-namespace OpenEchoSystem.Core.xReflection
+namespace CosmicLexicon.Foundation.xReflection
 {
     public class ConstructorTests
     {

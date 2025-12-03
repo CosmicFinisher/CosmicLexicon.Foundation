@@ -1,8 +1,8 @@
 using Xunit;
-using OpenEchoSystem.Core.xExtensions;
+using CosmicLexicon.Foundation.xExtensions;
 using System;
 
-namespace OpenEchoSystem.Core.xExtensions.Tests
+namespace CosmicLexicon.Foundation.xExtensions.Tests
 {
     public class GuidExtensionsTests
     {

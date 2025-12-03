@@ -1,4 +1,4 @@
-namespace OpenEchoSystem.Core.xReflection;
+namespace CosmicLexicon.Foundation.xReflection;
 
 using System.Reflection;
 using System;

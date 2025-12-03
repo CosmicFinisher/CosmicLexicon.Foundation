@@ -1,8 +1,8 @@
-# OpenEchoSystem.Core.Security
+# ConsmicLexicon.Foundation.Security
 
 ## Overview
 
-OpenEchoSystem.Core.Security provides modern security features and cryptography implementations for .NET applications. It focuses on secure defaults, automatic auditing, and comprehensive security patterns.
+ConsmicLexicon.Foundation.Security provides modern security features and cryptography implementations for .NET applications. It focuses on secure defaults, automatic auditing, and comprehensive security patterns.
 
 ## Features
 
@@ -38,9 +38,9 @@ OpenEchoSystem.Core.Security provides modern security features and cryptography 
 - Visual Studio 2025+ or VS Code
 
 ### Installation
-Add the package reference to your project:<PackageReference Include="OpenEchoSystem.Core.Security" Version="1.0.0" />
-### Basic Usage using OpenEchoSystem.Core.Security;
-using OpenEchoSystem.Core.Security.Cryptography;
+Add the package reference to your project:<PackageReference Include="ConsmicLexicon.Foundation.Security" Version="1.0.0" />
+### Basic Usage using ConsmicLexicon.Foundation.Security;
+using ConsmicLexicon.Foundation.Security.Cryptography;
 
 // Use security features
 var hash = HashUtility.ComputeHash(data);

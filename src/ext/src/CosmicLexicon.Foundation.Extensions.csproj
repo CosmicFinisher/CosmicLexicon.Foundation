@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>$(NetPrimaryTargetFramework)</TargetFramework>
-    <RootNamespace>OpenEchoSystem.Core.xExtensions</RootNamespace>
+    <RootNamespace>CosmicLexicon.Foundation.xExtensions</RootNamespace>
     <EnableSharedKernelDependencies>true</EnableSharedKernelDependencies>
 	  
   </PropertyGroup>

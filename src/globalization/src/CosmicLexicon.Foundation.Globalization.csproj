@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>$(NetPrimaryTargetFramework)</TargetFramework>
-    <RootNamespace>OpenEchoSystem.Core.xGlobalization</RootNamespace>
+    <RootNamespace>CosmicLexicon.Foundation.xGlobalization</RootNamespace>
     <EnableSharedKernelDependencies>true</EnableSharedKernelDependencies>
 	  
   </PropertyGroup>

@@ -1,4 +1,4 @@
-# References: OpenEchoSystem.Core Utilities and Extensions Research
+# References: ConsmicLexicon.Foundation Utilities and Extensions Research
 
 *   `README.Core.md`
 *   Module-Specific `README.Core.{FolderName}.md` files (e.g., `src/collections/README.Core.Collections.md`)

@@ -2,9 +2,9 @@ using Xunit;
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using OpenEchoSystem.Core.xGenerics;
+using CosmicLexicon.Foundation.xGenerics;
 
-namespace OpenEchoSystem.Core.xCollections.Comparison
+namespace CosmicLexicon.Foundation.Structures.Comparison
 {
     public class GenericEqualityComparerTTests
     {

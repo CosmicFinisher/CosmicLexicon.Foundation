@@ -70,16 +70,16 @@ src/
 The framework uses a consistent namespace strategy:
 
 ```csharp
-OpenEchoSystem.Core.x{Component}
+ConsmicLexicon.Foundation.x{Component}
 ??? Specialized sub-namespaces
-    ??? OpenEchoSystem.Core.x{Component}.x{Subcomponent}
-    ??? OpenEchoSystem.Core.x{Component}.{Feature}
+    ??? ConsmicLexicon.Foundation.x{Component}.x{Subcomponent}
+    ??? ConsmicLexicon.Foundation.x{Component}.{Feature}
 ```
 
 Example:
 ```csharp
-OpenEchoSystem.Core.xCollections
-??? OpenEchoSystem.Core.xCollections.Generic
+ConsmicLexicon.Foundation.xCollections
+??? ConsmicLexicon.Foundation.xCollections.Generic
 ```
 
 ## Implementation Patterns
@@ -123,7 +123,7 @@ Common project configuration patterns:
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>$(NetPrimaryTargetFramework)</TargetFramework>
-    <RootNamespace>OpenEchoSystem.Core.x{Component}</RootNamespace>
+    <RootNamespace>ConsmicLexicon.Foundation.x{Component}</RootNamespace>
     <EnableSharedKernelDependencies>true</EnableSharedKernelDependencies>
     <IsPackable>false</IsPackable>
   </PropertyGroup>
@@ -141,7 +141,7 @@ Common project configuration patterns:
 2. Test Project Configuration
    ```xml
    <PropertyGroup>
-     <RootNamespace>OpenEchoSystem.Core.x{Component}</RootNamespace>
+     <RootNamespace>ConsmicLexicon.Foundation.x{Component}</RootNamespace>
      <EnableSharedUnitTestDependencies>true</EnableSharedUnitTestDependencies>
    </PropertyGroup>
    ```

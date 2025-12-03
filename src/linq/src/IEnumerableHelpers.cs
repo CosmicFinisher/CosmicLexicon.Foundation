@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace OpenEchoSystem.Core.xLinq
+namespace CosmicLexicon.Foundation.xLinq
 {
     /// <summary>
     /// Provides helper methods for IEnumerable types to enhance collection operations.

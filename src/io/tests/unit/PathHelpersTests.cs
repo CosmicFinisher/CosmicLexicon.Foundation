@@ -1,10 +1,10 @@
 using Xunit;
-using OpenEchoSystem.Core.xIO;
+using CosmicLexicon.Foundation.xIO;
 using System;
 using System.IO;
-using OpenEchoSystem.Core.xIO;
+using CosmicLexicon.Foundation.xIO;
 
-namespace OpenEchoSystem.Core.xIO
+namespace CosmicLexicon.Foundation.xIO
 {
     public class PathHelpersTests
     {

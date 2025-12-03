@@ -1,9 +1,9 @@
 using System;
 using System.Collections.Generic;
-using OpenEchoSystem.Core.xRuntime;
+using CosmicLexicon.Foundation.xRuntime;
 using Xunit;
 
-namespace OpenEchoSystem.Core.xRuntime
+namespace CosmicLexicon.Foundation.xRuntime
 {
     public class GenericComparerTNewTests
     {

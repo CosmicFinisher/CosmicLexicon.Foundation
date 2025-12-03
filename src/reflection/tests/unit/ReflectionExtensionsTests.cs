@@ -2,10 +2,10 @@ using System;
 using System.Linq;
 using System.Reflection;
 using Xunit;
-using OpenEchoSystem.Core.xReflection;
+using CosmicLexicon.Foundation.xReflection;
 using Xunit.Sdk;
 
-namespace OpenEchoSystem.Core.xReflection
+namespace CosmicLexicon.Foundation.xReflection
 {
     public class ReflectionExtensionsTests
     {

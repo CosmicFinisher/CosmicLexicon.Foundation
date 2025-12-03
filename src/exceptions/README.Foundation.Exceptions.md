@@ -1,17 +1,17 @@
-### `OpenEchoSystem.Core/Exceptions/`
-*   **Full Path in Tree:** `OpenEchoSystem.Core/Exceptions/`
-*   **Namespace:** `OpenEchoSystem.Core.xExceptions`
-*   **Goal:** To define custom, foundational exception types for the `OpenEchoSystem.Core` library itself, or base exception types for the framework.
-*   **Purpose:** Provides a hierarchy of custom exceptions that can be thrown and caught by components within `OpenEchoSystem.Core` or serve as base classes for more specific exceptions in higher layers.
+### `ConsmicLexicon.Foundation/Exceptions/`
+*   **Full Path in Tree:** `ConsmicLexicon.Foundation/Exceptions/`
+*   **Namespace:** `ConsmicLexicon.Foundation.xExceptions`
+*   **Goal:** To define custom, foundational exception types for the `ConsmicLexicon.Foundation` library itself, or base exception types for the framework.
+*   **Purpose:** Provides a hierarchy of custom exceptions that can be thrown and caught by components within `ConsmicLexicon.Foundation` or serve as base classes for more specific exceptions in higher layers.
 *   **Description:** Contains custom exception classes deriving from `System.Exception` or its standard derivatives.
 *   **Rules & Policies:**
     *   Custom exceptions should be serializable and follow .NET exception design guidelines (e.g., include standard constructors).
-    *   Only define exceptions that represent distinct error conditions relevant to `OpenEchoSystem.Core` or truly foundational framework errors.
+    *   Only define exceptions that represent distinct error conditions relevant to `ConsmicLexicon.Foundation` or truly foundational framework errors.
     *   Avoid overly granular exception types if a standard .NET exception is suitable.
 
 ### `ApplicationException` Class
 
-The `ApplicationException` class serves as a base class for application-specific exceptions within the `OpenEchoSystem.Core.xExceptions` namespace. Its primary purpose is to provide a standardized way to represent errors that occur during the normal execution flow of the application, allowing for the inclusion of application-specific error codes in addition to standard exception information. This class is intended to be used as a foundation for creating more specific exception types or to be thrown directly for general application errors.
+The `ApplicationException` class serves as a base class for application-specific exceptions within the `ConsmicLexicon.Foundation.xExceptions` namespace. Its primary purpose is to provide a standardized way to represent errors that occur during the normal execution flow of the application, allowing for the inclusion of application-specific error codes in addition to standard exception information. This class is intended to be used as a foundation for creating more specific exception types or to be thrown directly for general application errors.
 
 #### Key Features and Enhancements:
 
@@ -44,4 +44,4 @@ The `ApplicationException` class serves as a base class for application-specific
     *   **Deserialization of Untrusted Data:** While the properties are primitive types, the general principle of "never deserialize untrusted data" applies. Avoid binary serialization across untrusted boundaries. If serialization is necessary, prefer safer formats like JSON or XML with robust schema validation, or implement strong integrity checks for binary streams.
     *   **Lack of Input Validation:** Constructors do not explicitly validate the `ErrorCode` or `CustomErrorCode` values. Code creating an `ApplicationException` should perform necessary validation on these values. Downstream usage contexts (e.g., logging, database queries, UI rendering) must apply appropriate encoding, sanitization, or parameterization to prevent injection attacks (e.g., log injection, SQL injection, XSS).
 
-This documentation aims to provide human programmers with a clear understanding of the `ApplicationException` class, its features, and important considerations for its secure and effective use within the `OpenEchoSystem.Core` framework.
+This documentation aims to provide human programmers with a clear understanding of the `ApplicationException` class, its features, and important considerations for its secure and effective use within the `ConsmicLexicon.Foundation` framework.

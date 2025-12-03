@@ -1,8 +1,8 @@
-# OpenEchoSystem.Core.Runtime
+# ConsmicLexicon.Foundation.Runtime
 
 ## Overview
 
-OpenEchoSystem.Core.Runtime provides essential runtime services and utilities for .NET applications. It includes memory management optimizations, serialization patterns, and runtime infrastructure components.
+ConsmicLexicon.Foundation.Runtime provides essential runtime services and utilities for .NET applications. It includes memory management optimizations, serialization patterns, and runtime infrastructure components.
 
 ## Features
 
@@ -37,8 +37,8 @@ OpenEchoSystem.Core.Runtime provides essential runtime services and utilities fo
 - Visual Studio 2025+ or VS Code
 
 ### Installation
-Add the package reference to your project:<PackageReference Include="OpenEchoSystem.Core.Runtime" Version="1.0.0" />
-### Basic Usage using OpenEchoSystem.Core.Runtime;
+Add the package reference to your project:<PackageReference Include="ConsmicLexicon.Foundation.Runtime" Version="1.0.0" />
+### Basic Usage using ConsmicLexicon.Foundation.Runtime;
 
 // Use runtime features
 using var pool = new MemoryPool<byte>();

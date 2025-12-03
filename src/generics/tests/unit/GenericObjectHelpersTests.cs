@@ -1,8 +1,8 @@
 using Xunit;
-using OpenEchoSystem.Core.xGenerics;
+using CosmicLexicon.Foundation.xGenerics;
 using System;
 
-namespace OpenEchoSystem.Core.xGenerics
+namespace CosmicLexicon.Foundation.xGenerics
 {
     public class GenericObjectHelpersTests
     {

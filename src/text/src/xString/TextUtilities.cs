@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace OpenEchoSystem.Core.xText.xString // Updated namespace
+namespace CosmicLexicon.Foundation.xText.xString // Updated namespace
 {
     public static class TextUtilities
     {

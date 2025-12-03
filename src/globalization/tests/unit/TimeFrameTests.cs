@@ -1,7 +1,7 @@
 using Xunit;
-using OpenEchoSystem.Core.xGlobalization;
+using CosmicLexicon.Foundation.xGlobalization;
 
-namespace OpenEchoSystem.Core.xGlobalization
+namespace CosmicLexicon.Foundation.xGlobalization
 {
     public class TimeFrameTests
     {

@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>$(NetPrimaryTargetFramework)</TargetFramework>
-    <RootNamespace>OpenEchoSystem.Core.xRuntime.Serialization</RootNamespace>
+    <RootNamespace>CosmicLexicon.Foundation.xRuntime.Serialization</RootNamespace>
     <EnableSharedKernelDependencies>true</EnableSharedKernelDependencies>
 	  
   </PropertyGroup>

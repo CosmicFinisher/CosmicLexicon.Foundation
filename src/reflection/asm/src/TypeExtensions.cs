@@ -10,7 +10,7 @@ using System.Runtime.InteropServices.ComTypes;
 using System.Runtime.Loader;
 using System.Xml.Linq;
 
-namespace OpenEchoSystem.Core.xReflection.xAssembly
+namespace CosmicLexicon.Foundation.xReflection.xAssembly
 {
     //Intelisense
     //[EditorBrowsable(EditorBrowsableState.Never)]

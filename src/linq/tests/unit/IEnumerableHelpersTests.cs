@@ -2,10 +2,10 @@ using Xunit;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using OpenEchoSystem.Core.xLinq;
+using CosmicLexicon.Foundation.xLinq;
 using System.Globalization;
 
-namespace OpenEchoSystem.Core.xLinq
+namespace CosmicLexicon.Foundation.xLinq
 {
     public class IEnumerableHelpersTests
     {        private static readonly string[] expectedStrings = new string[] { "1", "2", "3" };

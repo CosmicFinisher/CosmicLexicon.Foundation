@@ -1,6 +1,6 @@
 using System.Text.Json.Serialization;
 
-namespace OpenEchoSystem.Core.xText.Json
+namespace CosmicLexicon.Foundation.xText.Json
 {
     internal class TestClassWithEnum
     {

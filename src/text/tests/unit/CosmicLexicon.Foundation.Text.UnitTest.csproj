@@ -1,11 +1,11 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>$(NetPrimaryTargetFramework)</TargetFramework>
-    <RootNamespace>OpenEchoSystem.Core.xText</RootNamespace>
+    <RootNamespace>CosmicLexicon.Foundation.xText</RootNamespace>
 	<EnableSharedUnitTestDependencies>true</EnableSharedUnitTestDependencies>
    </PropertyGroup>
 	 <ItemGroup>
-	   <ProjectReference Include="$(MSBuildThisFileDirectory)..\..\src\OpenEchoSystem.Core.Text.csproj" />
+	   <ProjectReference Include="$(MSBuildThisFileDirectory)..\..\src\CosmicLexicon.Foundation.Text.csproj" />
 	 </ItemGroup>
   <ItemGroup>
     <PackageReference Include="coverlet.msbuild">

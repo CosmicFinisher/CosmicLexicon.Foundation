@@ -1,5 +1,5 @@
 
-namespace OpenEchoSystem.Core.xExtensions
+namespace CosmicLexicon.Foundation.xExtensions
 {
     public static class ReadonlySpanExtensions
     {

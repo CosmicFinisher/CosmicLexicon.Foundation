@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>$(NetPrimaryTargetFramework)</TargetFramework>
-    <RootNamespace>OpenEchoSystem.Core.xText.Json</RootNamespace>
+    <RootNamespace>CosmicLexicon.Foundation.xText.Json</RootNamespace>
     <EnableSharedUnitTestDependencies>true</EnableSharedUnitTestDependencies>
 </PropertyGroup>
 

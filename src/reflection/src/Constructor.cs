@@ -1,6 +1,6 @@
 using System.Reflection;
 
-namespace OpenEchoSystem.Core.xReflection;
+namespace CosmicLexicon.Foundation.xReflection;
 
 using System;
 using System.Linq;

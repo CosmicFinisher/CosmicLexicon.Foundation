@@ -2,9 +2,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using Xunit;
-using OpenEchoSystem.Core.xLinq;
+using CosmicLexicon.Foundation.xLinq;
 
-namespace OpenEchoSystem.Core.xLinq
+namespace CosmicLexicon.Foundation.xLinq
 {
     public class IEnumerableExtensionsTests
     {

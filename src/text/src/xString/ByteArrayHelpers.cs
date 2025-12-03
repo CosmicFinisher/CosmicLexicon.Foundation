@@ -1,7 +1,7 @@
 using System.Text;
 using System.ComponentModel;
 
-namespace OpenEchoSystem.Core.xText.xString
+namespace CosmicLexicon.Foundation.xText.xString
 {
     [EditorBrowsable(EditorBrowsableState.Never)]
     public static class ByteArrayHelpers

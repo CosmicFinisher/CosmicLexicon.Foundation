@@ -1,4 +1,4 @@
-﻿namespace OpenEchoSystem.Core.xReflection.xAssembly
+﻿namespace CosmicLexicon.Foundation.xReflection.xAssembly
 {
     public enum InterfaceFilter
     {
