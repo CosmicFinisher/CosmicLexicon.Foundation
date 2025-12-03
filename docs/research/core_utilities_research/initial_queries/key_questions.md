@@ -14,7 +14,7 @@ To effectively inform the SPARC Specification phase for improving the `ConsmicLe
 
 1.  **Collections:**
     *   Are there known issues or missing functionalities in the existing collection helpers or extensions?
-    *   Is the split between `ConsmicLexicon.Foundation.xCollections` (non-generic) and `ConsmicLexicon.Foundation.xCollections.Generic` appropriate and consistently applied?
+    *   Is the split between `ConsmicLexicon.Foundation.Structures` (non-generic) and `ConsmicLexicon.Foundation.Structures.Generic` appropriate and consistently applied?
     *   Are there any custom generic collection implementations that are overly complex or not truly foundational?
     *   Is test coverage adequate for all collection utilities and extensions?
 2.  **IO:**

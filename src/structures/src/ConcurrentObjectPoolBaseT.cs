@@ -12,7 +12,7 @@ namespace CosmicLexicon.Foundation.Structures
 
         public void Seed(int seedSize)
         {
-            if (seedSize < 0) throw new ArgumentOutOfRangeException(nameof(seedSize));
+            ArgumentOutOfRangeException.ThrowIfNegative(seedSize);
             for (int i = 0; i < seedSize; i++)
             {
                 _objects.Add(GenerateObject());

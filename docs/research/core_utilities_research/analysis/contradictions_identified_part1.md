@@ -8,7 +8,7 @@ This document outlines potential contradictions identified during the initial re
 
 ## Collections Module
 
-*   **Generic vs. Non-Generic:** The `README.Core.Collections.md` file states a preference for generic collections in `ConsmicLexicon.Foundation.xCollections.Generic`. However, the file listing for `src/collections/src/` shows a mix of generic and non-generic related files. This raises questions about the long-term role and necessity of the non-generic collection helpers.
+*   **Generic vs. Non-Generic:** The `README.Foundation.Structures.md` file states a preference for generic collections in `ConsmicLexicon.Foundation.Structures.Generic`. However, the file listing for `src/collections/src/` shows a mix of generic and non-generic related files. This raises questions about the long-term role and necessity of the non-generic collection helpers.
 
 ## Areas Requiring Clarification
 

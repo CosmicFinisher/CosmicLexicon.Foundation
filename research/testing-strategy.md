@@ -7,35 +7,35 @@ This document outlines the comprehensive testing strategy for the Core Framework
 ## Test Organization
 
 ### Project Structure{Component}/
-??? src/
-?   ??? Core.x{Component}.csproj
-?   ??? Implementation files
-??? tests/
-    ??? unit/
-        ??? Core.x{Component}.UnitTest.csproj
-        ??? Test files
+--- src/
+|   --- Core.{Component}.csproj
+|   --- Implementation files
+--- tests/
+    --- unit/
+        --- Core.{Component}.UnitTest.csproj
+        --- Test files
 
 Example:
 threading/
-??? src/
-?   ??? Core.Threading.csproj
-??? tasks/
-?   ??? src/
-?   ?   ??? Core.Threading.Tasks.csproj
-?   ??? tests/
-?       ??? unit/
-??? tests/
-    ??? unit/
-        ??? Core.Threading.UnitTest.csproj
+--- src/
+?   --- Core.Threading.csproj
+--- tasks/
+|   --- src/
+|   |   --- Foundation.Concurrency.Tasks.csproj
+|   --- tests/
+|       --- unit/
+--- tests/
+    --- unit/
+        --- Core.Threading.UnitTest.csproj
 ### Modern Test Project Configuration<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
    <TargetFramework>$(NetPrimaryTargetFramework)</TargetFramework>
-    <RootNamespace>ConsmicLexicon.Foundation.x{Component}</RootNamespace>
+    <RootNamespace>ConsmicLexicon.Foundation.{Component}</RootNamespace>
     <EnableSharedUnitTestDependencies>true</EnableSharedUnitTestDependencies>
   </PropertyGroup>
   
   <ItemGroup>
-    <ProjectReference Include="..\..\src\Core.x{Component}.csproj" />
+    <ProjectReference Include="..\..\src\Core.{Component}.csproj" />
   </ItemGroup>
 
 </Project>

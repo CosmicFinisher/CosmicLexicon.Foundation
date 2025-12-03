@@ -1,8 +1,8 @@
-# ConsmicLexicon.Foundation.Threading
+# ConsmicLexicon.Foundation.Concurrency
 
 ## Overview
 
-ConsmicLexicon.Foundation.Threading provides advanced threading primitives and utilities for modern concurrent programming in .NET applications. It offers enhanced threading capabilities, task parallel library extensions, and high-precision timing utilities.
+ConsmicLexicon.Foundation.Concurrency provides advanced threading primitives and utilities for modern concurrent programming in .NET applications. It offers enhanced threading capabilities, task parallel library extensions, and high-precision timing utilities.
 
 ## Features
 
@@ -38,9 +38,9 @@ ConsmicLexicon.Foundation.Threading provides advanced threading primitives and u
 - Visual Studio 2025+ or VS Code
 
 ### Installation
-Add the package reference to your project:<PackageReference Include="ConsmicLexicon.Foundation.Threading" Version="1.0.0" />
-### Basic Usage using ConsmicLexicon.Foundation.Threading;
-using ConsmicLexicon.Foundation.Threading.Tasks;
+Add the package reference to your project:<PackageReference Include="ConsmicLexicon.Foundation.Concurrency" Version="1.0.0" />
+### Basic Usage using ConsmicLexicon.Foundation.Concurrency;
+using ConsmicLexicon.Foundation.Concurrency.Tasks;
 
 // Use advanced threading features
 using var asyncLock = new AsyncLock();

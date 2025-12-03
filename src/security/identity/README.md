@@ -40,7 +40,7 @@ ConsmicLexicon.Foundation.Security provides modern security features and cryptog
 ### Installation
 Add the package reference to your project:<PackageReference Include="ConsmicLexicon.Foundation.Security" Version="1.0.0" />
 ### Basic Usage using ConsmicLexicon.Foundation.Security;
-using ConsmicLexicon.Foundation.Security.Cryptography;
+using ConsmicLexicon.Foundation.Cryptography;
 
 // Use security features
 var hash = HashUtility.ComputeHash(data);

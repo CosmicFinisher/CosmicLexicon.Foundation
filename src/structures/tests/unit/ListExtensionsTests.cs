@@ -36,7 +36,7 @@ namespace CosmicLexicon.Foundation.Structures.UnitTest
         public void IsNullOrEmptyWithEmptyCollectionReturnsEmptyCollection()
         {
             // Arrange
-            IReadOnlyCollection<int> collection = new List<int>();
+            IReadOnlyCollection<int> collection = [];
 
             // Act
             var result = ListExtensions.IsNullOrEmpty(collection);
@@ -49,7 +49,7 @@ namespace CosmicLexicon.Foundation.Structures.UnitTest
         public void IsNullOrEmptyWithNonEmptyCollectionReturnsOriginalCollection()
         {
             // Arrange
-            IReadOnlyCollection<int> collection = new List<int> { 1, 2, 3 };
+            IReadOnlyCollection<int> collection = [1, 2, 3];
 
             // Act
             var result = ListExtensions.IsNullOrEmpty(collection);
@@ -78,16 +78,16 @@ namespace CosmicLexicon.Foundation.Structures.UnitTest
             // Arrange
             var listOfLists = new List<List<int>?>
                         {
-                            new List<int> { 1, 2 },
+                            new() { 1, 2 },
                             null,
-                            new List<int> { 3, 4 }
+                            new() { 3, 4 }
                         };
 
             // Act
             var result = ListExtensions.ToFlatList(listOfLists);
 
             // Assert
-            Assert.Equal(new List<int> { 1, 2, 3, 4 }, result);
+            Assert.Equal([1, 2, 3, 4], result);
         }
 
         [Fact]
@@ -96,16 +96,16 @@ namespace CosmicLexicon.Foundation.Structures.UnitTest
             // Arrange
             var listOfLists = new List<List<int>?>
                         {
-                            new List<int> { 1, 2 },
+                            new() { 1, 2 },
                             null,
-                            new List<int> { 3, 4 }
+                            new() { 3, 4 }
                         };
 
             // Act
             var result = ListExtensions.AsFlattened(listOfLists);
 
             // Assert
-            Assert.Equal(new List<int> { 1, 2, 3, 4 }, result.ToList());
+            Assert.Equal(new List<int> { 1, 2, 3, 4 }, [.. result]);
         }
 
         [Fact]
@@ -114,16 +114,16 @@ namespace CosmicLexicon.Foundation.Structures.UnitTest
             // Arrange
             var listOfLists = new List<List<int>?>
                         {
-                            new List<int> { 1, 2 },
+                            new() { 1, 2 },
                             null,
-                            new List<int> { 3, 4 }
+                            new() { 3, 4 }
                         };
 
             // Act
             var result = ListExtensions.ToFlattenedList(listOfLists);
 
             // Assert
-            Assert.Equal(new List<int> { 1, 2, 3, 4 }, result);
+            Assert.Equal([1, 2, 3, 4], result);
         }
         [Fact]
         public void ToReadOnlyValidItemReturnsReadOnlyCollection()
@@ -144,7 +144,7 @@ namespace CosmicLexicon.Foundation.Structures.UnitTest
         public void NullCheckNonNullCollectionReturnsOriginalCollection()
         {
             // Arrange
-            IReadOnlyCollection<int> collection = new List<int> { 1, 2, 3 };
+            IReadOnlyCollection<int> collection = [1, 2, 3];
 
             // Act
             IReadOnlyCollection<int> result = collection.NullCheck();
@@ -167,18 +167,20 @@ namespace CosmicLexicon.Foundation.Structures.UnitTest
             Assert.Empty(result);
         }
 
+        private static readonly int[] expected = [1, 2, 3, 4];
+
         [Fact]
         public void ConcatNonNullCollectionsReturnsConcatenatedCollection()
         {
             // Arrange
-            IReadOnlyCollection<int> collection1 = new List<int> { 1, 2 };
-            IReadOnlyCollection<int> collection2 = new List<int> { 3, 4 };
+            IReadOnlyCollection<int> collection1 = [1, 2];
+            IReadOnlyCollection<int> collection2 = [3, 4];
 
             // Act
             IEnumerable<int> result = collection1.Concat(collection2);
 
             // Assert
-            Assert.Equal(new int[] { 1, 2, 3, 4 }, result.ToList());
+            Assert.Equal(expected, result.ToList());
         }
 
         [Fact]
@@ -195,28 +197,30 @@ namespace CosmicLexicon.Foundation.Structures.UnitTest
             Assert.Empty(result);
         }
 
+        private static readonly int[] expected4 = [1, 2, 3, 4];
+
         [Fact]
         public void ToFlatListNonNullListsReturnsFlatList()
         {
             // Arrange
-            List<List<int>?> collection = new List<List<int>?>
-            {
-                new List<int> { 1, 2 },
-                new List<int> { 3, 4 }
-            };
+            List<List<int>?> collection =
+            [
+                [1, 2],
+                [3, 4]
+            ];
 
             // Act
             List<int> result = collection.ToFlatList();
 
             // Assert
-            Assert.Equal(new int[] { 1, 2, 3, 4 }, result);
+            Assert.Equal(expected4, result);
         }
 
         [Fact]
         public void ToFlatListNullListsReturnsEmptyList()
         {
             // Arrange
-            List<List<int>?> collection = new List<List<int>?> { null, null };
+            List<List<int>?> collection = [null, null];
 
             // Act
             List<int> result = collection.ToFlatList();

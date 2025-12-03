@@ -1,7 +1,7 @@
 using Xunit;
 using System.Collections.Generic;
-using ConsmicLexicon.Foundation.xCollections;
-using ConsmicLexicon.Foundation.xText;
+using ConsmicLexicon.Foundation.Structures;
+using ConsmicLexicon.Foundation.Formats;
 using System;
 
 namespace ConsmicLexicon.Foundation.xTests

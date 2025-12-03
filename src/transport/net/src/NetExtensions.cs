@@ -26,9 +26,6 @@ namespace CosmicLexicon.Foundation.Transport.Net
         /// Checks if there is an active internet connection by attempting to resolve a DNS address, using a default host.
         /// </summary>
         /// <returns>True if the DNS resolution succeeds, indicating an internet connection; otherwise, false.</returns>
-        public static async Task<bool> HasInternetConnectionAsync()
-        {
-            return await HasInternetConnectionAsync("google.com");
-        }
+        public static async Task<bool> HasInternetConnectionAsync() => await HasInternetConnectionAsync("google.com");
     }
 }

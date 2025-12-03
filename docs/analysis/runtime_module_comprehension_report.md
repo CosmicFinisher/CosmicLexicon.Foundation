@@ -14,7 +14,7 @@ The analysis aimed to understand the functionality, underlying structure, depend
 
 ## 1. Overview of `src/runtime/` Module
 
-The `ConsmicLexicon.Foundation.xRuntime` namespace (mapped to `src/runtime/`) is designed to provide utilities related to the .NET runtime environment and interoperability, complementing `System.Runtime`. It serves as a parent container for more specific runtime concerns, such as `InteropServices` and `Serialization` (though these sub-modules were not part of this specific analysis scope). The core `src/runtime/src/` directory contains foundational utilities for generic comparisons, comparable type extensions, and type conversion.
+The `ConsmicLexicon.Foundation.Host` namespace (mapped to `src/runtime/`) is designed to provide utilities related to the .NET runtime environment and interoperability, complementing `System.Runtime`. It serves as a parent container for more specific runtime concerns, such as `InteropServices` and `Serialization` (though these sub-modules were not part of this specific analysis scope). The core `src/runtime/src/` directory contains foundational utilities for generic comparisons, comparable type extensions, and type conversion.
 
 **Contribution to PRDMasterPlan.md:**
 This module provides fundamental building blocks that ensure consistent type handling, comparison logic, and robust data conversion across the application. These utilities are crucial for maintaining code quality, reducing redundancy, and supporting AI verifiable outcomes by providing reliable low-level operations that higher-level features will depend on.

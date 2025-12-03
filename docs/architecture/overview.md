@@ -7,8 +7,8 @@ The Core Framework is built on .NET 9's latest features, emphasizing performance
 ## Component Architecture 
 Core Framework
 ### Collections
-- ConsmicLexicon.Foundation.xCollections # Thread-safe collections
-- ConsmicLexicon.Foundation.xCollections.Generic # Generic collections
+- ConsmicLexicon.Foundation.Structures # Thread-safe collections
+- ConsmicLexicon.Foundation.Structures.Generic # Generic collections
 
 ### Diagnostics
 - ConsmicLexicon.Foundation.xDiagnostics # Debugging and profiling
@@ -29,90 +29,90 @@ Core Framework
 - ConsmicLexicon.Foundation.xIO # Async I/O operations
 
 ### LINQ
-- ConsmicLexicon.Foundation.xLinq # LINQ extensions
+- ConsmicLexicon.Foundation.Structures.Linq # LINQ extensions
 
 ### Networking
 - ConsmicLexicon.Foundation.xNet # Network operations
 
 ### Reflection
-- ConsmicLexicon.Foundation.xReflection # Reflection utilities
-- ConsmicLexicon.Foundation.xReflection.Assembly # Assembly handling
+- ConsmicLexicon.Foundation.Introspection # Reflection utilities
+- ConsmicLexicon.Foundation.Introspection.Modules # Assembly handling
 
 ### Runtime
-- ConsmicLexicon.Foundation.xRuntime # Runtime services
-- ConsmicLexicon.Foundation.xRuntime.Serialization # Serialization
-- ConsmicLexicon.Foundation.xRuntime.InteropServices # Interop
+- ConsmicLexicon.Foundation.Host # Runtime services
+- ConsmicLexicon.Foundation.Formats.Serialization # Serialization
+- ConsmicLexicon.Foundation.Host.InteropServices # Interop
 
 ### Security
-- ConsmicLexicon.Foundation.xSecurity # Security features
-- ConsmicLexicon.Foundation.xSecurity.Cryptography # Cryptography
+- ConsmicLexicon.Foundation.Identity # Security features
+- ConsmicLexicon.Foundation.Cryptography # Cryptography
 
 ### Text
-- ConsmicLexicon.Foundation.xText # Text processing
-- ConsmicLexicon.Foundation.xText.Json # JSON handling
-- ConsmicLexicon.Foundation.xText.RegularExpressions # Regex
+- ConsmicLexicon.Foundation.Formats # Text processing
+- ConsmicLexicon.Foundation.Formats.Json # JSON handling
+- ConsmicLexicon.Foundation.Formats.RegularExpressions # Regex
 
 ### Threading
-- ConsmicLexicon.Foundation.xThreading # Threading primitives
-- ConsmicLexicon.Foundation.xThreading.Tasks # TPL extensions
-- ConsmicLexicon.Foundation.xThreading.Timers # High-precision timing
+- ConsmicLexicon.Foundation.Concurrency # Threading primitives
+- ConsmicLexicon.Foundation.Concurrency.Tasks # TPL extensions
+- ConsmicLexicon.Foundation.Concurrency.Timers # High-precision timing
   
 ## Implementation Details
 
 ### Collections Framework
 [View Collections API Documentation](../api/collections/index.md)
 
-#### ConsmicLexicon.Foundation.Collections
+#### ConsmicLexicon.Foundation.Structures
 - Modern thread-safe collections optimized for .NET 9
 - Lock-free implementations using new hardware intrinsics
 - Memory-efficient data structures
-- [Implementation Details](../../src/collections/README.Core.Collections.md)
+- [Implementation Details](../../src/collections/README.Foundation.Structures.md)
 
-#### ConsmicLexicon.Foundation.Collections.Generic
+#### ConsmicLexicon.Foundation.Structures.Generic
 - Advanced generic collections with AOT support
 - Span<T> and Memory<T> optimizations
 - Zero-allocation operations
-- [Implementation Details](../../src/collections/generic/README.Core.Collections.Generic.md)
+- [Implementation Details](../../src/collections/generic/README.Foundation.Structures.Generic.md)
 
 ### Text Processing Framework
 
-#### ConsmicLexicon.Foundation.xText
+#### ConsmicLexicon.Foundation.Formats
 - Modern string manipulation utilities
 - UTF-8 string optimizations
 - Efficient text transformations
-- [Implementation Details](../../src/text/README.Core.Text.md)
+- [Implementation Details](../../src/text/README.Foundation.Formats.md)
 
-#### ConsmicLexicon.Foundation.xText.Json
+#### ConsmicLexicon.Foundation.Formats.Json
 - High-performance JSON operations
 - Source generator-based serialization
 - UTF-8 JSON parsing
-- [Implementation Details](../../src/text/json/README.Core.Text.Json.md)
+- [Implementation Details](../../src/text/json/README.Foundation.Formats.Json.md)
 
-#### ConsmicLexicon.Foundation.Text.RegularExpressions
+#### ConsmicLexicon.Foundation.Formats.RegularExpressions
 - Source-generated regex engines
 - SIMD-accelerated pattern matching
 - Thread-safe regex operations
-- [Implementation Details](../../src/text/regex/README.Core.Text.RegularExpressions.md)
+- [Implementation Details](../../src/text/regex/README.Foundation.Formats.RegularExpressions.md)
 
 ### Threading Framework
 
-#### ConsmicLexicon.Foundation.Threading
+#### ConsmicLexicon.Foundation.Concurrency
 - Modern synchronization primitives
 - Thread pool optimizations
 - Lock-free algorithms
 - [Implementation Details](../../src/threading/README.Core.Threading.md)
 
-#### ConsmicLexicon.Foundation.Threading.Tasks
+#### ConsmicLexicon.Foundation.Concurrency.Tasks
 - Enhanced async/await patterns
 - Parallel processing optimizations
 - Task scheduling improvements
-- [Implementation Details](../../src/threading/tasks/README.Core.Threading.Tasks.md)
+- [Implementation Details](../../src/threading/tasks/README.Foundation.Concurrency.Tasks.md)
 
-#### ConsmicLexicon.Foundation.Threading.Timers
+#### ConsmicLexicon.Foundation.Concurrency.Timers
 - High-resolution timing operations
 - Precision scheduling
 - Timer management utilities
-- [Implementation Details](../../src/threading/timers/README.Core.Threading.Timers.md)
+- [Implementation Details](../../src/threading/timers/README.Foundation.Concurrency.Timers.md)
 
 ## Design Principles
 
@@ -142,7 +142,7 @@ Core Framework
 - Secure defaults
 - Automatic auditing
 - CVE monitoring
-- [Security Documentation](../../src/security/README.Core.Security.md)
+- [Security Documentation](../../src/security/README.Foundation.Identity.md)
 
 ### 5. Testing Excellence
 - Property-based testing

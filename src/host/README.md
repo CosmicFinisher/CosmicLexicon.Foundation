@@ -1,8 +1,8 @@
-# ConsmicLexicon.Foundation.Runtime
+# ConsmicLexicon.Foundation.Host
 
 ## Overview
 
-ConsmicLexicon.Foundation.Runtime provides essential runtime services and utilities for .NET applications. It includes memory management optimizations, serialization patterns, and runtime infrastructure components.
+ConsmicLexicon.Foundation.Host provides essential runtime services and utilities for .NET applications. It includes memory management optimizations, serialization patterns, and runtime infrastructure components.
 
 ## Features
 
@@ -37,8 +37,8 @@ ConsmicLexicon.Foundation.Runtime provides essential runtime services and utilit
 - Visual Studio 2025+ or VS Code
 
 ### Installation
-Add the package reference to your project:<PackageReference Include="ConsmicLexicon.Foundation.Runtime" Version="1.0.0" />
-### Basic Usage using ConsmicLexicon.Foundation.Runtime;
+Add the package reference to your project:<PackageReference Include="ConsmicLexicon.Foundation.Host" Version="1.0.0" />
+### Basic Usage using ConsmicLexicon.Foundation.Host;
 
 // Use runtime features
 using var pool = new MemoryPool<byte>();

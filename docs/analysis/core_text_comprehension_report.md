@@ -1,11 +1,11 @@
-# ConsmicLexicon.Foundation.Text Module Comprehension Report
+# ConsmicLexicon.Foundation.Formats Module Comprehension Report
 
-**Analysis Area**: `src/text/src/` (ConsmicLexicon.Foundation.xText.xString namespace)
+**Analysis Area**: `src/text/src/` (ConsmicLexicon.Foundation.Formats.xString namespace)
 **Date of Analysis**: 6/13/2025
 
 ## 1. Overview and Purpose
 
-The `ConsmicLexicon.Foundation.Text` module, specifically the `ConsmicLexicon.Foundation.xText.xString` namespace, serves as a comprehensive utility library for various string and character manipulation tasks within the ConsmicLexicon.Foundation framework. It provides a wide array of static helper methods for common text-processing operations, including:
+The `ConsmicLexicon.Foundation.Formats` module, specifically the `ConsmicLexicon.Foundation.Formats.xString` namespace, serves as a comprehensive utility library for various string and character manipulation tasks within the ConsmicLexicon.Foundation framework. It provides a wide array of static helper methods for common text-processing operations, including:
 *   Byte array to string conversions (Base64, encoded strings).
 *   Character type checking.
 *   String formatting with custom patterns.
@@ -21,7 +21,7 @@ The module aims to offer robust and efficient text utility functions for various
 
 ## 2. Main Components/Modules
 
-The `ConsmicLexicon.Foundation.Text` module is primarily composed of static helper classes and related enums:
+The `ConsmicLexicon.Foundation.Formats` module is primarily composed of static helper classes and related enums:
 
 *   [`ByteArrayHelpers.cs`](src/text/src/xString/ByteArrayHelpers.cs): Handles conversions between byte arrays and strings, including Base64 and encoding-specific conversions. Also includes a method to check for Unicode BOM.
 *   [`CharHelpers.cs`](src/text/src/xString/CharHelpers.cs): Provides utility methods for determining character types (e.g., whitespace, digit, letter) using a `CharIs` enum and identifies line break characters.

@@ -73,7 +73,7 @@ namespace CosmicLexicon.Foundation.Generics.UnitTest
         public void MakeShallowCopyArrayReturnsShallowCopy()
         {
             // Arrange
-            int[] inputArray = { 1, 2, 3 };
+            int[] inputArray = [1, 2, 3];
 
             // Act
             int[] resultArray = GenericObjectHelpers.MakeShallowCopy(inputArray);

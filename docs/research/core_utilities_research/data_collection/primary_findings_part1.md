@@ -13,7 +13,7 @@ This document details the initial primary findings from the research into the `C
 
 ### Collections (`src/collections/`)
 
-*   The `README.Core.Collections.md` file outlines the goal of providing common interfaces, base classes, and utilities for collections, augmenting `System.Collections`. It also mentions a preference for generic collections in `ConsmicLexicon.Foundation.xCollections.Generic`.
+*   The `README.Foundation.Structures.md` file outlines the goal of providing common interfaces, base classes, and utilities for collections, augmenting `System.Collections`. It also mentions a preference for generic collections in `ConsmicLexicon.Foundation.Structures.Generic`.
 *   The file listing for `src/collections/src/` shows a mix of generic and non-generic related files (e.g., `ArrayHelpers.cs`, `ListExtensions.cs`, `ObservableListT.cs`, `ConcurrentObjectPoolT.cs`).
 *   There are several test files present (e.g., `ArrayHelpersTests.cs`, `ListExtensionsTests.cs`, `ObservableListTTests.cs`).
 *   **Potential Areas for Investigation:**
@@ -61,7 +61,7 @@ This document details the initial primary findings from the research into the `C
 
 ### LINQ (`src/linq/`)
 
-*   The `README.Core.Linq.md` file states the goal of providing custom LINQ operators or extensions, augmenting `System.Linq`. It mentions following deferred execution patterns and ensuring performance.
+*   The `README.Foundation.Linq.md` file states the goal of providing custom LINQ operators or extensions, augmenting `System.Linq`. It mentions following deferred execution patterns and ensuring performance.
 *   The file listing for `src/linq/src/` shows files like `EnumerableHelpers.cs`, `IEnumerableExtensions.cs`, and `IEnumerableHelpers.cs`.
 *   **Potential Areas for Investigation:**
     *   Evaluate the custom LINQ operators or extensions provided. Are they broadly applicable and do they follow LINQ design principles?
@@ -79,7 +79,7 @@ This document details the initial primary findings from the research into the `C
 
 ### Reflection (`src/reflection/`)
 
-*   The `README.Core.xReflection.md` file states the goal of providing utilities and extensions for reflection and metadata manipulation, building upon `System.xReflection`. It emphasizes performance and providing helpers for common scenarios.
+*   The `README.Foundation.Introspection.md` file states the goal of providing utilities and extensions for reflection and metadata manipulation, building upon `System.xReflection`. It emphasizes performance and providing helpers for common scenarios.
 *   The file listing for `src/reflection/src/` shows numerous files related to reflection, including `FastActivator.cs`, `ReflectionExtensions.cs`, and `TypeCacheForT.cs`. There is also a subdirectory `asm/` with its own set of files and README.
 *   **Potential Areas for Investigation:**
     *   Evaluate the range and complexity of reflection utilities provided. Do they align with the goal of simplifying common tasks?
@@ -90,7 +90,7 @@ This document details the initial primary findings from the research into the `C
 
 ### Runtime (`src/runtime/`)
 
-*   The `README.Core.Runtime.md` file indicates the goal of providing utilities related to the .NET runtime environment and interoperability, serving as a container for `InteropServices` and `Serialization`.
+*   The `README.Foundation.Host.md` file indicates the goal of providing utilities related to the .NET runtime environment and interoperability, serving as a container for `InteropServices` and `Serialization`.
 *   The file listing for `src/runtime/src/` shows files like `GenericComparerT.cs`, `IComparableExtensions.cs`, and `TypeHelpers.cs`. There are also subdirectories `introp/` and `serialization/` with their own READMEs.
 *   **Potential Areas for Investigation:**
     *   Evaluate the utilities in the main `runtime/src/` directory. Do they fit the description of runtime-related helpers?
@@ -100,16 +100,16 @@ This document details the initial primary findings from the research into the `C
 
 ### Security (`src/security/`)
 
-*   The `README.Core.Security.md` file states the goal of providing base utilities related to security concepts, augmenting `System.Security`. It mentions `Cryptography/` as a sub-namespace and emphasizes caution and providing building blocks, not complete solutions.
-*   The file listing for `src/security/src/` shows `ConsmicLexicon.Foundation.xSecurity.csproj`. There is a subdirectory `crypto/` with its own README and files.
+*   The `README.Foundation.Identity.md` file states the goal of providing base utilities related to security concepts, augmenting `System.Security`. It mentions `Cryptography/` as a sub-namespace and emphasizes caution and providing building blocks, not complete solutions.
+*   The file listing for `src/security/src/` shows `ConsmicLexicon.Foundation.Identity.csproj`. There is a subdirectory `crypto/` with its own README and files.
 *   **Potential Areas for Investigation:**
     *   Examine the contents and README of the `crypto/` subdirectory to understand the specific cryptographic utilities provided. Do they adhere to the rule of *not* implementing custom algorithms and only using `System.Security.Cryptography`?
-    *   Are there other foundational security-related utilities that would be appropriate for `ConsmicLexicon.Foundation.xSecurity` (e.g., secure random number generation helpers)?
+    *   Are there other foundational security-related utilities that would be appropriate for `ConsmicLexicon.Foundation.Identity` (e.g., secure random number generation helpers)?
     *   Assess the commenting and test coverage in this module and its submodules, with a strong focus on correctness and security implications.
 
 ### Text (`src/text/`)
 
-*   The `README.Core.Text.md` file indicates the goal of providing utilities and extensions for text manipulation and encoding, augmenting `System.Text`. It mentions sub-namespaces `RegularExpressions/` and `Json/`.
+*   The `README.Foundation.Formats.md` file indicates the goal of providing utilities and extensions for text manipulation and encoding, augmenting `System.Text`. It mentions sub-namespaces `RegularExpressions/` and `Json/`.
 *   The file listing for `src/text/src/` shows numerous files related to string manipulation and helpers (e.g., `StringHelpers.cs`, `CharHelpers.cs`, `NumericHelpers.cs`). There are also subdirectories `regex/` and `json/` with their own READMEs.
 *   **Potential Areas for Investigation:**
     *   Evaluate the range and utility of the provided text manipulation helpers. Are there common tasks that are not covered?

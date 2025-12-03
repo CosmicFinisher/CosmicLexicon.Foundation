@@ -2,8 +2,10 @@
 {
     public static class GenericTypeExtensions
     {
-        public static bool IsDefault<T>(this T value) =>
+        extension<T>(T value)
+        {
+            public bool IsDefault() =>
         EqualityComparer<T>.Default.Equals(value, default!);
-
+        }
     }
 }

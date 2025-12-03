@@ -8,7 +8,7 @@ namespace CosmicLexicon.Foundation.Generics
     [EditorBrowsable(EditorBrowsableState.Never)]
     public static class GenericObjectHelpers
     {
-        private static readonly ConcurrentDictionary<Type, PropertyInfo[]> CachedProperties = new ConcurrentDictionary<Type, PropertyInfo[]>();
+        private static readonly ConcurrentDictionary<Type, PropertyInfo[]> CachedProperties = new();
 
         public static T? MakeShallowCopy<T>(T inputObject, bool simpleTypesOnly = false)
         {

@@ -2,7 +2,7 @@
 
 ## 1. Overview of Current Usage of `System.Text.Json` within the `Text` Module
 
-The `System.Text.Json` library is utilized within the `ConsmicLexicon.Foundation.xText.Json` namespace, specifically through the `JsonExtensions.cs` file. This file provides a set of static extension methods (`FromJson<T>`, `ToJson<T>`, and `Configure`) that encapsulate JSON serialization and deserialization logic for the `Text` module.
+The `System.Text.Json` library is utilized within the `ConsmicLexicon.Foundation.Formats.Json` namespace, specifically through the `JsonExtensions.cs` file. This file provides a set of static extension methods (`FromJson<T>`, `ToJson<T>`, and `Configure`) that encapsulate JSON serialization and deserialization logic for the `Text` module.
 
 The core usage revolves around the `JsonSerializer` class for converting objects to JSON strings and vice-versa. A `Lazy<JsonSerializerOptions>` instance is used to ensure that the `JsonSerializerOptions` are configured only once and in a thread-safe manner.
 
@@ -61,7 +61,7 @@ The most prominent alternative to `System.Text.Json` in the .NET ecosystem is **
 
 ## 5. Self-Reflection on the Thoroughness of the Assessment
 
-The assessment was comprehensive, focusing on the designated files (`src/text/json/src/JsonExtensions.cs`, `src/text/src/ConsmicLexicon.Foundation.Text.csproj`, and `src/text/json/src/ConsmicLexicon.Foundation.Text.Json.csproj`). The analysis included a detailed examination of the code's functionality, particularly the custom `PrivateConstructorContractResolver`, which represents a key architectural decision.
+The assessment was comprehensive, focusing on the designated files (`src/text/json/src/JsonExtensions.cs`, `src/text/src/ConsmicLexicon.Foundation.Formats.csproj`, and `src/text/json/src/ConsmicLexicon.Foundation.Formats.Json.csproj`). The analysis included a detailed examination of the code's functionality, particularly the custom `PrivateConstructorContractResolver`, which represents a key architectural decision.
 
 The methods used for understanding the code primarily involved static code analysis of the provided C# source files and project files. Control flow graph concepts were implicitly applied when tracing how `JsonSerializerOptions` are configured and used throughout the `JsonExtensions` class. Modularity assessment confirmed that the JSON serialization logic is well-encapsulated within the `JsonExtensions` class.
 

@@ -8,7 +8,7 @@ namespace CosmicLexicon.Foundation.Globalization.UnitTest
         public void AddWeeksAddsWeeksToDate()
         {
             // Arrange
-            DateTime date = new DateTime(2025, 1, 1);
+            DateTime date = new(2025, 1, 1);
             int numberOfWeeks = 2;
 
             // Act
@@ -22,8 +22,8 @@ namespace CosmicLexicon.Foundation.Globalization.UnitTest
         public void AgeCalculatesAgeCorrectly()
         {
             // Arrange
-            DateTime birthDate = new DateTime(1990, 5, 30);
-            DateTime calculateFrom = new DateTime(2025, 5, 30);
+            DateTime birthDate = new(1990, 5, 30);
+            DateTime calculateFrom = new(2025, 5, 30);
 
             // Act
             int age = birthDate.Age(calculateFrom);
@@ -49,8 +49,8 @@ namespace CosmicLexicon.Foundation.Globalization.UnitTest
         public void AgeCalculatesAgeCorrectlyWhenBirthDateIsAfterCalculateFrom()
         {
             // Arrange
-            DateTime birthDate = new DateTime(1990, 12, 31);
-            DateTime calculateFrom = new DateTime(1991, 1, 1); // Only a few days after birthDate in the next year
+            DateTime birthDate = new(1990, 12, 31);
+            DateTime calculateFrom = new(1991, 1, 1); // Only a few days after birthDate in the next year
 
             // Act
             int age = birthDate.Age(calculateFrom);
@@ -63,8 +63,8 @@ namespace CosmicLexicon.Foundation.Globalization.UnitTest
         public void AgeCalculatesAgeCorrectlyWhenBirthMonthDayIsAfterCalculateMonthDay()
         {
             // Arrange
-            DateTime birthDate = new DateTime(1990, 6, 15);
-            DateTime calculateFrom = new DateTime(2025, 5, 10); // CalculateFrom is before birth day/month in the current year
+            DateTime birthDate = new(1990, 6, 15);
+            DateTime calculateFrom = new(2025, 5, 10); // CalculateFrom is before birth day/month in the current year
 
             // Act
             int age = birthDate.Age(calculateFrom);
@@ -77,7 +77,7 @@ namespace CosmicLexicon.Foundation.Globalization.UnitTest
         public void BeginningOfDayReturnsBeginningOfDay()
         {
             // Arrange
-            DateTime date = new DateTime(2025, 5, 30, 10, 30, 0);
+            DateTime date = new(2025, 5, 30, 10, 30, 0);
 
             // Act
             DateTime result = date.BeginningOf(TimeFrame.Day);
@@ -90,7 +90,7 @@ namespace CosmicLexicon.Foundation.Globalization.UnitTest
         public void BeginningOfWeekReturnsBeginningOfWeek()
         {
             // Arrange
-            DateTime date = new DateTime(2025, 5, 30, 10, 30, 0); // Friday, assuming Sunday as FirstDayOfWeek
+            DateTime date = new(2025, 5, 30, 10, 30, 0); // Friday, assuming Sunday as FirstDayOfWeek
 
             // Act
             DateTime result = date.BeginningOf(TimeFrame.Week);
@@ -103,8 +103,8 @@ namespace CosmicLexicon.Foundation.Globalization.UnitTest
         public void BeginningOfWeekReturnsBeginningOfWeekForMondayCulture()
         {
             // Arrange
-            DateTime date = new DateTime(2025, 5, 30, 10, 30, 0); // Friday
-            CultureInfo culture = new CultureInfo("de-DE"); // Culture where Monday is FirstDayOfWeek
+            DateTime date = new(2025, 5, 30, 10, 30, 0); // Friday
+            CultureInfo culture = new("de-DE"); // Culture where Monday is FirstDayOfWeek
 
             // Act
             DateTime result = date.BeginningOf(TimeFrame.Week, culture);
@@ -117,7 +117,7 @@ namespace CosmicLexicon.Foundation.Globalization.UnitTest
         public void BeginningOfMonthReturnsBeginningOfMonth()
         {
             // Arrange
-            DateTime date = new DateTime(2025, 5, 30, 10, 30, 0);
+            DateTime date = new(2025, 5, 30, 10, 30, 0);
 
             // Act
             DateTime result = date.BeginningOf(TimeFrame.Month);
@@ -130,7 +130,7 @@ namespace CosmicLexicon.Foundation.Globalization.UnitTest
         public void BeginningOfQuarterReturnsBeginningOfQuarter()
         {
             // Arrange
-            DateTime date = new DateTime(2025, 5, 30, 10, 30, 0);
+            DateTime date = new(2025, 5, 30, 10, 30, 0);
 
             // Act
             DateTime result = date.BeginningOf(TimeFrame.Quarter);
@@ -143,7 +143,7 @@ namespace CosmicLexicon.Foundation.Globalization.UnitTest
         public void BeginningOfYearReturnsBeginningOfYear()
         {
             // Arrange
-            DateTime date = new DateTime(2025, 5, 30, 10, 30, 0);
+            DateTime date = new(2025, 5, 30, 10, 30, 0);
 
             // Act
             DateTime result = date.BeginningOf(TimeFrame.Year);
@@ -156,7 +156,7 @@ namespace CosmicLexicon.Foundation.Globalization.UnitTest
         public void BeginningOfMinuteReturnsBeginningOfMinute()
         {
             // Arrange
-            DateTime date = new DateTime(2025, 5, 30, 10, 30, 45);
+            DateTime date = new(2025, 5, 30, 10, 30, 45);
 
             // Act
             DateTime result = date.BeginningOf(TimeFrame.Minute);
@@ -169,7 +169,7 @@ namespace CosmicLexicon.Foundation.Globalization.UnitTest
         public void BeginningOfHourReturnsBeginningOfHour()
         {
             // Arrange
-            DateTime date = new DateTime(2025, 5, 30, 10, 30, 45);
+            DateTime date = new(2025, 5, 30, 10, 30, 45);
 
             // Act
             DateTime result = date.BeginningOf(TimeFrame.Hour);
@@ -187,7 +187,7 @@ namespace CosmicLexicon.Foundation.Globalization.UnitTest
         public void DaysInMonthTimeFrameReturnsCorrectDays(int year, int month, int day, TimeFrame timeFrame, int expectedDays)
         {
             // Arrange
-            DateTime date = new DateTime(year, month, day);
+            DateTime date = new(year, month, day);
 
             // Act
             int result = date.DaysIn(timeFrame);
@@ -200,7 +200,7 @@ namespace CosmicLexicon.Foundation.Globalization.UnitTest
         public void DaysInYearTimeFrameReturnsCorrectDaysWhenCultureIsNotSpecified()
         {
             // Arrange
-            DateTime date = new DateTime(2025, 6, 15);
+            DateTime date = new(2025, 6, 15);
 
             // Act
             int result = date.DaysIn(TimeFrame.Year);
@@ -213,7 +213,7 @@ namespace CosmicLexicon.Foundation.Globalization.UnitTest
         public void DaysInInvalidTimeFrameThrowsArgumentException()
         {
             // Arrange
-            DateTime date = new DateTime(2025, 1, 1);
+            DateTime date = new(2025, 1, 1);
 
             // Act & Assert
             Assert.Throws<System.ComponentModel.InvalidEnumArgumentException>(() => date.DaysIn((TimeFrame)999));
@@ -223,7 +223,7 @@ namespace CosmicLexicon.Foundation.Globalization.UnitTest
         public void DaysInDayTimeFrameReturnsOne()
         {
             // Arrange
-            DateTime date = new DateTime(2025, 1, 15);
+            DateTime date = new(2025, 1, 15);
 
             // Act
             int result = date.DaysIn(TimeFrame.Day);
@@ -236,7 +236,7 @@ namespace CosmicLexicon.Foundation.Globalization.UnitTest
         public void DaysInWeekTimeFrameReturnsSeven()
         {
             // Arrange
-            DateTime date = new DateTime(2025, 1, 15);
+            DateTime date = new(2025, 1, 15);
 
             // Act
             int result = date.DaysIn(TimeFrame.Week);
@@ -254,8 +254,8 @@ namespace CosmicLexicon.Foundation.Globalization.UnitTest
         public void DaysInQuarterTimeFrameReturnsCorrectDays(int year, int month, int day, int expectedDays)
         {
             // Arrange
-            DateTime date = new DateTime(year, month, day);
-            DateTime startOfQuarter1 = new DateTime(year, 1, 1);
+            DateTime date = new(year, month, day);
+            DateTime startOfQuarter1 = new(year, 1, 1);
 
             // Act
             int result = date.DaysIn(TimeFrame.Quarter, startOfQuarter1);
@@ -270,7 +270,7 @@ namespace CosmicLexicon.Foundation.Globalization.UnitTest
         public void DaysInYearTimeFrameReturnsCorrectDays(int year, int expectedDays)
         {
             // Arrange
-            DateTime date = new DateTime(year, 6, 15);
+            DateTime date = new(year, 6, 15);
 
             // Act
             int result = date.DaysIn(TimeFrame.Year);
@@ -295,7 +295,7 @@ namespace CosmicLexicon.Foundation.Globalization.UnitTest
         public void BeginningOfQuarterReturnsCorrectDate(int year, int month, int day, int expectedYear, int expectedMonth, int expectedDay)
         {
             // Arrange
-            DateTime date = new DateTime(year, month, day);
+            DateTime date = new(year, month, day);
 
             // Act
             DateTime result = date.BeginningOfQuarter();
@@ -308,7 +308,7 @@ namespace CosmicLexicon.Foundation.Globalization.UnitTest
         public void EndOfDayTimeFrameReturnsEndOfDay()
         {
             // Arrange
-            DateTime date = new DateTime(2025, 5, 30, 10, 30, 0);
+            DateTime date = new(2025, 5, 30, 10, 30, 0);
 
             // Act
             DateTime result = date.EndOf(TimeFrame.Day);
@@ -321,7 +321,7 @@ namespace CosmicLexicon.Foundation.Globalization.UnitTest
         public void EndOfMinuteReturnsEndOfMinute()
         {
             // Arrange
-            DateTime date = new DateTime(2025, 5, 30, 10, 30, 45, 123);
+            DateTime date = new(2025, 5, 30, 10, 30, 45, 123);
 
             // Act
             DateTime result = date.EndOf(TimeFrame.Minute);
@@ -334,7 +334,7 @@ namespace CosmicLexicon.Foundation.Globalization.UnitTest
         public void EndOfHourReturnsEndOfHour()
         {
             // Arrange
-            DateTime date = new DateTime(2025, 5, 30, 10, 30, 45, 123);
+            DateTime date = new(2025, 5, 30, 10, 30, 45, 123);
 
             // Act
             DateTime result = date.EndOf(TimeFrame.Hour);
@@ -347,7 +347,7 @@ namespace CosmicLexicon.Foundation.Globalization.UnitTest
         public void EndOfInvalidTimeFrameThrowsArgumentException()
         {
             // Arrange
-            DateTime date = new DateTime(2025, 1, 1);
+            DateTime date = new(2025, 1, 1);
 
             // Act & Assert
             Assert.Throws<System.ComponentModel.InvalidEnumArgumentException>(() => date.EndOf((TimeFrame)999));
@@ -357,7 +357,7 @@ namespace CosmicLexicon.Foundation.Globalization.UnitTest
         public void EndOfWeekTimeFrameReturnsEndOfWeek()
         {
             // Arrange
-            DateTime date = new DateTime(2025, 5, 30, 10, 30, 0); // Friday, assuming Sunday as FirstDayOfWeek
+            DateTime date = new(2025, 5, 30, 10, 30, 0); // Friday, assuming Sunday as FirstDayOfWeek
 
             // Act
             DateTime result = date.EndOf(TimeFrame.Week);
@@ -375,7 +375,7 @@ namespace CosmicLexicon.Foundation.Globalization.UnitTest
         public void EndOfMonthTimeFrameReturnsEndOfMonth(int year, int month, int expectedDay)
         {
             // Arrange
-            DateTime date = new DateTime(year, month, 15, 10, 30, 0);
+            DateTime date = new(year, month, 15, 10, 30, 0);
 
             // Act
             DateTime result = date.EndOf(TimeFrame.Month);
@@ -393,7 +393,7 @@ namespace CosmicLexicon.Foundation.Globalization.UnitTest
         public void EndOfQuarterTimeFrameReturnsEndOfQuarter(int year, int month, int day, int expectedYear, int expectedMonth, int expectedDay)
         {
             // Arrange
-            DateTime date = new DateTime(year, month, day, 10, 30, 0);
+            DateTime date = new(year, month, day, 10, 30, 0);
 
             // Act
             DateTime result = date.EndOf(TimeFrame.Quarter);
@@ -408,7 +408,7 @@ namespace CosmicLexicon.Foundation.Globalization.UnitTest
         public void EndOfYearTimeFrameReturnsEndOfYear(int year, int expectedYear, int expectedMonth, int expectedDay)
         {
             // Arrange
-            DateTime date = new DateTime(year, 6, 15, 10, 30, 0);
+            DateTime date = new(year, 6, 15, 10, 30, 0);
 
             // Act
             DateTime result = date.EndOf(TimeFrame.Year);

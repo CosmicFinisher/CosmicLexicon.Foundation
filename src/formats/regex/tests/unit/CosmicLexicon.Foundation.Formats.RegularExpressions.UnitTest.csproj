@@ -4,6 +4,6 @@
     <EnableSharedUnitTestDependencies>true</EnableSharedUnitTestDependencies>
   </PropertyGroup>
   <ItemGroup>
-    <ProjectReference Include="$(MSBuildThisFileDirectory)..\..\src\CosmicLexicon.Foundation.Text.RegularExpressions.csproj" />
+    <ProjectReference Include="$(MSBuildThisFileDirectory)..\..\src\CosmicLexicon.Foundation.Formats.RegularExpressions.csproj" />
   </ItemGroup>
 </Project> 

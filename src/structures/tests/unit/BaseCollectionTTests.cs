@@ -2,49 +2,25 @@ namespace CosmicLexicon.Foundation.Structures.UnitTest
 {
     public class BaseCollectionTTests
     {
-        private static readonly int[] ExpectedArray = new int[] { 2, 4 };
+        private static readonly int[] ExpectedArray = [2, 4];
         
         private class ConcreteCollection : BaseCollection<int>
         {
-            public override bool Contains(int item)
-            {
-                return items.Contains(item);
-            }
+            public override bool Contains(int item) => Items.Contains(item);
 
-            protected override bool ShouldObjectAddToCollection(int item)
-            {
-                return item % 2 == 0; // Only allow even numbers
-            }
+            protected override bool ShouldObjectAddToCollection(int item) => item % 2 == 0; // Only allow even numbers
 
-            public void AddItem(int item)
-            {
-                items.Add(item);
-            }
+            public void AddItem(int item) => Items.Add(item);
 
-            public override void Clear()
-            {
-                base.Clear();
-            }
+            public override void Clear() => base.Clear();
 
-            public override void CopyTo(Array array, int index)
-            {
-                base.CopyTo(array, index);
-            }
+            public override void CopyTo(Array array, int index) => base.CopyTo(array, index);
 
-            public override void CopyTo(int[] array, int index)
-            {
-                items.CopyTo(array, index);
-            }
+            public override void CopyTo(int[] array, int index) => Items.CopyTo(array, index);
 
-            public override bool Remove(int item)
-            {
-                return items.Remove(item);
-            }
+            public override bool Remove(int item) => Items.Remove(item);
 
-            public override string ToString()
-            {
-                return string.Join(",", items);
-            }
+            public override string ToString() => string.Join(",", Items);
         }
 
         private class NullableIntWrapper : IEquatable<NullableIntWrapper>
@@ -71,61 +47,32 @@ namespace CosmicLexicon.Foundation.Structures.UnitTest
                 return Equals((NullableIntWrapper)obj);
             }
 
-            public override int GetHashCode()
-            {
-                return Value.GetHashCode();
-            }
+            public override int GetHashCode() => Value.GetHashCode();
 
-            public override string ToString()
-            {
-                return Value.HasValue ? Value.ToString()! : "null";
-            }
+            public override string ToString() => Value.HasValue ? Value.ToString()! : "null";
         }
 
         private class ConcreteCollectionNullable : BaseCollection<NullableIntWrapper>
         {
-            public override bool Contains(NullableIntWrapper item)
-            {
-                return items.Contains(item);
-            }
+            public override bool Contains(NullableIntWrapper item) => Items.Contains(item);
 
-            protected override bool ShouldObjectAddToCollection(NullableIntWrapper item)
-            {
-                // This concrete implementation prevents adding NullableIntWrapper items where the internal Value is null.
+            protected override bool ShouldObjectAddToCollection(NullableIntWrapper item) =>
+                // This concrete implementation prevents adding NullableIntWrapper Items where the internal Value is null.
                 // This aligns with the principle that BaseCollection<T> handles object reference nulls,
                 // while concrete implementations handle semantic nulls or specific business rules.
-                return item.Value.HasValue;
-            }
+                item.Value.HasValue;
 
-            public void AddItem(NullableIntWrapper item)
-            {
-                items.Add(item);
-            }
+            public void AddItem(NullableIntWrapper item) => Items.Add(item);
 
-            public override void Clear()
-            {
-                base.Clear();
-            }
+            public override void Clear() => base.Clear();
 
-            public override void CopyTo(Array array, int index)
-            {
-                base.CopyTo(array, index);
-            }
+            public override void CopyTo(Array array, int index) => base.CopyTo(array, index);
 
-            public override void CopyTo(NullableIntWrapper[] array, int index)
-            {
-                items.CopyTo(array, index);
-            }
+            public override void CopyTo(NullableIntWrapper[] array, int index) => Items.CopyTo(array, index);
 
-            public override bool Remove(NullableIntWrapper item)
-            {
-                return items.Remove(item);
-            }
+            public override bool Remove(NullableIntWrapper item) => Items.Remove(item);
 
-            public override string ToString()
-            {
-                return string.Join(",", items);
-            }
+            public override string ToString() => string.Join(",", Items);
         }
 
         [Fact]
@@ -160,7 +107,7 @@ namespace CosmicLexicon.Foundation.Structures.UnitTest
         {
             // Arrange
             var collection = new ConcreteCollectionNullable();
-            NullableIntWrapper item = new NullableIntWrapper(null); // A wrapped nullable value type set to null
+            NullableIntWrapper item = new(null); // A wrapped nullable value type set to null
 
             // Act
             // Attempt to add the item. Given the modification to ShouldObjectAddToCollection,
@@ -170,7 +117,7 @@ namespace CosmicLexicon.Foundation.Structures.UnitTest
 
             // Assert
             // Verify that no exception was thrown and the item was not added to the collection.
-            Assert.Equal(0, collection.Count);
+            Assert.Empty(collection);
             Assert.False(collection.Contains(item));
         }
 
@@ -181,10 +128,11 @@ namespace CosmicLexicon.Foundation.Structures.UnitTest
             var collection1 = new ConcreteCollection();
             collection1.AddItem(2);
             collection1.AddItem(4);
-            var collection2 = new ConcreteCollection();
-
-            // Act
-            collection2.Add(collection1);
+            var collection2 = new ConcreteCollection
+            {
+                // Act
+                collection1
+            };
 
             // Assert
             Assert.True(collection2.Contains(2));

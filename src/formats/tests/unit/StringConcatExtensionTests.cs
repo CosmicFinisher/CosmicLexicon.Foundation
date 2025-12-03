@@ -34,7 +34,7 @@ namespace CosmicLexicon.Foundation.Formats.UnitTest
         {
             var @strings = GetStrings();
 
-            // Calling the Concat extension method from CosmicLexicon.Net.Core.xLinqExtensions
+            // Calling the Concat extension method from CosmicLexicon.Foundation.Foundation.Structures.LinqExtensions
             var actualString = StringHelpers.Concat(@strings).ToString();
 
             var expected = GetExpectedConcatenatedStringSimple();
@@ -54,27 +54,23 @@ namespace CosmicLexicon.Foundation.Formats.UnitTest
             Assert.Equal(expected, actualString);
         }
 
-    
-        private static string GetExpectedConcatenatedStringSimple()
-        {
+
+        private static string GetExpectedConcatenatedStringSimple() =>
             // string1 is " ", string2="Successful", etc.
             // Empty strings are skipped by Concat(). Whitespace strings are included.
-            return " SuccessfulConcatenationStrings!";
-        }
+            " SuccessfulConcatenationStrings!";
 
-        private static string GetExpectedConcatenatedStringWithSpaces()
-        {
+        private static string GetExpectedConcatenatedStringWithSpaces() =>
             // Test with GetStringsForSpacedConcat which doesn't have leading/trailing space strings by default
-            return "Successful Concatenation Strings !";
-        }
+            "Successful Concatenation Strings !";
 
-        private  string[] GetStrings() => new string[5] {
+        private  string[] GetStrings() => [
                 string1, string2, string3, string4, string5
-        };
+        ];
 
-        private static string[] GetStringsForSpacedConcat() => new string[4] {
+        private static string[] GetStringsForSpacedConcat() => [
                 "Successful", "Concatenation", "Strings", "!"
-        };
+        ];
 
         [Fact]
         public void CustomConcatenatedStringsUsingFuncMustEqualToActualString()
@@ -93,7 +89,7 @@ namespace CosmicLexicon.Foundation.Formats.UnitTest
         public void ConcatWithEmptyAdditionsReturnsOriginalEnumerable()
         {
             // Arrange
-            IEnumerable<int> enumerable1 = new int[] { 1, 2, 3 };
+            IEnumerable<int> enumerable1 = [1, 2, 3];
             IEnumerable<int>[] additions = Array.Empty<IEnumerable<int>>(); // Fixed CA1825
 
             // Act

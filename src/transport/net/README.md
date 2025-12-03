@@ -47,7 +47,7 @@ var response = await connection.ReceiveAsync();
 - [Project Overview](../../integrated_documentation_overview.md)
 - [Other Core Libraries](../)
   - [Collections](../../collections/README.CORE.COLLECTIONS.md)
-  - [Text](../../text/README.CORE.TEXT.md)
+  - [Text](../../text/README.FOUNDATION.FORMATS.md)
   - [Threading](../../threading/README.CORE.THREADING.md)
   - [Security](../../security/README.CORE.SECURITY.md)
 

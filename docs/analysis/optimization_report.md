@@ -1,6 +1,6 @@
 # Optimization Report: `src/text/json/src/JsonExtensions.cs`
 
-**Module Identifier:** `ConsmicLexicon.Foundation.xText.Json.JsonExtensions`
+**Module Identifier:** `ConsmicLexicon.Foundation.Formats.Json.JsonExtensions`
 **Problem Addressed:** Optimization of `System.Text.Json` usage and identification of performance bottlenecks within `JsonExtensions.cs`.
 
 ## 1. Overview of Identified Performance Bottlenecks or Areas for Optimization

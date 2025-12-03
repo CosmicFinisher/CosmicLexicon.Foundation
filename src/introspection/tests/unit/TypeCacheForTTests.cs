@@ -2,9 +2,9 @@ using System;
 using System.Linq;
 using System.Reflection;
 using Xunit;
-using CosmicLexicon.Foundation.xReflection;
+using CosmicLexicon.Foundation.Introspection;
 
-namespace CosmicLexicon.Foundation.xReflection
+namespace CosmicLexicon.Foundation.Introspection
 {
     public class TypeCacheForTTests
     {

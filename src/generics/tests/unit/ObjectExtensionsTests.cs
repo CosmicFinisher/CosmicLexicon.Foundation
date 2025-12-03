@@ -32,7 +32,7 @@ namespace CosmicLexicon.Foundation.Generics.UnitTest
         public void IsNullOrDbNullNotNullObjectReturnsFalse()
         {
             // Arrange
-            object obj = new object();
+            object obj = new();
 
             // Act
             bool result = ObjectExtensions.IsNullOrDbNull(obj);

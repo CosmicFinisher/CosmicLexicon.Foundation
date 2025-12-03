@@ -28,15 +28,9 @@ namespace CosmicLexicon.Foundation.Structures
             remove => propertyChanged = (PropertyChangedEventHandler?)Delegate.Remove(propertyChanged, value);
         }
 
-        protected virtual void OnPropertyChanged([CallerMemberName] string? propertyName = null)
-        {
-            propertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-        }
+        protected virtual void OnPropertyChanged([CallerMemberName] string? propertyName = null) => propertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
 
-        protected virtual void OnCollectionChanged(NotifyCollectionChangedEventArgs e)
-        {
-            collectionChanged?.Invoke(this, e);
-        }
+        protected virtual void OnCollectionChanged(NotifyCollectionChangedEventArgs e) => collectionChanged?.Invoke(this, e);
 
         public ObservableListCollection()
         {

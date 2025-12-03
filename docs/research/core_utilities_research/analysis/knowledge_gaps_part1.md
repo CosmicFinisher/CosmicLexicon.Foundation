@@ -15,7 +15,7 @@ This document outlines the initial knowledge gaps identified during the first pa
 ### Collections (`src/collections/`)
 
 *   **Non-Generic vs. Generic Usage:** Clarification is needed on the intended long-term role of non-generic collection helpers. Should they be maintained, or is the focus strictly on generic collections moving forward?
-*   **Completeness of Generic Extensions:** Are there other commonly used generic collection extension methods that are missing from `ConsmicLexicon.Foundation.xCollections.Generic`?
+*   **Completeness of Generic Extensions:** Are there other commonly used generic collection extension methods that are missing from `ConsmicLexicon.Foundation.Structures.Generic`?
 *   **Test Coverage Detail:** Specific test coverage metrics for each file in this module are unknown.
 
 ### Diagnostics (`src/diagnostics/`)

@@ -23,7 +23,7 @@ namespace CosmicLexicon.Foundation.Structures.UnitTest
         public void NullCheckNonNullCollectionReturnsOriginalCollection()
         {
             // Arrange
-            IReadOnlyCollection<int> collection = new List<int> { 1, 2, 3 };
+            IReadOnlyCollection<int> collection = [1, 2, 3];
 
             // Act
             var result = collection.NullCheck();

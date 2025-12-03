@@ -60,15 +60,12 @@ public sealed class Constructor
     //     constructor
     public Constructor(ConstructorInfo constructor, ParameterInfo[] parameters)
     {
-        if (constructor is null)
-        {
-            throw new ArgumentNullException(nameof(constructor));
-        }
+        ArgumentNullException.ThrowIfNull(constructor);
 
         ParameterInfo[] array = parameters ?? [];
-        Parameters = array.Select(x => x.ParameterType).ToArray();
+        Parameters = [.. array.Select(x => x.ParameterType)];
         ParameterLength = Parameters.Length;
-        ParameterNullable = Parameters.Select(x => x.IsGenericType && x.GetGenericTypeDefinition() == typeof(Nullable<>)).ToArray();
+        ParameterNullable = [.. Parameters.Select(x => x.IsGenericType && x.GetGenericTypeDefinition() == typeof(Nullable<>))];
         ConstructorDelegate = CreateConstructor(constructor, array);
     }
 
@@ -99,10 +96,7 @@ public sealed class Constructor
     //     The new object
     public object? CreateInstance(object[] args)
     {
-        if (args is null)
-        {
-            throw new ArgumentNullException(nameof(args));
-        }
+        ArgumentNullException.ThrowIfNull(args);
 
         if (!IsMatch(args))
         {
@@ -123,10 +117,7 @@ public sealed class Constructor
     //     true if the specified arguments is a match; otherwise, false.
     public bool IsMatch(object[]? args)
     {
-        if (args is null)
-        {
-            throw new ArgumentNullException(nameof(args));
-        }
+        ArgumentNullException.ThrowIfNull(args);
 
         if (args.Length != ParameterLength)
         {
@@ -173,10 +164,7 @@ public sealed class Constructor
     //
     // Returns:
     //     The argument expression
-    private static Expression CreateArgumentExpression(ParameterExpression parameterExpression, ParameterInfo parameterInfo, int index)
-    {
-        return Expression.Convert(Expression.ArrayIndex(parameterExpression, Expression.Constant(index)), parameterInfo.ParameterType);
-    }
+    private static Expression CreateArgumentExpression(ParameterExpression parameterExpression, ParameterInfo parameterInfo, int index) => Expression.Convert(Expression.ArrayIndex(parameterExpression, Expression.Constant(index)), parameterInfo.ParameterType);
 
     //
     // Summary:

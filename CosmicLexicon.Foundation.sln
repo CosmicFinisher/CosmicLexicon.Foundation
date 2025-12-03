@@ -71,11 +71,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CosmicLexicon.Foundation.Tr
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Linq", "Linq", "{29B99ED8-F38A-4517-7AFA-A88299E32717}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CosmicLexicon.Foundation.Linq", "src\linq\src\CosmicLexicon.Foundation.Linq.csproj", "{D9A8C07F-B2C1-4697-96FB-E6520890E036}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CosmicLexicon.Foundation.Structures.Linq", "src\linq\src\CosmicLexicon.Foundation.Structures.Linq.csproj", "{D9A8C07F-B2C1-4697-96FB-E6520890E036}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{17C9678C-DD78-890B-6330-0E1FB4F2E99B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CosmicLexicon.Foundation.Linq.UnitTest", "src\linq\tests\unit\CosmicLexicon.Foundation.Linq.UnitTest.csproj", "{B6ECCF21-EE04-4448-87DD-466BF7357CC8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CosmicLexicon.Foundation.Structures.Linq.UnitTest", "src\linq\tests\unit\CosmicLexicon.Foundation.Structures.Linq.UnitTest.csproj", "{B6ECCF21-EE04-4448-87DD-466BF7357CC8}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CosmicLexicon.Foundation.Transport.Net", "src\transport\net\src\CosmicLexicon.Foundation.Transport.Net.csproj", "{778B064B-8614-48E0-872D-37CFA19CAD10}"
 EndProject
@@ -199,9 +199,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CosmicLexicon.Foundation.Fo
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documents", "Documents", "{E0F1E01E-EE7A-439B-8852-CCE986F71A96}"
 	ProjectSection(SolutionItems) = preProject
+		CHANGELOG.md = CHANGELOG.md
+		CONTRIBUTING.md = CONTRIBUTING.md
+		coverlet.runsettings = coverlet.runsettings
+		docs\guides\getting-started.md = docs\guides\getting-started.md
+		icon.png = icon.png
 		docs\integrated_documentation_overview.md = docs\integrated_documentation_overview.md
-		docs\PRDMasterPlan.md = docs\PRDMasterPlan.md
-		docs\user_blueprint.md = docs\user_blueprint.md
 	EndProjectSection
 EndProject
 Global

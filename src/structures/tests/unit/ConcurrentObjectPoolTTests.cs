@@ -57,10 +57,7 @@ namespace CosmicLexicon.Foundation.Structures.UnitTest
         {
             public bool IsDisposed { get; private set; }
 
-            public void Dispose()
-            {
-                IsDisposed = true;
-            }
+            public void Dispose() => IsDisposed = true;
         }
     }
 }

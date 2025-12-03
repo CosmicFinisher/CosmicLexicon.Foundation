@@ -29,9 +29,9 @@ namespace CosmicLexicon.Foundation.Host.UnitTest
         public void CompareCustomComparableTypesReturnsCorrectResult()
         {
             // Arrange
-            CustomComparable x = new CustomComparable(10);
-            CustomComparable y = new CustomComparable(5);
-            CustomComparable z = new CustomComparable(10);
+            CustomComparable x = new(10);
+            CustomComparable y = new(5);
+            CustomComparable z = new(10);
 
             // Act
             int resultXY = GenericComparer<CustomComparable>.Comparer.Compare(x, y);

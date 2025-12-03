@@ -1,9 +1,9 @@
 using System;
 using System.Collections.Generic;
 using Xunit;
-using CosmicLexicon.Foundation.xReflection;
+using CosmicLexicon.Foundation.Introspection;
 
-namespace CosmicLexicon.Foundation.xReflection
+namespace CosmicLexicon.Foundation.Introspection
 {
     public class DefaultValuesTests
     {

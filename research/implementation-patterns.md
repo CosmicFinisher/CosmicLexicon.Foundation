@@ -9,18 +9,18 @@ This document details the implementation patterns used throughout the Core Frame
 ### Directory Structuresrc/
 src/
 └── collections/
-    ├── Core.Collections/
+    ├── Foundation.Structures/
     │   ├── src/
-    │   │   └── Core.Collections.csproj
+    │   │   └── Foundation.Structures.csproj
     │   └── tests/
     │       └── unit/
-    │           └── Core.Collections.Tests.Unit.csproj
-    └── Core.Collections.Generic/
+    │           └── Foundation.Structures.Tests.Unit.csproj
+    └── Foundation.Structures.Generic/
         ├── src/
-        │   └── Core.Collections.Generic.csproj
+        │   └── Foundation.Structures.Generic.csproj
         └── tests/
             └── unit/
-                └── Core.Collections.Generic.Tests.Unit.csproj
+                └── Foundation.Structures.Generic.Tests.Unit.csproj
 ├── threading/
     ├── Core.Threading/
     │   ├── src/
@@ -28,43 +28,43 @@ src/
     │   └── tests/
     │       └── unit/
     │           └── Core.Threading.Tests.Unit.csproj
-    ├── Core.Threading.Tasks/
+    ├── Foundation.Concurrency.Tasks/
     │   ├── src/
-    │   │   └── Core.Threading.Tasks.csproj
+    │   │   └── Foundation.Concurrency.Tasks.csproj
     │   └── tests/
     │       └── unit/
-    │           └── Core.Threading.Tasks.Tests.Unit.csproj
-    └── Core.Threading.Timers/
+    │           └── Foundation.Concurrency.Tasks.Tests.Unit.csproj
+    └── Foundation.Concurrency.Timers/
         ├── src/
-        │   └── Core.Threading.Timers.csproj
+        │   └── Foundation.Concurrency.Timers.csproj
         └── tests/
             └── unit/
-                └── Core.Threading.Timers.Tests.Unit.csproj/
+                └── Foundation.Concurrency.Timers.Tests.Unit.csproj/
 └── └── text/
-    ├── Core.Text/
+    ├── Foundation.Formats/
     │   ├── src/
-    │   │   └── Core.Text.csproj
+    │   │   └── Foundation.Formats.csproj
     │   └── tests/
     │       └── unit/
-    │           └── Core.Text.Tests.Unit.csproj
-    ├── Core.Text.Json/
+    │           └── Foundation.Formats.Tests.Unit.csproj
+    ├── Foundation.Formats.Json/
     │   ├── src/
-    │   │   └── Core.Text.Json.csproj
+    │   │   └── Foundation.Formats.Json.csproj
     │   └── tests/
     │       └── unit/
-    │           └── Core.Text.Json.Tests.Unit.csproj
-    └── Core.Text.Regex/
+    │           └── Foundation.Formats.Json.Tests.Unit.csproj
+    └── Foundation.Formats.Regex/
         ├── src/
-        │   └── Core.Text.Regex.csproj
+        │   └── Foundation.Formats.Regex.csproj
         └── tests/
             └── unit/
-                └── Core.Text.Regex.Tests.Unit.csproj/
+                └── Foundation.Formats.Regex.Tests.Unit.csproj/
 ### Modern Project Configuration
 
 1. Main Projects (.NET 9)<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>$(NetPrimaryTargetFramework)</TargetFramework>
-    <RootNamespace>ConsmicLexicon.Foundation.x{Component}</RootNamespace>
+    <RootNamespace>ConsmicLexicon.Foundation.{Component}</RootNamespace>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <EnablePreviewFeatures>true</EnablePreviewFeatures>
@@ -257,9 +257,9 @@ public async ValueTask<T> ProcessAsync<T>(T input,
 ## References
 
 ### Implementation Files
-- [Collections Implementation](../src/collections/src/README.Core.Collections.md)
+- [Collections Implementation](../src/collections/src/README.Foundation.Structures.md)
 - [Threading Implementation](../src/threading/src/README.Core.Threading.md)
-- [Text Processing](../src/text/src/README.Core.Text.md)
+- [Text Processing](../src/text/src/README.Foundation.Formats.md)
 
 ### Related Documentation
 - [Architecture Overview](../docs/architecture/overview.md)
@@ -269,5 +269,5 @@ public async ValueTask<T> ProcessAsync<T>(T input,
 
 ### Package References
 - [Core Framework NuGet](https://www.nuget.org/packages/ConsmicLexicon.Foundation/)
-- [Collections Package](https://www.nuget.org/packages/ConsmicLexicon.Foundation.xCollections/)
-- [Threading Package](https://www.nuget.org/packages/ConsmicLexicon.Foundation.xThreading/)
+- [Collections Package](https://www.nuget.org/packages/ConsmicLexicon.Foundation.Structures/)
+- [Threading Package](https://www.nuget.org/packages/ConsmicLexicon.Foundation.Concurrency/)

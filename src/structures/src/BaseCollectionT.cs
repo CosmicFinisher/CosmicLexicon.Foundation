@@ -11,7 +11,8 @@ namespace CosmicLexicon.Foundation.Structures
             SyncRoot = new object();
             IsSynchronized = false;
         }
-        protected readonly List<TItem> items;
+        private readonly List<TItem> items;
+        protected List<TItem> Items => items;
         private bool disposedValue;
 
         //
@@ -175,8 +176,8 @@ namespace CosmicLexicon.Foundation.Structures
         //     to the type of the destination array.
         public virtual void CopyTo(Array array, int index)
         {
-            if (array == null) throw new ArgumentNullException(nameof(array));
-            if (index < 0) throw new ArgumentOutOfRangeException("index");
+            ArgumentNullException.ThrowIfNull(array);
+            ArgumentOutOfRangeException.ThrowIfNegative(index);
             lock (SyncRoot)
             {
                 items.CopyTo(array as TItem[], index);
@@ -213,8 +214,8 @@ namespace CosmicLexicon.Foundation.Structures
         //     to the type of the destination array.
         public virtual void CopyTo(TItem[] array, int index)
         {
-            if (array == null) throw new ArgumentNullException(nameof(array));
-            if (index < 0) throw new ArgumentOutOfRangeException("index");
+            ArgumentNullException.ThrowIfNull(array);
+            ArgumentOutOfRangeException.ThrowIfNegative(index);
             lock (SyncRoot)
             {
                 items.CopyTo(array, index);

@@ -1,6 +1,6 @@
 # Test Coverage Gaps Analysis Report
 
-This report summarizes the identified test coverage gaps based on the `code_analysis_report.md`, with a specific focus on the `ConsmicLexicon.Foundation.xRuntime` module and other modules exhibiting low coverage.
+This report summarizes the identified test coverage gaps based on the `code_analysis_report.md`, with a specific focus on the `ConsmicLexicon.Foundation.Host` module and other modules exhibiting low coverage.
 
 ## 1. Overall Test Coverage Status
 
@@ -12,29 +12,29 @@ This low coverage suggests a high risk of undetected bugs and potential difficul
 
 ## 2. Module-Specific Test Coverage Analysis
 
-### ConsmicLexicon.Foundation.xRuntime
+### ConsmicLexicon.Foundation.Host
 
-Contrary to an initial assumption of low coverage, the `ConsmicLexicon.Foundation.xRuntime` module demonstrates robust test coverage:
+Contrary to an initial assumption of low coverage, the `ConsmicLexicon.Foundation.Host` module demonstrates robust test coverage:
 - **Line Rate:** 100%
 - **Branch Rate:** 92.85%
 
-This indicates that `ConsmicLexicon.Foundation.xRuntime` is well-tested, providing a solid foundation for its functionalities. This positive coverage is detailed in [core_runtime_test_coverage_report.md](docs/analysis/core_runtime_test_coverage_report.md).
+This indicates that `ConsmicLexicon.Foundation.Host` is well-tested, providing a solid foundation for its functionalities. This positive coverage is detailed in [core_runtime_test_coverage_report.md](docs/analysis/core_runtime_test_coverage_report.md).
 
 ### Other Modules with Low Coverage (Identified as Coverage Gaps)
 
 Several other modules exhibit significant test coverage gaps, requiring immediate attention for test enhancement:
 
-*   **ConsmicLexicon.Foundation.xText**
+*   **ConsmicLexicon.Foundation.Formats**
     *   **Line Rate:** 0.0975 (9.75%)
     *   **Branch Rate:** 0.0753 (7.53%)
     *   **Concern:** This module, likely responsible for core text manipulation utilities, has critically low coverage, posing a high risk for reliability and stability.
 
-*   **ConsmicLexicon.Foundation.xCollections**
+*   **ConsmicLexicon.Foundation.Structures**
     *   **Line Rate:** 0.3333 (33.33%)
     *   **Branch Rate:** 0.2302 (23.02%)
     *   **Concern:** Core collection functionalities appear insufficiently tested, which could lead to fundamental issues in data handling and operations.
 
-*   **ConsmicLexicon.Foundation.xReflection.Assembly**
+*   **ConsmicLexicon.Foundation.Introspection.Modules**
     *   **Line Rate:** 0.4802 (48.02%)
     *   **Branch Rate:** 0.2825 (28.25%)
     *   **Concern:** Falling just under the 50% threshold, this module is crucial for dynamic code analysis and introspection. Incomplete testing here could introduce subtle and hard-to-diagnose runtime errors.

@@ -14,61 +14,72 @@ using System.Text;
 [EditorBrowsable(EditorBrowsableState.Never)]
 public static class TimeSpanExtensions
 {
-    //
-    // Summary:
-    //     Averages a list of TimeSpans
-    //
-    // Parameters:
-    //   list:
-    //     List of TimeSpans
-    //
-    // Returns:
-    //     The average value
-    public static TimeSpan Average(this IEnumerable<TimeSpan> list)
+    extension(IEnumerable<TimeSpan> list)
     {
-        if (list is null)
+        //
+        // Summary:
+        //     Averages a list of TimeSpans
+        //
+        // Parameters:
+        //   list:
+        //     List of TimeSpans
+        //
+        // Returns:
+        //     The average value
+        public TimeSpan Average()
         {
-            throw new ArgumentNullException(nameof(list));
-        }
+            ArgumentNullException.ThrowIfNull(list);
 
-        if (!list.Any())
-        {
-            return TimeSpan.Zero;
-        }
+            if (!list.Any())
+            {
+                return TimeSpan.Zero;
+            }
 
-        return new TimeSpan((long)list.Average(x => x.Ticks));
+            return new TimeSpan((long)list.Average(x => x.Ticks));
+        }
     }
 
-    //
-    // Summary:
-    //     Days in the TimeSpan minus the months and years
-    //
-    // Parameters:
-    //   span:
-    //     TimeSpan to get the days from
-    //
-    // Returns:
-    //     The number of days minus the months and years that the TimeSpan has
-    public static int DaysRemainder(this TimeSpan span)
+    extension(TimeSpan span)
     {
-        return span.Days % 365 % 30;
-    }
+        //
+        // Summary:
+        //     Days in the TimeSpan minus the months and years
+        //
+        // Parameters:
+        //   span:
+        //     TimeSpan to get the days from
+        //
+        // Returns:
+        //     The number of days minus the months and years that the TimeSpan has
+        public int DaysRemainder() => span.Days % 365 % 30;
 
-    //
-    // Summary:
-    //     Months in the TimeSpan
-    //
-    // Parameters:
-    //   span:
+        //
+        // Summary:
+        //     Months in the TimeSpan
+        //
+        // Parameters:
+        //   span:
         //     TimeSpan to get the months from
         //
         // Returns:
         //     The number of months that the TimeSpan has
-        public static int Months(this TimeSpan span)
-        {
-            return (int)(span.TotalDays % 365.2425 / 30);
-        }
+        public int Months() => (int)(span.TotalDays % 365.2425 / 30);
 
+        //
+        // Summary:
+        //     Years in the TimeSpan
+        //
+        // Parameters:
+        //   span:
+        //     TimeSpan to get the years from
+        //
+        // Returns:
+        //     The number of years that the TimeSpan has
+        public int Years() => (int)(span.TotalDays / 365.2425);
+    }
+
+    extension(TimeSpan input)
+    {
         //
         // Summary:
         //     Converts the input to a string in this format: (Years) years, (Months) months,
@@ -80,9 +91,9 @@ public static class TimeSpanExtensions
         //
         // Returns:
         //     The TimeSpan as a string
-        public static string ToStringFull(this TimeSpan input)
+        public string ToStringFull()
         {
-            StringBuilder text = new StringBuilder();
+            StringBuilder text = new();
             string text2 = "";
             if (input.Years() > 0)
             {
@@ -138,19 +149,5 @@ public static class TimeSpanExtensions
 
             return text.ToString();
         }
-
-        //
-        // Summary:
-        //     Years in the TimeSpan
-        //
-        // Parameters:
-        //   span:
-        //     TimeSpan to get the years from
-        //
-        // Returns:
-        //     The number of years that the TimeSpan has
-        public static int Years(this TimeSpan span)
-        {
-            return (int)(span.TotalDays / 365.2425);
-        }
+    }
 }

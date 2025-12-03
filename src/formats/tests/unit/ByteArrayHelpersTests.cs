@@ -30,25 +30,19 @@ namespace CosmicLexicon.Foundation.Formats.UnitTest
         }
 
         [Fact]
-        public void IsUnicodeWithNullInputReturnsFalse()
-        {
+        public void IsUnicodeWithNullInputReturnsFalse() =>
             // AI Verifiable End Result: Verify IsUnicode handles null input
             Assert.False(ByteArrayHelpers.IsUnicode(null));
-        }
 
         [Fact]
-        public void IsUnicodeWithEmptyArrayReturnsFalse()
-        {
+        public void IsUnicodeWithEmptyArrayReturnsFalse() =>
             // AI Verifiable End Result: Verify IsUnicode handles empty array
-            Assert.False(ByteArrayHelpers.IsUnicode(new byte[0]));
-        }
+            Assert.False(ByteArrayHelpers.IsUnicode([]));
 
         [Fact]
-        public void IsUnicodeWithSingleByteReturnsFalse()
-        {
+        public void IsUnicodeWithSingleByteReturnsFalse() =>
             // AI Verifiable End Result: Verify IsUnicode handles single byte array
-            Assert.False(ByteArrayHelpers.IsUnicode(new byte[] { 0x41 }));
-        }
+            Assert.False(ByteArrayHelpers.IsUnicode([0x41]));
 
         [Fact]
         public void ToStringBase64WithValidInputReturnsCorrectBase64String()
@@ -69,18 +63,14 @@ namespace CosmicLexicon.Foundation.Formats.UnitTest
         }
 
         [Fact]
-        public void ToStringBase64WithNullInputReturnsEmptyString()
-        {
+        public void ToStringBase64WithNullInputReturnsEmptyString() =>
             // AI Verifiable End Result: Verify ToString (Base64) handles null input
             Assert.Equal(string.Empty, ByteArrayHelpers.ToString(null));
-        }
 
         [Fact]
-        public void ToStringBase64WithEmptyInputReturnsEmptyString()
-        {
+        public void ToStringBase64WithEmptyInputReturnsEmptyString() =>
             // AI Verifiable End Result: Verify ToString (Base64) handles empty input
             Assert.Equal(string.Empty, ByteArrayHelpers.ToString(Array.Empty<byte>()));
-        }
 
         [Fact]
         public void ToStringBase64WithNegativeIndexReturnsCorrectBase64StringFromStart()
@@ -142,18 +132,14 @@ namespace CosmicLexicon.Foundation.Formats.UnitTest
         }
 
         [Fact]
-        public void ToStringEncodedWithNullInputReturnsEmptyString()
-        {
+        public void ToStringEncodedWithNullInputReturnsEmptyString() =>
             // AI Verifiable End Result: Verify ToString (Encoded) handles null input
             Assert.Equal(string.Empty, ByteArrayHelpers.ToString(null, Encoding.UTF8));
-        }
 
         [Fact]
-        public void ToStringEncodedWithEmptyInputReturnsEmptyString()
-        {
+        public void ToStringEncodedWithEmptyInputReturnsEmptyString() =>
             // AI Verifiable End Result: Verify ToString (Encoded) handles empty input
             Assert.Equal(string.Empty, ByteArrayHelpers.ToString(Array.Empty<byte>(), Encoding.UTF8));
-        }
 
         [Fact]
         public void ToStringEncodedWithNegativeIndexReturnsCorrectStringFromStart()
@@ -203,7 +189,7 @@ namespace CosmicLexicon.Foundation.Formats.UnitTest
             var mockEncoding = new Mock<UTF8Encoding>();
 
             // Mock Configuration: Configure the mock's GetString method
-            byte[] inputBytes = { 72, 101, 108, 108, 111 }; // ASCII for "Hello"
+            byte[] inputBytes = [72, 101, 108, 108, 111]; // ASCII for "Hello"
             mockEncoding.Setup(e => e.GetString(It.IsAny<byte[]>(), It.IsAny<int>(), It.IsAny<int>()))
                         .Returns("MOCKED_DECODED_STRING");
 
@@ -226,7 +212,7 @@ namespace CosmicLexicon.Foundation.Formats.UnitTest
         {
             // Collaborators to Mock: None, as we are testing the default behavior of the static method.
             // Test Data
-            byte[] input = { 72, 101, 108, 108, 111 }; // ASCII for "Hello"
+            byte[] input = [72, 101, 108, 108, 111]; // ASCII for "Hello"
             Encoding? encodingUsing = null;
             int index = 0;
             int count = -1;

@@ -1,14 +1,14 @@
 using System.ComponentModel;
 
-namespace CosmicLexicon.Foundation.Linq
+namespace CosmicLexicon.Foundation.Structures.Linq
 {
     [EditorBrowsable(EditorBrowsableState.Never)]
     public static class EnumerableHelpers
     {
         public static bool CanBeSucceeded<T>(IEnumerable<T> collection, Func<T, bool> func)
         {
-            if (collection == null) throw new ArgumentNullException(nameof(collection));
-            if (func == null) throw new ArgumentNullException(nameof(func));
+            ArgumentNullException.ThrowIfNull(collection);
+            ArgumentNullException.ThrowIfNull(func);
 
             using var enumerator = collection.GetEnumerator();
             while (enumerator.MoveNext())
@@ -21,8 +21,8 @@ namespace CosmicLexicon.Foundation.Linq
 
         public static bool CanBeIncluded<T>(IEnumerable<T> collection, Func<T, bool> func)
         {
-            if (collection == null) throw new ArgumentNullException(nameof(collection));
-            if (func == null) throw new ArgumentNullException(nameof(func));
+            ArgumentNullException.ThrowIfNull(collection);
+            ArgumentNullException.ThrowIfNull(func);
 
             using var enumerator = collection.GetEnumerator();
             while (enumerator.MoveNext())
