@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>$(NetPrimaryTargetFramework)</TargetFramework>
+    <RootNamespace>CosmicLexicon.Foundation.Formats</RootNamespace>
+	<EnableSharedUnitTestDependencies>true</EnableSharedUnitTestDependencies>
+   </PropertyGroup>
+	 <ItemGroup>
+	   <ProjectReference Include="$(MSBuildThisFileDirectory)..\..\src\CosmicLexicon.Foundation.Formats.csproj" />
+	 </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="coverlet.msbuild">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" />
+    <PackageReference Include="ReportGenerator" />
+  </ItemGroup>
+</Project>

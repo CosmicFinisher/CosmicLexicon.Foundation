@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>$(NetPrimaryTargetFramework)</TargetFramework>
+    <RootNamespace>CosmicLexicon.Foundation.Formats.Json</RootNamespace>
+    <EnableSharedUnitTestDependencies>true</EnableSharedUnitTestDependencies>
+  </PropertyGroup>
+
+  <PropertyGroup>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="$(MSBuildThisFileDirectory)..\..\src\CosmicLexicon.Foundation.Formats.Json.csproj" />
+  </ItemGroup>
+
+
+</Project> 

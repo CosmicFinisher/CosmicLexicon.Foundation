@@ -113,11 +113,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CosmicLexicon.Foundation.Ru
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Serialization", "Serialization", "{71FC8F1B-0EFF-5960-C054-76A05FA0121B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CosmicLexicon.Foundation.Runtime.Serialization", "src\runtime\serialization\src\CosmicLexicon.Foundation.Runtime.Serialization.csproj", "{6148E387-979D-46B8-97EE-18DF8148AC0E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CosmicLexicon.Foundation.Formats.Serialization", "src\formats\serialization\src\CosmicLexicon.Foundation.Formats.Serialization.csproj", "{6148E387-979D-46B8-97EE-18DF8148AC0E}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{982EC800-00E6-83CE-AA4A-0B58C112C35B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CosmicLexicon.Foundation.Runtime.Serialization.UnitTest", "src\runtime\serialization\tests\unit\CosmicLexicon.Foundation.Runtime.Serialization.UnitTest.csproj", "{A8701237-7B43-4CD4-88F0-9BB914457596}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CosmicLexicon.Foundation.Formats.Serialization.UnitTest", "src\formats\serialization\tests\unit\CosmicLexicon.Foundation.Formats.Serialization.UnitTest.csproj", "{A8701237-7B43-4CD4-88F0-9BB914457596}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CosmicLexicon.Foundation.Runtime", "src\runtime\src\CosmicLexicon.Foundation.Runtime.csproj", "{496F968D-807F-490C-8C22-4E821036DA72}"
 EndProject
@@ -141,51 +141,51 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{1E251923
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CosmicLexicon.Foundation.Security.UnitTest", "src\security\tests\unit\CosmicLexicon.Foundation.Security.UnitTest.csproj", "{A203606B-766B-453B-ACA9-631EFEC7B26A}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Text", "Text", "{AA8F73D5-AC14-AFC1-52FB-D818A464B4AD}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Formats", "Formats", "{AA8F73D5-AC14-AFC1-52FB-D818A464B4AD}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Json", "Json", "{659BF957-0DAD-DADE-E53E-298457F93556}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{29841295-EF03-DC4E-224E-E189AF1896CA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CosmicLexicon.Foundation.Text.Json.UnitTest", "src\text\json\tests\unit\CosmicLexicon.Foundation.Text.Json.UnitTest.csproj", "{0464028B-ED66-43FF-B101-DE27CC7570DE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CosmicLexicon.Foundation.Formats.Json.UnitTest", "src\formats\json\tests\unit\CosmicLexicon.Foundation.Formats.Json.UnitTest.csproj", "{0464028B-ED66-43FF-B101-DE27CC7570DE}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "RegularExpressions", "RegularExpressions", "{669130E5-0290-3209-FF4D-AE03DA94A988}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CosmicLexicon.Foundation.Text.RegularExpressions", "src\text\regex\src\CosmicLexicon.Foundation.Text.RegularExpressions.csproj", "{CAB7CBCC-98BB-49D6-8FAE-70622A4BF3BA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CosmicLexicon.Foundation.Formats.RegularExpressions", "src\formats\regex\src\CosmicLexicon.Foundation.Formats.RegularExpressions.csproj", "{CAB7CBCC-98BB-49D6-8FAE-70622A4BF3BA}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{BDF7FD01-0CE6-9308-9A28-3A5DEE2FD065}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CosmicLexicon.Foundation.Text.RegularExpressions.UnitTest", "src\text\regex\tests\unit\CosmicLexicon.Foundation.Text.RegularExpressions.UnitTest.csproj", "{0DC97B72-0A41-436A-92AE-EDE4E62934B8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CosmicLexicon.Foundation.Formats.RegularExpressions.UnitTest", "src\formats\regex\tests\unit\CosmicLexicon.Foundation.Formats.RegularExpressions.UnitTest.csproj", "{0DC97B72-0A41-436A-92AE-EDE4E62934B8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CosmicLexicon.Foundation.Text", "src\text\src\CosmicLexicon.Foundation.Text.csproj", "{016B58AE-4422-4607-8C18-D63B38331D96}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CosmicLexicon.Foundation.Formats", "src\formats\src\CosmicLexicon.Foundation.Formats.csproj", "{016B58AE-4422-4607-8C18-D63B38331D96}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{DEFD145F-B7DE-D315-B8D0-C366CDA3869D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CosmicLexicon.Foundation.Text.UnitTest", "src\text\tests\unit\CosmicLexicon.Foundation.Text.UnitTest.csproj", "{A539FABE-F019-4C59-A4AA-06B788221B0E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CosmicLexicon.Foundation.Formats.UnitTest", "src\formats\tests\unit\CosmicLexicon.Foundation.Formats.UnitTest.csproj", "{A539FABE-F019-4C59-A4AA-06B788221B0E}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Threading", "Threading", "{D005F27F-1B44-30F1-A9D9-AEBA55B62F4D}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Concurrency", "Concurrency", "{D005F27F-1B44-30F1-A9D9-AEBA55B62F4D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CosmicLexicon.Foundation.Threading", "src\threading\src\CosmicLexicon.Foundation.Threading.csproj", "{EEAA2A33-4062-4D4C-B412-2DE2006A9FEE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CosmicLexicon.Foundation.Concurrency", "src\concurrency\src\CosmicLexicon.Foundation.Concurrency.csproj", "{EEAA2A33-4062-4D4C-B412-2DE2006A9FEE}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tasks", "Tasks", "{51C93766-BF57-6D34-E9B4-38B120F9CD77}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CosmicLexicon.Foundation.Threading.Tasks", "src\threading\tasks\src\CosmicLexicon.Foundation.Threading.Tasks.csproj", "{5CE10316-844F-4D1F-A160-095FD72CE0E8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CosmicLexicon.Foundation.Concurrency.Tasks", "src\concurrency\tasks\src\CosmicLexicon.Foundation.Concurrency.Tasks.csproj", "{5CE10316-844F-4D1F-A160-095FD72CE0E8}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{18BD9328-F25D-970A-8053-B9742B077634}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CosmicLexicon.Foundation.Threading.Tasks.UnitTest", "src\threading\tasks\tests\unit\CosmicLexicon.Foundation.Threading.Tasks.UnitTest.csproj", "{D10D987C-35E6-440C-B448-FB480AB64E7A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CosmicLexicon.Foundation.Concurrency.Tasks.UnitTest", "src\concurrency\tasks\tests\unit\CosmicLexicon.Foundation.Concurrency.Tasks.UnitTest.csproj", "{D10D987C-35E6-440C-B448-FB480AB64E7A}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{154F36AE-E5EC-FD15-47DD-9325B5E694CE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CosmicLexicon.Foundation.Threading.UnitTest", "src\threading\tests\unit\CosmicLexicon.Foundation.Threading.UnitTest.csproj", "{62494166-B7DE-4CDF-A52F-CE52B0B5877D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CosmicLexicon.Foundation.Concurrency.UnitTest", "src\concurrency\tests\unit\CosmicLexicon.Foundation.Concurrency.UnitTest.csproj", "{62494166-B7DE-4CDF-A52F-CE52B0B5877D}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Timers", "Timers", "{A001B933-E261-6BE3-FE07-AFBD1B190672}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CosmicLexicon.Foundation.Threading.Timers", "src\threading\timers\src\CosmicLexicon.Foundation.Threading.Timers.csproj", "{E1D91CB8-F524-45EE-B754-1C78DF960EAA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CosmicLexicon.Foundation.Concurrency.Timers", "src\concurrency\timers\src\CosmicLexicon.Foundation.Concurrency.Timers.csproj", "{E1D91CB8-F524-45EE-B754-1C78DF960EAA}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{EA1C885F-1A3A-0FC1-358B-0E917AB56996}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CosmicLexicon.Foundation.Threading.Timers.UnitTest", "src\threading\timers\tests\unit\CosmicLexicon.Foundation.Threading.Timers.UnitTest.csproj", "{B06E1A36-2BFC-4D09-B8B9-D083C97F980D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CosmicLexicon.Foundation.Concurrency.Timers.UnitTest", "src\concurrency\timers\tests\unit\CosmicLexicon.Foundation.Concurrency.Timers.UnitTest.csproj", "{B06E1A36-2BFC-4D09-B8B9-D083C97F980D}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
 	ProjectSection(SolutionItems) = preProject
@@ -201,7 +201,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		..\..\..\..\..\..\..\.net\System.Build.props = ..\..\..\..\..\..\..\.net\System.Build.props
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CosmicLexicon.Foundation.Text.Json", "src\text\json\src\CosmicLexicon.Foundation.Text.Json.csproj", "{C87B1DD2-C69C-E3CA-702F-148DEA058699}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CosmicLexicon.Foundation.Formats.Json", "src\formats\json\src\CosmicLexicon.Foundation.Formats.Json.csproj", "{C87B1DD2-C69C-E3CA-702F-148DEA058699}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documents", "Documents", "{E0F1E01E-EE7A-439B-8852-CCE986F71A96}"
 	ProjectSection(SolutionItems) = preProject
@@ -830,7 +830,7 @@ Global
 		{A8063940-F778-4383-A97C-A3A147DB5851} = {673E7D32-A5F7-224D-4705-A6BB524B75B6}
 		{39F69A85-8C22-F347-497C-B073D73B306D} = {673E7D32-A5F7-224D-4705-A6BB524B75B6}
 		{B77D61BF-AC1E-42DD-805F-C633E5AFBE18} = {39F69A85-8C22-F347-497C-B073D73B306D}
-		{71FC8F1B-0EFF-5960-C054-76A05FA0121B} = {C9FFCADF-E5C6-A53A-5B99-4551A1C4A183}
+		{71FC8F1B-0EFF-5960-C054-76A05FA0121B} = {AA8F73D5-AC14-AFC1-52FB-D818A464B4AD}
 		{6148E387-979D-46B8-97EE-18DF8148AC0E} = {71FC8F1B-0EFF-5960-C054-76A05FA0121B}
 		{982EC800-00E6-83CE-AA4A-0B58C112C35B} = {71FC8F1B-0EFF-5960-C054-76A05FA0121B}
 		{A8701237-7B43-4CD4-88F0-9BB914457596} = {982EC800-00E6-83CE-AA4A-0B58C112C35B}
