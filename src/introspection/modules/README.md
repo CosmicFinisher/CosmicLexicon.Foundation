@@ -1,8 +1,8 @@
-# ConsmicLexicon.Foundation.Reflection.Assembly Namespace Overview
+# ConsmicLexicon.Foundation.Introspection.Modules Namespace Overview
 
 ## Purpose
 
-The `ConsmicLexicon.Foundation.Reflection.Assembly` namespace provides extensions and utilities for working with .NET assemblies, types, and properties. It simplifies common reflection tasks and offers convenient ways to query and filter types within an assembly.
+The `ConsmicLexicon.Foundation.Introspection.Modules` namespace provides extensions and utilities for working with .NET assemblies, types, and properties. It simplifies common reflection tasks and offers convenient ways to query and filter types within an assembly.
 
 ## Key Classes
 
@@ -46,7 +46,7 @@ bool hasAttribute = property.HasAttribute<MyAttribute>();
 
 ## Scope
 
-This document covers the core functionalities of the `ConsmicLexicon.Foundation.Reflection.Assembly` namespace, focusing on assembly-level reflection tasks. It does not include detailed documentation of individual methods or properties.
+This document covers the core functionalities of the `ConsmicLexicon.Foundation.Introspection.Modules` namespace, focusing on assembly-level reflection tasks. It does not include detailed documentation of individual methods or properties.
 
 ## Dependencies
 

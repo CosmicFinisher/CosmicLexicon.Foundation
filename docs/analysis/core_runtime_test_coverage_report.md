@@ -1,6 +1,6 @@
-# ConsmicLexicon.Foundation.Runtime Test Coverage Report
+# ConsmicLexicon.Foundation.Host Test Coverage Report
 
-This report provides an overview of the test coverage for the `ConsmicLexicon.Foundation.xRuntime` module.
+This report provides an overview of the test coverage for the `ConsmicLexicon.Foundation.Host` module.
 
 ## Coverage Summary
 

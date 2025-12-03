@@ -6,29 +6,30 @@ namespace CosmicLexicon.Foundation.Structures
 
     public static class ListExtensions2
     {
-        public static List<T> AddIfNotExists<T>(this List<T> list, IEnumerable<T> values)
+        extension<T>(List<T> list)
         {
-            var set = new HashSet<T>(list);
-            foreach (var value in values)
+            public List<T> AddIfNotExists(IEnumerable<T> values)
             {
+                var set = new HashSet<T>(list);
+                foreach (var value in values)
+                {
+                    if (set.Add(value))
+                    {
+                        list.Add(value);
+                    }
+                }
+                return list;
+            }
+            public bool AddIfNotExists(T value)
+            {
+                var set = new HashSet<T>(list);
                 if (set.Add(value))
                 {
                     list.Add(value);
+                    return true;
                 }
+                return false;
             }
-            return list;
         }
-        public static bool AddIfNotExists<T>(this List<T> list,
-                                     T value)
-       {
-           var set = new HashSet<T>(list);
-           if (set.Add(value))
-           {
-               list.Add(value);
-               return true;
-           }
-           return false;
-       }
-
     }
 }

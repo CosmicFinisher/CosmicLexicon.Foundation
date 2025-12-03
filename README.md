@@ -17,27 +17,27 @@ A modern, high-performance .NET framework designed for cloud-native applications
 
 ### Modern Collections
 
-- [Thread-safe Collections](src/collections/README.Core.Collections.md) - High-performance concurrent collections
-- [Generic Collections](src/collections/generic/README.Core.Collections.Generic.md) - Type-safe generic collection implementations
-- [LINQ Extensions](src/linq/README.Core.Linq.md) - Enhanced LINQ capabilities
+- [Thread-safe Collections](src/collections/README.Foundation.Structures.md) - High-performance concurrent collections
+- [Generic Collections](src/collections/generic/README.Foundation.Structures.Generic.md) - Type-safe generic collection implementations
+- [LINQ Extensions](src/linq/README.Foundation.Linq.md) - Enhanced LINQ capabilities
 
 ### High-Performance Text Processing
 
-- [Text Utilities](src/text/README.Core.Text.md) - Efficient string manipulation and text processing
-- [JSON Processing](src/text/json/README.Core.Text.Json.md) - High-performance JSON serialization/deserialization
-- [Regular Expressions](src/text/regex/README.Core.Text.RegularExpressions.md) - Optimized regular expression engine
+- [Text Utilities](src/text/README.Foundation.Formats.md) - Efficient string manipulation and text processing
+- [JSON Processing](src/text/json/README.Foundation.Formats.Json.md) - High-performance JSON serialization/deserialization
+- [Regular Expressions](src/text/regex/README.Foundation.Formats.RegularExpressions.md) - Optimized regular expression engine
 
 ### Advanced Threading
 
 - [Threading Primitives](src/threading/README.Core.Threading.md) - Low-level threading constructs
-- [Task Parallel Library](src/threading/tasks/README.Core.Threading.Tasks.md) - Advanced async/await patterns
-- [High-Precision Timing](src/threading/timers/README.Core.Threading.Timers.md) - Precise timing operations
+- [Task Parallel Library](src/threading/tasks/README.Foundation.Concurrency.Tasks.md) - Advanced async/await patterns
+- [High-Precision Timing](src/threading/timers/README.Foundation.Concurrency.Timers.md) - Precise timing operations
 
 ### Runtime & Security
 
-- [Runtime Services](src/runtime/README.Core.Runtime.md) - Runtime optimization and services
-- [Security Features](src/security/README.Core.Security.md) - Security patterns and practices
-- [Cryptography](src/security/crypto/README.Core.Security.Cryptography.md) - Modern cryptographic operations
+- [Runtime Services](src/runtime/README.Foundation.Host.md) - Runtime optimization and services
+- [Security Features](src/security/README.Foundation.Identity.md) - Security patterns and practices
+- [Cryptography](src/security/crypto/README.Foundation.Cryptography.md) - Modern cryptographic operations
 
 ## Getting Started
 
@@ -48,14 +48,14 @@ dotnet --version # Must be .NET 9.0 or higher
 dotnet add package ConsmicLexicon.Foundation
 
 # Install specific modules
-dotnet add package ConsmicLexicon.Foundation.xCollections  # For collections
-dotnet add package ConsmicLexicon.Foundation.xThreading    # For threading
-dotnet add package ConsmicLexicon.Foundation.xSecurity     # For security features
+dotnet add package ConsmicLexicon.Foundation.Structures  # For collections
+dotnet add package ConsmicLexicon.Foundation.Concurrency    # For threading
+dotnet add package ConsmicLexicon.Foundation.Identity     # For security features
 ### Quick Example
 using ConsmicLexicon.Foundation;
-using ConsmicLexicon.Foundation.xCollections;
-using ConsmicLexicon.Foundation.xThreading;
-using ConsmicLexicon.Foundation.xSecurity;
+using ConsmicLexicon.Foundation.Structures;
+using ConsmicLexicon.Foundation.Concurrency;
+using ConsmicLexicon.Foundation.Identity;
 
 // Create a thread-safe collection
 var safeCollection = new ConcurrentHashSet<string>();

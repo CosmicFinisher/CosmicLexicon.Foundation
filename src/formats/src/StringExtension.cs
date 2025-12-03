@@ -6,9 +6,9 @@ namespace CosmicLexicon.Foundation.Formats
     [EditorBrowsable(EditorBrowsableState.Never)]
     public static class StringExtensions
     {
-        public static bool IsNullOrWhiteSpace(this string value)
+        extension(string value)
         {
-            return string.IsNullOrWhiteSpace(value);
+            public bool IsNullOrWhiteSpace() => string.IsNullOrWhiteSpace(value);
         }
 
         public static bool Is(string value1, string value2, StringCompare compareType)
@@ -52,42 +52,45 @@ namespace CosmicLexicon.Foundation.Formats
             sb.Append(value.AsSpan(1));
             return sb.ToString();
         }
-        
-       /// <summary>
-       /// Truncates a string to a specified maximum length and appends an ellipsis if truncated.
-       /// </summary>
-       /// <param name="str">The string to truncate.</param>
-       /// <param name="maxLength">The maximum length of the returned string, including the ellipsis.</param>
-       /// <returns>The truncated string with an ellipsis, or the original string if truncation is not needed.</returns>
-       /// <exception cref="ArgumentOutOfRangeException">Thrown if <paramref name="maxLength"/> is less than or equal to 0.</exception>
-       public static string TruncateWithEllipsis(this string str, int maxLength)
-       {
-           if (str.IsNullOrWhiteSpace())
-           {
-               return str;
-           }
 
-           if (maxLength <= 0)
-           {
-               throw new ArgumentOutOfRangeException(nameof(maxLength), "Maximum length must be greater than 0.");
-           }
+        extension(string str)
+        {
+            /// <summary>
+            /// Truncates a string to a specified maximum length and appends an ellipsis if truncated.
+            /// </summary>
+            /// <param name="str">The string to truncate.</param>
+            /// <param name="maxLength">The maximum length of the returned string, including the ellipsis.</param>
+            /// <returns>The truncated string with an ellipsis, or the original string if truncation is not needed.</returns>
+            /// <exception cref="ArgumentOutOfRangeException">Thrown if <paramref name="maxLength"/> is less than or equal to 0.</exception>
+            public string TruncateWithEllipsis(int maxLength)
+            {
+                if (str.IsNullOrWhiteSpace())
+                {
+                    return str;
+                }
 
-           if (str.Length <= maxLength)
-           {
-               return str;
-           }
+                if (maxLength <= 0)
+                {
+                    throw new ArgumentOutOfRangeException(nameof(maxLength), "Maximum length must be greater than 0.");
+                }
 
-           if (maxLength == 1)
-           {
-               return ".";
-           }
+                if (str.Length <= maxLength)
+                {
+                    return str;
+                }
 
-           if (maxLength == 2)
-           {
-               return "..";
-           }
+                if (maxLength == 1)
+                {
+                    return ".";
+                }
 
-           return str.AsSpan(0, maxLength - 3).ToString() + "...";
-       }
-   }
+                if (maxLength == 2)
+                {
+                    return "..";
+                }
+
+                return str.AsSpan(0, maxLength - 3).ToString() + "...";
+            }
+        }
+    }
 }

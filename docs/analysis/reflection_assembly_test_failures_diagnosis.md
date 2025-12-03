@@ -1,13 +1,13 @@
 # Reflection Assembly Test Failures Diagnosis
 
-This document provides a diagnosis of the failing tests in the `ConsmicLexicon.Foundation.Reflection.Assembly.UnitTest` project, along with suggestions for fixing them.
+This document provides a diagnosis of the failing tests in the `ConsmicLexicon.Foundation.Introspection.Modules.UnitTest` project, along with suggestions for fixing them.
 
 ## Failing Tests
 
-- `ConsmicLexicon.Foundation.xReflection.xAssembly.PropertyInfoExtensionsTests.TryGetCustomAttributeWithNoAttributeReturnsFalseAndNull`
-- `ConsmicLexicon.Foundation.xReflection.xAssembly.PropertyInfoExtensionsTests.IsAccessibleFromSetterWithProtectedInternalSetterReturnsFalse`
-- `ConsmicLexicon.Foundation.xReflection.xAssembly.PropertyInfoExtensionsTests.HasAnInaccessibleSetterWithProtectedInternalSetterReturnsTrue`
-- `ConsmicLexicon.Foundation.xReflection.xAssembly.PropertyInfoExtensionsTests.IsNullableWithNullablePropertyReturnsTrue`
+- `ConsmicLexicon.Foundation.Introspection.Modules.PropertyInfoExtensionsTests.TryGetCustomAttributeWithNoAttributeReturnsFalseAndNull`
+- `ConsmicLexicon.Foundation.Introspection.Modules.PropertyInfoExtensionsTests.IsAccessibleFromSetterWithProtectedInternalSetterReturnsFalse`
+- `ConsmicLexicon.Foundation.Introspection.Modules.PropertyInfoExtensionsTests.HasAnInaccessibleSetterWithProtectedInternalSetterReturnsTrue`
+- `ConsmicLexicon.Foundation.Introspection.Modules.PropertyInfoExtensionsTests.IsNullableWithNullablePropertyReturnsTrue`
 
 ## Diagnosis
 

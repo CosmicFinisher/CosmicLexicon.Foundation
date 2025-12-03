@@ -59,8 +59,8 @@ namespace CosmicLexicon.Foundation.Generics.UnitTest
         {
             // Arrange
             var comparer = new GenericEqualityComparer<IEnumerable<int>>();
-            IEnumerable<int> list1 = new List<int> { 1, 2, 3 };
-            IEnumerable<int> list2 = new List<int> { 1, 2, 3 };
+            IEnumerable<int> list1 = [1, 2, 3];
+            IEnumerable<int> list2 = [1, 2, 3];
 
             // Act
             bool result = comparer.Equals(list1, list2);
@@ -74,8 +74,8 @@ namespace CosmicLexicon.Foundation.Generics.UnitTest
         {
             // Arrange
             var comparer = new GenericEqualityComparer<IEnumerable<int>>();
-            IEnumerable<int> list1 = new List<int> { 1, 2, 3 };
-            IEnumerable<int> list2 = new List<int> { 1, 2, 4 };
+            IEnumerable<int> list1 = [1, 2, 3];
+            IEnumerable<int> list2 = [1, 2, 4];
 
             // Act
             bool result = comparer.Equals(list1, list2);

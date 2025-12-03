@@ -6,12 +6,12 @@ namespace CosmicLexicon.Foundation.Globalization.UnitTest
         public void AverageWithValidTimeSpanListReturnsCorrectAverage()
         {
             // Arrange
-            List<TimeSpan> timeSpans = new List<TimeSpan>()
-            {
+            List<TimeSpan> timeSpans =
+            [
                 TimeSpan.FromHours(1),
                 TimeSpan.FromHours(2),
                 TimeSpan.FromHours(3)
-            };
+            ];
 
             // Act
             TimeSpan result = timeSpans.Average();
@@ -24,7 +24,7 @@ namespace CosmicLexicon.Foundation.Globalization.UnitTest
         public void AverageWithEmptyTimeSpanListReturnsZeroTimeSpan()
         {
             // Arrange
-            List<TimeSpan> timeSpans = new List<TimeSpan>();
+            List<TimeSpan> timeSpans = [];
 
             // Act
             TimeSpan result = timeSpans.Average();

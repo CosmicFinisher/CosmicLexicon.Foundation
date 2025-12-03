@@ -6,9 +6,9 @@ namespace CosmicLexicon.Foundation.Structures
     [RequiresPreviewFeatures]
     public static class RangeExtensions
     {
-        public static CustomRangeEnumerator GetEnumerator(this Range range)
+        extension(Range range)
         {
-            return new CustomRangeEnumerator(range);
+            public CustomRangeEnumerator GetEnumerator() => new CustomRangeEnumerator(range);
         }
 
         public ref struct CustomRangeEnumerator

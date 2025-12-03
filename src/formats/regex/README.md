@@ -1,6 +1,6 @@
 ### `ConsmicLexicon.Foundation/Text/RegularExpressions/`
 *   **Full Path in Tree:** `ConsmicLexicon.Foundation/Text/RegularExpressions/`
-*   **Namespace:** `ConsmicLexicon.Foundation.xText.RegularExpressions`
+*   **Namespace:** `ConsmicLexicon.Foundation.Formats.RegularExpressions`
 *   **Goal:** To provide utilities and pre-compiled regex instances for common patterns, complementing `System.Text.RegularExpressions`.
 *   **Purpose:** Offers helper methods for validating or extracting data using regular expressions, and can provide commonly used, compiled `Regex` objects for performance.
 *   **Description:** Contains types that simplify working with regular expressions.

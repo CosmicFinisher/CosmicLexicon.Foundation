@@ -77,10 +77,7 @@ namespace CosmicLexicon.Foundation.Formats.UnitTest
         [InlineData("A", "a")]
         [InlineData("HelloWorld", "helloWorld")]
         [InlineData("helloWorld", "helloWorld")]
-        public void MakeCamelCaseConvertsFirstCharToLower(string? input, string? expected)
-        {
-            Assert.Equal(expected, StringExtensions.MakeCamelCase(input!)); // CS8604
-        }
+        public void MakeCamelCaseConvertsFirstCharToLower(string? input, string? expected) => Assert.Equal(expected, StringExtensions.MakeCamelCase(input!)); // CS8604
 
         [Theory]
         [InlineData(null, null)]
@@ -89,10 +86,7 @@ namespace CosmicLexicon.Foundation.Formats.UnitTest
         [InlineData("A", "A")]
         [InlineData("helloWorld", "HelloWorld")]
         [InlineData("HelloWorld", "HelloWorld")]
-        public void MakeFirstCharUpperConvertsFirstCharToUpper(string? input, string? expected)
-        {
-            Assert.Equal(expected, StringExtensions.MakeFirstCharUpper(input!)); // CS8604
-        }
+        public void MakeFirstCharUpperConvertsFirstCharToUpper(string? input, string? expected) => Assert.Equal(expected, StringExtensions.MakeFirstCharUpper(input!)); // CS8604
 
         [Fact]
         public void MakeCamelCaseWithTurkishCultureBehavesConsistently()

@@ -96,3 +96,85 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Efficient enumeration patterns
 - Type caching for reflection operations
 - Lock-free algorithms where applicable
+
+---
+---
+
+### **Pull Request Title:**
+
+`refactor(foundation): Complete architectural renaming of all foundation projects`
+
+### **Pull Request Body:**
+
+## Summary
+
+This pull request implements a complete, top-to-bottom architectural renaming of the entire `CosmicLexicon.Foundation` layer. The original project names directly mirrored the .NET Base Class Library (BCL) namespaces (e.g., `...Threading`, `...Collections`, `...Security`), which was a significant architectural flaw.
+
+This led to constant namespace collisions, ambiguity in code, and the need for confusing workarounds like `using` aliases or unconventional prefixes (`xThreading`).
+
+## The Renaming Blueprint
+
+This is a **one-to-one renaming** initiative that maintains the granular project structure while applying "smart synonyms" to avoid conflicts. No projects were merged.
+
+### Key Transformations:
+*   **`Collections` -> `Structures`**: Describes custom data structures, avoids `System.Collections`.
+*   **`Text` / `Serialization` -> `Formats`**: Describes data formats (JSON, Regex), avoids `System.Data`.
+*   **`Threading` -> `Concurrency`**: The modern term for this domain, avoids `System.Threading`.
+*   **`IO` / `Net` -> `Transport`**: Unifies byte-moving operations, avoids `System.IO` and `System.Net`.
+*   **`Security` -> `Identity` & `Cryptography`**: Splits the domain into two precise, non-colliding areas.
+*   **`Reflection` / `Runtime` -> `Introspection` & `Host`**: Uses correct computer science terms, avoids `System.Reflection` and `System.Runtime`.
+*   **`Assembly` -> `Modules`**: Avoids direct collision with the `Assembly` class.
+*   **`InteropServices` -> `Native`**: The clear, standard term for native code interaction.
+
+### Detailed Project Renaming Map:
+
+| Old Project Name (`.csproj`) | **New Project Name (`.csproj`)** |
+| :--- | :--- |
+| **Core Primitives** | |
+| `CosmicLexicon.Foundation.Diagnostics` | `CosmicLexicon.Foundation.Diagnostics` |
+| `CosmicLexicon.Foundation.Exceptions` | `CosmicLexicon.Foundation.Exceptions` |
+| `CosmicLexicon.Foundation.Extensions` | `CosmicLexicon.Foundation.Extensions` |
+| `CosmicLexicon.Foundation.Generics` | `CosmicLexicon.Foundation.Generics` |
+| `CosmicLexicon.Foundation.Globalization` | `CosmicLexicon.Foundation.Globalization` |
+| **Data Structures** | |
+| `CosmicLexicon.Foundation.Collections` | **`CosmicLexicon.Foundation.Structures`** |
+| `CosmicLexicon.Foundation.Collections.Generic` | **`CosmicLexicon.Foundation.Structures.Generic`** |
+| `CosmicLexicon.Foundation.Linq` | **`CosmicLexicon.Foundation.Structures.Linq`** |
+| **Concurrency** | |
+| `CosmicLexicon.Foundation.Threading` | **`CosmicLexicon.Foundation.Concurrency`** |
+| `CosmicLexicon.Foundation.Threading.Tasks` | **`CosmicLexicon.Foundation.Concurrency.Tasks`** |
+| `CosmicLexicon.Foundation.Threading.Timers` | **`CosmicLexicon.Foundation.Concurrency.Timers`** |
+| **Data Formats** | |
+| `CosmicLexicon.Foundation.Text` | **`CosmicLexicon.Foundation.Formats`** |
+| `CosmicLexicon.Foundation.Text.Json` | **`CosmicLexicon.Foundation.Formats.Json`** |
+| `CosmicLexicon.Foundation.Text.RegularExpressions` | **`CosmicLexicon.Foundation.Formats.RegularExpressions`** |
+| `CosmicLexicon.Foundation.Runtime.Serialization` | **`CosmicLexicon.Foundation.Formats.Serialization`** |
+| **Data Transport** | |
+| `CosmicLexicon.Foundation.IO` | **`CosmicLexicon.Foundation.Transport`** |
+| `CosmicLexicon.Foundation.Net` | **`CosmicLexicon.Foundation.Transport.Net`** |
+| **Security** | |
+| `CosmicLexicon.Foundation.Security` | **`CosmicLexicon.Foundation.Identity`** |
+| `CosmicLexicon.Foundation.Security.Cryptography` | **`CosmicLexicon.Foundation.Cryptography`** |
+| **Interop** | |
+| `CosmicLexicon.Foundation.Reflection` | **`CosmicLexicon.Foundation.Introspection`** |
+| `CosmicLexicon.Foundation.Reflection.Assembly` | **`CosmicLexicon.Foundation.Introspection.Modules`** |
+| `CosmicLexicon.Foundation.Runtime` | **`CosmicLexicon.Foundation.Host`** |
+| `CosmicLexicon.Foundation.Runtime.InteropServices` | **`CosmicLexicon.Foundation.Host.Native`** |
+
+*All `.UnitTest.csproj` files have been renamed to `.Tests.csproj` to follow the same pattern.*
+
+## For Review
+
+1.  Verify that the new project names are applied consistently across the solution.
+2.  Check the `.csproj` files to ensure their `<AssemblyName>` and `<RootNamespace>` properties match the new naming convention.
+3.  Ensure that the directory structure on disk reflects the new project names.
+
+This PR lays the groundwork for a cleaner, more maintainable, and professional framework.
+
+## Checklist
+
+-   [x] The title of this PR follows conventional commit guidelines.
+-   [x] The summary clearly explains the "why" of this change.
+-   [x] The code builds successfully after these changes.
+-   [x] All unit tests pass with the new project structure.
+-   [x] The project's architectural documentation has been updated to reflect the new naming conventions.

@@ -1,8 +1,8 @@
-# ConsmicLexicon.Foundation.Text
+# ConsmicLexicon.Foundation.Formats
 
 ## Overview
 
-ConsmicLexicon.Foundation.Text provides high-performance text processing utilities, including string manipulation, JSON handling, and regular expressions support. It focuses on efficient text operations while maintaining security and performance.
+ConsmicLexicon.Foundation.Formats provides high-performance text processing utilities, including string manipulation, JSON handling, and regular expressions support. It focuses on efficient text operations while maintaining security and performance.
 
 ## Features
 
@@ -37,9 +37,9 @@ ConsmicLexicon.Foundation.Text provides high-performance text processing utiliti
 - Visual Studio 2025+ or VS Code
 
 ### Installation
-Add the package reference to your project:<PackageReference Include="ConsmicLexicon.Foundation.Text" Version="1.0.0" />
-### Basic Usage using ConsmicLexicon.Foundation.Text;
-using ConsmicLexicon.Foundation.Text.Json;
+Add the package reference to your project:<PackageReference Include="ConsmicLexicon.Foundation.Formats" Version="1.0.0" />
+### Basic Usage using ConsmicLexicon.Foundation.Formats;
+using ConsmicLexicon.Foundation.Formats.Json;
 
 // Use text processing features
 var result = text.ToPooledString();

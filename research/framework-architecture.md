@@ -78,8 +78,8 @@ ConsmicLexicon.Foundation.x{Component}
 
 Example:
 ```csharp
-ConsmicLexicon.Foundation.xCollections
-??? ConsmicLexicon.Foundation.xCollections.Generic
+ConsmicLexicon.Foundation.Structures
+??? ConsmicLexicon.Foundation.Structures.Generic
 ```
 
 ## Implementation Patterns
@@ -123,7 +123,7 @@ Common project configuration patterns:
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>$(NetPrimaryTargetFramework)</TargetFramework>
-    <RootNamespace>ConsmicLexicon.Foundation.x{Component}</RootNamespace>
+    <!-- <RootNamespace>ConsmicLexicon.Foundation.{Component}</RootNamespace> -->
     <EnableSharedKernelDependencies>true</EnableSharedKernelDependencies>
     <IsPackable>false</IsPackable>
   </PropertyGroup>
@@ -141,7 +141,7 @@ Common project configuration patterns:
 2. Test Project Configuration
    ```xml
    <PropertyGroup>
-     <RootNamespace>ConsmicLexicon.Foundation.x{Component}</RootNamespace>
+     <!-- <RootNamespace>ConsmicLexicon.Foundation.{Component}</RootNamespace> -->
      <EnableSharedUnitTestDependencies>true</EnableSharedUnitTestDependencies>
    </PropertyGroup>
    ```
@@ -322,6 +322,6 @@ Clear interface boundaries:
    - src/threading/tests/unit/ThreadingExtensionsTests.cs
 
 3. Project Files
-   - src/collections/src/Core.Collections.csproj
-   - src/text/src/Core.Text.csproj
+   - src/collections/src/Foundation.Structures.csproj
+   - src/text/src/Foundation.Formats.csproj
    - src/threading/src/Core.Threading.csproj

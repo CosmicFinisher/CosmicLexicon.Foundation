@@ -94,7 +94,7 @@ namespace CosmicLexicon.Foundation.Introspection.Modules.UnitTest
             // Assert
             Assert.True(result);
             Assert.NotNull(attributes);
-            Assert.Equal(1, attributes.Count());
+            Assert.Single(attributes);
         }
 
         [Fact]

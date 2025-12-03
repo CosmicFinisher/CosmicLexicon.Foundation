@@ -1,8 +1,8 @@
-# ConsmicLexicon.Foundation.Collections
+# ConsmicLexicon.Foundation.Structures
 
 ## Overview
 
-ConsmicLexicon.Foundation.Collections provides a comprehensive set of collection types and utilities optimized for performance and thread safety. This library extends the standard .NET collection capabilities with additional features and optimizations.
+ConsmicLexicon.Foundation.Structures provides a comprehensive set of collection types and utilities optimized for performance and thread safety. This library extends the standard .NET collection capabilities with additional features and optimizations.
 
 ## Features
 
@@ -36,9 +36,9 @@ ConsmicLexicon.Foundation.Collections provides a comprehensive set of collection
 - Visual Studio 2025+ or VS Code
 
 ### Installation
-Add the package reference to your project:<PackageReference Include="ConsmicLexicon.Foundation.Collections" Version="1.0.0" />
-### Basic Usage using ConsmicLexicon.Foundation.Collections;
-using ConsmicLexicon.Foundation.Collections.Generic;
+Add the package reference to your project:<PackageReference Include="ConsmicLexicon.Foundation.Structures" Version="1.0.0" />
+### Basic Usage using ConsmicLexicon.Foundation.Structures;
+using ConsmicLexicon.Foundation.Structures.Generic;
 
 // Use enhanced collection features
 var collection = new ThreadSafeCollection<string>();

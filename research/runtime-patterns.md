@@ -11,15 +11,15 @@ This document details the runtime patterns and infrastructure implementations us
 ```
 runtime/
 ??? src/
-?   ??? Core.Runtime.csproj
+?   ??? Foundation.Host.csproj
 ??? introp/
 ?   ??? src/
-?   ?   ??? Core.Runtime.InteropServices.csproj
+?   ?   ??? Foundation.Host.InteropServices.csproj
 ?   ??? tests/
 ?       ??? unit/
 ??? serialization/
     ??? src/
-    ?   ??? Core.Runtime.Serialization.csproj
+    ?   ??? Foundation.Formats.Serialization.csproj
     ??? tests/
         ??? unit/
 ```
@@ -27,17 +27,17 @@ runtime/
 ### Namespace Organization
 
 ```csharp
-namespace ConsmicLexicon.Foundation.xRuntime
+namespace ConsmicLexicon.Foundation.Host
 {
     // Base runtime functionality
 }
 
-namespace ConsmicLexicon.Foundation.xRuntime.Serialization
+namespace ConsmicLexicon.Foundation.Formats.Serialization
 {
     // Serialization components
 }
 
-namespace ConsmicLexicon.Foundation.xRuntime.InteropServices
+namespace ConsmicLexicon.Foundation.Host.InteropServices
 {
     // Interop functionality
 }
@@ -316,11 +316,11 @@ public static class TypeFactory
 ## References
 
 ### Implementation Files
-- src/runtime/src/Core.Runtime.csproj
-- src/runtime/introp/src/Core.Runtime.InteropServices.csproj
-- src/runtime/serialization/src/Core.Runtime.Serialization.csproj
+- src/runtime/src/Foundation.Host.csproj
+- src/runtime/introp/src/Foundation.Host.InteropServices.csproj
+- src/runtime/serialization/src/Foundation.Formats.Serialization.csproj
 
 ### Test Files
-- src/runtime/tests/unit/Core.Runtime.UnitTest.csproj
-- src/runtime/introp/tests/unit/Core.Runtime.InteropServices.UnitTest.csproj
-- src/runtime/serialization/tests/unit/Core.Runtime.Serialization.UnitTest.csproj
+- src/runtime/tests/unit/Foundation.Host.UnitTest.csproj
+- src/runtime/introp/tests/unit/Foundation.Host.InteropServices.UnitTest.csproj
+- src/runtime/serialization/tests/unit/Foundation.Formats.Serialization.UnitTest.csproj

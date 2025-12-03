@@ -21,10 +21,7 @@ public static class CuidGenerator
     /// Generate CUID with default length
     /// </summary>
     /// <returns>A cryptographically secure random string of 11 characters</returns>
-    public static string NewCuid()
-    {
-        return NewCuid(11);
-    }
+    public static string NewCuid() => NewCuid(11);
 
     /// <summary>
     /// Generate CUID with custom length in string format

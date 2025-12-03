@@ -35,7 +35,7 @@ public class ConcurrentObjectPoolInterfaceTests
                     {
                         // Arrange
                         IConcurrentObjectPool<object> pool = new ConcreteObjectPool();
-                        object obj = new object();
+                        object obj = new();
             
                         // Act
                         pool.ReturnToPool(obj);
@@ -46,7 +46,7 @@ public class ConcurrentObjectPoolInterfaceTests
             
                     private class ConcreteObjectPool : IConcurrentObjectPool<object>
                     {
-                        private readonly List<object> _objects = new List<object>();
+                        private readonly List<object> _objects = [];
             
                         public void Seed(int seedSize)
                         {
@@ -66,15 +66,9 @@ public class ConcurrentObjectPoolInterfaceTests
                             }
                             return new object();
                         }
-            
-                        public void ReturnToPool(object returnObject)
-                        {
-                            _objects.Add(returnObject);
-                        }
-            
-                        public int GetObjectsCount()
-                        {
-                            return _objects.Count;
-                        }
-                    }
+
+        public void ReturnToPool(object returnObject) => _objects.Add(returnObject);
+
+        public int GetObjectsCount() => _objects.Count;
+    }
                 }

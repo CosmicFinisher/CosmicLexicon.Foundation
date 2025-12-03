@@ -45,15 +45,15 @@ Implement a highly modular, cloud-native architecture with independent component
 
 #### ImplementationCore.Framework/
 ??? Collections/
-?   ??? Core.Collections
-?   ??? Core.Collections.Generic
+?   ??? Foundation.Structures
+?   ??? Foundation.Structures.Generic
 ??? Threading/
 ?   ??? Core.Threading
-?   ??? Core.Threading.Tasks
-?   ??? Core.Threading.Timers
+?   ??? Foundation.Concurrency.Tasks
+?   ??? Foundation.Concurrency.Timers
 ??? Security/
-    ??? Core.Security
-    ??? Core.Security.Cryptography
+    ??? Foundation.Identity
+    ??? Foundation.Cryptography
 #### Rationale
 - Enables selective adoption
 - Facilitates microservices architecture

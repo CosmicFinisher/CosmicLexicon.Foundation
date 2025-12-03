@@ -63,10 +63,7 @@ namespace CosmicLexicon.Foundation.Formats
         //
         // Returns:
         //     The formatted string
-        public string Format(string? format, object? arg, IFormatProvider? formatProvider)
-        {
-            return Format(arg?.ToString() ?? string.Empty, format ?? string.Empty);
-        }
+        public string Format(string? format, object? arg, IFormatProvider? formatProvider) => Format(arg?.ToString() ?? string.Empty, format ?? string.Empty);
 
         public string Format(string? input, string formatPattern)
         {
@@ -75,7 +72,7 @@ namespace CosmicLexicon.Foundation.Formats
                 throw new ArgumentException("Format pattern is not valid.", nameof(formatPattern));
             }
 
-            StringBuilder stringBuilder = new StringBuilder();
+            StringBuilder stringBuilder = new();
             int inputIndex = 0;
 
             for (int i = 0; i < formatPattern.Length; i++)

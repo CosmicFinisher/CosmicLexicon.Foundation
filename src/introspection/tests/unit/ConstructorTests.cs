@@ -1,10 +1,10 @@
 using Xunit;
-using CosmicLexicon.Foundation.xReflection;
+using CosmicLexicon.Foundation.Introspection;
 using System;
 using System.Linq;
 using System.Reflection;
 
-namespace CosmicLexicon.Foundation.xReflection
+namespace CosmicLexicon.Foundation.Introspection
 {
     public class ConstructorTests
     {

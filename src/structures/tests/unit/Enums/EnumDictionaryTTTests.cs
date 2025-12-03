@@ -48,7 +48,7 @@ namespace CosmicLexicon.Foundation.Structures.UnitTest.Enums
             var dictionary = new EnumDictionary<TestEnum, int>(0);
 
             // Act
-            dictionary.SetValueFor(new TestEnum[] { TestEnum.Value1, TestEnum.Value3 }, 15);
+            dictionary.SetValueFor([TestEnum.Value1, TestEnum.Value3], 15);
 
             // Assert
             Assert.Equal(15, dictionary.Member(TestEnum.Value1));
@@ -83,7 +83,7 @@ namespace CosmicLexicon.Foundation.Structures.UnitTest.Enums
             TestEnum[] result = dictionary.WhereValues(25);
 
             // Assert
-            Assert.Equal(new TestEnum[] { TestEnum.Value1, TestEnum.Value2 }, result);
+            Assert.Equal([TestEnum.Value1, TestEnum.Value2], result);
         }
 
         [Fact]

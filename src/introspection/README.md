@@ -1,8 +1,8 @@
-# ConsmicLexicon.Foundation.Reflection
+# ConsmicLexicon.Foundation.Introspection
 
 ## Overview
 
-ConsmicLexicon.Foundation.Reflection provides optimized reflection utilities and type system operations for .NET applications. It focuses on performance while providing powerful reflection capabilities.
+ConsmicLexicon.Foundation.Introspection provides optimized reflection utilities and type system operations for .NET applications. It focuses on performance while providing powerful reflection capabilities.
 
 ## Features
 
@@ -37,8 +37,8 @@ ConsmicLexicon.Foundation.Reflection provides optimized reflection utilities and
 - Visual Studio 2025+ or VS Code
 
 ### Installation
-Add the package reference to your project:<PackageReference Include="ConsmicLexicon.Foundation.Reflection" Version="1.0.0" />
-### Basic Usage using ConsmicLexicon.Foundation.Reflection;
+Add the package reference to your project:<PackageReference Include="ConsmicLexicon.Foundation.Introspection" Version="1.0.0" />
+### Basic Usage using ConsmicLexicon.Foundation.Introspection;
 
 // Use reflection features
 var typeInfo = TypeCache.GetTypeInfo(typeof(MyClass));

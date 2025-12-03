@@ -21,9 +21,9 @@ namespace CosmicLexicon.Foundation.Host.UnitTest
         public void BetweenDateTimeValueIsBetweenMinAndMaxReturnsTrue()
         {
             // Arrange
-            DateTime value = new DateTime(2023, 1, 5);
-            DateTime min = new DateTime(2023, 1, 1);
-            DateTime max = new DateTime(2023, 1, 10);
+            DateTime value = new(2023, 1, 5);
+            DateTime min = new(2023, 1, 1);
+            DateTime max = new(2023, 1, 10);
 
             // Act
             bool result = value.Between(min, max);
@@ -36,9 +36,9 @@ namespace CosmicLexicon.Foundation.Host.UnitTest
         public void BetweenGuidValueIsBetweenMinAndMaxReturnsTrue()
         {
             // Arrange
-            Guid value = new Guid("00000000-0000-0000-0000-000000000002");
-            Guid min = new Guid("00000000-0000-0000-0000-000000000001");
-            Guid max = new Guid("00000000-0000-0000-0000-000000000003");
+            Guid value = new("00000000-0000-0000-0000-000000000002");
+            Guid min = new("00000000-0000-0000-0000-000000000001");
+            Guid max = new("00000000-0000-0000-0000-000000000003");
 
             // Act
             bool result = value.Between(min, max);
@@ -102,9 +102,9 @@ namespace CosmicLexicon.Foundation.Host.UnitTest
         public void ClampDateTimeValueIsBetweenMinAndMaxReturnsValue()
         {
             // Arrange
-            DateTime value = new DateTime(2023, 1, 5);
-            DateTime min = new DateTime(2023, 1, 1);
-            DateTime max = new DateTime(2023, 1, 10);
+            DateTime value = new(2023, 1, 5);
+            DateTime min = new(2023, 1, 1);
+            DateTime max = new(2023, 1, 10);
 
             // Act
             DateTime result = value.Clamp(max, min);
@@ -117,8 +117,8 @@ namespace CosmicLexicon.Foundation.Host.UnitTest
         public void MaxDateTimeReturnsMax()
         {
             // Arrange
-            DateTime inputA = new DateTime(2023, 1, 10);
-            DateTime inputB = new DateTime(2023, 1, 5);
+            DateTime inputA = new(2023, 1, 10);
+            DateTime inputB = new(2023, 1, 5);
 
             // Act
             DateTime result = inputA.Max(inputB);
@@ -131,8 +131,8 @@ namespace CosmicLexicon.Foundation.Host.UnitTest
         public void MinDateTimeReturnsMin()
         {
             // Arrange
-            DateTime inputA = new DateTime(2023, 1, 10);
-            DateTime inputB = new DateTime(2023, 1, 5);
+            DateTime inputA = new(2023, 1, 10);
+            DateTime inputB = new(2023, 1, 5);
 
             // Act
             DateTime result = inputA.Min(inputB);

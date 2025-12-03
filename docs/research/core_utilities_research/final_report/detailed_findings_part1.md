@@ -4,9 +4,9 @@ This document provides a detailed overview of the findings from the initial rese
 
 ## Collections (`src/collections/`)
 
-*   **Code Structure:** The module contains a mix of generic and non-generic related files, with a clear separation between `ConsmicLexicon.Foundation.xCollections` (non-generic) and `ConsmicLexicon.Foundation.xCollections.Generic`.
+*   **Code Structure:** The module contains a mix of generic and non-generic related files, with a clear separation between `ConsmicLexicon.Foundation.Structures` (non-generic) and `ConsmicLexicon.Foundation.Structures.Generic`.
 *   **Testing:** Test files are present for many of the source files, suggesting an existing effort towards testing.
-*   **Documentation:** The `README.Core.Collections.md` file outlines the goal of providing common interfaces, base classes, and utilities for collections.
+*   **Documentation:** The `README.Foundation.Structures.md` file outlines the goal of providing common interfaces, base classes, and utilities for collections.
 *   **Potential Areas for Improvement:**
     *   Evaluate the necessity and usage of the non-generic collection helpers.
     *   Assess the completeness and clarity of comments within the C# files.

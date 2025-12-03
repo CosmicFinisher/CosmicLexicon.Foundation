@@ -25,7 +25,7 @@ namespace CosmicLexicon.Foundation.Structures.UnitTest
         public void FillArrayElementsWithStartIndexFillsArrayFromStartIndex()
         {
             // Arrange
-            int[] array = new int[5] { 1, 2, 3, 4, 5 };
+            int[] array = [1, 2, 3, 4, 5];
             int value = 42;
             int startIndex = 2;
 
@@ -55,7 +55,7 @@ namespace CosmicLexicon.Foundation.Structures.UnitTest
         public void FillArrayElementWithValidParametersUpdatesElement()
         {
             // Arrange
-            int[] array = new int[5] { 1, 2, 3, 4, 5 };
+            int[] array = [1, 2, 3, 4, 5];
             Predicate<int> finder = i => i == 3;
             Func<int, int> producer = index => 42;
 
@@ -75,7 +75,7 @@ namespace CosmicLexicon.Foundation.Structures.UnitTest
         public void FillArrayElementWithStartIndexSearchesFromStartIndex()
         {
             // Arrange
-            int[] array = new int[5] { 3, 2, 3, 4, 5 };
+            int[] array = [3, 2, 3, 4, 5];
             Predicate<int> finder = i => i == 3;
             Func<int, int> producer = index => 42;
             int startIndex = 1;
@@ -96,7 +96,7 @@ namespace CosmicLexicon.Foundation.Structures.UnitTest
         public void FillArrayElementWhenNoElementMatchesReturnsFalse()
         {
             // Arrange
-            int[] array = new int[5] { 1, 2, 3, 4, 5 };
+            int[] array = [1, 2, 3, 4, 5];
             Predicate<int> finder = i => i == 10; // No element matches
             Func<int, int> producer = index => 42;
 
@@ -179,7 +179,7 @@ namespace CosmicLexicon.Foundation.Structures.UnitTest
         public void FillArrayElementEmptyArrayReturnsFalse()
         {
             // Arrange
-            int[] array = new int[0];
+            int[] array = [];
             Predicate<int> finder = i => i == 3;
             Func<int, int> producer = index => 42;
 
@@ -195,7 +195,7 @@ namespace CosmicLexicon.Foundation.Structures.UnitTest
             // Arrange
             var arr = new int[] { 1, 2, 3 };
             ICollection<int> enumerable1 = arr;
-            ICollection<int>[] additions = new ICollection<int>[] { };
+            ICollection<int>[] additions = [];
 
             // Act
             IEnumerable<int> result = IEnumerableExtensions.Concat<int>(arr, additions);
@@ -254,26 +254,17 @@ namespace CosmicLexicon.Foundation.Structures.UnitTest
                     IsReadOnly = false;
                 }
 
-                public override bool Contains(int item)
-                {
-                    return items.Contains(item);
-                }
+                public override bool Contains(int item) => Items.Contains(item);
 
-                protected override bool ShouldObjectAddToCollection(int item)
-                {
-                    return item % 2 != 0;
-                }
+                protected override bool ShouldObjectAddToCollection(int item) => item % 2 != 0;
 
-                public void AddItem(int item)
-                {
-                    items.Add(item);
-                }
+                public void AddItem(int item) => Items.Add(item);
 
                 public override void CopyTo(Array array, int index)
                 {
                     if (array is int[] intArray)
                     {
-                        items.CopyTo(intArray, index);
+                        Items.CopyTo(intArray, index);
                     }
                 }
             }
@@ -288,7 +279,7 @@ namespace CosmicLexicon.Foundation.Structures.UnitTest
                 int[] result = ArrayHelpers.FillArrayElements(array, value);
 
                 // Assert
-                Assert.Equal(new int[] { 5, 5, 5 }, result);
+                Assert.Equal([5, 5, 5], result);
             }
 
             [Fact]
@@ -303,7 +294,7 @@ namespace CosmicLexicon.Foundation.Structures.UnitTest
                 int[] result = ArrayHelpers.FillArrayElements(array, value, startIndex);
 
                 // Assert
-                Assert.Equal(new int[] { 0, 5, 5 }, result);
+                Assert.Equal([0, 5, 5], result);
             }
 
             [Fact]
@@ -321,21 +312,21 @@ namespace CosmicLexicon.Foundation.Structures.UnitTest
             public void FillArrayElementsEmptyArrayReturnsEmptyArray()
             {
                 // Arrange
-                int[] array = new int[0];
+                int[] array = [];
                 int value = 5;
 
                 // Act
                 int[] result = ArrayHelpers.FillArrayElements(array, value);
 
                 // Assert
-                Assert.Equal(new int[0], result);
+                Assert.Equal([], result);
             }
 
             [Fact]
             public void FillArrayElementElementFoundReturnsTrueAndUpdatesArray()
             {
                 // Arrange
-                int[] array = new int[] { 1, 2, 3 };
+                int[] array = [1, 2, 3];
                 Predicate<int> finder = x => x == 2;
                 Func<int, int> producer = x => x * 2; // This producer expects an int (index)
                 // The FillArrayElement method now expects Func<T, T> (value, value)
@@ -358,7 +349,7 @@ namespace CosmicLexicon.Foundation.Structures.UnitTest
             public void FillArrayElementElementNotFoundReturnsFalseAndDoesNotUpdateArray()
             {
                 // Arrange
-                int[] array = new int[] { 1, 2, 3 };
+                int[] array = [1, 2, 3];
                 Predicate<int> finder = x => x == 4;
                 Func<int, int> producer = x => x * 2; // Original producer, now unused
                 Func<int, int> valueProducer = x => x * 2; // New producer that takes value
@@ -368,7 +359,7 @@ namespace CosmicLexicon.Foundation.Structures.UnitTest
 
                 // Assert
                 Assert.False(result);
-                Assert.Equal(new int[] { 1, 2, 3 }, array);
+                Assert.Equal([1, 2, 3], array);
             }
 
             [Fact]
@@ -387,7 +378,7 @@ namespace CosmicLexicon.Foundation.Structures.UnitTest
             public void FillArrayElementStartIndexOutOfRangeThrowsArgumentOutOfRangeException()
             {
                 // Arrange
-                int[] array = new int[] { 1, 2, 3 };
+                int[] array = [1, 2, 3];
                 Predicate<int> finder = x => x == 2;
                 Func<int, int> producer = x => x * 2;
                 int startIndex = 5;
@@ -400,7 +391,7 @@ namespace CosmicLexicon.Foundation.Structures.UnitTest
             public void FillArrayElementNullProducerThrowsArgumentNullException()
             {
                 // Arrange
-                int[] array = new int[] { 1, 2, 3 };
+                int[] array = [1, 2, 3];
                 Predicate<int> finder = x => x == 2;
                 Func<int, int> producer = null;
 
@@ -412,7 +403,7 @@ namespace CosmicLexicon.Foundation.Structures.UnitTest
             public void FillArrayElementNullFinderThrowsArgumentNullException()
             {
                 // Arrange
-                int[] array = new int[] { 1, 2, 3 };
+                int[] array = [1, 2, 3];
                 Predicate<int> finder = null;
                 Func<int, int> producer = x => x * 2;
 
@@ -424,7 +415,7 @@ namespace CosmicLexicon.Foundation.Structures.UnitTest
             public void FillArrayElementEmptyArrayReturnsFalse()
             {
                 // Arrange
-                int[] array = new int[0];
+                int[] array = [];
                 Predicate<int> finder = x => x == 2;
                 Func<int, int> producer = x => x * 2;
 

@@ -2,19 +2,20 @@ namespace CosmicLexicon.Foundation.Structures.UnitTest
 {
     public class ListMappingTTTests
     {
-        private static readonly int[] SingleValueArray = { 1 };
-        private static readonly int[] TwoValuesArray = { 1, 2 };
-        private static readonly string[] TwoKeysArray = { "key1", "key2" };
-        private static readonly int[] SingleValueArray2 = { 2 };
+        private static readonly int[] SingleValueArray = [1];
+        private static readonly int[] TwoValuesArray = [1, 2];
+        private static readonly string[] TwoKeysArray = ["key1", "key2"];
+        private static readonly int[] SingleValueArray2 = [2];
 
         [Fact]
         public void AddKeyValuePairAddsValueToList()
         {
             // Arrange
-            var mapping = new ListMapping<string, int>();
-
-            // Act
-            mapping.Add("key1", 1);
+            var mapping = new ListMapping<string, int>
+            {
+                // Act
+                { "key1", 1 }
+            };
 
             // Assert
             Assert.True(mapping.ContainsKey("key1"));
@@ -50,9 +51,11 @@ namespace CosmicLexicon.Foundation.Structures.UnitTest
         public void ClearRemovesAllKeyValuePairs()
         {
             // Arrange
-            var mapping = new ListMapping<string, int>();
-            mapping.Add("key1", 1);
-            mapping.Add("key2", 2);
+            var mapping = new ListMapping<string, int>
+            {
+                { "key1", 1 },
+                { "key2", 2 }
+            };
 
             // Act
             mapping.Clear();
@@ -65,8 +68,10 @@ namespace CosmicLexicon.Foundation.Structures.UnitTest
         public void ContainsKeyReturnsTrueForExistingKey()
         {
             // Arrange
-            var mapping = new ListMapping<string, int>();
-            mapping.Add("key1", 1);
+            var mapping = new ListMapping<string, int>
+            {
+                { "key1", 1 }
+            };
 
             // Act & Assert
             Assert.True(mapping.ContainsKey("key1"));
@@ -96,9 +101,11 @@ namespace CosmicLexicon.Foundation.Structures.UnitTest
         public void IndexerGetsListForExistingKey()
         {
             // Arrange
-            var mapping = new ListMapping<string, int>();
-            mapping.Add("key1", 1);
-            mapping.Add("key1", 2);
+            var mapping = new ListMapping<string, int>
+            {
+                { "key1", 1 },
+                { "key1", 2 }
+            };
 
             // Act
             var result = mapping["key1"];
@@ -137,8 +144,10 @@ namespace CosmicLexicon.Foundation.Structures.UnitTest
         public void TryGetValueReturnsTrueForExistingKey()
         {
             // Arrange
-            var mapping = new ListMapping<string, int>();
-            mapping.Add("key1", 1);
+            var mapping = new ListMapping<string, int>
+            {
+                { "key1", 1 }
+            };
 
             // Act
             bool result = mapping.TryGetValue("key1", out var values);
@@ -166,8 +175,10 @@ namespace CosmicLexicon.Foundation.Structures.UnitTest
         public void RemoveKeyReturnsTrueForExistingKey()
         {
             // Arrange
-            var mapping = new ListMapping<string, int>();
-            mapping.Add("key1", 1);
+            var mapping = new ListMapping<string, int>
+            {
+                { "key1", 1 }
+            };
 
             // Act
             bool result = mapping.Remove("key1");
@@ -194,9 +205,11 @@ namespace CosmicLexicon.Foundation.Structures.UnitTest
         public void KeysContainsAllKeys()
         {
             // Arrange
-            var mapping = new ListMapping<string, int>();
-            mapping.Add("key1", 1);
-            mapping.Add("key2", 2);
+            var mapping = new ListMapping<string, int>
+            {
+                { "key1", 1 },
+                { "key2", 2 }
+            };
 
             // Act
             var keys = mapping.Keys;
@@ -209,9 +222,11 @@ namespace CosmicLexicon.Foundation.Structures.UnitTest
         public void ValuesContainsAllLists()
         {
             // Arrange
-            var mapping = new ListMapping<string, int>();
-            mapping.Add("key1", 1);
-            mapping.Add("key2", 2);
+            var mapping = new ListMapping<string, int>
+            {
+                { "key1", 1 },
+                { "key2", 2 }
+            };
 
             // Act
             var values = mapping.Values;
@@ -226,10 +241,12 @@ namespace CosmicLexicon.Foundation.Structures.UnitTest
         public void CountReturnsNumberOfKeys()
         {
             // Arrange
-            var mapping = new ListMapping<string, int>();
-            mapping.Add("key1", 1);
-            mapping.Add("key1", 2);
-            mapping.Add("key2", 3);
+            var mapping = new ListMapping<string, int>
+            {
+                { "key1", 1 },
+                { "key1", 2 },
+                { "key2", 3 }
+            };
 
             // Act & Assert
             Assert.Equal(2, mapping.Count);

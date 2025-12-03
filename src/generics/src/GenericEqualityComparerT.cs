@@ -99,9 +99,6 @@ namespace CosmicLexicon.Foundation.Generics
         //
         // Returns:
         //     The object's hash code
-        public int GetHashCode(TData obj)
-        {
-            return obj?.GetHashCode() ?? -1;
-        }
+        public int GetHashCode(TData obj) => obj?.GetHashCode() ?? -1;
     }
 }

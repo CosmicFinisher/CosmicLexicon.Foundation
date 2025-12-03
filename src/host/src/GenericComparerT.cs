@@ -4,9 +4,6 @@ namespace CosmicLexicon.Foundation.Host
     {
         public static GenericComparer<TData> Comparer { get; } = new GenericComparer<TData>();
 
-        public int Compare(TData x, TData y)
-        {
-            return Comparer<TData>.Default.Compare(x, y);
-        }
+        public int Compare(TData x, TData y) => Comparer<TData>.Default.Compare(x, y);
     }
 }

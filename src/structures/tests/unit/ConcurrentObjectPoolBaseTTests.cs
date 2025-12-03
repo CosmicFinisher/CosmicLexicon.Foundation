@@ -4,10 +4,7 @@ namespace CosmicLexicon.Foundation.Structures.UnitTest
     {
         private class ConcreteObjectPool : ConcurrentObjectPoolBase<object>
         {
-            public override object GenerateObject()
-            {
-                return new object();
-            }
+            public override object GenerateObject() => new object();
         }
 
         [Fact]
@@ -123,10 +120,7 @@ namespace CosmicLexicon.Foundation.Structures.UnitTest
         {
             public bool IsDisposed { get; private set; }
 
-            public void Dispose()
-            {
-                IsDisposed = true;
-            }
+            public void Dispose() => IsDisposed = true;
         }
     }
 }

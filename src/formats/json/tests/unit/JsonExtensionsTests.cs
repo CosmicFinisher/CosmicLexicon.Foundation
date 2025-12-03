@@ -34,7 +34,7 @@ namespace CosmicLexicon.Foundation.Formats.Json.UnitTest
         public void ToJsonWithValidObjectReturnsJsonString()
         {
             // Arrange
-            TestClassExample obj = new TestClassExample
+            TestClassExample obj = new()
             {
                 Name = "Test",
                 Value = 123
@@ -63,7 +63,7 @@ namespace CosmicLexicon.Foundation.Formats.Json.UnitTest
         public void ToJsonWithNullPropertiesIgnoresNull()
         {
             // Arrange
-            TestClassExample obj = new TestClassExample
+            TestClassExample obj = new()
             {
                 Name = "Test",
                 Value = 0 // Value type, so not null
@@ -110,7 +110,7 @@ namespace CosmicLexicon.Foundation.Formats.Json.UnitTest
         public void ToJsonWithEnumReturnsCamelCaseString()
         {
             // Arrange
-            TestClassWithEnum obj = new TestClassWithEnum
+            TestClassWithEnum obj = new()
             {
                 Status = TestEnumExample.PendingApproval
             };
