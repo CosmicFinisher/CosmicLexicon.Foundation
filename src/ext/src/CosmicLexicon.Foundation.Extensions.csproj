@@ -2,7 +2,6 @@
 
   <PropertyGroup>
     <TargetFramework>$(NetPrimaryTargetFramework)</TargetFramework>
-    <RootNamespace>CosmicLexicon.Foundation.xExtensions</RootNamespace>
     <EnableSharedKernelDependencies>true</EnableSharedKernelDependencies>
 	  
   </PropertyGroup>

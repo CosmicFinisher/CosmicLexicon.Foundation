@@ -2,7 +2,6 @@
 
   <PropertyGroup>
     <TargetFramework>$(NetPrimaryTargetFramework)</TargetFramework>
-    <RootNamespace>CosmicLexicon.Foundation.Formats.Json</RootNamespace>
     <EnableSharedUnitTestDependencies>true</EnableSharedUnitTestDependencies>
 </PropertyGroup>
 

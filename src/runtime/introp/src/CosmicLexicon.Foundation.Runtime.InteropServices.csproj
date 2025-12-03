@@ -1,8 +1,0 @@
-<Project Sdk="Microsoft.NET.Sdk">
-  <PropertyGroup>
-    <TargetFramework>$(NetPrimaryTargetFramework)</TargetFramework>
-    <RootNamespace>CosmicLexicon.Foundation.xRuntime.InteropServices</RootNamespace>
-    <EnableSharedKernelDependencies>true</EnableSharedKernelDependencies>
-	  
-  </PropertyGroup>
-</Project> 

@@ -81,31 +81,31 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CosmicLexicon.Foundation.Tr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CosmicLexicon.Foundation.Transport.Net.UnitTest", "src\transport\net\tests\unit\CosmicLexicon.Foundation.Transport.Net.UnitTest.csproj", "{86F15D64-DA90-4308-939D-6F88142321EC}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Reflection", "Reflection", "{E478AFE2-E14D-D266-35EE-173990642964}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Introspection", "Introspection", "{E478AFE2-E14D-D266-35EE-173990642964}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Assembly", "Assembly", "{F23BD63D-550C-81D5-C6CD-68CD2694D70C}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Modules", "Modules", "{F23BD63D-550C-81D5-C6CD-68CD2694D70C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CosmicLexicon.Foundation.Reflection.Assembly", "src\reflection\asm\src\CosmicLexicon.Foundation.Reflection.Assembly.csproj", "{CCC410E5-6EBA-4845-92B9-F799BF70AEA4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CosmicLexicon.Foundation.Introspection.Modules", "src\introspection\modules\src\CosmicLexicon.Foundation.Introspection.Modules.csproj", "{CCC410E5-6EBA-4845-92B9-F799BF70AEA4}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{F32DA5F2-DFB0-6793-0AE9-FFCC6CE40367}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CosmicLexicon.Foundation.Reflection.Assembly.UnitTest", "src\reflection\asm\tests\unit\CosmicLexicon.Foundation.Reflection.Assembly.UnitTest.csproj", "{A33F13F5-125B-4B9D-9F52-5B9B78AD52C9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CosmicLexicon.Foundation.Introspection.Modules.UnitTest", "src\introspection\modules\tests\unit\CosmicLexicon.Foundation.Introspection.Modules.UnitTest.csproj", "{A33F13F5-125B-4B9D-9F52-5B9B78AD52C9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CosmicLexicon.Foundation.Reflection", "src\reflection\src\CosmicLexicon.Foundation.Reflection.csproj", "{BAAA936C-C456-4B23-BCF3-717215B011A9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CosmicLexicon.Foundation.Introspection", "src\introspection\src\CosmicLexicon.Foundation.Introspection.csproj", "{BAAA936C-C456-4B23-BCF3-717215B011A9}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{DE25EE0C-FF5A-1341-E367-1351329F82AE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CosmicLexicon.Foundation.Reflection.UnitTest", "src\reflection\tests\unit\CosmicLexicon.Foundation.Reflection.UnitTest.csproj", "{D7BEBE09-76CD-4CDE-A806-49F7AB568153}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CosmicLexicon.Foundation.Host.UnitTest", "src\host\tests\unit\CosmicLexicon.Foundation.Host.UnitTest.csproj", "{D7BEBE09-76CD-4CDE-A806-49F7AB568153}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Runtime", "Runtime", "{C9FFCADF-E5C6-A53A-5B99-4551A1C4A183}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Host", "Host", "{C9FFCADF-E5C6-A53A-5B99-4551A1C4A183}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "IntropServices", "IntropServices", "{673E7D32-A5F7-224D-4705-A6BB524B75B6}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Native", "Native", "{673E7D32-A5F7-224D-4705-A6BB524B75B6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CosmicLexicon.Foundation.Runtime.InteropServices", "src\runtime\introp\src\CosmicLexicon.Foundation.Runtime.InteropServices.csproj", "{A8063940-F778-4383-A97C-A3A147DB5851}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CosmicLexicon.Foundation.Host.Native", "src\host\native\src\CosmicLexicon.Foundation.Host.Native.csproj", "{A8063940-F778-4383-A97C-A3A147DB5851}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{39F69A85-8C22-F347-497C-B073D73B306D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CosmicLexicon.Foundation.Runtime.InteropServices.UnitTest", "src\runtime\introp\tests\unit\CosmicLexicon.Foundation.Runtime.InteropServices.UnitTest.csproj", "{B77D61BF-AC1E-42DD-805F-C633E5AFBE18}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CosmicLexicon.Foundation.Host.Native.UnitTest", "src\host\native\tests\unit\CosmicLexicon.Foundation.Host.Native.UnitTest.csproj", "{B77D61BF-AC1E-42DD-805F-C633E5AFBE18}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Serialization", "Serialization", "{71FC8F1B-0EFF-5960-C054-76A05FA0121B}"
 EndProject
@@ -115,11 +115,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{982EC800
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CosmicLexicon.Foundation.Formats.Serialization.UnitTest", "src\formats\serialization\tests\unit\CosmicLexicon.Foundation.Formats.Serialization.UnitTest.csproj", "{A8701237-7B43-4CD4-88F0-9BB914457596}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CosmicLexicon.Foundation.Runtime", "src\runtime\src\CosmicLexicon.Foundation.Runtime.csproj", "{496F968D-807F-490C-8C22-4E821036DA72}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CosmicLexicon.Foundation.Host", "src\host\src\CosmicLexicon.Foundation.Host.csproj", "{496F968D-807F-490C-8C22-4E821036DA72}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{5BB0C2D2-9FE0-964F-CE0D-97036B5F8D1B}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CosmicLexicon.Foundation.Runtime.UnitTest", "src\runtime\tests\unit\CosmicLexicon.Foundation.Runtime.UnitTest.csproj", "{DD9BF449-9349-482A-A81F-7024FE1F77F3}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Identity", "Identity", "{1C3DE192-CBD8-088B-643D-6DF890361DE2}"
 EndProject
@@ -564,18 +562,6 @@ Global
 		{496F968D-807F-490C-8C22-4E821036DA72}.Release|x64.Build.0 = Release|Any CPU
 		{496F968D-807F-490C-8C22-4E821036DA72}.Release|x86.ActiveCfg = Release|Any CPU
 		{496F968D-807F-490C-8C22-4E821036DA72}.Release|x86.Build.0 = Release|Any CPU
-		{DD9BF449-9349-482A-A81F-7024FE1F77F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{DD9BF449-9349-482A-A81F-7024FE1F77F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{DD9BF449-9349-482A-A81F-7024FE1F77F3}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{DD9BF449-9349-482A-A81F-7024FE1F77F3}.Debug|x64.Build.0 = Debug|Any CPU
-		{DD9BF449-9349-482A-A81F-7024FE1F77F3}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{DD9BF449-9349-482A-A81F-7024FE1F77F3}.Debug|x86.Build.0 = Debug|Any CPU
-		{DD9BF449-9349-482A-A81F-7024FE1F77F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{DD9BF449-9349-482A-A81F-7024FE1F77F3}.Release|Any CPU.Build.0 = Release|Any CPU
-		{DD9BF449-9349-482A-A81F-7024FE1F77F3}.Release|x64.ActiveCfg = Release|Any CPU
-		{DD9BF449-9349-482A-A81F-7024FE1F77F3}.Release|x64.Build.0 = Release|Any CPU
-		{DD9BF449-9349-482A-A81F-7024FE1F77F3}.Release|x86.ActiveCfg = Release|Any CPU
-		{DD9BF449-9349-482A-A81F-7024FE1F77F3}.Release|x86.Build.0 = Release|Any CPU
 		{1FBCD002-FEAF-4F63-8430-E46FC0DE3ADA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{1FBCD002-FEAF-4F63-8430-E46FC0DE3ADA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1FBCD002-FEAF-4F63-8430-E46FC0DE3ADA}.Debug|x64.ActiveCfg = Debug|Any CPU
@@ -830,7 +816,6 @@ Global
 		{A8701237-7B43-4CD4-88F0-9BB914457596} = {982EC800-00E6-83CE-AA4A-0B58C112C35B}
 		{496F968D-807F-490C-8C22-4E821036DA72} = {C9FFCADF-E5C6-A53A-5B99-4551A1C4A183}
 		{5BB0C2D2-9FE0-964F-CE0D-97036B5F8D1B} = {C9FFCADF-E5C6-A53A-5B99-4551A1C4A183}
-		{DD9BF449-9349-482A-A81F-7024FE1F77F3} = {5BB0C2D2-9FE0-964F-CE0D-97036B5F8D1B}
 		{1C3DE192-CBD8-088B-643D-6DF890361DE2} = {827E0CD3-B72D-47B6-A68D-7590B98EB39B}
 		{A66CA9D5-6B32-B71A-7313-F10E39732AF0} = {827E0CD3-B72D-47B6-A68D-7590B98EB39B}
 		{1FBCD002-FEAF-4F63-8430-E46FC0DE3ADA} = {A66CA9D5-6B32-B71A-7313-F10E39732AF0}
