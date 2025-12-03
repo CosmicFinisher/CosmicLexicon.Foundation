@@ -12,7 +12,7 @@
           <Exclude>[*]*.Tests</Exclude>
           <Exclude>[*]*.Test</Exclude>
           <Exclude>[*]*.Test</Exclude>
-          <Include>Core.Text</Include>
+          <Include>Foundation.Formats</Include>
           <MergeWith>$(MSBuildProjectDirectory)/coverage.json</MergeWith>
         </Configuration>
       </DataCollector>

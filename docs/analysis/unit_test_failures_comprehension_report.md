@@ -10,21 +10,21 @@ This report provides a comprehension analysis of the reported unit test failures
 
 The analysis is based on the unit test failure summary recorded in the `.memory` file as of `2025-06-14T18:42:00Z`. The following unit test projects are identified as having failures:
 
-*   `ConsmicLexicon.Foundation.Collections.UnitTest`
+*   `ConsmicLexicon.Foundation.Structures.UnitTest`
 *   `ConsmicLexicon.Foundation.Generics.UnitTest`
 *   `ConsmicLexicon.Foundation.Globalization.UnitTest`
-*   `ConsmicLexicon.Foundation.Reflection.Assembly.UnitTest`
-*   `ConsmicLexicon.Foundation.Reflection.UnitTest`
+*   `ConsmicLexicon.Foundation.Introspection.Modules.UnitTest`
+*   `ConsmicLexicon.Foundation.Introspection.UnitTest`
 
 ## 3. Summary of Reported Failures
 
 The `.memory` file indicates the following number of failures per project:
 
-*   **ConsmicLexicon.Foundation.Collections.UnitTest**: 15 failures
+*   **ConsmicLexicon.Foundation.Structures.UnitTest**: 15 failures
 *   **ConsmicLexicon.Foundation.Generics.UnitTest**: 2 failures
 *   **ConsmicLexicon.Foundation.Globalization.UnitTest**: 3 failures
-*   **ConsmicLexicon.Foundation.Reflection.Assembly.UnitTest**: 4 failures
-*   **ConsmicLexicon.Foundation.Reflection.UnitTest**: 3 failures
+*   **ConsmicLexicon.Foundation.Introspection.Modules.UnitTest**: 4 failures
+*   **ConsmicLexicon.Foundation.Introspection.UnitTest**: 3 failures
 
 ## 4. Analysis Limitations
 
@@ -34,13 +34,13 @@ A comprehensive root cause analysis, including identification of specific failin
 
 Based on the project names and the number of reported failures, the following high-level observations and potential problem areas can be inferred:
 
-*   **ConsmicLexicon.Foundation.Collections.UnitTest (15 failures)**: This project exhibits the highest number of failures. This suggests potential issues within the core collection manipulation utilities, array helpers, or custom collection implementations (e.g., `src/collections/src/ArrayHelpers.cs`, `src/collections/src/BaseCollectionT.cs`). Given the foundational nature of collection operations, these failures could indicate issues in basic data structures or common algorithms, potentially impacting data flow and integrity across the system. Further static code analysis and a control flow graph examination of the failing tests and corresponding production code would be beneficial once detailed logs are available.
+*   **ConsmicLexicon.Foundation.Structures.UnitTest (15 failures)**: This project exhibits the highest number of failures. This suggests potential issues within the core collection manipulation utilities, array helpers, or custom collection implementations (e.g., `src/collections/src/ArrayHelpers.cs`, `src/collections/src/BaseCollectionT.cs`). Given the foundational nature of collection operations, these failures could indicate issues in basic data structures or common algorithms, potentially impacting data flow and integrity across the system. Further static code analysis and a control flow graph examination of the failing tests and corresponding production code would be beneficial once detailed logs are available.
 
 *   **ConsmicLexicon.Foundation.Generics.UnitTest (2 failures)**: Failures here might point to subtle bugs in generic helper methods or equality comparers (`src/generics/src/GenericEqualityComparerT.cs`). Issues in generic implementations can have broad impacts due to their reusable nature.
 
 *   **ConsmicLexicon.Foundation.Globalization.UnitTest (3 failures)**: Problems in this area often relate to handling of dates, times, time zones, or culture-specific string operations (`src/globalization/src/DateCompare.cs`, `src/globalization/src/DateTimeExtensions.cs`, `src/globalization/src/TimeFrame.cs`, `src/globalization/src/TimeSpanExtensions.cs`). These are common sources of errors in applications dealing with diverse user bases or international data.
 
-*   **ConsmicLexicon.Foundation.Reflection.Assembly.UnitTest (4 failures) & ConsmicLexicon.Foundation.Reflection.UnitTest (3 failures)**: The `ConsmicLexicon.Foundation.Reflection` and `ConsmicLexicon.Foundation.Reflection.Assembly` modules deal with runtime type information, assembly loading, and dynamic code execution (`src/reflection/asm/src/AssemblyExtensions.cs`, `src/reflection/asm/src/TypeExtensions.cs`, `src/reflection/src/FastActivator.cs`, `src/reflection/src/ReflectionExtensions.cs`). Reflection is a powerful but complex area, and failures here often indicate issues with type discovery, member invocation, or dynamic object creation. These could be critical issues impacting modularity and extensibility, potentially indicating technical debt if the reflection usage is overly complex or brittle.
+*   **ConsmicLexicon.Foundation.Introspection.Modules.UnitTest (4 failures) & ConsmicLexicon.Foundation.Introspection.UnitTest (3 failures)**: The `ConsmicLexicon.Foundation.Introspection` and `ConsmicLexicon.Foundation.Introspection.Modules` modules deal with runtime type information, assembly loading, and dynamic code execution (`src/reflection/asm/src/AssemblyExtensions.cs`, `src/reflection/asm/src/TypeExtensions.cs`, `src/reflection/src/FastActivator.cs`, `src/reflection/src/ReflectionExtensions.cs`). Reflection is a powerful but complex area, and failures here often indicate issues with type discovery, member invocation, or dynamic object creation. These could be critical issues impacting modularity and extensibility, potentially indicating technical debt if the reflection usage is overly complex or brittle.
 
 ## 6. Contribution to PRDMasterPlan.md and AI Verifiable Outcomes
 
@@ -51,10 +51,10 @@ The identification of these failing unit test projects is a crucial step in ensu
 To facilitate a detailed root cause analysis and subsequent resolution, the following actions are recommended:
 
 *   **Access Detailed Test Logs**: It is imperative to gain access to the full test execution reports, typically `.trx` files generated by `dotnet test` or similar test runners. These files contain vital information such as test names, error messages, and stack traces, which are indispensable for debugging.
-*   **Prioritize Investigations**: Based on the number of failures and the criticality of the affected modules, prioritize the investigation. `ConsmicLexicon.Foundation.Collections.UnitTest` appears to be the most impacted and should be a high priority.
+*   **Prioritize Investigations**: Based on the number of failures and the criticality of the affected modules, prioritize the investigation. `ConsmicLexicon.Foundation.Structures.UnitTest` appears to be the most impacted and should be a high priority.
 *   **Targeted Debugging**: Once detailed logs are available, specialized `debugger-targeted` agents or human programmers can be deployed to systematically diagnose the specific failing tests.
 *   **Static Code Analysis**: For modules with numerous failures, a more in-depth static code analysis focusing on code quality warnings, potential null reference issues, or logical flaws could complement dynamic testing.
-*   **Modularity Assessment**: For projects like `ConsmicLexicon.Foundation.Reflection`, a modularity assessment might reveal overly tight coupling or violations of design principles that contribute to test fragility.
+*   **Modularity Assessment**: For projects like `ConsmicLexicon.Foundation.Introspection`, a modularity assessment might reveal overly tight coupling or violations of design principles that contribute to test fragility.
 *   **Technical Debt Identification**: Consistent failures in certain areas might indicate underlying technical debt that needs to be addressed through refactoring, which could be delegated to an `optimizer-module` agent.
 
 ## 8. Self-Reflection on Analysis Quality and Completeness

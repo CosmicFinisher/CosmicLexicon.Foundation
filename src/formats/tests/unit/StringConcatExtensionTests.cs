@@ -34,7 +34,7 @@ namespace CosmicLexicon.Foundation.Formats.UnitTest
         {
             var @strings = GetStrings();
 
-            // Calling the Concat extension method from CosmicLexicon.Net.Core.xLinqExtensions
+            // Calling the Concat extension method from CosmicLexicon.Foundation.Foundation.Structures.LinqExtensions
             var actualString = StringHelpers.Concat(@strings).ToString();
 
             var expected = GetExpectedConcatenatedStringSimple();

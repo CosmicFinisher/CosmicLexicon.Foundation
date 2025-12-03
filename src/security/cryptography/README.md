@@ -1,6 +1,6 @@
 ### `ConsmicLexicon.Foundation/Security/Cryptography/`
 *   **Full Path in Tree:** `ConsmicLexicon.Foundation/Security/Cryptography/`
-*   **Namespace:** `ConsmicLexicon.Foundation.xSecurity.Cryptography`
+*   **Namespace:** `ConsmicLexicon.Foundation.Cryptography`
 *   **Goal:** To provide utilities and extensions for cryptographic operations, complementing `System.Security.Cryptography`.
 *   **Purpose:** Offers helper methods for common cryptographic tasks, such as hashing, encryption/decryption wrappers (using `System` providers), or secure random number generation utilities.
 *   **Description:** Contains types that simplify the use of .NET's cryptographic services.

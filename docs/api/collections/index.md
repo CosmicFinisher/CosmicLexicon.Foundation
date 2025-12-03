@@ -1,8 +1,8 @@
-# ConsmicLexicon.Foundation.Collections API Reference
+# ConsmicLexicon.Foundation.Structures API Reference
 
 ## Overview
 
-The ConsmicLexicon.Foundation.Collections namespace provides enhanced collection types and utilities designed for high-performance, type-safe operations in .NET applications.
+The ConsmicLexicon.Foundation.Structures namespace provides enhanced collection types and utilities designed for high-performance, type-safe operations in .NET applications.
 
 ## Key Components
 

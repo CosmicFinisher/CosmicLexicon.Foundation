@@ -7,7 +7,7 @@
     <EnablePackaging>true</EnablePackaging>
   </PropertyGroup>
   <ItemGroup>
-    <ProjectReference Include="$(MSBuildThisFileDirectory)..\..\linq\src\CosmicLexicon.Foundation.Linq.csproj" />
+    <ProjectReference Include="$(MSBuildThisFileDirectory)..\..\linq\src\CosmicLexicon.Foundation.Structures.Linq.csproj" />
     <ProjectReference Include="$(MSBuildThisFileDirectory)..\..\generics\src\CosmicLexicon.Foundation.Generics.csproj" />
   </ItemGroup>
 </Project> 

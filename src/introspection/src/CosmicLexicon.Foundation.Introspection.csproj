@@ -10,6 +10,6 @@
     <ProjectReference Include="$(MSBuildThisFileDirectory)..\..\generics\src\CosmicLexicon.Foundation.Generics.csproj" />
   </ItemGroup>
 	<ItemGroup>
-		<InternalsVisibleTo Include="CosmicLexicon.Foundation.Reflection.UnitTest" />
+		<InternalsVisibleTo Include="CosmicLexicon.Foundation.Introspection.UnitTest" />
 	</ItemGroup>
 </Project> 

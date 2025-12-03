@@ -10,11 +10,11 @@
 ### Installation
 
 1. Add NuGet packages:dotnet add package ConsmicLexicon.Foundation              # Core utilities
-dotnet add package ConsmicLexicon.Foundation.xCollections  # Collections
-dotnet add package ConsmicLexicon.Foundation.xThreading    # Threading utilities
+dotnet add package ConsmicLexicon.Foundation.Structures  # Collections
+dotnet add package ConsmicLexicon.Foundation.Concurrency    # Threading utilities
 2. Import namespaces:using ConsmicLexicon.Foundation;
-using ConsmicLexicon.Foundation.xCollections;
-using ConsmicLexicon.Foundation.xThreading;
+using ConsmicLexicon.Foundation.Structures;
+using ConsmicLexicon.Foundation.Concurrency;
 ## Core Components
 
 ### Collections// Thread-safe collections
@@ -23,14 +23,14 @@ var orderedMap = new OrderedConcurrentDictionary<int, string>();
 
 // High-performance collections
 using var memoryOptimizedList = new PooledList<int>();
-using var customComparer = new ValueTypeComparer<MyStruct>();[Learn more about Collections](../../src/collections/README.Core.Collections.md)
+using var customComparer = new ValueTypeComparer<MyStruct>();[Learn more about Collections](../../src/collections/README.Foundation.Structures.md)
 
 ### Text Processing// JSON handling
 using var json = new JsonDocument();
 var formatter = new SmartFormatter();
 
 // Regular expressions
-using var regex = new OptimizedRegex(@"\w+");[Learn more about Text Processing](../../src/text/README.Core.Text.md)
+using var regex = new OptimizedRegex(@"\w+");[Learn more about Text Processing](../../src/text/README.Foundation.Formats.md)
 
 ### Threading// High-precision timing
 using var timer = new HighPrecisionTimer();
@@ -77,8 +77,8 @@ public Result<int> Calculate()
 - [Microservices Integration](../../docs/architecture/overview.md#microservices)
 
 ### Security
-- [Cryptography Usage](../../src/security/crypto/README.Core.Security.Cryptography.md)
-- [Security Best Practices](../../src/security/README.Core.Security.md)
+- [Cryptography Usage](../../src/security/crypto/README.Foundation.Cryptography.md)
+- [Security Best Practices](../../src/security/README.Foundation.Identity.md)
 - [Authentication Patterns](../../research/implementation-patterns.md#security)
 
 ### Testing

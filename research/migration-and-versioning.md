@@ -35,12 +35,12 @@ Current Version: 9.0.0 (.NET 9 baseline)
 
 1. **Project File Updates**<PropertyGroup>
     <TargetFramework>$(NetPrimaryTargetFramework)</TargetFramework>
-    <RootNamespace>ConsmicLexicon.Foundation.x{Component}</RootNamespace>
+    <!-- <RootNamespace>ConsmicLexicon.Foundation.{Component}</RootNamespace> -->
     <EnableSharedKernelDependencies>true</EnableSharedKernelDependencies>
 </PropertyGroup>
 2. **Package References**<ItemGroup>
     <PackageReference Include="ConsmicLexicon.Foundation" Version="9.0.0" />
-    <PackageReference Include="ConsmicLexicon.Foundation.xCollections" Version="9.0.0" />
+    <PackageReference Include="ConsmicLexicon.Foundation.Structures" Version="9.0.0" />
     <!-- Add other components as needed -->
 </ItemGroup>
 3. **Code Updates**
@@ -65,7 +65,7 @@ Current Version: 9.0.0 (.NET 9 baseline)
 #### Collections
 - Collection initialization syntax changes
 - Thread-safe collection improvements
-- See [Collections Documentation](../src/collections/README.Core.Collections.md)
+- See [Collections Documentation](../src/collections/README.Foundation.Structures.md)
 
 #### Threading
 - New timer implementations
@@ -75,7 +75,7 @@ Current Version: 9.0.0 (.NET 9 baseline)
 #### Security
 - Modern cryptography updates
 - Enhanced security patterns
-- See [Security Documentation](../src/security/README.Core.Security.md)
+- See [Security Documentation](../src/security/README.Foundation.Identity.md)
 
 ## Compatibility Guarantees
 

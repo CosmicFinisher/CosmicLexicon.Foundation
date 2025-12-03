@@ -1,6 +1,6 @@
-using CosmicLexicon.Foundation.Linq;
+using CosmicLexicon.Foundation.Structures.Linq;
 
-namespace CosmicLexicon.Foundation.Linq.UnitTest
+namespace CosmicLexicon.Foundation.Structures.Linq.UnitTest
 {
     public class IEnumerableExtensionsTests
     {

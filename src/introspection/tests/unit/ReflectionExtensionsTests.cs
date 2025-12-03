@@ -2,10 +2,10 @@ using System;
 using System.Linq;
 using System.Reflection;
 using Xunit;
-using CosmicLexicon.Foundation.xReflection;
+using CosmicLexicon.Foundation.Introspection;
 using Xunit.Sdk;
 
-namespace CosmicLexicon.Foundation.xReflection
+namespace CosmicLexicon.Foundation.Introspection
 {
     public class ReflectionExtensionsTests
     {

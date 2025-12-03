@@ -2,19 +2,19 @@
 
 This report summarizes the analysis of the following test projects:
 
-- ConsmicLexicon.Foundation.Collections.UnitTest
+- ConsmicLexicon.Foundation.Structures.UnitTest
 - ConsmicLexicon.Foundation.Generics.UnitTest
 - ConsmicLexicon.Foundation.Globalization.UnitTest
-- ConsmicLexicon.Foundation.Reflection.Assembly.UnitTest
-- ConsmicLexicon.Foundation.Reflection.UnitTest
+- ConsmicLexicon.Foundation.Introspection.Modules.UnitTest
+- ConsmicLexicon.Foundation.Introspection.UnitTest
 
 The goal is to understand the purpose of each test project, the code they are testing, and the reasons for any potential failures.
 
-## ConsmicLexicon.Foundation.Collections.UnitTest
+## ConsmicLexicon.Foundation.Structures.UnitTest
 
 ### Purpose
 
-This project tests the functionality of the `ConsmicLexicon.Foundation.xCollections` namespace, which provides common interfaces, base classes, and utilities related to collections, augmenting `System.Collections` and `System.Collections.Generic`.
+This project tests the functionality of the `ConsmicLexicon.Foundation.Structures` namespace, which provides common interfaces, base classes, and utilities related to collections, augmenting `System.Collections` and `System.Collections.Generic`.
 
 ### Key Classes and Methods Being Tested
 
@@ -78,11 +78,11 @@ The tests primarily use Xunit and involve testing various scenarios, including d
 - Some tests use hardcoded values, which could make them brittle.
 - The tests seem to focus on basic functionality, and there may be a lack of tests for edge cases or error conditions.
 
-## ConsmicLexicon.Foundation.Reflection.Assembly.UnitTest
+## ConsmicLexicon.Foundation.Introspection.Modules.UnitTest
 
 ### Purpose
 
-This project's purpose could not be determined, as the `README.ConsmicLexicon.Foundation.Reflection.Assembly.md` file was not found. Additionally, the `ConsmicLexicon.Foundation.Reflection.Assembly.csproj` file could not be located, suggesting potential structural issues or missing files in this project.
+This project's purpose could not be determined, as the `README.ConsmicLexicon.Foundation.Introspection.Modules.md` file was not found. Additionally, the `ConsmicLexicon.Foundation.Introspection.Modules.csproj` file could not be located, suggesting potential structural issues or missing files in this project.
 
 ### Key Classes and Methods Being Tested
 
@@ -97,11 +97,11 @@ Due to the missing project file, the types of tests being used could not be dete
 - The project appears to be missing critical files, such as the `README.md` and `.csproj` files.
 - The project may not be properly structured.
 
-## ConsmicLexicon.Foundation.Reflection.UnitTest
+## ConsmicLexicon.Foundation.Introspection.UnitTest
 
 ### Purpose
 
-This project tests the functionality of the `ConsmicLexicon.Foundation.xReflection` namespace, which provides utilities and extensions for type reflection and metadata manipulation, building upon `System.Reflection`.
+This project tests the functionality of the `ConsmicLexicon.Foundation.Introspection` namespace, which provides utilities and extensions for type reflection and metadata manipulation, building upon `System.Reflection`.
 
 ### Key Classes and Methods Being Tested
 
@@ -125,4 +125,4 @@ The tests primarily use Xunit and involve testing various scenarios, including n
 
 - Many of the tests use hardcoded values, which could make them brittle and difficult to maintain.
 - The tests seem to focus on basic functionality, and there may be a lack of tests for edge cases or error conditions.
-- The `ConsmicLexicon.Foundation.Reflection.Assembly.UnitTest` project appears to be missing critical files and may not be properly structured.
+- The `ConsmicLexicon.Foundation.Introspection.Modules.UnitTest` project appears to be missing critical files and may not be properly structured.

@@ -1,7 +1,7 @@
-using CosmicLexicon.Foundation.Linq;
+using CosmicLexicon.Foundation.Structures.Linq;
 using System.Globalization;
 
-namespace CosmicLexicon.Foundation.Linq.UnitTest
+namespace CosmicLexicon.Foundation.Structures.Linq.UnitTest
 {
     public class IEnumerableHelpersTests
     {        private static readonly string[] expectedStrings = new string[] { "1", "2", "3" };

@@ -1,4 +1,4 @@
-using CosmicLexicon.Foundation.Linq;
+using CosmicLexicon.Foundation.Structures.Linq;
 using CosmicLexicon.Foundation.Structures;
 using CosmicLexicon.Foundation.Structures.Extensions;
 

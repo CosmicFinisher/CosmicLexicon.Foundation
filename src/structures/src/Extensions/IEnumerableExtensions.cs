@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel;
 using CosmicLexicon.Foundation.Generics;
-using CosmicLexicon.Foundation.Linq;
+using CosmicLexicon.Foundation.Structures.Linq;
 
 namespace CosmicLexicon.Foundation.Structures.Extensions
 {

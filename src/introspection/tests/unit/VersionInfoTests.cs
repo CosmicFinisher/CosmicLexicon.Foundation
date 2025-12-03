@@ -1,7 +1,7 @@
 using Xunit;
-using CosmicLexicon.Foundation.xReflection;
+using CosmicLexicon.Foundation.Introspection;
 
-namespace CosmicLexicon.Foundation.xReflection.Tests
+namespace CosmicLexicon.Foundation.Introspection.Tests
 {
     public class VersionInfoTests
     {

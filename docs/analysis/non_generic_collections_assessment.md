@@ -17,7 +17,7 @@ The analysis specifically targeted the following files within the `src/collectio
 
 The comprehension process involved:
 1.  **File Listing:** Initial listing of files within `src/collections/src/` to understand the module's contents.
-2.  **Project File Review:** Examination of `ConsmicLexicon.Foundation.xCollections.csproj` to identify project dependencies and target frameworks.
+2.  **Project File Review:** Examination of `ConsmicLexicon.Foundation.Structures.csproj` to identify project dependencies and target frameworks.
 3.  **Keyword Search:** Performing a regex search for common non-generic collection types (e.g., `ArrayList`, `Hashtable`) and the `System.Collections` namespace import statements to pinpoint their occurrences.
 4.  **Detailed Code Review:** In-depth analysis of `BaseCollectionT.cs` and `ObservableListT.cs` to understand the context and implementation details of non-generic interface usage. This included examining method implementations, interface declarations, and internal data structures.
 
@@ -38,7 +38,7 @@ The search for specific non-generic collection classes (like `ArrayList`, `Hasht
 
 The data flow within `BaseCollectionT.cs` and `ObservableListT.cs` is straightforward: all collection operations (add, remove, clear, enumerate, etc.) are ultimately handled by the internal generic `List<T>` instance.
 
-Dependencies for `ConsmicLexicon.Foundation.xCollections.csproj` include `ConsmicLexicon.Foundation.xLinq.csproj` and `ConsmicLexicon.Foundation.xGenerics.csproj`, indicating a reliance on other core utility modules, which are themselves likely generic-focused.
+Dependencies for `ConsmicLexicon.Foundation.Structures.csproj` include `ConsmicLexicon.Foundation.Structures.Linq.csproj` and `ConsmicLexicon.Foundation.xGenerics.csproj`, indicating a reliance on other core utility modules, which are themselves likely generic-focused.
 
 ## Concerns and Potential Issues
 

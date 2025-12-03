@@ -1,6 +1,6 @@
 using System.ComponentModel;
 
-namespace CosmicLexicon.Foundation.Linq
+namespace CosmicLexicon.Foundation.Structures.Linq
 {
     [EditorBrowsable(EditorBrowsableState.Never)]
     public static class EnumerableHelpers

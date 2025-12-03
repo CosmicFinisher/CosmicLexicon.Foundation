@@ -1,11 +1,11 @@
-using CosmicLexicon.Foundation.Linq;
+using CosmicLexicon.Foundation.Structures.Linq;
 using System.Buffers;
 using System.Collections.Concurrent;
 using System.ComponentModel;
 using System.Text;
 
 
-namespace CosmicLexicon.Foundation.Linq
+namespace CosmicLexicon.Foundation.Structures.Linq
 {
     //
     // Summary:
