@@ -121,21 +121,21 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{5BB0C2D2
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CosmicLexicon.Foundation.Runtime.UnitTest", "src\runtime\tests\unit\CosmicLexicon.Foundation.Runtime.UnitTest.csproj", "{DD9BF449-9349-482A-A81F-7024FE1F77F3}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Security", "Security", "{1C3DE192-CBD8-088B-643D-6DF890361DE2}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Identity", "Identity", "{1C3DE192-CBD8-088B-643D-6DF890361DE2}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Cryptography", "Cryptography", "{A66CA9D5-6B32-B71A-7313-F10E39732AF0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CosmicLexicon.Foundation.Security.Cryptography", "src\security\crypto\src\CosmicLexicon.Foundation.Security.Cryptography.csproj", "{1FBCD002-FEAF-4F63-8430-E46FC0DE3ADA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CosmicLexicon.Foundation.Cryptography", "src\cryptography\src\CosmicLexicon.Foundation.Cryptography.csproj", "{1FBCD002-FEAF-4F63-8430-E46FC0DE3ADA}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{EF4A0F55-B70C-E6AB-E9D0-7942E61BA905}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CosmicLexicon.Foundation.Security.Cryptography.UnitTest", "src\security\crypto\tests\unit\CosmicLexicon.Foundation.Security.Cryptography.UnitTest.csproj", "{D9D37C0F-4B84-4462-9C4C-CBB13D4662F7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CosmicLexicon.Foundation.Cryptography.UnitTest", "src\cryptography\tests\unit\CosmicLexicon.Foundation.Cryptography.UnitTest.csproj", "{D9D37C0F-4B84-4462-9C4C-CBB13D4662F7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CosmicLexicon.Foundation.Security", "src\security\src\CosmicLexicon.Foundation.Security.csproj", "{805490E6-73E7-44B2-94D4-30E3C42E33C9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CosmicLexicon.Foundation.Identity", "src\identity\src\CosmicLexicon.Foundation.Identity.csproj", "{805490E6-73E7-44B2-94D4-30E3C42E33C9}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{1E251923-65A7-F629-C8D7-0BE43096A2BB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CosmicLexicon.Foundation.Security.UnitTest", "src\security\tests\unit\CosmicLexicon.Foundation.Security.UnitTest.csproj", "{A203606B-766B-453B-ACA9-631EFEC7B26A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CosmicLexicon.Foundation.Identity.UnitTest", "src\identity\tests\unit\CosmicLexicon.Foundation.Identity.UnitTest.csproj", "{A203606B-766B-453B-ACA9-631EFEC7B26A}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Formats", "Formats", "{AA8F73D5-AC14-AFC1-52FB-D818A464B4AD}"
 EndProject
@@ -832,7 +832,7 @@ Global
 		{5BB0C2D2-9FE0-964F-CE0D-97036B5F8D1B} = {C9FFCADF-E5C6-A53A-5B99-4551A1C4A183}
 		{DD9BF449-9349-482A-A81F-7024FE1F77F3} = {5BB0C2D2-9FE0-964F-CE0D-97036B5F8D1B}
 		{1C3DE192-CBD8-088B-643D-6DF890361DE2} = {827E0CD3-B72D-47B6-A68D-7590B98EB39B}
-		{A66CA9D5-6B32-B71A-7313-F10E39732AF0} = {1C3DE192-CBD8-088B-643D-6DF890361DE2}
+		{A66CA9D5-6B32-B71A-7313-F10E39732AF0} = {827E0CD3-B72D-47B6-A68D-7590B98EB39B}
 		{1FBCD002-FEAF-4F63-8430-E46FC0DE3ADA} = {A66CA9D5-6B32-B71A-7313-F10E39732AF0}
 		{EF4A0F55-B70C-E6AB-E9D0-7942E61BA905} = {A66CA9D5-6B32-B71A-7313-F10E39732AF0}
 		{D9D37C0F-4B84-4462-9C4C-CBB13D4662F7} = {EF4A0F55-B70C-E6AB-E9D0-7942E61BA905}
