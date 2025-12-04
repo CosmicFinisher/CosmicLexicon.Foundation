@@ -2,6 +2,8 @@
   <PropertyGroup>
     <TargetFramework>$(NetPrimaryTargetFramework)</TargetFramework>
     <EnableSharedKernelDependencies>true</EnableSharedKernelDependencies>
-	
+	  <IsPackable>true</IsPackable>
+	  <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+	  <EnablePackaging>true</EnablePackaging>
   </PropertyGroup>
 </Project> 

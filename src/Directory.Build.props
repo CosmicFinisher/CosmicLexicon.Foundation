@@ -6,15 +6,18 @@
 	</PropertyGroup>
 	<PropertyGroup Label="NugetPackagingSettings">
 		<!--<PackageId>CosmicLexicon.Foundation</PackageId>-->
-		<Authors>COSMIC FINISHER ALPHA</Authors>
-		<Company>Cosmic Finisher</Company>
+		<!--<Authors>COSMIC FINISHER ALPHA</Authors>-->
+		<!--<Company>Cosmic Finisher</Company>-->
 		<Description>A foundation framework core library for Cosmic Containment projects.</Description>
 		<PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
 		<RepositoryUrl>https://github.com/CosmicFinisher/CosmicLexicon.Foundation.git</RepositoryUrl>
 		<PackageProjectUrl>$(RepositoryUrl)</PackageProjectUrl>
+		<ProductName>Cosmic Lexicon Foundation</ProductName>
+		<ProjectTitle>Cosmic Lexicon Framework Foundation</ProjectTitle>
 		<PackageIcon>icon.png</PackageIcon>
 		<RepositoryType>git</RepositoryType>
-
+		<PackageVersion>1.0.0-alpha.1</PackageVersion>
+		<AssemblyFileVersion>1.0.0-alpha.1</AssemblyFileVersion>
 	</PropertyGroup>
 
 
